@@ -1,0 +1,9 @@
+I, [2016-02-07T22:41:30.050154 #55703]  INFO -- : Started HEAD "/" for 127.0.0.1 at 2016-02-07 22:41:30 +0100
+I, [2016-02-07T22:41:30.077095 #55703]  INFO -- : Processing by StaticPagesController#home as HTML
+I, [2016-02-07T22:41:30.122547 #55703]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+I, [2016-02-07T22:41:30.127667 #55703]  INFO -- : Completed 200 OK in 47ms (Views: 28.4ms)
+I, [2016-02-07T22:41:30.137842 #55703]  INFO -- : Started GET "/api/v1/tasks/user/56b64a54e737f1f6f0ab8d8f?token=8b5b746cc618d35ef1f1ed49a08e47ef" for 127.0.0.1 at 2016-02-07 22:41:30 +0100
+I, [2016-02-07T22:41:30.144534 #55703]  INFO -- : Processing by Api::V1::TasksController#index as JSON
+I, [2016-02-07T22:41:30.144750 #55703]  INFO -- :   Parameters: {"token"=>"8b5b746cc618d35ef1f1ed49a08e47ef", "user_id"=>"56b64a54e737f1f6f0ab8d8f"}
+I, [2016-02-07T22:41:31.877719 #55703]  INFO -- :   Rendered api/v1/tasks/index.json.rabl (4.9ms)
+I, [2016-02-07T22:41:31.879744 #55703]  INFO -- : Completed 200 OK in 1735ms (Views: 20.4ms)
