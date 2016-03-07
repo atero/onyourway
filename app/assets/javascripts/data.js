@@ -1,32 +1,28 @@
 Requests = [
 	{
-		from: ["France", "US"],
-		to: "Moscow",
-		day: 8,
-		month: 4,
-		year: 2016
+		from: ["Russia", "Ukraine"],
+		to: "Paris",
+		name: "Ksenia K",
+		product: "Колбаса Докторская"
 	},
 	{
-		from: ["France", "US"],
-		to: "Berlin",
-		day: 18,
-		month: 5,
-		year: 2016
+		from: ["Russia", "Ukraine"],
+		to: "Paris",
+		name: "Masha X",
+		product: "Лапша Ролтон"
 	},
 	{
-		from: ["France", "US"],
-		to: "Moscow",
-		day: 10,
-		month: 4,
-		year: 2016
+		from: ["Russia", "Ukraine"],
+		to: "Paris",
+		name: "Olga Y",
+		product: "Одеколон Октябрь"
 	},
 	{
-		from: ["France", "US"],
-		to: "Moscow",
-		day: 10,
-		month: 4,
-		year: 2016
-	}
+		from: ["Russia", "Ukraine"],
+		to: "Paris",
+		name: "Svetlana H",
+		product: "Мазь Звездочка"
+	},
 ]
 Proposals = [
 	{
@@ -34,27 +30,31 @@ Proposals = [
 		to: "Moscow",
 		day: 8,
 		month: 4,
-		year: 2016
+		year: 2016,
+		name: "Prenom Nom",
 	},
 	{
 		from: "France",
 		to: "Berlin",
 		day: 18,
 		month: 5,
-		year: 2016
+		year: 2016,
+		name: "Prenom Nom",
 	},
 	{
 		from: "Germany",
 		to: "Moscow",
 		day: 10,
 		month: 4,
-		year: 2016
+		year: 2016,
+		name: "Prenom Nom",
 	},
 	{
 		from: "US",
 		to: "Moscow",
 		day: 10,
 		month: 4,
-		year: 2016
+		year: 2016,
+		name: "Prenom Nom",
 	}
 ]

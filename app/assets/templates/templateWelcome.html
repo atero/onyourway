@@ -8,7 +8,7 @@
                 <div class="list-group">
                   <uib-tabset justified="true">
                     <uib-tab index="0" heading="I travel" select="inherit.usertype = 'traveller'">
-                        <form>
+                        <form ng-submit="local.goSearch()">
                           <div class="form-group">
                             <label for="departure">From</label>
                             <input type="text" class="form-control" placeholder="Country">
@@ -25,7 +25,7 @@
                         </form>
                     </uib-tab>
                     <uib-tab index="1" heading="I shop" select="inherit.usertype = 'shopper'">
-                        <form>
+                        <form ng-submit="local.goSearch()">
                           <div class="form-group">
                             <label for="departure">From</label>
                             <input type="text" class="form-control" placeholder="Countries">
@@ -74,7 +74,12 @@
                     </div>
 
                 </div>
-
+            </div>
+            <div class="col-md-12">
+            
+            <div class="row">
+                <p class="lead text-center">Lately delivered items</p>
+            </div>
                 <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
@@ -145,7 +150,67 @@
             </div>
 
         </div>
+            <div class="row">
+            <div class="row">
+                <p class="lead text-center">Why order with Shop'N'Ship</p>
+            </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Security</h4>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Rapidity</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Etc</h4>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Etc</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Etc</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="text-center">Etc</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
     <!-- /.container -->
 
@@ -157,7 +222,39 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Shop'N'Ship 2016</p>
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                              <ul class="">
+                                  <li>
+                                      <a href="#">FAQ</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Terms of use</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">FAQ</a>
+                                  </li>
+                              </ul>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                              <ul class="">
+                                  <li>
+                                      <a href="#">FAQ</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Terms of use</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">FAQ</a>
+                                  </li>
+                              </ul>
+                        </div>
+
+                    </div>
+                    <div class="row pull-right">
+                        <p>Copyright &copy; Shop'N'Ship 2016</p>
+                    </div>
                 </div>
             </div>
         </footer>

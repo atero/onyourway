@@ -10,12 +10,12 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
         controller: 'WelcomeCtrl'
     })
 
-    // $stateProvider
-    //  .state('login', {
-    //     url:'/login',
-    //     templateUrl: "templateLogin.html",
-    //     controller: 'LoginCtrl'
-    // })
+    $stateProvider
+     .state('results', {
+        url:'/results',
+        templateUrl: "templateResults.html",
+        controller: 'ResultsCtrl'
+    })
 
 
 }]);

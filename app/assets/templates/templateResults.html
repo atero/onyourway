@@ -1,0 +1,64 @@
+<!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Filter the results:</p>
+            </div>
+
+                <div class="col-md-9" style="border-left: 1px solid #ddd;">
+                    <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">List of shoppers</p>
+                    <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">List of travellers</p>
+                    <table class="table">
+
+                          <thead>
+
+                            <th ng-class="home-table-th"></th>
+                            <th ng-class="home-table-th"></th>
+                            <th ng-class="home-table-th"></th>
+
+                          </thead>
+
+
+                          <tbody ng-if="inherit.usertype == 'traveller'" >
+
+                            <tr ng-repeat="result in local.results">
+
+                              <td class="home-table-td"><img src="images/nophoto.png" alt=""></th>
+                              <td valign="middle">{{result.name}} wants the {{result.product}} to be delivered to {{result.to}}</th>
+                              <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
+                            </tr>
+
+                          </tbody>
+                        <tbody ng-if="inherit.usertype == 'shopper'" >
+
+                            <tr ng-repeat="result in local.results">
+
+                              <td class="home-table-td"><img src="images/nophoto.png" alt=""></th>
+                              <td valign="middle">{{result.name}} travels from {{result.from}} to {{result.to}} on the {{result.date}}</th>
+                              <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
+                              
+                            </tr>
+
+                          </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="col-md-12 register-bottom">
+                
+                    
+                    <p class="lead text-center">Did not find what you were looking for?</p>
+                    <div class="col-md-offset-5 col-md-2">
+                        <button style="display: block; width: 100%;" type="button" class="btn btn-danger large">Create you own ad</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->

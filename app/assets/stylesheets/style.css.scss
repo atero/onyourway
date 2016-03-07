@@ -8,6 +8,13 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td{
+    vertical-align: middle !important;
+}
+
+.register-bottom{
+    margin-top:100px;
+}
 .slide-image {
     width: 100%;
 }
@@ -47,6 +54,10 @@ body {
 .thumbnail .caption-full {
     padding: 9px;
     color: #333;
+}
+
+.left-bar-border{
+
 }
 
 footer {
