@@ -1,9 +1,6 @@
-<!-- Page Content -->
     <div class="container">
 
-        <div class="row">
-
-            <div class="col-md-3">
+<!--             <div class="col-md-3">
                 <p class="lead">Shop'N'Ship</p>
                 <div class="list-group">
                   <uib-tabset justified="true">
@@ -40,54 +37,53 @@
                     
                   </uib-tabset>
                 </div>
-            </div>
+            </div> -->
+        <div class="row">
+            <div class="col-md-12">
 
-            <div class="col-md-9">
-
-                <div class="row carousel-holder">
+                <div class="row">
 
                     <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
+                        <div class="welcome-image">
+                            <div class="col-md-offset-4 col-md-4">
+                                 <button class="btn btn-default shopper-button">Request a purchase</button>
+                                 <button class="btn btn-default travaller-button">Become a travaller</button>
                             </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
                         </div>
                     </div>
 
                 </div>
+                <div class="row">
+                    <div class="search-form padding-top">
+                    <div class="row">
+                        <p class="lead text-center">Look up current ads (il faut préciser ici que c'est pour les shoppers)</p>
+                    </div>
+                        <form ng-submit="local.goSearch()">
+                              <div class="form-group col-md-offset-2 col-md-3">
+                                <input type="text" class="form-control" placeholder="Countries">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <input type="text" class="form-control" placeholder="City">
+                              </div>
+                              <button type="submit" class="btn btn-default col-md-1">Go</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
             
-            <div class="row">
-                <p class="lead text-center">Lately delivered items</p>
-            </div>
+                <div class="row padding-top">
+                    <p class="lead text-center">Items resently delivered</p>
+                </div>
                 <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://placehold.it/160x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">MacBook Pro</h4>
-                                <h4><a href="#">Feedback 1</a>
+                                <h4 class="text-center">MacBook Pro</h4>
                                 </h4>
                                 <p>Delivered from US to Paris</p>
                             </div>
@@ -105,10 +101,9 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://placehold.it/160x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">Лапша Ролтон</h4>
-                                <h4><a href="#">Feedback 2</a>
+                                <h4 class="text-center">Лапша Ролтон</h4>
                                 </h4>
                                 <p>Delivered from Russia to London</p>
                             </div>
@@ -126,10 +121,9 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://placehold.it/160x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">Blah blah</h4>
-                                <h4><a href="#">Feedback 3</a>
+                                <h4 class="text-center">Blah blah</h4>
                                 </h4>
                                 <p>Blah blah blah blah blah</p>
                             </div>
@@ -148,12 +142,40 @@
                 </div>
 
             </div>
-
+</div>
+<div class="row">
+    <div class="col-xs-12 how-it-works padding-top" align="left">
+            <div class="how-title"> How it works?</div>
+                <div class="row row-how">
+                  <div class="col-xs-2 col-xs-offset-2">
+                      <img class="how-img" src="http://placehold.it/150x150">
+                  </div>
+                  <div class="col-xs-8 how-text" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                </div>
+                <div class="row row-how">
+                  <div class="col-xs-2 col-xs-offset-2">
+                      <img src="http://placehold.it/150x150" class="how-img" >
+                  </div>
+                  <div class="col-xs-8 how-text" align="left">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+                </div>
+                <div class="row row-how">
+                  <div class="col-xs-2 col-xs-offset-2">
+                      <img class="how-img" src="http://placehold.it/150x150">
+                  </div>
+                  <div class="col-xs-8 how-text" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                </div>
+                <div class="row row-how">
+                  <div class="col-xs-2 col-xs-offset-2">
+                      <img src="http://placehold.it/150x150" class="how-img" >
+                  </div>
+                  <div class="col-xs-8 how-text" align="left">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+                </div>
         </div>
+</div>
             <div class="row">
-            <div class="row">
-                <p class="lead text-center">Why order with Shop'N'Ship</p>
-            </div>
+                <div class="row padding-top">
+                    <p class="lead text-center">Why order with Shop'N'Ship</p>
+                </div>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
@@ -180,83 +202,10 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Etc</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Etc</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Etc</h4>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
 
         </div>
     </div>
-    <!-- /.container -->
-
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                              <ul class="">
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Terms of use</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                              </ul>
-                        </div>
-
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                              <ul class="">
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Terms of use</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                              </ul>
-                        </div>
-
-                    </div>
-                    <div class="row pull-right">
-                        <p>Copyright &copy; Shop'N'Ship 2016</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div>
+    <!-- /.container

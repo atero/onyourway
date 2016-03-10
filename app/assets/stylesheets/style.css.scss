@@ -15,30 +15,14 @@ body {
 .register-bottom{
     margin-top:100px;
 }
-.slide-image {
-    width: 100%;
-}
-
-.carousel-holder {
-    margin-bottom: 30px;
-}
-
-.carousel-control,
-.item {
-    border-radius: 4px;
-}
 
 .caption {
-    height: 130px;
+    height: 80px;
     overflow: hidden;
 }
 
 .caption h4 {
     white-space: nowrap;
-}
-
-.thumbnail img {
-    width: 100%;
 }
 
 .ratings {
@@ -59,7 +43,41 @@ body {
 .left-bar-border{
 
 }
-
+.welcome-image{
+    background-image: url(http://placehold.it/1170x400);
+    height: 400px;
+    width:100%;
+    padding-top: 190px;
+}
+.shopper-button{
+    
+}
+.travaller-button{
+    
+}
+.how-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+.how-text {
+    font-size: 1.0em;
+    margin-top: 80px;
+    font-weight: normal;
+}
+.how-img {
+    height: 150px;
+}
+.row-how {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    -webkit-transition: all .5s ease !important;
+    -o-transition: all .5s ease !important;
+    transition: all .5s ease !important;
+}
+.padding-top{
+    padding-top: 50px;
+}
 footer {
     margin: 50px 0;
 }

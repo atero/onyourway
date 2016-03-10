@@ -2166,3 +2166,25 @@
 [2016-03-07 15:29:23 +0100 ksenias-mbp.eki.group (10647)] ERROR : Invalid license key, please contact support@newrelic.com
 [2016-03-07 15:29:23 +0100 ksenias-mbp.eki.group (10647)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
 [2016-03-07 17:18:49 +0100 ksenias-mbp.eki.group (10647)] INFO : Starting Agent shutdown
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Starting the New Relic agent in "development" environment.
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] WARN : No configuration file found. Working directory = /Users/xksusha/Documents/Rails Projects/ShopNShip
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] WARN : Looked in these locations (based on defaults): /Users/xksusha/Documents/Rails Projects/ShopNShip/config/newrelic.yml, /Users/xksusha/Documents/Rails Projects/ShopNShip/newrelic.yml, /Users/xksusha/Documents/Rails Projects/ShopNShip/config/newrelic.yml, /Users/xksusha/Documents/Rails Projects/ShopNShip/newrelic.yml, /Users/xksusha/.newrelic/newrelic.yml, /Users/xksusha/newrelic.yml
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Environment: development
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Dispatcher: webrick
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Application: development
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-03-10 10:01:08 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing middleware-based Excon instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Mongo instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Net instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Rails 4 Controller instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Rails 4 view instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Installing Rails 4 Error instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Finished instrumentation
+[2016-03-10 10:01:09 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-03-10 10:01:14 +0100 Ksenias-MacBook-Pro.local (17914)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-03-10 10:01:14 +0100 Ksenias-MacBook-Pro.local (17914)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-03-10 11:35:27 +0100 Ksenias-MacBook-Pro.local (17914)] INFO : Starting Agent shutdown
