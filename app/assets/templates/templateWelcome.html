@@ -1,43 +1,5 @@
     <div class="container">
 
-<!--             <div class="col-md-3">
-                <p class="lead">Shop'N'Ship</p>
-                <div class="list-group">
-                  <uib-tabset justified="true">
-                    <uib-tab index="0" heading="I travel" select="inherit.usertype = 'traveller'">
-                        <form ng-submit="local.goSearch()">
-                          <div class="form-group">
-                            <label for="departure">From</label>
-                            <input type="text" class="form-control" placeholder="Country">
-                          </div>
-                          <div class="form-group">
-                            <label for="arrival">To</label>
-                            <input type="text" class="form-control" placeholder="City">
-                          </div>
-                          <div class="form-group">
-                            <label for="date">Date</label>
-                            <input type="date" class="form-control">
-                          </div>
-                          <button type="submit" class="btn btn-default">Search</button>
-                        </form>
-                    </uib-tab>
-                    <uib-tab index="1" heading="I shop" select="inherit.usertype = 'shopper'">
-                        <form ng-submit="local.goSearch()">
-                          <div class="form-group">
-                            <label for="departure">From</label>
-                            <input type="text" class="form-control" placeholder="Countries">
-                          </div>
-                          <div class="form-group">
-                            <label for="arrival">To</label>
-                            <input type="text" class="form-control" placeholder="City">
-                          </div>
-                          <button type="submit" class="btn btn-default">Search</button>
-                        </form>
-                    </uib-tab>
-                    
-                  </uib-tabset>
-                </div>
-            </div> -->
         <div class="row">
             <div class="col-md-12">
 
@@ -46,8 +8,8 @@
                     <div class="col-md-12">
                         <div class="welcome-image">
                             <div class="col-md-offset-4 col-md-4">
-                                 <button class="btn btn-default shopper-button">Request a purchase</button>
-                                 <button class="btn btn-default travaller-button">Become a travaller</button>
+                                 <button ng-click="inherit.usertype = 'shopper'; local.goSearch()" class="btn btn-default shopper-button">Request a purchase</button>
+                                 <button ng-click="inherit.usertype = 'traveller'; local.goSearch()" class="btn btn-default travaller-button">Become a travaller</button>
                             </div>
                         </div>
                     </div>
@@ -55,9 +17,9 @@
                 </div>
                 <div class="row">
                     <div class="search-form padding-top">
-                    <div class="row">
-                        <p class="lead text-center">Look up current ads (il faut préciser ici que c'est pour les shoppers)</p>
-                    </div>
+                        <div class="row">
+                            <p class="lead text-center">Look up current ads (il faut préciser ici que c'est pour les shoppers)</p>
+                        </div>
                         <form ng-submit="local.goSearch()">
                               <div class="form-group col-md-offset-2 col-md-3">
                                 <input type="text" class="form-control" placeholder="Countries">

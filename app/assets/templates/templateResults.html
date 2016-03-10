@@ -3,47 +3,85 @@
 
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead">Filter the results:</p>
-            </div>
+                <div class="col-md-12" style="border-left: 1px solid #ddd;">
+                  <div class="row" ng-show="inherit.usertype == 'shopper'">
+                      <div class="search-form padding-top col-md-8 text-center">
+                          <p class="lead text-center">Search for traveller's ads</p>
 
-                <div class="col-md-9" style="border-left: 1px solid #ddd;">
-                    <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">List of shoppers</p>
-                    <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">List of travellers</p>
-                    <table class="table">
+                            <form ng-submit="">
+                                    <input type="text" class="form-control search-input" placeholder="Countries">
+                                    <input type="text" class="form-control search-input" placeholder="City">
+                                    <button type="submit" class="btn btn-default">Go</button>                                    
+                            </form>
 
-                          <thead>
+                      </div>
+                      <div class="search-form padding-top col-md-4 text-center">
+                          <p class="lead text-center">or</p>
 
-                            <th ng-class="home-table-th"></th>
-                            <th ng-class="home-table-th"></th>
-                            <th ng-class="home-table-th"></th>
+                          <button type="submit" class="btn btn-default big-button">Become a traveller</button>                                    
 
-                          </thead>
+                      </div>
+                  </div>
+
+                  <div class="row" ng-show="inherit.usertype == 'traveller'">
+                      <div class="search-form padding-top col-md-8 text-center">
+                          <p class="lead text-center">Search for shopper's ads</p>
+
+                            <form ng-submit="">
+                                    <input type="text" class="form-control search-input" placeholder="Countries">
+                                    <input type="text" class="form-control search-input" placeholder="City">
+                                    <button type="submit" class="btn btn-default">Go</button>                                    
+                            </form>
+
+                      </div>
+                      <div class="search-form padding-top col-md-4 text-center">
+                          <p class="lead text-center">or</p>
+
+                                    <button type="submit" class="btn btn-default big-button">Become a shopper</button>                                    
+
+                      </div>
+                  </div>
+
+                  <div class="row padding-top">
+                      <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">List of shoppers</p>
+                      <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">List of travellers</p>
+                      <div class="col-md-offset-1 col-md-10">
+                        <table class="table">
+
+                              <thead>
+
+                                <th ng-class="home-table-th"></th>
+                                <th ng-class="home-table-th"></th>
+                                <th ng-class="home-table-th"></th>
+
+                              </thead>
 
 
-                          <tbody ng-if="inherit.usertype == 'traveller'" >
+                              <tbody ng-if="inherit.usertype == 'traveller'" >
 
-                            <tr ng-repeat="result in local.results">
+                                <tr ng-repeat="result in local.results">
 
-                              <td class="home-table-td"><img src="images/nophoto.png" alt=""></th>
-                              <td valign="middle">{{result.name}} wants the {{result.product}} to be delivered to {{result.to}}</th>
-                              <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
-                            </tr>
+                                  <td class="home-table-td profile-photo"><img src="images/nophoto.png" alt=""></th>
+                                  <td valign="middle">{{result.name}} wants the {{result.product}} to be delivered to {{result.to}}</th>
+                                  <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
+                                </tr>
 
-                          </tbody>
-                        <tbody ng-if="inherit.usertype == 'shopper'" >
+                              </tbody>
+                            <tbody ng-if="inherit.usertype == 'shopper'" >
 
-                            <tr ng-repeat="result in local.results">
+                                <tr ng-repeat="result in local.results">
 
-                              <td class="home-table-td"><img src="images/nophoto.png" alt=""></th>
-                              <td valign="middle">{{result.name}} travels from {{result.from}} to {{result.to}} on the {{result.date}}</th>
-                              <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
-                              
-                            </tr>
+                                  <td class="home-table-td profile-photo"><img src="images/nophoto.png" alt=""></th>
+                                  <td valign="middle">{{result.name}} travels from {{result.from}} to {{result.to}} on the {{result.date}}</th>
+                                  <td valign="middle"><button type="button" class="btn btn-default">Choose</button></td>
+                                  
+                                </tr>
 
-                          </tbody>
+                              </tbody>
 
-                    </table>
+                        </table>
+                      </div>
+                    </div>
 
                 </div>
 

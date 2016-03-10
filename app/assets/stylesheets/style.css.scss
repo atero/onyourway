@@ -76,7 +76,14 @@ body {
     transition: all .5s ease !important;
 }
 .padding-top{
-    padding-top: 50px;
+    padding-top: 45px;
+}
+.search-input{
+    max-width:300px;
+    margin:20px auto;
+}
+.big-button{
+    height:100px;
 }
 footer {
     margin: 50px 0;
