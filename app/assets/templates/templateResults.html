@@ -18,7 +18,7 @@
                       <div class="search-form padding-top col-md-4 text-center">
                           <p class="lead text-center">or</p>
 
-                          <button type="submit" class="btn btn-default big-button">Become a traveller</button>                                    
+                          <button ng-click="inherit.usertype = 'traveller'; inherit.goCreate()" type="submit" class="btn btn-default big-button">Become a traveller</button>                                    
 
                       </div>
                   </div>
@@ -37,7 +37,7 @@
                       <div class="search-form padding-top col-md-4 text-center">
                           <p class="lead text-center">or</p>
 
-                                    <button type="submit" class="btn btn-default big-button">Become a shopper</button>                                    
+                                    <button ng-click="inherit.usertype = 'shopper'; inherit.goCreate()" type="submit" class="btn btn-default big-button">Become a shopper</button>                                    
 
                       </div>
                   </div>
@@ -90,7 +90,7 @@
                     
                     <p class="lead text-center">Did not find what you were looking for?</p>
                     <div class="col-md-offset-5 col-md-2">
-                        <button style="display: block; width: 100%;" type="button" class="btn btn-danger large">Create you own ad</button>
+                        <button ng-click="inherit.goCreate()" style="display: block; width: 100%;" type="button" class="btn btn-danger large">Create you own ad</button>
                     </div>
 
                 </div>

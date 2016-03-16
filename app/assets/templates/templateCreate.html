@@ -23,16 +23,78 @@
 
 			</ul>			
 		</div>
-		<div class="row padding-top">
-          <div class="search-form padding-top col-md-8 text-center">
-                <form ng-submit="">
-                        <input type="text" class="form-control search-input" placeholder="Countries">
-                        <input type="text" class="form-control search-input" placeholder="City">
-                        <button type="submit" class="btn btn-default">Go</button>                                    
-                </form>
+		<div class="row padding-top" ng-if="inherit.usertype == 'shopper'">
+          <div class="padding-top col-md-offset-2 col-md-8 text-center">
+                <form ng-if = "local.stages[0]">
+				    <div class="form-group">
+				      <label for="departure">From:</label>
+					      <select multiple class="form-control" required>
+					        <option>Country 1</option>
+					        <option>Country 2</option>
+					        <option>Country 3</option>
+					        <option>Country 4</option>
+					        <option>Country 5</option>
+					      </select>
+					      (hold ctrl to select more than one country)
+				    </div>
+				    <div class="form-group">
+				      <label for="arrival">To</label>
+				      <input type="text" class="form-control" placeholder="City">
+				    </div>
+				    <div class="form-group">
+				      <label for="date">Date</label>
+				      <input type="date" class="form-control">
+				    </div>
+
+				</form>
+                <form ng-if = "local.stages[1]">
+				    <div class="form-group">
+				      <label for="departure">Item photo:</label>
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+							  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+
+							  </div>
+							  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+							  <div>
+							    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+							    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+							  </div>
+							</div>
+				    </div>
+
+				</form>				
 
           </div>
 		</div>		
+		<div class="row padding-top" ng-if="inherit.usertype == 'traveller'">
+          <div class="padding-top col-md-offset-2 col-md-8 text-center">
+                <form ng-if = "local.stages[0]">
+				    <div class="form-group">
+				      <label for="arrival">From</label>
+				      <input type="text" class="form-control" placeholder="City">
+				    </div>
+				    <div class="form-group">
+				      <label for="arrival">To</label>
+				      <input type="text" class="form-control" placeholder="City">
+				    </div>
+				    <div class="form-group">
+				      <label for="date">Date</label>
+				      <input type="date" class="form-control">
+				    </div>
+				</form>
+                <form ng-if = "local.stages[1]">
+				    <div class="form-group">
+				      <label for="arrival">First Name</label>
+				      <input type="text" class="form-control" placeholder="City">
+				    </div>
+				    <div class="form-group">
+				      <label for="arrival">Last Name</label>
+				      <input type="text" class="form-control" placeholder="City">
+				    </div>
+				</form>			
+
+          </div>
+		</div>			
 		<div class="row padding-top">
 			<button ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button>
 			<button ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
