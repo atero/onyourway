@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="col-md-offset-2 col-md-8">
+    	<div class="row">
+			<div class="row padding-top">
+	            <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">Create a new purchase request</p>
+	            <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">Propose a new delivery</p>
+	        </div>        
+        	<ul class='nav nav-wizard' ng-if="inherit.usertype == 'shopper'">
+
+			  <li ng-class='{"active": local.stages[0]}'>Geographics</li>
+
+			  <li ng-class='{"active": local.stages[1]}'>Item description</li>
+
+			  <li ng-class='{"active": local.stages[2]}'>Traveller's reward</li>
+			  <li ng-class='{"active": local.stages[3]}'>Summary and confirmation</li>
+
+			</ul>
+			<ul class='nav nav-wizard' ng-if="inherit.usertype == 'traveller'">
+
+			  <li ng-class='{"active": local.stages[0]}'>Trip & dates</li>
+
+			  <li ng-class='{"active": local.stages[1]}'>Personal details</li>
+
+			</ul>			
+		</div>
+		<div class="row padding-top">
+          <div class="search-form padding-top col-md-8 text-center">
+                <form ng-submit="">
+                        <input type="text" class="form-control search-input" placeholder="Countries">
+                        <input type="text" class="form-control search-input" placeholder="City">
+                        <button type="submit" class="btn btn-default">Go</button>                                    
+                </form>
+
+          </div>
+		</div>		
+		<div class="row padding-top">
+			<button ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button>
+			<button ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
+		</div>
+	</div>
+
+</div>

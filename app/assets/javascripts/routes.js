@@ -17,5 +17,11 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
         controller: 'ResultsCtrl'
     })
 
+    $stateProvider
+     .state('create', {
+        url:'/create',
+        templateUrl: "templateCreate.html",
+        controller: 'CreateCtrl'
+      })
 
 }]);
