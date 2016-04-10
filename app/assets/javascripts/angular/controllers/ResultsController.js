@@ -1,4 +1,4 @@
-App.controller('ResultsCtrl',['$scope','$state', function($scope,$state){
+App.controller('ResultsCtrl',['$scope','$state', "$uibModal", function($scope,$state,$uibModal){
 	
 	var monthNames = [
 	  " January ", " February ", " March ",
@@ -8,7 +8,6 @@ App.controller('ResultsCtrl',['$scope','$state', function($scope,$state){
 	];
 
 	var getResults = function(){
-		console.log("here")
 		if($scope.inherit.usertype == 'traveller'){
 			return Requests
 		}else{
@@ -20,6 +19,28 @@ App.controller('ResultsCtrl',['$scope','$state', function($scope,$state){
 		results: getResults()
 	}
 	
+
+ $scope.propose = function (type, result) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'templateModal.html',
+      controller: 'ModalCtrl',
+      size: "md",
+      resolve: {
+        result: function () {
+          return result;
+        },
+        type: function () {
+          return type;
+        },
+      }
+    });
+	
+	modalInstance.result.then(function (message) {
+      	console.log(message)
+      })
+}
 
 
 

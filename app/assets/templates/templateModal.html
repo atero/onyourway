@@ -1,0 +1,76 @@
+<div class="modal-header">
+    <p ng-if="local.usertype == 'traveller'" class="lead text-center">Propose to deliver</p>
+    <p ng-if="local.usertype == 'shopper'" class="lead text-center">Request a delivery</p>
+</div>
+
+<div ng-if="local.usertype == 'traveller' && !local.validated" class="modal-body">
+
+    <div class="form-group">
+      <label for="arrival">From</label>
+      <input type="text" class="form-control" placeholder="City" ng-model="local.delivery_from">
+    </div>
+
+    <div class="form-group">
+      <label for="arrival">To</label>
+      <input type="text" class="form-control" placeholder="City" ng-model="local.delivery_to">
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" ng-model="local.delivery_date">
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="content" type="text" ng-model="local.delivery_message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
+    </div>
+
+</div>
+
+<div ng-if="local.usertype == 'shopper' && !local.validated" class="modal-body">
+
+    <div class="form-group">
+      <label for="arrival">What do you need to be delivered</label>
+      <input type="text" class="form-control" placeholder="Iphone 8" ng-model="local.order_item">
+    </div>
+
+    <div class="form-group">
+      <label for="arrival">Approximate price (in €)</label>
+      <input type="number" class="form-control" placeholder="100" ng-model="local.order_price">
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Quantity</label>
+      <input type="number" class="form-control" ng-model="local.order_q" placeholder="2">
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Reward (in €)</label>
+      <input type="number" class="form-control" ng-model="local.order_reward" placeholder="Generally between 10€ and 2% of the total order">
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="content" type="text" ng-model="local.order_message" class="form-control" placeholder="Additional information (link towards an item photo, color, size etc...)"></textarea>
+    </div>
+
+</div>
+
+<div ng-if="local.validated" class="modal-body">
+
+<h5>You're about to send the following message to {{local.ad.name}}:</h5>
+
+<p ng-if = "local.usertype == 'traveller'">Hi, I'm travelling from {{local.delivery_from}} to {{local.delivery_to}} on the {{local.delivery_date| date : mediumDate}}.
+{{local.delivery_message}}</p>
+
+<p ng-if = "local.usertype == 'shopper'">Hi, I need {{local.order_q}} {{local.order_item}} to be delivered from {{local.ad.from}} to {{local.ad.to}}. An approximative price would be of {{local.order_q*local.order_price}}€ and you reward would be of {{local.order_reward}}€.
+{{local.order_message}}</p>
+
+Looking forward to hearing from you!
+
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+</div>

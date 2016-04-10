@@ -11,45 +11,45 @@
 
 			  <li ng-class='{"active": local.stages[1]}'>Item description</li>
 
-			  <li ng-class='{"active": local.stages[2]}'>Traveller's reward</li>
+			  <li ng-class='{"active": local.stages[2]}'>Price</li>
 			  <li ng-class='{"active": local.stages[3]}'>Summary and confirmation</li>
 
 			</ul>
-			<ul class='nav nav-wizard' ng-if="inherit.usertype == 'traveller'">
+<!-- 			<ul class='nav nav-wizard' ng-if="inherit.usertype == 'traveller'">
 
 			  <li ng-class='{"active": local.stages[0]}'>Trip & dates</li>
 
 			  <li ng-class='{"active": local.stages[1]}'>Personal details</li>
 
-			</ul>			
+			</ul>	 -->		
 		</div>
 		<div class="row padding-top" ng-if="inherit.usertype == 'shopper'">
           <div class="padding-top col-md-offset-2 col-md-8 text-center">
                 <form ng-if = "local.stages[0]">
 				    <div class="form-group">
 				      <label for="departure">From:</label>
-					      <select multiple class="form-control" required>
-					        <option>Country 1</option>
-					        <option>Country 2</option>
-					        <option>Country 3</option>
-					        <option>Country 4</option>
-					        <option>Country 5</option>
+					      <select ng-model="local.request.from" multiple class="form-control" required>
+					        <option ng-repeat="country in inherit.countrylist">{{country}}</option>
 					      </select>
 					      (hold ctrl to select more than one country)
 				    </div>
 				    <div class="form-group">
 				      <label for="arrival">To</label>
-				      <input type="text" class="form-control" placeholder="City">
+				      <input type="text" class="form-control" placeholder="City" ng-model="local.request.to">
 				    </div>
 				    <div class="form-group">
 				      <label for="date">Date</label>
-				      <input type="date" class="form-control">
+				      <input type="date" class="form-control" ng-model="local.request.date">
 				    </div>
 
 				</form>
                 <form ng-if = "local.stages[1]">
 				    <div class="form-group">
-				      <label for="departure">Item photo:</label>
+				      <label for="arrival">What do you need to be delivered</label>
+				      <input type="text" class="form-control" placeholder="Iphone 8" ng-model="local.request.item">
+				    </div>                
+				    <label for="">Item photo:</label>
+				    <div class="form-group">
 							<div class="fileinput fileinput-new" data-provides="fileinput">
 							  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
 
@@ -57,15 +57,66 @@
 							  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 							  <div>
 							    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-							    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+							    <a class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 							  </div>
 							</div>
 				    </div>
+				    <div class="form-group">
+				        <label for="message">Additional information</label>
+				        <textarea name="content" type="text" ng-model="local.request.details" class="form-control" placeholder="Additional information (link towards an item photo, color, size etc)"></textarea>
+				    </div>				    
 
-				</form>				
+				</form>
+
+				<form ng-if = "local.stages[2]">
+				    <div class="form-group">
+				      <label for="arrival">Approximate price (in €)</label>
+				      <input type="number" class="form-control" placeholder="100" ng-model="local.request.price">
+				    </div>
+				    
+				    <div class="form-group">
+				      <label for="date">Quantity</label>
+				      <input type="number" class="form-control" ng-model="local.request.q" placeholder="2">
+				    </div>
+				    
+				    <div class="form-group">
+				      <label for="date">Reward for the traveller (in €)</label>
+				      <input type="number" class="form-control" ng-model="local.request.reward" placeholder="Generally between 10€ and 2% of the total order">
+				    </div>
+
+				</form>
+				<form ng-if = "local.stages[3]">
+
+				    <div class="form-group">
+				      <label for="arrival">Summary</label><br/>
+
+				      You're about to publish the following purchase request:<br/>
+				      	<div class="padding-top">
+					      <span class="pull-left">From:</span><span class="pull-right">{{local.request.from.join(", ")}}</span><br/>
+					      <span class="pull-left">To:</span><span class="pull-right">{{local.request.to}}</span><br/>
+					      <span class="pull-left">Date:</span><span class="pull-right">{{local.request.date| date : mediumDate}}</span><br/>
+					      <span class="pull-left">Qty:</span><span class="pull-right">{{local.request.q}}</span><br/>
+					      <span class="pull-left">Item:</span><span class="pull-right">{{local.request.item}}</span><br/>
+					      {{local.request.details}}<br/>
+						</div>
+				      	<div class="padding-top">
+					      <span class="pull-left">Total items price:</span><span class="pull-right">{{local.request.price*local.request.q}}€</span><br/>
+					      <span class="pull-left">Traveller's reward:</span><span class="pull-right">{{local.request.reward}}€</span><br/>
+					      <span class="pull-left">Shop'N'Ship fee:</span><span class="pull-right">{{local.request.price*local.request.q*0.03}}€</span><br/>
+						</div>
+						
+						<div class="padding-top">
+							<h5 class="pull-left">Total:</h5><br/>
+							<span style="padding-top:10px" class="pull-right">{{local.request.reward +local.request.price*local.request.q + local.request.price*local.request.q*0.03}}€</span><br/>
+						</div>
+				    </div>
+
+				</form>
+
 
           </div>
-		</div>		
+		</div>
+
 		<div class="row padding-top" ng-if="inherit.usertype == 'traveller'">
           <div class="padding-top col-md-offset-2 col-md-8 text-center">
                 <form ng-if = "local.stages[0]">
@@ -81,23 +132,18 @@
 				      <label for="date">Date</label>
 				      <input type="date" class="form-control">
 				    </div>
-				</form>
-                <form ng-if = "local.stages[1]">
 				    <div class="form-group">
-				      <label for="arrival">First Name</label>
-				      <input type="text" class="form-control" placeholder="City">
-				    </div>
-				    <div class="form-group">
-				      <label for="arrival">Last Name</label>
-				      <input type="text" class="form-control" placeholder="City">
-				    </div>
-				</form>			
+				        <label for="message">Message</label>
+				        <textarea name="content" type="text" ng-model="local.delivery_message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
+				    </div>				    
+				</form>		
 
           </div>
-		</div>			
+		</div>
+
 		<div class="row padding-top">
-			<button ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button>
-			<button ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
+			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button><button ng-if="local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Publish the request</button>
+			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
 		</div>
 	</div>
 

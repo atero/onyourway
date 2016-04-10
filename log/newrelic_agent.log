@@ -2254,3 +2254,25 @@
 [2016-03-16 11:47:09 +0100 ksenias-mbp.eki.group (30830)] ERROR : Invalid license key, please contact support@newrelic.com
 [2016-03-16 11:47:09 +0100 ksenias-mbp.eki.group (30830)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
 [2016-03-16 12:18:05 +0100 ksenias-mbp.eki.group (30830)] INFO : Starting Agent shutdown
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Starting the New Relic agent in "development" environment.
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] WARN : No configuration file found. Working directory = /Users/xksusha/Desktop/Dev/ShopNShip
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] WARN : Looked in these locations (based on defaults): /Users/xksusha/Desktop/Dev/ShopNShip/config/newrelic.yml, /Users/xksusha/Desktop/Dev/ShopNShip/newrelic.yml, /Users/xksusha/Desktop/Dev/ShopNShip/config/newrelic.yml, /Users/xksusha/Desktop/Dev/ShopNShip/newrelic.yml, /Users/xksusha/.newrelic/newrelic.yml, /Users/xksusha/newrelic.yml
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Environment: development
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Dispatcher: webrick
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Application: development
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing middleware-based Excon instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Mongo instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Net instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Rails 4 Controller instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Rails 4 view instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Installing Rails 4 Error instrumentation
+[2016-04-10 12:05:49 +0200 Air-de-Ksusha.lan (85978)] INFO : Finished instrumentation
+[2016-04-10 12:05:50 +0200 Air-de-Ksusha.lan (85978)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-04-10 12:05:55 +0200 Air-de-Ksusha.lan (85978)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-04-10 12:05:55 +0200 Air-de-Ksusha.lan (85978)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-04-10 17:12:31 +0200 Air-de-Ksusha.lan (85978)] INFO : Starting Agent shutdown

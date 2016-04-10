@@ -1,11 +1,13 @@
 App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
 	
-	$scope.local = {}
+	$scope.local = {
+		request:{}
+	}
 
-	if($scope.inherit.usertype == "traveller"){
+	if($scope.inherit.usertype == "shopper"){
 		$scope.local.stages=[true, false, false, false]
 	}else{
-		$scope.local.stages=[true, false]
+		$scope.local.stages=[true]
 	}
 
 	$scope.stepForward = function(){

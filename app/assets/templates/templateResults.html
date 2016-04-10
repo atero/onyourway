@@ -1,11 +1,13 @@
 <!-- Page Content -->
     <div class="container">
 
+
+
         <div class="row">
 
                 <div class="col-md-12" style="border-left: 1px solid #ddd;">
                   <div class="row" ng-show="inherit.usertype == 'shopper'">
-                      <div class="search-form padding-top col-md-8 text-center">
+                      <div class="search-form padding-top text-center">
                           <p class="lead text-center">Search for traveller's ads</p>
 
                             <form ng-submit="">
@@ -15,16 +17,11 @@
                             </form>
 
                       </div>
-                      <div class="search-form padding-top col-md-4 text-center">
-                          <p class="lead text-center">or</p>
 
-                          <button ng-click="inherit.usertype = 'traveller'; inherit.goCreate()" type="submit" class="btn btn-default big-button">Become a traveller</button>                                    
-
-                      </div>
                   </div>
 
                   <div class="row" ng-show="inherit.usertype == 'traveller'">
-                      <div class="search-form padding-top col-md-8 text-center">
+                      <div class="search-form padding-top text-center">
                           <p class="lead text-center">Search for shopper's ads</p>
 
                             <form ng-submit="">
@@ -34,12 +31,7 @@
                             </form>
 
                       </div>
-                      <div class="search-form padding-top col-md-4 text-center">
-                          <p class="lead text-center">or</p>
 
-                                    <button ng-click="inherit.usertype = 'shopper'; inherit.goCreate()" type="submit" class="btn btn-default big-button">Become a shopper</button>                                    
-
-                      </div>
                   </div>
 
                   <div class="row padding-top">
@@ -63,7 +55,7 @@
 
                                   <td class="home-table-td"><img class="profile-photo" src="images/nophoto.png" alt=""></th>
                                   <td valign="middle">{{result.name}} wants the {{result.product}} to be delivered to {{result.to}}</th>
-                                  <td valign="middle"><button type="button" class="btn btn-default">Propose yourself</button></td>
+                                  <td valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)">Propose yourself</button></td>
                                 </tr>
 
                               </tbody>
@@ -73,7 +65,7 @@
 
                                   <td class="home-table-td profile-photo"><img class="profile-photo" src="images/nophoto.png" alt=""></th>
                                   <td valign="middle">{{result.name}} travels from {{result.from}} to {{result.to}} on the {{result.date}}</th>
-                                  <td valign="middle"><button type="button" class="btn btn-default">Send a request</button></td>
+                                  <td valign="middle"><button type="button" class="btn btn-default" ng-click="propose('shopper', result)">Send a request</button></td>
                                   
                                 </tr>
 
