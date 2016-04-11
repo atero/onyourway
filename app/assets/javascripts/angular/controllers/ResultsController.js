@@ -1,5 +1,5 @@
 App.controller('ResultsCtrl',['$scope','$state', "$uibModal", function($scope,$state,$uibModal){
-	
+	$scope.inherit.usertype == 'shopper'
 	var monthNames = [
 	  " January ", " February ", " March ",
 	  " April ", " May ", " June ", " July ",
