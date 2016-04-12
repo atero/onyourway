@@ -1,7 +1,17 @@
 App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
 	
 	$scope.local = {
-		request:{}
+		request:{
+			from:[],
+			to:"",
+			date: new Date()
+		},
+		delivery:{
+			from:"",
+			to:"",
+			date: new Date(),
+			message: ""
+		}
 	}
 
 	if($scope.inherit.usertype == "shopper"){

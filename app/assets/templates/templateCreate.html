@@ -14,24 +14,14 @@
 			  <li ng-class='{"active": local.stages[2]}'>Price</li>
 			  <li ng-class='{"active": local.stages[3]}'>Summary and confirmation</li>
 
-			</ul>
-<!-- 			<ul class='nav nav-wizard' ng-if="inherit.usertype == 'traveller'">
-
-			  <li ng-class='{"active": local.stages[0]}'>Trip & dates</li>
-
-			  <li ng-class='{"active": local.stages[1]}'>Personal details</li>
-
-			</ul>	 -->		
+			</ul>	
 		</div>
 		<div class="row padding-top" ng-if="inherit.usertype == 'shopper'">
           <div class="padding-top col-md-offset-2 col-md-8 text-center">
                 <form ng-if = "local.stages[0]">
 				    <div class="form-group">
 				      <label for="departure">From:</label>
-					      <select ng-model="local.request.from" multiple class="form-control" required>
-					        <option ng-repeat="country in inherit.countrylist">{{country}}</option>
-					      </select>
-					      (hold ctrl to select more than one country)
+				      <my-countries tags="local.request.from" autocomplete="inherit.countrylist"></my-countries>
 				    </div>
 				    <div class="form-group">
 				      <label for="arrival">To</label>
@@ -120,22 +110,17 @@
 		<div class="row padding-top" ng-if="inherit.usertype == 'traveller'">
           <div class="padding-top col-md-offset-2 col-md-8 text-center">
                 <form ng-if = "local.stages[0]">
-				    <div class="form-group">
-				      <label for="arrival">From</label>
-				      <input type="text" class="form-control" placeholder="City">
-				    </div>
-				    <div class="form-group">
-				      <label for="arrival">To</label>
-				      <input type="text" class="form-control" placeholder="City">
-				    </div>
-				    <div class="form-group">
-				      <label for="date">Date</label>
-				      <input type="date" class="form-control">
-				    </div>
-				    <div class="form-group">
-				        <label for="message">Message</label>
-				        <textarea name="content" type="text" ng-model="local.delivery_message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
-				    </div>				    
+						<label>From:</label>                            
+						<input ng-model="local.delivery.from" list="countries" type="text" class="form-control" placeholder="Country">
+						<datalist id="countries">
+						<option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+						</datalist>
+						<label>To:</label>                                    
+						<input ng-model="local.delivery.to" type="text" class="form-control" placeholder="City">
+						<label for="date">Date:</label>
+						<input ng-model="local.delivery.date" type="date" class="form-control">
+				        <label for="message">Message:</label>
+				        <textarea name="content" type="text" ng-model="local.delivery.message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
 				</form>		
 
           </div>

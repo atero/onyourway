@@ -8,6 +8,21 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.tags {
+   margin-bottom: 5px;
+} 
+
+.tags .tag {
+   display: inline-block;
+   margin-right: 5px;
+   font-size: 13px;
+}
+  
+.tag .close {
+   font-size: 14px;
+   margin-left: 5px;
+}
+
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td{
     vertical-align: middle !important;
 }
@@ -79,8 +94,9 @@ body {
     padding-top: 45px;
 }
 .search-input{
-    max-width:300px;
-    margin:20px auto;
+    max-width:200px;
+    margin:20px;
+    display: inline-block;
 }
 .big-button{
     height:100px;

@@ -6,30 +6,19 @@
         <div class="row">
 
                 <div class="col-md-12" style="border-left: 1px solid #ddd;">
-                  <div class="row" ng-show="inherit.usertype == 'shopper'">
-                      <div class="search-form padding-top text-center">
-                          <p class="lead text-center">Search for traveller's ads</p>
-
-                            <form ng-submit="">
-                                    <label>From:</label>
-                                    <input type="text" class="form-control search-input" placeholder="Countries">
-                                    <label>To:</label>
-                                    <input type="text" class="form-control search-input" placeholder="City">
-                                    <button type="submit" class="btn btn-default">Go</button>                                    
-                            </form>
-
-                      </div>
-
-                  </div>
-
                   <div class="row" ng-show="inherit.usertype == 'traveller'">
                       <div class="search-form padding-top text-center">
                           <p class="lead text-center">Search for shopper's ads</p>
 
                             <form ng-submit="">
-                                    <input type="text" class="form-control search-input" placeholder="Countries">
-                                    <input type="text" class="form-control search-input" placeholder="City">
-                                    <button type="submit" class="btn btn-default">Go</button>                                    
+                                    <label>From:</label>                            
+                                    <input ng-model="search.from" list="countries" type="text" class="form-control search-input" placeholder="Country">
+                                    <datalist id="countries">
+                                        <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+                                    </datalist>
+                                    <label>To:</label>                                    
+                                    <input ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
+                                    <button type="submit" class="btn btn-default" ng-click="local.results = filterResults()">Go</button>                                    
                             </form>
 
                       </div>
@@ -38,15 +27,17 @@
 
                   <div class="row padding-top">
                       <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">List of shoppers</p>
-                      <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">List of travellers</p>
                       <div class="col-md-offset-1 col-md-10">
                         <table class="table">
 
                               <thead>
 
-                                <th ng-class="home-table-th"></th>
-                                <th ng-class="home-table-th"></th>
-                                <th ng-class="home-table-th"></th>
+                                <th class="home-table-th text-center"></th>
+                                <th class="home-table-th text-center">What</th>
+                                <th class="home-table-th text-center">From</th>
+                                <th class="home-table-th text-center">To</th>
+                                <th class="home-table-th text-center">When</th>
+                                <th class="home-table-th text-center"></th>
 
                               </thead>
 
@@ -55,20 +46,12 @@
 
                                 <tr ng-repeat="result in local.results">
 
-                                  <td class="home-table-td"><img class="profile-photo" src="images/nophoto.png" alt=""></th>
-                                  <td valign="middle">{{result.name}} wants the {{result.product}} to be delivered to {{result.to}}</th>
-                                  <td valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)">Propose yourself</button></td>
-                                </tr>
-
-                              </tbody>
-                            <tbody ng-if="inherit.usertype == 'shopper'" >
-
-                                <tr ng-repeat="result in local.results">
-
-                                  <td class="home-table-td profile-photo"><img class="profile-photo" src="images/nophoto.png" alt=""></th>
-                                  <td valign="middle">{{result.name}} travels from {{result.from}} to {{result.to}} on the {{result.date}}</th>
-                                  <td valign="middle"><button type="button" class="btn btn-default" ng-click="propose('shopper', result)">Send a request</button></td>
-                                  
+                                  <td style="width:100px" class="home-table-td text-center"><img class="profile-photo" src="images/nophoto.png" alt="">{{result.name}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{result.product}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{result.from.join(", ")}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{result.to}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{result.date | date : mediumDate}}</th>
+                                  <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)">Propose yourself</button></td>
                                 </tr>
 
                               </tbody>
@@ -79,7 +62,7 @@
 
                 </div>
 
-                <div class="col-md-12 register-bottom">
+                <div class="col-md-12 register-bottom" ng-show="local.results.length == 0">
                 
                     
                     <p class="lead text-center">Did not find what you were looking for?</p>
