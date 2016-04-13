@@ -18,3 +18,22 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance', "type", "result", func
 		}
 	}
 }]);
+
+App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($scope, $uibModalInstance, type){
+	$scope.local={
+		type:type
+	}
+
+	$scope.signin = function(){
+		$uibModalInstance.close($scope.local)
+	}
+
+	$scope.signup = function(){
+		$uibModalInstance.close($scope.local)
+	}
+
+	$scope.change_type = function(){
+		$scope.local.type = ($scope.local.type == "signin")?"signup":"signin"
+	}
+
+}]);

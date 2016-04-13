@@ -4,126 +4,144 @@ Requests = [
                 to: "Paris",
                 name: "Ksenia K",
                 product: "Колбаса Докторская",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Andorra", "Angola"],
                 to: "Paris",
                 name: "Masha X",
                 product: "Лапша Ролтон",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Albania", "Armenia"],
                 to: "Paris",
                 name: "Olga Y",
                 product: "Одеколон Октябрь",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Comoros", "Eritrea"],
                 to: "Paris",
                 name: "Svetlana H",
                 product: "Мазь Звездочка",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Andorra", "Angola"],
                 to: "Moscow",
                 name: "Dan H",
                 product: "superstar",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Comoros", "Eritrea"],
                 to: "Paris",
                 name: "Svetlana H",
                 product: "Мазь Звездочка",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Aruba", "Australia"],
                 to: "New York",
                 name: "David H",
                 product: "Мазь",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Bahamas", "Bahrain"],
                 to: "London",
                 name: "Justin H",
                 product: "MacBook",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Bangladesh", "Barbaros"],
                 to: "Jouy",
                 name: "Madonna M",
                 product: "dream cream",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Spain", "Sri Lanka"],
                 to: "Casablanka",
                 name: "Adam H",
                 product: "Vodka",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Sweden", "Switzerland"],
                 to: "Berlin",
                 name: "Alex H",
                 product: "meat balls",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Thailand", "Togo"],
                 to: "Paris",
                 name: "Dimi H",
                 product: "Coconut",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Uganda", "Ukraine"],
                 to: "Rome",
                 name: "Bianca H",
                 product: "Jamon",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Urugway", "Uzbekistan"],
                 to: "Madrid",
                 name: "Jose H",
                 product: "Tequila",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Viet Nam", "Russia"],
                 to: "Paris",
                 name: "Joanne H",
                 product: "Caviar",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Mali", "Malta"],
                 to: "Lyon",
                 name: "Pierre H",
                 product: "Star",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Morocco", "United States"],
                 to: "Milan",
                 name: "Jhon H",
                 product: "Toy",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
         {
                 from: ["Nepal", "Mali"],
                 to: "Moscow",
                 name: "Alex H",
                 product: "Yoga mat",
-                date: new Date()
+                date: new Date(),
+				reward: Math.round(Math.random()*20)
         },
 
 ]

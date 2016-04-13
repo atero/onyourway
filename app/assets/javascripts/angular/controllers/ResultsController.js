@@ -48,7 +48,7 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal", function($scope,$s
     });
 	
 	modalInstance.result.then(function (message) {
-      	console.log(message)
+      	$scope.inherit.openSignin()
       })
 }
 

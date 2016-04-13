@@ -17,7 +17,7 @@
                                         <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
                                     </datalist>
                                     <label>To:</label>                                    
-                                    <input ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
+                                    <input style="text-transform: capitalize;" ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
                                     <button type="submit" class="btn btn-default" ng-click="local.results = filterResults()">Go</button>                                    
                             </form>
 
@@ -37,6 +37,7 @@
                                 <th class="home-table-th text-center">From</th>
                                 <th class="home-table-th text-center">To</th>
                                 <th class="home-table-th text-center">When</th>
+                                <th class="home-table-th text-center">Reward</th>
                                 <th class="home-table-th text-center"></th>
 
                               </thead>
@@ -51,6 +52,7 @@
                                   <td class="home-table-th text-center" valign="middle">{{result.from.join(", ")}}</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.to}}</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.date | date : mediumDate}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{result.reward}}€</th>
                                   <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)">Propose yourself</button></td>
                                 </tr>
 

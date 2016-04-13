@@ -94,10 +94,18 @@ body {
     padding-top: 45px;
 }
 .search-input{
-    max-width:200px;
+    max-width:230px;
     margin:20px;
     display: inline-block;
 }
+li.signup{
+  background-color: rgba(255, 255, 255, 0.12);
+  cursor:pointer;
+}
+li.signin{
+  cursor:pointer;
+}
+
 .big-button{
     height:100px;
 }

@@ -10,7 +10,6 @@ App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
 			from:"",
 			to:"",
 			date: new Date(),
-			message: ""
 		}
 	}
 
@@ -29,6 +28,10 @@ App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
 		curr_stage = $scope.local.stages.indexOf(true)
 		$scope.local.stages[curr_stage] = false
 		$scope.local.stages[curr_stage-1] = true
+	}
+	$scope.publishRequest = function(){
+		console.log("triggered")
+		$scope.inherit.openSignin()
 	}
 
 }]);
