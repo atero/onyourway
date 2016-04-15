@@ -1,5 +1,5 @@
-App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
-	
+App.controller('CreateCtrl',['$scope','$state','localuser', function($scope,$state, localuser){
+	if (localuser) $scope.inherit.user = localuser;
 	$scope.local = {
 		request:{
 			from:[],
@@ -30,8 +30,7 @@ App.controller('CreateCtrl',['$scope','$state', function($scope,$state){
 		$scope.local.stages[curr_stage-1] = true
 	}
 	$scope.publishRequest = function(){
-		console.log("triggered")
-		$scope.inherit.openSignin()
+		if (!$scope.inherit.user) $scope.inherit.openSignin()
 	}
 
 }]);

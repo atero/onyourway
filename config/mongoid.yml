@@ -4,12 +4,6 @@ development:
       uri: <%= ENV['Mongolab_uri'] %>
       options:
   options:
-test:
-  clients:
-    default:
-      uri: <%= ENV['Mongolab_test_uri'] %>
-      options:
-  options:
 production:
   clients:
     default:

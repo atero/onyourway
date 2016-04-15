@@ -1,4 +1,5 @@
-App.controller('ResultsCtrl',['$scope','$state', "$uibModal", function($scope,$state,$uibModal){
+App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser', function($scope,$state,$uibModal, localuser){
+	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
 	// var monthNames = [
 	//   " January ", " February ", " March ",
@@ -48,8 +49,15 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal", function($scope,$s
     });
 	
 	modalInstance.result.then(function (message) {
-      	$scope.inherit.openSignin()
-      })
+      	if (!$scope.inherit.user){
+      		$scope.inherit.openSignin().then(function(user){
+      			console.log(user, message)
+      		})
+      	}else{
+			console.log($scope.inherit.user, message)
+      	}
+
+     })
 }
 
 
