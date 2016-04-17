@@ -90,7 +90,7 @@ Requests = [
         {
                 from: ["Thailand", "Togo"],
                 to: "Paris",
-                name: "Dimi H",
+                name: "Mane S",
                 product: "Coconut",
                 date: new Date(),
 				reward: Math.round(Math.random()*20)
@@ -122,7 +122,7 @@ Requests = [
         {
                 from: ["Mali", "Malta"],
                 to: "Lyon",
-                name: "Pierre H",
+                name: "Mane S",
                 product: "Star",
                 date: new Date(),
 				reward: Math.round(Math.random()*20)
@@ -138,7 +138,7 @@ Requests = [
         {
                 from: ["Nepal", "Mali"],
                 to: "Moscow",
-                name: "Alex H",
+                name: "Mane S",
                 product: "Yoga mat",
                 date: new Date(),
 				reward: Math.round(Math.random()*20)
@@ -146,38 +146,26 @@ Requests = [
 
 ]
 
-Proposals = [
+var Shipments = [
 	{
 		from: "France",
 		to: "Moscow",
-		day: 8,
-		month: 4,
-		year: 2016,
-		name: "Prenom Nom",
+		date: new Date()
 	},
 	{
 		from: "France",
 		to: "Berlin",
-		day: 18,
-		month: 5,
-		year: 2016,
-		name: "Prenom Nom",
+		date: new Date()
 	},
 	{
 		from: "Germany",
 		to: "Moscow",
-		day: 10,
-		month: 4,
-		year: 2016,
-		name: "Prenom Nom",
+		date: new Date()
 	},
 	{
 		from: "US",
 		to: "Moscow",
-		day: 10,
-		month: 4,
-		year: 2016,
-		name: "Prenom Nom",
+		date: new Date()
 	}
 ]
 countrylist = [

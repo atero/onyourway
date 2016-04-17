@@ -57,4 +57,57 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
         }
       })
 
+    $stateProvider
+     .state('profile', {
+        url:'/profile',
+        templateUrl: "templateProfile.html",
+        controller: 'ProfileCtrl',
+        resolve: {
+          localuser:['$q', 'Auth', function($q, Auth){
+                var d = $q.defer();
+                var user = Auth.currentUser().then(function(user){
+                  d.resolve(user);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
+          }]
+        }
+      })    
+
+    $stateProvider
+     .state('orders', {
+        url:'/orders',
+        templateUrl: "templateOrders.html",
+        controller: 'OrdersCtrl',
+        resolve: {
+          localuser:['$q', 'Auth', function($q, Auth){
+                var d = $q.defer();
+                var user = Auth.currentUser().then(function(user){
+                  d.resolve(user);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
+          }]
+        }
+      })  
+
+    $stateProvider
+     .state('shipments', {
+        url:'/shipments',
+        templateUrl: "templateShipments.html",
+        controller: 'ShipmentsCtrl',
+        resolve: {
+          localuser:['$q', 'Auth', function($q, Auth){
+                var d = $q.defer();
+                var user = Auth.currentUser().then(function(user){
+                  d.resolve(user);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
+          }]
+        }
+      })  
 }]);

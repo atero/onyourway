@@ -4,16 +4,17 @@ App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Au
 		user: null,
 		loading: false,
 		usertype: "shopper",
-		goSearch:function(){
-			$state.go('results')
+		currentState: function(){
+			return $state.current.name
 		},
-		goCreate:function(){
-			$state.go('create')
+		goState:function(state){
+			$state.go(state)
 		},
 		countrylist: countrylist,
 		logOut: function(){
 			Auth.logout();
-			$scope.inherit.user = null
+			$scope.inherit.user = null;
+			$state.go('welcome')
 		},
 		openSignup: function(){
 			var d = $q.defer();

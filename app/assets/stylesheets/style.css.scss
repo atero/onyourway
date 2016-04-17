@@ -17,6 +17,39 @@ body {
     z-index:10000;
 }
 
+.clickableRow{
+  cursor: pointer;
+}
+
+.clickableRow:hover{
+  background-color: #eee;
+}
+
+.profile-body{
+  position: fixed;
+  padding: 40px;
+  top: 60px;
+  left: 220px;
+  width: calc(100% - 220px);
+}
+
+.left-bar{
+  width: 220px;
+  height: 800px;
+  border-right: rgba(0, 0, 0, 0.04) solid 2px;
+  display: inline-block;
+}
+
+.left-bar li.active a, .left-bar li.active a:focus, .left-bar li.active a:hover{
+  background-color: white;
+  color:#BFBFBF;
+}
+
+.left-bar li a{
+  cursor: pointer;
+  color:black;
+}
+
 .tags {
    margin-bottom: 5px;
 } 
@@ -114,7 +147,9 @@ li.signup{
 li.signin{
   cursor:pointer;
 }
-
+li.profile{
+    cursor:pointer;
+}
 .big-button{
     height:100px;
 }
