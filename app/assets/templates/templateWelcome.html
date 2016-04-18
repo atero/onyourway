@@ -6,18 +6,16 @@
                 <div class="row">
 
                     <div class="col-md-12">
-                        <div class="welcome-image">
-                            <div class="col-md-offset-4 col-md-4">
+                        <div class="welcome-image text-center">
                                 <button ng-click="inherit.usertype = 'shopper'; inherit.goState('create')" class="btn btn-default shopper-button">Request a purchase</button>
-                                 <button ng-click="inherit.usertype = 'traveller'; inherit.goState('search')" class="btn btn-default travaller-button">Become a travaller</button>
-                            </div>
+                                 <button ng-click="inherit.usertype = 'traveller'; inherit.goState('results')" class="btn btn-default travaller-button">Become a travaller</button>
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="padding-top text-center">
-                                <button ng-click="inherit.usertype = 'traveller'; inherit.goState('search')" type="submit" class="btn btn-default big-button">Look up purchase requests</button>
+                                <button ng-click="inherit.usertype = 'traveller'; inherit.goState('results')" type="submit" class="btn btn-default big-button">Look up purchase requests</button>
                     </div>
                 </div>
             </div>
