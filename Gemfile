@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 'ruby 2.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.5'
+gem 'rails', '4.2.0'
 gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
 
@@ -36,13 +36,11 @@ gem 'sass-rails'
 gem 'angularjs-rails'
 gem "angular-ui-bootstrap-rails"
 gem 'angular-rails-templates'
-gem 'spinjs-rails'
+
 gem 'underscore-rails'
 gem 'font-awesome-sass'
-gem 'crossfilter-rails'
 
 gem 'rabl'
-gem 'oj'
 
 # New Relic add-on for heroku
 gem 'newrelic_rpm'
@@ -56,7 +54,11 @@ gem 'uglifier'
 gem "awesome_print", require:"ap"
 gem "pry-rails", group:"development"
 gem 'momentjs-rails'
-gem 'jspdf-rails'
+
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk'
+gem 'angularjs-file-upload-rails', '~> 2.2.0'
+
 group :development do
   gem "better_errors"
   gem "quiet_assets"

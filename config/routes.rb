@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root  'static_pages#home'
+  devise_for :users
 
       namespace :api ,  path: '/api' , defaults: {format: 'json'} do
-
-          namespace :v1 do
-
-          end
-
+        match '/orders', to: 'orders#show', via: [:options]
+        post '/orders', to: 'orders#create'
       end
 
 end

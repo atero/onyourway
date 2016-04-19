@@ -18,13 +18,11 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser', functi
 	}
 	$scope.filterResults = function(){
 		filtered = Requests
-		console.log($scope.search.to)
 		if($scope.search.from && $scope.search.from!=""){
 			filtered = filtered.filter(function(d){
 				return d.from.indexOf($scope.search.from) > -1
 			})
 		}
-		$scope.search = $scope.search.to.charAt(0).toUpperCase() + $scope.search.to.slice(1);
 		if($scope.search.to && $scope.search.to!=""){
 			filtered = filtered.filter(function(d){
 				return d.to.indexOf($scope.search.to) > -1
@@ -53,10 +51,8 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser', functi
 	modalInstance.result.then(function (message) {
       	if (!$scope.inherit.user){
       		$scope.inherit.openSignin().then(function(user){
-      			console.log(user, message)
       		})
       	}else{
-			console.log($scope.inherit.user, message)
       	}
 
      })

@@ -48,6 +48,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
           localuser:['$q', 'Auth', function($q, Auth){
                 var d = $q.defer();
                 var user = Auth.currentUser().then(function(user){
+                  console.log(user)
                   d.resolve(user);
                 }, function(error) {
                   d.resolve(null);

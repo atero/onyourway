@@ -8,9 +8,9 @@
 //= require angular-rails-templates
 //= require underscore
 //= require moment
-//= require jspdf
 //= require main.js
 //= require angular-ui-bootstrap-tpls
 //= require_tree ../templates
 //= require_tree ./angular
 //= require_tree .
+//= require angularjs-file-upload

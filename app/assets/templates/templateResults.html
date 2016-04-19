@@ -17,7 +17,7 @@
                                         <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
                                     </datalist>
                                     <label>To:</label>                                    
-                                    <input style="text-transform: capitalize;" ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
+                                    <input ng-change="search.to = search.to.charAt(0).toUpperCase() + search.to.slice(1);" ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
                                     <button type="submit" class="btn btn-default" ng-click="local.results = filterResults()">Go</button>                                    
                             </form>
 
