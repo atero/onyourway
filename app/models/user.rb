@@ -26,6 +26,7 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_many :orders
+  has_many :shipments
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time

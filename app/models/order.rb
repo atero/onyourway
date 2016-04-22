@@ -29,6 +29,7 @@ class Order
    field :base64_image, type: String
    ## RELATIONSHIPS
    belongs_to :user
+   has_many :shipments
    before_save :process_base64_image
    ## METHODS
 

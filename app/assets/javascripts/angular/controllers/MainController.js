@@ -8,6 +8,7 @@ App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Au
 			return $state.current.name
 		},
 		goState:function(state){
+			$scope.inherit.loading = true;
 			$state.go(state)
 		},
 		countrylist: countrylist,

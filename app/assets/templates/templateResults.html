@@ -36,9 +36,9 @@
                                 <th class="home-table-th text-center">What</th>
                                 <th class="home-table-th text-center">From</th>
                                 <th class="home-table-th text-center">To</th>
-                                <th class="home-table-th text-center">When</th>
                                 <th class="home-table-th text-center">Reward</th>
                                 <th class="home-table-th text-center">Price</th>
+                                <th class="home-table-th text-center">Quantity</th>
                                 <th class="home-table-th text-center"></th>
 
                               </thead>
@@ -52,10 +52,10 @@
                                   <td class="home-table-th text-center" valign="middle">{{result.item}}</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.from.join("/ ")}}</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.to}}</th>
-                                  <td class="home-table-th text-center" valign="middle">{{result.date | date : mediumDate}}</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.reward}}€</th>
                                   <td class="home-table-th text-center" valign="middle">{{result.price}}€</th>
-                                  <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)">Propose yourself</button></td>
+                                  <td class="home-table-th text-center" valign="middle">{{result.quantity}}</th>
+                                  <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default" ng-click="propose('traveller', result)"><i class="fa fa-envelope"></i></button></td>
                                 </tr>
 
                               </tbody>
@@ -66,12 +66,12 @@
 
                 </div>
 
-                <div class="col-md-12 register-bottom" ng-show="local.results.length == 0">
+                <div class="col-md-12 register-bottom">
                 
                     
                     <p class="lead text-center">Did not find what you were looking for?</p>
                     <div class="col-md-offset-5 col-md-2">
-                        <button ng-click="inherit.goState('create')" style="display: block; width: 100%;" type="button" class="btn btn-danger large">Create you own ad</button>
+                        <button ng-click="inherit.goState('create')" style="display: block; width: 100%;" type="button" class="btn btn-custom large">Create you own ad</button>
                     </div>
 
                 </div>

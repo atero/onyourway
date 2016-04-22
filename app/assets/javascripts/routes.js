@@ -125,6 +125,15 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                   d.resolve(null);
                 });
                 return d.promise;
+          }],
+          shipments:['$q', 'Auth', 'Shipment', 'localuser', function($q, Auth, Shipment, localuser){
+                var d = $q.defer();
+                var shipments = Shipment.list({}, function(res){
+                  d.resolve(res);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
           }]
         }
       })  

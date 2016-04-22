@@ -27,11 +27,6 @@
 				      <label for="arrival">To</label>
 				      <input type="text" class="form-control" style="text-transform: capitalize;" placeholder="City" ng-model="local.order.to">
 				    </div>
-				    <div class="form-group">
-				      <label for="date">Date</label>
-				      <input type="date" class="form-control" ng-model="local.order.date">
-				    </div>
-
 				</form>
                 <form ng-if = "local.stages[1]">
 				    <div class="form-group">
@@ -112,23 +107,24 @@
           <div class="padding-top col-md-offset-2 col-md-8 text-center">
                 <form ng-if = "local.stages[0]">
 						<label>From:</label>                            
-						<input ng-model="local.delivery.from" list="countries" type="text" class="form-control" placeholder="Country">
+						<input ng-model="local.shipment.from" list="countries" type="text" class="form-control" placeholder="Country">
 						<datalist id="countries">
 						<option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
 						</datalist>
 						<label>To:</label>                                    
-						<input ng-model="local.delivery.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
+						<input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
 						<label for="date">Date:</label>
-						<input ng-model="local.delivery.date" type="date" class="form-control">
+						<input ng-model="local.shipment.date" type="date" class="form-control">
 				        <label for="message">Message:</label>
-				        <textarea name="content" type="text" ng-model="local.delivery.message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
+				        <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
 				</form>		
 
           </div>
 		</div>
 
 		<div class="row padding-top">
-			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button><button ng-if="local.stages[local.stages.length-1]" ng-click="publishRequest()" class="btn btn-default navigate-button pull-right">Publish the order</button>
+			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button><button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn btn-default navigate-button pull-right">Publish the order</button>
+			<button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the travel</button>
 			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
 		</div>
 	</div>

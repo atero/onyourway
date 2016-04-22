@@ -1,7 +1,9 @@
-App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders', function($scope,$state,$uibModal, localuser, orders){
+App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders','Shipment', function($scope,$state,$uibModal, localuser, orders, Shipment){
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
-
+	
+	$scope.inherit.loading = false;
+	
 	$scope.local={
 		results: orders
 	}
@@ -24,7 +26,17 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 		}
 		return filtered	
 	}
-	
+
+newShipments = function(shipment){
+	$scope.inherit.loading = true;
+
+	console.log(shipment)
+
+	Shipment.create({id:shipment.order_id}, {shipment:shipment}, function(res) {
+		$scope.inherit.loading = false;
+	})
+}
+
  $scope.propose = function (type, result) {
 
     var modalInstance = $uibModal.open({
@@ -33,22 +45,17 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
       controller: 'ModalCtrl',
       size: "md",
       resolve: {
-        result: function () {
-          return result;
-        },
-        type: function () {
-          return type;
-        },
+        order_id: function () {
+          return result.id;
+        }
       }
     });
 	
-	modalInstance.result.then(function (message) {
-      	if (!$scope.inherit.user){
-      		$scope.inherit.openSignin().then(function(user){
-      		})
-      	}else{
-      	}
-
+	modalInstance.result.then(function (shipment) {
+		if(shipment){
+			if (!$scope.inherit.user) $scope.inherit.openSignin().then(newShipments(shipment));
+			else newShipments(shipment)
+		}
      })
 }
 

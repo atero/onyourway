@@ -8,6 +8,10 @@ Rails.application.routes.draw do
         post '/orders', to: 'orders#create'
         get '/orders', to: 'orders#index'
         get '/orders/:user_id', to: 'orders#list'
+        match '/shipments', to: 'shipments#show', via: [:options]
+        post '/shipments/:order_id', to: 'shipments#create'
+        post '/shipments', to: 'shipments#create'
+        get '/shipments', to: 'shipments#list'
       end
 
 end

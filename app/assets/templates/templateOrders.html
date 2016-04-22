@@ -28,9 +28,33 @@
              </div>
              <div class="col-md-8" ng-show="local.data_to_show">
 
-             	<p class="lead text-center">Details and current state of your order</p>
+  				<p class="lead text-center">Shipments proposed for this order</p>
+			    <table class="table">
 
-             	{{local.data_to_show.item}} from {{local.data_to_show.from.join("/ ")}} to {{local.data_to_show.to}}
+			      <thead>
+
+			        <th class="home-table-th text-center">From</th>
+			        <th class="home-table-th text-center">To</th>
+			        <th class="home-table-th text-center">When</th>
+			        <th class="home-table-th text-center">Message</th>
+
+			      </thead>
+
+
+			      <tbody>
+
+			        <tr ng-repeat="shipment in local.data_to_show.shipments" class="clickableRow">
+
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.message}}</th>
+
+			        </tr>
+
+			      </tbody>
+
+				</table>
              	
              </div>
 </div>

@@ -1,11 +1,12 @@
-App.controller('ModalCtrl',['$scope','$uibModalInstance', "type", "result", function($scope,$uibModalInstance,type, result){
+App.controller('ModalCtrl',['$scope','$uibModalInstance', "order_id", function($scope,$uibModalInstance,order_id){
 	$scope.local={
-		usertype:type,
-		ad: result
+		shipment: {
+			order_id: order_id
+		}
 	}
 	$scope.ok = function(){
 		if($scope.local.validated){
-			$uibModalInstance.close($scope.local)
+			$uibModalInstance.close($scope.local.shipment)
 		}else{
 			$scope.local.validated = true			
 		}
@@ -14,7 +15,7 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance', "type", "result", func
 		if($scope.local.validated){
 			$scope.local.validated = false
 		}else{
-			$uibModalInstance.close()		
+			$uibModalInstance.close()
 		}
 	}
 }]);
