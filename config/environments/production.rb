@@ -60,7 +60,7 @@ Rails.application.configure do
 
   config.log_formatter = ::Logger::Formatter.new
   
-  config.paperclip_defaults = {
+ config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['S3_BUCKET_NAME'],

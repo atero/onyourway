@@ -16,8 +16,8 @@
 
 			        <tr ng-repeat="order in local.orders" class="clickableRow">
 
-			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = order">{{order.product}}</th>
-			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = order">{{order.from.join(", ")}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = order">{{order.item}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = order">{{order.from.join("/ ")}}</th>
 			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = order">{{order.to}}</th>
 
 			        </tr>
@@ -30,7 +30,7 @@
 
              	<p class="lead text-center">Details and current state of your order</p>
 
-             	{{local.data_to_show.product}} from {{local.data_to_show.from.join(", ")}} to {{local.data_to_show.to}}
+             	{{local.data_to_show.item}} from {{local.data_to_show.from.join("/ ")}} to {{local.data_to_show.to}}
              	
              </div>
 </div>

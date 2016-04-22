@@ -56,7 +56,9 @@ gem "pry-rails", group:"development"
 gem 'momentjs-rails'
 
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'aws-sdk'
+gem 'aws-s3'
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 gem 'angularjs-file-upload-rails', '~> 2.2.0'
 
 group :development do

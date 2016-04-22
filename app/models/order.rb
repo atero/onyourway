@@ -1,4 +1,6 @@
 class Order
+    require 'aws-sdk-v1'
+  require 'aws-sdk'
    include Mongoid::Document
    include Mongoid::Timestamps
    include Mongoid::Paperclip
@@ -19,12 +21,28 @@ class Order
    field :to, type: String
    field :date, type: Date
    field :item, type: String
-
+   field :message, type: String
+   field :price, type: Float
+   field :quantity, type: Float
+   field :reward, type: Float
+   field :total_price, type: Float
+   field :base64_image, type: String
    ## RELATIONSHIPS
    belongs_to :user
-
+   before_save :process_base64_image
    ## METHODS
 
-  # render only accessible campaigns for a given user
-
+      def process_base64_image
+        p self
+        regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
+        data_uri_parts = self.base64_image.match(regexp) || []
+        extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
+        file_name = SecureRandom.hex
+        data = StringIO.new(Base64.decode64(data_uri_parts[2]))
+        data.class.class_eval { attr_accessor :original_filename, :content_type }
+        data.original_filename = file_name
+        data.content_type = extension
+        self.photo = data # self.image is a paperclip field
+        self.base64_image = ""
+      end
 end

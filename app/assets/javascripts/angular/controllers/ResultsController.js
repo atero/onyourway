@@ -1,15 +1,9 @@
-App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser', function($scope,$state,$uibModal, localuser){
+App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders', function($scope,$state,$uibModal, localuser, orders){
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
-	// var monthNames = [
-	//   " January ", " February ", " March ",
-	//   " April ", " May ", " June ", " July ",
-	//   " August ", " September ", " October ",
-	//   " November ", " December "
-	// ];
 
 	$scope.local={
-		results: Requests
+		results: orders
 	}
 
 	$scope.search = {
@@ -17,7 +11,7 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser', functi
 		from:""
 	}
 	$scope.filterResults = function(){
-		filtered = Requests
+		filtered = orders
 		if($scope.search.from && $scope.search.from!=""){
 			filtered = filtered.filter(function(d){
 				return d.from.indexOf($scope.search.from) > -1

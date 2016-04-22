@@ -35,10 +35,18 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                   d.resolve(null);
                 });
                 return d.promise;
+          }],
+          orders:['$q', 'Auth', 'Order', function($q, Auth, Order){
+                var d = $q.defer();
+                var orders = Order.index({}, function(res){
+                  d.resolve(res);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
           }]
         }
     })
-
     $stateProvider
      .state('create', {
         url:'/create',
@@ -90,8 +98,17 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                   d.resolve(null);
                 });
                 return d.promise;
+          }],
+          orders:['$q', 'Auth', 'Order', 'localuser', function($q, Auth, Order, localuser){
+                var d = $q.defer();
+                var orders = Order.list({id: localuser._id}, function(res){
+                  d.resolve(res);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
           }]
-        }
+        },
       })  
 
     $stateProvider

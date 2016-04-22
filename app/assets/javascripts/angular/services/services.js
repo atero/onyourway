@@ -1,9 +1,11 @@
-
 App.factory('Order',['$resource',function($resource){
 
-	return $resource(api_endpoint+'/orders/', {id:'@id'},
+	return $resource(api_endpoint+'orders/:id/', {id:'@id'},
 	{
-		create: { method:"POST", params: {}, isArray : false }
+		create: { method:"POST", params: {}, isArray : false },
+		index: { method:"GET", params: {}, isArray : true },
+		list: { method:"GET", params: {id :'@id'}, isArray : true }
+
 	});
 }]);
 
