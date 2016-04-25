@@ -2,7 +2,6 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
 	
-	$scope.inherit.loading = false;
 	
 	$scope.local={
 		results: orders
@@ -28,9 +27,8 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 	}
 
 newShipments = function(shipment){
+	console.log("creating")
 	$scope.inherit.loading = true;
-
-	console.log(shipment)
 
 	Shipment.create({id:shipment.order_id}, {shipment:shipment}, function(res) {
 		$scope.inherit.loading = false;
@@ -53,8 +51,13 @@ newShipments = function(shipment){
 	
 	modalInstance.result.then(function (shipment) {
 		if(shipment){
-			if (!$scope.inherit.user) $scope.inherit.openSignin().then(newShipments(shipment));
-			else newShipments(shipment)
+			if (!$scope.inherit.user) {
+				$scope.inherit.openSignin().then(function(res){
+					newShipments(shipment)
+				});
+			}else{
+				newShipments(shipment)
+			}
 		}
      })
 }

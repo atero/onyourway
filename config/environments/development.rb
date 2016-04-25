@@ -32,6 +32,7 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
   config.log_formatter = ::Logger::Formatter.new
+  config.log_level = :debug
 
   config.paperclip_defaults = {
     :storage => :s3,

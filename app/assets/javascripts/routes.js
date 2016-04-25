@@ -1,6 +1,5 @@
 window.App.config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
-
     $urlRouterProvider.otherwise("/");
 
     $stateProvider

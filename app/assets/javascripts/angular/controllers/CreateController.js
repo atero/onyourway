@@ -26,6 +26,7 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 		$scope.inherit.loading = true;
 		$scope.local.order.total_price = $scope.local.order.reward + $scope.local.order.price*$scope.local.order.quantity + $scope.local.order.price*$scope.local.order.quantity*0.03
 		Order.create({}, {order:$scope.local.order}, function(res) {
+			$scope.inherit.loading = false;
 			$scope.inherit.goState('orders');
 		})
 	}
@@ -34,6 +35,7 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 		$scope.inherit.loading = true;
 
 		Shipment.create({}, {shipment:$scope.local.shipment}, function(res) {
+			$scope.inherit.loading = false;
 			$scope.inherit.goState('shipments');
 		})
 	}
@@ -55,11 +57,11 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 		$scope.local.stages[curr_stage-1] = true
 	}
 	$scope.publishOrder = function(){
-		if (!$scope.inherit.user) $scope.inherit.openSignin().then(newOrder());
+		if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res){newOrder()});
 		else newOrder()
 	}
 	$scope.publishShipment = function(){
-		if (!$scope.inherit.user) $scope.inherit.openSignin().then(newShipment());
+		if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res){newShipment()});
 		else newShipment()
 	}
 

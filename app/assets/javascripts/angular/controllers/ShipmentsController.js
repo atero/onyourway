@@ -2,8 +2,6 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', func
 	
 	if (localuser) $scope.inherit.user = localuser;
 
-	$scope.inherit.loading = false;
-
 	$scope.local={
 		shipments: shipments
 	}

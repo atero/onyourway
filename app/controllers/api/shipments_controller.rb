@@ -4,6 +4,8 @@ module Api
     def create
 
       @shipment = Shipment.new(shipment_params)
+      p "HERE USER"
+      p current_user
 
       @shipment.user = current_user
 

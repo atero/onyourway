@@ -66,4 +66,5 @@ group :development do
   gem "quiet_assets"
   gem "pry-byebug"
   gem "letter_opener"
+  gem 'debug'
 end

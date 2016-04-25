@@ -1,4 +1,12 @@
-App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", function($scope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q){
+App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", function($scope,$rootScope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q){
+    
+    $rootScope.$on('$stateChangeStart', function(){
+        $scope.inherit.loading = true;
+    })
+
+    $rootScope.$on('$stateChangeSuccess', function(){
+        $scope.inherit.loading = false;
+    })
 
 	$scope.inherit = {
 		user: null,
@@ -8,14 +16,14 @@ App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Au
 			return $state.current.name
 		},
 		goState:function(state){
-			$scope.inherit.loading = true;
 			$state.go(state)
 		},
 		countrylist: countrylist,
 		logOut: function(){
-			Auth.logout();
-			$scope.inherit.user = null;
-			$state.go('welcome')
+			Auth.logout().then(function(res){
+				$scope.inherit.user = null;
+				$state.go('welcome')
+			});
 		},
 		openSignup: function(){
 			var d = $q.defer();
@@ -32,15 +40,12 @@ App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Au
 			});
 
 			modalInstance.result.then(function (user) {
-					$scope.inherit.loading = true;
 					Auth.register(credentials.user).then(function(user) {
 						$scope.inherit.user = user
-						$scope.inherit.loading = false;
 						d.resolve(user)
 					},function(error) {
 				        toastr.error(error.data.error);
-				        if(error.data.error=="Account does not existe."){
-				        	$scope.inherit.loading = false;
+				        if(error.data.error=="Account does not exist."){
 				        	d.resolve(null)
 				        }
 				    });
@@ -62,15 +67,12 @@ App.controller('MainCtrl',['$scope','Auth','$state','$stateParams','$window','Au
 			});
 
 			modalInstance.result.then(function (credentials) {
-					$scope.inherit.loading = true;
 					Auth.login(credentials.user).then(function(user) {
 						$scope.inherit.user = user
-						$scope.inherit.loading = false;
 						d.resolve(user)
 					},function(error) {
 				        toastr.error(error.data.error);
 				        if(error.data.error=="Account does not existe."){
-				        	$scope.inherit.loading = false;
 				        	d.resolve(null)
 				        }
 				    });
