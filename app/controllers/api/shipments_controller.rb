@@ -1,11 +1,9 @@
 module Api
   class ShipmentsController < ApplicationController
-
+    before_filter :authenticate_user!
     def create
 
       @shipment = Shipment.new(shipment_params)
-      p "HERE USER"
-      p current_user
 
       @shipment.user = current_user
 
