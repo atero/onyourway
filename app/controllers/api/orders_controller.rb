@@ -31,7 +31,6 @@ module Api
     end
 
     def list
-      # @orders = Order.where(:user_id => params["user_id"])
       @orders = current_user.orders
       if @orders.length > 0
           render 'index'
