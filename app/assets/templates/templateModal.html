@@ -61,9 +61,9 @@
 
 <div ng-if="local.validated" class="modal-body">
 
-<h5>You're about to send the following message to {{local.ad.name}}:</h5>
+<h5>You're about to send the following message:</h5>
 
-<p ng-if = "local.usertype == 'traveller'">Hi, I'm travelling from {{local.shipment.from}} to {{local.shipment.to}} on the {{local.shipment.date| date : mediumDate}}.
+<p>Hi, I'm travelling from {{local.shipment.from}} to {{local.shipment.to}} on the {{local.shipment.date| date : mediumDate}}.
 {{local.shipment.message}}</p>
 
 <!-- <p ng-if = "local.usertype == 'shopper'">Hi, I need {{local.order_q}} {{local.order_item}} to be delivered from {{local.ad.from}} to {{local.ad.to}}. An approximative price would be of {{local.order_q*local.order_price}}€ and you reward would be of {{local.order_reward}}€.
