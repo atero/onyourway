@@ -2,7 +2,6 @@
     <p ng-if="local.type == 'signup'" class="lead text-center">Sign up</p>
     <p ng-if="local.type == 'signin'" class="lead text-center">Sign in</p>
 </div>
-
 <div class="form-group text-center" ng-if="local.type == 'signup'">
       <input ng-model="local.user.first_name" type="text" class="form-control search-input" placeholder="First name">
       <input type="text" class="form-control search-input" placeholder="Last name" ng-model="local.user.last_name">

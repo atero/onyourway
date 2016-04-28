@@ -8,6 +8,29 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
         $scope.inherit.loading = false;
     })
 
+    closeModal = function(credentials){
+    	if(credentials.type == 'signin'){
+			Auth.login(credentials.user).then(function(user) {
+				if(user){$scope.inherit.user = user}
+				return user
+			},function(error) {
+		        toastr.error(error.data.error);
+		        if(error.data.error=="Account does not existe."){
+		        	return null
+		        }
+		    });
+    	}else{
+			Auth.register(credentials.user).then(function(user) {
+				return user
+			},function(error) {
+		        toastr.error(error.data.error);
+		        if(error.data.error=="Account does not exist."){
+		        	return null
+		        }
+		    });
+    	}
+    }
+
 	$scope.inherit = {
 		user: null,
 		loading: false,
@@ -39,16 +62,8 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 				}
 			});
 
-			modalInstance.result.then(function (user) {
-					Auth.register(credentials.user).then(function(user) {
-						$scope.inherit.user = user
-						d.resolve(user)
-					},function(error) {
-				        toastr.error(error.data.error);
-				        if(error.data.error=="Account does not exist."){
-				        	d.resolve(null)
-				        }
-				    });
+			modalInstance.result.then(function (credentials) {
+				d.resolve(closeModal(credentials))
 			})
 			return d.promise
 		},
@@ -67,15 +82,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 			});
 
 			modalInstance.result.then(function (credentials) {
-					Auth.login(credentials.user).then(function(user) {
-						$scope.inherit.user = user
-						d.resolve(user)
-					},function(error) {
-				        toastr.error(error.data.error);
-				        if(error.data.error=="Account does not existe."){
-				        	d.resolve(null)
-				        }
-				    });
+				d.resolve(closeModal(credentials))
 			})
 			return d.promise
 		}

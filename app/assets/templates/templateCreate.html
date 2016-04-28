@@ -80,7 +80,6 @@
 				      	<div class="padding-top">
 					      <span class="pull-left">From:</span><span class="pull-right">{{local.order.from.join(", ")}}</span><br/>
 					      <span class="pull-left">To:</span><span class="pull-right">{{local.order.to}}</span><br/>
-					      <span class="pull-left">Date:</span><span class="pull-right">{{local.order.date| date : mediumDate}}</span><br/>
 					      <span class="pull-left">Qty:</span><span class="pull-right">{{local.order.quantity}}</span><br/>
 					      <span class="pull-left">Item:</span><span class="pull-right">{{local.order.item}}</span><br/>
 					      {{local.order.details}}<br/>
@@ -115,8 +114,6 @@
 						<input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
 						<label for="date">Date:</label>
 						<input ng-model="local.shipment.date" type="date" class="form-control">
-				        <label for="message">Message:</label>
-				        <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
 				</form>		
 
           </div>
