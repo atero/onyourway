@@ -27,6 +27,8 @@ class User
 
   has_many :orders
   has_many :shipments
+  has_many :outgoings, class_name: "Message", inverse_of: :sender
+  has_many :ingoings, class_name: "Message", inverse_of: :recepient
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time

@@ -1,4 +1,4 @@
-App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders','Shipment', function($scope,$state,$uibModal, localuser, orders, Shipment){
+App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders','Shipment','Message', function($scope,$state,$uibModal, localuser, orders, Shipment, Message){
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
 	
@@ -26,13 +26,17 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 		return filtered	
 	}
 
-newShipments = function(shipment){
-	console.log("creating")
+newShipments = function(shipment, result){
+
 	$scope.inherit.loading = true;
 
 	Shipment.create({id:shipment.order_id}, {shipment:shipment}, function(res) {
 		$scope.inherit.loading = false;
+		Message.create({shipment_id:res._id}, {message:{text:shipment.message, sender:$scope.inherit.user._id, recipient: result.user_id}}, function(res) {
+			$scope.inherit.loading = false;
+		})
 	})
+
 }
 
  $scope.propose = function (type, result) {
@@ -53,10 +57,10 @@ newShipments = function(shipment){
 		if(shipment){
 			if (!$scope.inherit.user) {
 				$scope.inherit.openSignin().then(function(res){
-					newShipments(shipment)
+					newShipments(shipment, result)
 				});
 			}else{
-				newShipments(shipment)
+				newShipments(shipment, result)
 			}
 		}
      })

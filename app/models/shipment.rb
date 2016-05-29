@@ -5,10 +5,11 @@ class Shipment
    field :from, type: String
    field :to, type: String
    field :date, type: Date
-   field :message, type: String
+   
    ## RELATIONSHIPS
    belongs_to :user
    belongs_to :order
+   has_many :messages
    ## METHODS
 
 end

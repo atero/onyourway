@@ -45,7 +45,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :message, :from)
+      params.require(:shipment).permit(:to, :date, :from)
     end
   end
 end
