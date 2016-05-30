@@ -6,6 +6,15 @@ class Message
    ## RELATIONSHIPS
    belongs_to :shipment
    belongs_to :sender, class_name: "User", inverse_of: :outgoing
-   belongs_to :recipient, class_name: "User", inverse_of: :ingoing
+   belongs_to :recipient, class_name: "User", inverse_of: :ingoing 
+   validate :users_consistency
+   
+  def users_consistency
+    u1 = self.shipment.order.user
+    u2 = self.shipment.user
+    if !(u1 == self.sender && u2 == self.recipient || u2 == self.sender && u1 == self.recipient)
+      errors.add(:message, "user is not supposed to be able to send this message")
+    end
+  end
 
 end

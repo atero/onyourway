@@ -1,9 +1,9 @@
 class Order
     require 'aws-sdk-v1'
-  require 'aws-sdk'
-   include Mongoid::Document
-   include Mongoid::Timestamps
-   include Mongoid::Paperclip
+    require 'aws-sdk'
+    include Mongoid::Document
+    include Mongoid::Timestamps
+    include Mongoid::Paperclip
 
    ## FIELDS
   # This method associates the attribute ":avatar" with a file attachment
@@ -16,7 +16,6 @@ class Order
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
-
    field :from, type: Array
    field :to, type: String
    field :date, type: Date
@@ -27,14 +26,16 @@ class Order
    field :reward, type: Float
    field :total_price, type: Float
    field :base64_image, type: String
+   field :status, type: String
    ## RELATIONSHIPS
    belongs_to :user
    has_many :shipments
-   before_save :process_base64_image
-   ## METHODS
+   before_save :process_base64_image, :check_status
 
       def process_base64_image
+
         if self.base64_image && self.base64_image.length > 0
+
           regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
           data_uri_parts = self.base64_image.match(regexp) || []
           extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
@@ -45,6 +46,15 @@ class Order
           data.content_type = extension
           self.photo = data # self.image is a paperclip field
           self.base64_image = ""
+
         end
+
+      end
+      
+      def check_status
+
+        valid_states = ["pending_travel", "travel_accepted", "travel_failed"]
+        if !valid_states.include?(self.status) then self.status = "pending_travel" end
+
       end
 end

@@ -21,7 +21,7 @@ module Api
       end
     end
 
-    def index
+    def index #all the orders
       @orders = Order.all
       if @orders.length > 0
           render 'index'
@@ -30,10 +30,10 @@ module Api
       end
     end
 
-    def list
+    def list #created by the logged user
       @orders = current_user.orders
       if @orders.length > 0
-          render 'index'
+          render 'index_profile'
        else
          render json: {messsage:'No orders found'}, status: 404
       end

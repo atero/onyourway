@@ -8,11 +8,11 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
-  color: #fae86f;
+  color: #2E6836;
 }
 .btn-custom{
   color: black;
-  background-color: #fae86f;
+  background-color: #2E6836;
 }
 #overlay {
     top:50px;
@@ -29,7 +29,7 @@ body {
 }
 
 .clickableRow:hover{
-  background-color: rgba(250, 232, 111, 0.25);
+  background-color: #79A57F;
 }
 
 .profile-body{
@@ -99,6 +99,10 @@ body {
     padding: 0;
 }
 
+.thumbnail img{
+  height:150px;
+}
+
 .thumbnail .caption-full {
     padding: 9px;
     color: #333;
@@ -108,7 +112,7 @@ body {
 
 }
 .welcome-image{
-    background-image: url(http://fakeimg.pl/1170x400/fae86f/?text=☼);
+    background-image: url("./welcome_photo.jpeg");
     height: 400px;
     width:100%;
     padding-top: 190px;
@@ -169,8 +173,8 @@ footer {
 
 /*WIZARD FOR CREATE*/
 ul.nav-wizard {
-  background-color: #fae86f;
-  border: 1px solid #fae86f;
+  background-color: #2E6836;
+  border: 1px solid #2E6836;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -185,8 +189,8 @@ ul.nav-wizard:before {
   right: 0px;
   top: 46px;
   height: 47px;
-  border-top: 1px solid #fae86f;
-  border-bottom: 1px solid #fae86f;
+  border-top: 1px solid #2E6836;
+  border-bottom: 1px solid #2E6836;
   z-index: 11;
   content: " ";
 }
@@ -197,8 +201,8 @@ ul.nav-wizard:after {
   right: 0px;
   top: 138px;
   height: 47px;
-  border-top: 1px solid #fae86f;
-  border-bottom: 1px solid #fae86f;
+  border-top: 1px solid #2E6836;
+  border-bottom: 1px solid #2E6836;
   z-index: 11;
   content: " ";
 }
@@ -224,7 +228,7 @@ ul.nav-wizard li:before {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid #fae86f;
+  border-left: 16px solid #2E6836;
   border-right: 0;
   top: -1px;
   z-index: 10;
@@ -235,7 +239,7 @@ ul.nav-wizard li:after {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid #fae86f;
+  border-left: 16px solid #2E6836;
   border-right: 0;
   top: -1px;
   z-index: 10;
@@ -244,7 +248,7 @@ ul.nav-wizard li:after {
 }
 ul.nav-wizard li.active {
   color: black;
-  background: #FFFAD9;
+  background: #2E6836;
 }
 ul.nav-wizard li.active:after {
   border-left: 16px solid #FFFAD9;
@@ -254,47 +258,47 @@ ul.nav-wizard li.active a:active,
 ul.nav-wizard li.active a:visited,
 ul.nav-wizard li.active a:focus {
   color: #3a87ad;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard .active ~ li {
   color: black;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard .active ~ li:after {
-  border-left: 16px solid #fae86f;
+  border-left: 16px solid #2E6836;
 }
 ul.nav-wizard .active ~ li a,
 ul.nav-wizard .active ~ li a:active,
 ul.nav-wizard .active ~ li a:visited,
 ul.nav-wizard .active ~ li a:focus {
   color: black;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav li:hover {
   color: #468847;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav li:hover:after {
-  border-left: 16px solid #fae86f;
+  border-left: 16px solid #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav li:hover a,
 ul.nav-wizard.nav-wizard-backnav li:hover a:active,
 ul.nav-wizard.nav-wizard-backnav li:hover a:visited,
 ul.nav-wizard.nav-wizard-backnav li:hover a:focus {
   color: #468847;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav .active ~ li {
   color: black;
-  background: #fae86f;
+  background: #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
-  border-left: 16px solid #fae86f;
+  border-left: 16px solid #2E6836;
 }
 ul.nav-wizard.nav-wizard-backnav .active ~ li a,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
   color: black;
-  background: #fae86f;
+  background: #2E6836;
 }
