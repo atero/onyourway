@@ -17,8 +17,11 @@ class Shipment
 
       def check_status
 
-        valid_states = ["pending", "accepted", "delivered"]
-        if !valid_states.include?(self.status) then self.status = "pending" end
+        valid_states = ["pending", "accepted", "delivered", "refused"]
+        if !valid_states.include?(self.status) || !self.status then self.status = "pending" end
+        if self.order then self.order.save end
+
+        true
 
       end
 end

@@ -27,6 +27,7 @@ class Order
    field :total_price, type: Float
    field :base64_image, type: String
    field :status, type: String
+   field :accepted_shipment, type: Boolean, :default => false
    ## RELATIONSHIPS
    belongs_to :user
    has_many :shipments
@@ -56,5 +57,12 @@ class Order
         valid_states = ["pending_travel", "travel_accepted", "travel_failed"]
         if !valid_states.include?(self.status) then self.status = "pending_travel" end
 
+        if self.shipments.detect{|sh| sh.status == "accepted"} then 
+          self.accepted_shipment = true 
+        else 
+          self.accepted_shipment = false
+        end
+
       end
+
 end

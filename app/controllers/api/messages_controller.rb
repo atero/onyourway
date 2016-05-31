@@ -7,8 +7,8 @@ module Api
       if @shipment then @message.shipment = @shipment end
 
       if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
-          @messages = @shipment.messages
-          render 'index'
+          # @messages = @shipment.messages
+         render json: @message, status: :accepted
        else
          render json: {messsage:'Bad request'}, status: 400
       end

@@ -14,7 +14,8 @@ App.factory('Shipment',['$resource',function($resource){
 	return $resource(api_endpoint+'shipments/:id/', {id:'@id'},
 	{
 		create: { method:"POST", params: {id :'@id'}, isArray : false },
-		list: { method:"GET", params: {}, isArray : true }
+		list: { method:"GET", params: {}, isArray : true },
+		update: {method: "PUT", params:{id : '@id'}, isArray : false}
 	});
 }]);
 
@@ -22,7 +23,7 @@ App.factory('Message',['$resource',function($resource){
 
 	return $resource(api_endpoint+'messages/:shipment_id/', {shipment_id:'@shipment_id'},
 	{
-		create: { method:"POST", params: {shipment_id :'@shipment_id'}, isArray : true },
+		create: { method:"POST", params: {shipment_id :'@shipment_id'}, isArray : false },
 		index: { method:"GET", params: {shipment_id :'@shipment_id'}, isArray : true }
 	});
 }]);

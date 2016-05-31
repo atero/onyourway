@@ -32,6 +32,17 @@ module Api
       end
     end
 
+    def update
+
+      @shipment = Shipment.where(:id=> params[:shipment_id]).first
+      
+      if @shipment && @shipment.update(shipment_params)
+        render json: @shipment, status: :accepted
+      else
+        render json: {messsage:'No orders found'}, status: 404
+      end
+    end
+
     # def list
     #   @orders = current_user.orders
     #   @shipments = @orders.map(&:shipments)
@@ -45,7 +56,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :from)
+      params.require(:shipment).permit(:to, :date, :from, :status)
     end
   end
 end

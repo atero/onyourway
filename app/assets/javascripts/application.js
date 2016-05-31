@@ -14,3 +14,4 @@
 //= require_tree ./angular
 //= require_tree .
 //= require angularjs-file-upload
+//= require promise

@@ -61,6 +61,8 @@ gem 'aws-sdk-v1'
 gem 'aws-sdk', '~> 2'
 gem 'angularjs-file-upload-rails', '~> 2.2.0'
 
+gem 'es6-promise-rails'
+
 group :development do
   gem "better_errors"
   gem "quiet_assets"

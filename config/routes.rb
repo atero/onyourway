@@ -14,6 +14,7 @@ Rails.application.routes.draw do
         match '/shipments', to: 'shipments#show', via: [:options]
         post '/shipments/:order_id', to: 'shipments#create'
         post '/shipments', to: 'shipments#create'
+        put '/shipments/:shipment_id', to: 'shipments#update'
         get '/shipments', to: 'shipments#list'
 
         match '/messages', to: 'messages#show', via: [:options]
