@@ -43,8 +43,10 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 		},
 		countrylist: countrylist,
 		logOut: function(){
+			$scope.inherit.loading = true
 			Auth.logout().then(function(res){
 				$scope.inherit.user = null;
+				$scope.inherit.loading = false;
 				$state.go('welcome')
 			});
 		},
@@ -87,5 +89,14 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 			return d.promise
 		}
 	};
+
+    $scope.inherit.result = '';
+
+    $scope.inherit.options = {
+      country: '',
+      types: '(cities)'
+    };
+
+    $scope.inherit.details = '';
 
 }])

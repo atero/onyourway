@@ -30,7 +30,71 @@
 
              	<p class="lead text-center">Details and current state of your travel</p>
 
-             	From {{local.data_to_show.from.join(", ")}} to {{local.data_to_show.to}} on the {{local.data_to_show.date | date : mediumDate}}
-             	
+             	Status: <b>{{local.data_to_show.status}}</b> for the order
+
+             	<div class='col-md-offset-1 col-md-10'>
+                        <table class="table">
+
+                              <thead>
+
+                                <th class="home-table-th text-center"></th>
+                                <th class="home-table-th text-center">What</th>
+                                <th class="home-table-th text-center">From</th>
+                                <th class="home-table-th text-center">To</th>
+                                <th class="home-table-th text-center">Reward</th>
+                                <th class="home-table-th text-center">Price</th>
+                                <th class="home-table-th text-center">Quantity</th>
+
+                              </thead>
+
+
+                              <tbody>
+
+                                <tr>
+
+                                  <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.from.join("/ ")}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.to}}</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
+                                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.quantity}}</th>
+                                </tr>
+
+                              </tbody>
+
+                        </table>
+
+              			 <div class="col-md-12">
+  				
+			  				<div class="col-md-12">
+			  					<table class="table" style="table-layout:fixed;">
+								      <tbody>
+
+									        <tr ng-repeat="message in local.data_to_show.messages">
+									        	<td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+									          	<td style='width:80%'class="home-table-th text-center" valign="middle">{{message.text}}</td>
+									          	<td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+									        </tr>
+								      </tbody>
+
+								</table>
+
+								<table class="table">
+														      
+								      <tbody>
+									        <tr>
+									          <td style='width:90%' class="home-table-th text-center" valign="middle">
+									          		<textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
+									          </td>
+									          <td class="home-table-th text-center" valign="middle">
+									          		<button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.data_to_show)"><i class="fa fa-send">
+									          </td>
+									        </tr>
+								      </tbody>
+
+								</table>
+							</div>
+				</div>
              </div>             
 </div>

@@ -12,4 +12,14 @@ child :shipments do |shipment|
       child :user do |u|
 		attributes :id, :first_name, :last_name
       end
+
+      child :messages do |u|
+		
+		attributes :text, :sender_id
+		
+		child :sender do |u|
+			attributes :id, :first_name, :last_name
+      	end
+      	
+      end
 end

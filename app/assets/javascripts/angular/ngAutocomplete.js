@@ -38,7 +38,7 @@ angular.module( "ngAutocomplete", [])
       },
 
       link: function(scope, element, attrs, controller) {
-
+        console.log(scope)
         //options for autocomplete
         var opts
         var watchEnter = false

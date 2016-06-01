@@ -12,7 +12,7 @@ body {
 }
 .btn-custom{
   color: black;
-  background-color: #2E6836;
+  background-color: rgb(150, 150, 150);
 }
 #overlay {
     top:50px;
@@ -29,7 +29,7 @@ body {
 }
 
 .clickableRow:hover{
-  background-color: #79A57F;
+  background-color: #F5F5F5;
 }
 
 .profile-body{
@@ -304,11 +304,15 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 }
 
 .profile-travel{
-  border: 1px solid #2E6836;;
+  border: 1px solid #F5F5F5;;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
+  cursor: pointer;
 }
 .travel-preview-message{
   padding:20px;
+}
+.pac-container {
+    z-index: 2000;
 }

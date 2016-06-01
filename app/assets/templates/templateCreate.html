@@ -21,11 +21,19 @@
                 <form ng-if = "local.stages[0]">
 				    <div class="form-group">
 				      <label for="departure">From:</label>
-				      <my-countries tags="local.order.from" type="country"></my-countries>
+
+			          <div class="checkbox">
+					    <label>
+					      <input type="checkbox" ng-model="local.anywhere" ng-change='console.log("here")'>
+					      Anywhere
+					    </label>
+					  </div>
+
+				      <my-countries anywhere="local.anywhere" tags="local.request.from" autocomplete="inherit.countrylist"></my-countries>
 				    </div>
 				    <div class="form-group">
-				      <label for="arrival">To</label>
-				      <input type="text" class="form-control" style="text-transform: capitalize;" placeholder="City" ng-model="local.order.to">
+				      <label for="arrival">To:</label>
+				      <input type="text" class="form-control" ng-autocomplete="inherit.result" details="inherit.details" options="inherit.options" placeholder="City" ng-model="local.order.to"/>
 				    </div>
 				</form>
                 <form ng-if = "local.stages[1]">

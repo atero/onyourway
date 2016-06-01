@@ -49,7 +49,7 @@ class Order
           self.base64_image = ""
 
         end
-
+        true
       end
       
       def check_status
@@ -57,11 +57,15 @@ class Order
         valid_states = ["pending_travel", "travel_accepted", "travel_failed"]
         if !valid_states.include?(self.status) then self.status = "pending_travel" end
 
-        if self.shipments.detect{|sh| sh.status == "accepted"} then 
+        sh = self.shipments.detect{|sh| sh.status == "accepted"}      
+
+        if sh then 
           self.accepted_shipment = true 
         else 
           self.accepted_shipment = false
         end
+
+        true
 
       end
 

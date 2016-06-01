@@ -11,13 +11,19 @@
                           <p class="lead text-center">Search for shopper's ads</p>
 
                             <form ng-submit="">
+
                                     <label>From:</label>                            
                                     <input ng-model="search.from" list="countries" type="text" class="form-control search-input" placeholder="Country">
                                     <datalist id="countries">
-                                        <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+                                        <option ng-repeat="x1 in local.countrylist" value="{{x1}}">
                                     </datalist>
-                                    <label>To:</label>                                    
-                                    <input ng-change="search.to = search.to.charAt(0).toUpperCase() + search.to.slice(1);" ng-model="search.to" type="text" class="form-control search-input" placeholder="City">
+
+                                    <label>To:</label>
+                                    <input ng-model="search.to" list="cities" type="text" class="form-control search-input" placeholder="City">
+                                    <datalist id="cities">
+                                        <option ng-repeat="x1 in local.citylist" value="{{x1}}">
+                                    </datalist>
+
                                     <button type="submit" class="btn btn-default" ng-click="local.results = filterResults()">Go</button>                                    
                             </form>
 

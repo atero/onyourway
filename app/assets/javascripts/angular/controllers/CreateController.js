@@ -23,6 +23,7 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 	}
 
 	newOrder = function(){
+		$scope.local.order.from = $scope.local.anywhere?["Anywhere"]:$scope.local.order.from
 		$scope.inherit.loading = true;
 		$scope.local.order.total_price = $scope.local.order.reward + $scope.local.order.price*$scope.local.order.quantity + $scope.local.order.price*$scope.local.order.quantity*0.03
 		Order.create({}, {order:$scope.local.order}, function(res) {
@@ -64,5 +65,6 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 		if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res){newShipment()});
 		else newShipment()
 	}
+
 
 }]);

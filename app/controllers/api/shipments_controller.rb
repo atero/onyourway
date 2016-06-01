@@ -24,12 +24,7 @@ module Api
     
     def list
       @shipments = current_user.shipments
-      
-      if @shipments.length > 0
-        render json: @shipments, status: :accepted
-      else
-         render json: {messsage:'No orders found'}, status: 404
-      end
+      render 'index'
     end
 
     def update
@@ -37,6 +32,7 @@ module Api
       @shipment = Shipment.where(:id=> params[:shipment_id]).first
       
       if @shipment && @shipment.update(shipment_params)
+        @shipment.order.save
         render json: @shipment, status: :accepted
       else
         render json: {messsage:'No orders found'}, status: 404
