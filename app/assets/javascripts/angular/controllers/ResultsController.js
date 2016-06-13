@@ -8,7 +8,7 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 	}
 
 	$scope.local.citylist = _.uniq(orders.map(function(d){return d.to})).sort()
-	$scope.local.countrylist = [].concat.apply([], _.uniq(orders.map(function(d){return d.from}))).sort()
+	$scope.local.countrylist =  _.uniq([].concat.apply([],orders.map(function(d){return d.from}))).sort()
 	
 
 	$scope.search = {
@@ -33,10 +33,10 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 newShipments = function(shipment, result){
 
 	$scope.inherit.loading = true;
-
-	Shipment.create({id:shipment.order_id}, {shipment:shipment}, function(res) {
+console.log($scope.inherit.user)
+	Shipment.create({id:shipment.order_id, token:$scope.inherit.user.token}, {shipment:shipment}, function(res) {
 		
-		Message.create({shipment_id:res._id}, {message:{text:shipment.message, sender:$scope.inherit.user._id, recipient: result.user_id}}, function(res) {
+		Message.create({shipment_id:res._id, token:$scope.inherit.user.token}, {message:{text:shipment.message, sender:$scope.inherit.user._id, recipient: result.user_id}}, function(res) {
 			$scope.inherit.loading = false;
 			$scope.inherit.goState("shipments")
 		})

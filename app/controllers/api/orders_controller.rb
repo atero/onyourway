@@ -1,6 +1,8 @@
 module Api
   class OrdersController < ApplicationController
 
+    before_filter :authenticate_user!, :except => :index 
+
     def create
       @order = Order.new(order_params)
       @order.user = current_user
