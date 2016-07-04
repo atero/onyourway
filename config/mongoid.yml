@@ -1,12 +1,12 @@
 development:
   clients:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['Mongolab_uri'] %>
       options:
   options:
 production:
   clients:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['Mongolab_uri'] %>
       options:
   options:
