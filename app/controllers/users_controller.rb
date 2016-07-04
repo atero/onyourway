@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def create
-
+    p @user
     @user = User.new(user_params)
     if @user.save
         render json: @user, status: :accepted
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     end
 
   end
-  
+
   private
 
   def user_params
