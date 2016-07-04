@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-'ruby 2.2.1'
+'ruby 2.2.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'mongoid', '~> 5.1.0'
@@ -69,4 +69,8 @@ group :development do
   gem "pry-byebug"
   gem "letter_opener"
   gem 'debug'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
