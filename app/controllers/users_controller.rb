@@ -1,15 +1,9 @@
 class UsersController < ApplicationController
 
   def create
-    
-    p @user
-    @user = User.new(user_params)
-    if @user.save
-        render json: @user, status: :accepted
-    else
-       render json: {messsage:'Bad request'}, status: 400
-    end
 
+    @user = User.new(user_params)
+        render json: @user, status: :accepted
   end
 
   private
