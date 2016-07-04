@@ -63,13 +63,13 @@ gem 'angularjs-file-upload-rails', '~> 2.2.0'
 
 gem 'es6-promise-rails'
 
-group :development do
-  gem "better_errors"
-  gem "quiet_assets"
-  gem "pry-byebug"
-  gem "letter_opener"
-  gem 'debug'
-end
+#group :development do
+gem "better_errors"
+gem "quiet_assets"
+gem "pry-byebug"
+gem "letter_opener"
+gem 'debug'
+#end
 
 group :production do
   gem 'rails_12factor'
