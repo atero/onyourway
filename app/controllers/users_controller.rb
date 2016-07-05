@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     p save
     p "**************************************************************"
     if save
-
+      render json: @user, status: :accepted
     else
-       
+      render json: {messsage:'Bad request'}, status: 400
     end
   end
 
