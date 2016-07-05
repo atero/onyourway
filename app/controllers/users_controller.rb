@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def create
 
-    @user = User.new(user_params)
+    @user = User.new()
     respond_to do |format|
       if @user.save
         format.html { render :index, notice: 'user was successfully created.' }
