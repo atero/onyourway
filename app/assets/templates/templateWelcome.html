@@ -1,90 +1,53 @@
-    <div class="container">
+    <div class="">
 
-        <div class="row">
-            <div class="col-md-12">
+        <div class="welcome-image">
 
                 <div class="row">
 
                     <div class="col-md-12">
-                        <div class="welcome-image text-center">
-                                <button ng-click="inherit.usertype = 'shopper'; inherit.goState('create')" class="btn btn-default shopper-button">Request a purchase</button>
-                                 <button ng-click="inherit.usertype = 'traveller'; inherit.goState('results')" class="btn btn-default travaller-button">Become a travaller</button>
+                        <div class="text-center">
+                            <h1>Your Space In My Suitcase</h1>
+                            <h4>Buy anything from anywhere, even if it’s not sold online  <br>travelers will make offers to deliver it  </h4>
+                                <a ng-click="inherit.usertype = 'shopper'; inherit.goState('create')" class="btn btn-default shopper-button">SHOP <span>What would you like to buy?</span> </a>
+                                <a ng-click="inherit.usertype = 'traveller'; inherit.goState('results')" class="btn btn-default travaller-button">BRING <span>Make money while traveling</span></a>
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="padding-top text-center">
-                                <button ng-click="inherit.usertype = 'traveller'; inherit.goState('results')" type="submit" class="btn btn-default big-button">Look up purchase requests</button>
+
+                      <br>
+                      <br>
                     </div>
                 </div>
-            </div>
+
         </div>
-        <div class="row">
+      </div>
+      <div class="container land-content">
+        <div class="row thumbs-row">
             <div class="col-md-12">
-            
+
                 <div class="row padding-top">
-                    <p class="lead text-center">Items resently delivered</p>
+                    <p class="lead text-center">Buy anything from anywhere, even if it’s not sold online</p>
                 </div>
                 <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/obj1.jpg" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">MacBook Pro</h4>
-                                </h4>
-                                <p>Delivered from US to Paris</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
+                        <div class="thumb-items">
+                            <img src="/images/item-images.jpg" alt="">
                         </div>
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/obj2.jpg" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Лапша Ролтон</h4>
-                                </h4>
-                                <p>Delivered from Russia to London</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                        <div class="thumb-items">
+                            <img src="/images/item-images2.jpg" alt="">
                         </div>
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/obj3.jpeg" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Kittens</h4>
-                                </h4>
-                                <p>Cute kittens from Japan</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                        <div class="thumb-items">
+                            <img src="/images/item-images3.jpg" alt="">
                         </div>
                     </div>
 
@@ -96,62 +59,70 @@
     <div class="col-xs-12 how-it-works padding-top" align="left">
             <div class="how-title"> How it works?</div>
                 <div class="row row-how">
-                  <div class="col-xs-2 col-xs-offset-2">
-                      <img class="how-img" src="/images/pug.png">
+                  <div class="col-xs-2 vector-wrap">
+                      <img class="how-img" src="/images/vector-smart.png">
                   </div>
-                  <div class="col-xs-8 how-text" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                  <div class="col-xs-10" align="left">
+                    <h3>Post your order</h3>
+                    Describe the item you want and add a delivery reward of your choice. <br>
+                    Travelers will make offers to deliver it.</div>
+                </div>
+                <div class="row row-how row-how-right">
+                  <div class="col-xs-10 text-right" align="left">
+                    <h3>Choose a traveler</h3>
+                    Agree on delivery details and pre-pay for your order.<br>
+                    We will hold your moneysecurely until your item is delivered.</div>
+                    <div class="col-xs-2 vector-wrap">
+                        <img class="how-img" src="/images/vector-smart-images.png">
+                    </div>
                 </div>
                 <div class="row row-how">
-                  <div class="col-xs-2 col-xs-offset-2">
-                      <img src="/images/stbernard.png" class="how-img" >
+                  <div class="col-xs-2 vector-wrap">
+                      <img class="how-img" src="/images/vector-smart-ok.png">
                   </div>
-                  <div class="col-xs-8 how-text" align="left">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-                </div>
-                <div class="row row-how">
-                  <div class="col-xs-2 col-xs-offset-2">
-                      <img class="how-img" src="/images/cocktail.png">
-                  </div>
-                  <div class="col-xs-8 how-text" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                </div>
-                <div class="row row-how">
-                  <div class="col-xs-2 col-xs-offset-2">
-                      <img src="/images/chihuahua_bone.png" class="how-img" >
-                  </div>
-                  <div class="col-xs-8 how-text" align="left">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+                  <div class="col-xs-10" align="left">
+                    <h3>Collect your item</h3>
+                    Meet with the traveler and pick up your item.<br>
+                    We will transfer your payment to the traveler after you’ve confirmed a successful delivery.</div>
                 </div>
         </div>
 </div>
-            <div class="row">
-                <div class="row padding-top">
-                    <p class="lead text-center">Why order with Shop'N'Ship</p>
-                </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/boxer.png" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Security</h4>
-                            </div>
-                        </div>
-                    </div>
+<div class="row">
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/fitness.png" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Rapidity</h4>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumb-items">
+            <img src="/images/stock-foto.png" alt="">
+            <p>
+              <strong>Safe transactions</strong>
+              you’ll receive an immediate refund<br>
+              if your item is not delivered.
+            </p>
+        </div>
+    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="/images/shepherd.png" alt="">
-                            <div class="caption">
-                                <h4 class="text-center">Etc</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumb-items">
+            <img src="/images/stock-foto2.jpg" alt="">
+            <p>
+              <strong>Safe transactions</strong>
+              you’ll receive an immediate refund<br>
+              if your item is not delivered.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumb-items">
+            <img src="/images/stock-foto1.png" alt="">
+            <p>
+              <strong>Safe transactions</strong>
+              you’ll receive an immediate refund<br>
+              if your item is not delivered.
+            </p>
+        </div>
+    </div>
+
+</div>
 
             </div>
 

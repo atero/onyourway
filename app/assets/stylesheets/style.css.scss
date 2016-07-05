@@ -111,23 +111,8 @@ body {
 .left-bar-border{
 
 }
-.welcome-image{
-    background-image: url("../images/welcome_photo.jpeg");
-    height: 400px;
-    width:100%;
-    padding-top: 190px;
-}
-.shopper-button{
 
-}
-.travaller-button{
 
-}
-.how-title {
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.5em;
-}
 .how-text {
     font-size: 1.0em;
     margin-top: 80px;
@@ -320,6 +305,197 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 
 /************My Styles***********/
 
+@font-face {
+font-family: DistrictProThin;
+src: url("../fonts/DistProTh.otf") format("opentype");
+}
+
+@font-face {
+font-family: FaricyNew-Light;
+src: url("../fonts/FaricyNew-Light.otf") format("opentype");
+}
+
+@font-face {
+font-family: FaricyNew-Regular;
+src: url("../fonts/FaricyNew-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: FaricyNew-Bold;
+src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
+}
+
+.nav-wrapper{
+  padding-left:80px;
+  padding-right: 70px;
+  background: white;
+}
+
 .navbar-fixed-top{
   margin-bottom: 0;
+  background: white;
+  height: 80px;
+  a{
+    line-height: 46px;
+    color: #666;
+    font-size: 26px;
+    font-family: DistrictProThin, serif;
+  }
+  a.btn-act-ord{
+    background: #11e9de;
+    color: white;
+  }
+  ul{
+    margin-top: 15px;
+  }
+}
+
+.navbar-nav>li>a{
+  padding: 5px;
+  margin: 10px;
+}
+
+.thumbs-row{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.shopper-button{
+  background: #11e9de;
+  font-family: FaricyNew-Bold;
+  font-size: 22px;
+  text-align: right;
+  color: #666;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  width: 270px;
+  span{
+    margin-top: -8px;
+    font-size: 21px;
+    display: block;
+    font-family: DistrictProThin, serif;
+    font-weight: normal;
+  }
+}
+.travaller-button{
+  background: #fee539;
+  font-family: FaricyNew-Bold;
+  font-size: 22px;
+  text-align: left;
+  color: #666;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  width: 270px;
+  span{
+    margin-top: -8px;
+    font-size: 21px;
+    display: block;
+    font-family: DistrictProThin, serif;
+    font-weight: normal;
+  }
+}
+
+.welcome-image{
+    background-image: url("../images/welcome_photo.jpg");
+    height: 700px;
+    width:100%;
+    padding-top: 190px;
+    .row{
+      margin: 0;
+    }
+    h1{
+      color: white;
+      font-size: 90px;
+      font-family: DistrictProThin, serif;
+    }
+    h4{
+      margin: 20px;
+      color: white;
+      font-size: 36px;
+      font-family: DistrictProThin, serif;
+    }
+}
+
+.land-content{
+  font-family: DistrictProThin, serif;
+  font-size: 24px;
+  .row-how{
+    margin-bottom: 60px;
+    color: #999;
+  }
+  .lead{
+    font-size: 36px;
+  }
+  .thumb-items{
+      padding: 12px;
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+      p{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 18px;
+        color: #999;
+        font-family: FaricyNew-Light;
+        strong{
+          color: #666;
+          font-family: FaricyNew-Regular;
+          display: block;
+        }
+      }
+  }
+  .how-title {
+      font-family: FaricyNew-Bold;
+      text-align: center;
+      font-size: 42px;
+      color: #666;
+  }
+  h3 {
+      font-family: FaricyNew-Bold;
+      text-align: left;
+      font-size: 32px;
+      color: #666;
+  }
+  .vector-wrap{
+    padding-right: 30px;
+    padding-top: 24px;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .row-how-right{
+    .vector-wrap{
+      padding-right: 0;
+      padding-left: 30px;
+    }
+    h3{
+      text-align: right;
+    }
+  }
+}
+
+.footer-wrapper{
+  background: #fee539;
+  font-size: 26px;
+  font-family: FaricyNew-Light;
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  .footer-nav{
+    li{
+      padding: 30px 40px 30px 0;
+      list-style: none;
+      display: inline-block;
+    }
+  }
+  p{
+    padding: 30px;
+    display: inline-block;
+    float:  right;
+    padding-right: 0;
+  }
 }

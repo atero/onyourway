@@ -1,7 +1,7 @@
 <body>
   <div id="overlay" ng-if='inherit.loading'></div>
   <nav class="navbar navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid nav-wrapper">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -10,23 +10,27 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"></a>
+              <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" /></a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
+                <li>
+                    <a ng-click="" class="btn btn-sm btn-act-ord">Active Ordres</a>
+                </li>
+                <li>
+                    <a ng-click="">About Us</a>
+                </li>
                   <li ng-show="!inherit.user" class="signup">
-                      <a ng-click="inherit.openSignup()">Sign Up</a>
+                      <a ng-click="inherit.openSignup()">Sign up</a>
                   </li>
                   <li ng-show="!inherit.user" class="signin">
-                      <a ng-click="inherit.openSignin()">Sign In</a>
+                      <a ng-click="inherit.openSignin()">Sign in</a>
                   </li>
                   <li ng-show="inherit.user" class="signin">
-                      <a ng-click="inherit.logOut()">Sign Out</a>
+                      <a ng-click="inherit.logOut()">Sign out</a>
                   </li>
-                  <li>
-                      <a ng-click="">About Us</a>
-                  </li>
+
                   <li ng-show="inherit.user" class="profile">
                       <a ng-click="inherit.goState('profile')"><i class="fa fa-user"></i></a>
                   </li>
@@ -42,17 +46,14 @@
   <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
 </ul>
   <ui-view></ui-view>
-    <div class="container">
-
-        <hr>
-
+    <div class="footer-wrapper">
         <!-- Footer -->
-        <footer>
+        <footer class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                              <ul class="">
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                              <ul class="footer-nav">
                                   <li>
                                       <a href="#">FAQ</a>
                                   </li>
@@ -60,32 +61,18 @@
                                       <a href="#">Terms of use</a>
                                   </li>
                                   <li>
-                                      <a href="#">FAQ</a>
+                                      <a href="#">Contact Us</a>
                                   </li>
                               </ul>
                         </div>
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                              <ul class="">
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Terms of use</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">FAQ</a>
-                                  </li>
-                              </ul>
+                        <div class="col-sm-6 col-lg-6 col-md-6 text-right">
+                          <p>Copyright &copy; Shop'N'Ship 2016</p>
                         </div>
 
-                    </div>
-                    <div class="row pull-right">
-                        <p>Copyright &copy; Shop'N'Ship 2016</p>
                     </div>
                 </div>
             </div>
         </footer>
-
     </div>
 </body>
