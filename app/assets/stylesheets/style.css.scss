@@ -5,7 +5,7 @@
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 80px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
   color: #2E6836;
@@ -59,14 +59,14 @@ body {
 
 .tags {
    margin-bottom: 5px;
-} 
+}
 
 .tags .tag {
    display: inline-block;
    margin-right: 5px;
    font-size: 13px;
 }
-  
+
 .tag .close {
    font-size: 14px;
    margin-left: 5px;
@@ -118,10 +118,10 @@ body {
     padding-top: 190px;
 }
 .shopper-button{
-    
+
 }
 .travaller-button{
-    
+
 }
 .how-title {
     font-weight: bold;
@@ -315,4 +315,11 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 }
 .pac-container {
     z-index: 2000;
+}
+
+
+/************My Styles***********/
+
+.navbar-fixed-top{
+  margin-bottom: 0;
 }

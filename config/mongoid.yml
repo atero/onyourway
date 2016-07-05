@@ -25,7 +25,6 @@ development:
       uri: mongodb://heroku_9mg7mwjj:h4vf4nv5psef4ao6g934cmdgq4@ds013545.mlab.com:13545/heroku_9mg7mwjj
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
 
       options:
         consistency: :strong
