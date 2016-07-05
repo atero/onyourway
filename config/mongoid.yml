@@ -1,12 +1,26 @@
-development:
-  clients:
-    default:
-      uri: <%= ENV['Mongolab_uri'] %>
-      options:
-  options:
 production:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      # Defines the name of the default database that Mongoid can connect to.
+      # (required).
+      database: 'mongodb://heroku_9mg7mwjj:_9mg7mwjj@ds013545.mlab.com:13545/heroku_9mg7mwjj'
+      # Provides the hosts the default client can connect to. Must be an array
+      # of host:port pairs. (required)
+      hosts:
+
+      options:
+
+  options:
+
+test:
   clients:
     default:
-      uri: <%= ENV['Mongolab_uri'] %>
+      database: shop_n_ship_test
+      hosts:
+        - localhost:27017
       options:
-  options:
+        read:
+          mode: :primary
+        max_pool_size: 1
