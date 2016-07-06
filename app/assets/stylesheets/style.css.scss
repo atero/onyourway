@@ -499,3 +499,8 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     padding-right: 0;
   }
 }
+@media (min-width: 1600px) {
+    .container{
+        width: 1530px;
+    }
+}
