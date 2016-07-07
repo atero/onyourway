@@ -1,137 +1,141 @@
+<div class="">
+  <div class="narrow-banner">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1><span>PROPOSE</span> A NEW DELIVERY</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="row" ng-if="inherit.usertype == 'shopper'">
+      <div class="padding-top col-md-offset-2 col-md-8 text-center">
+        <form ng-if="local.stages[0]" class="crate-form">
+          <div class="form-group">
+            <label for="departure">From</label>
+            <div class="input-w">
+              <my-countries anywhere="local.anywhere" tags="local.request.from" autocomplete="inherit.countrylist"></my-countries>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="arrival">To</label>
+            <div class="input-w">
+              <input type="text" class="form-control" ng-autocomplete="inherit.result" details="inherit.details" options="inherit.options" placeholder="City" ng-model="local.order.to" />
+            </div>
+          </div>
+        </form>
+        <form ng-if="local.stages[1]">
+          <div class="form-group">
+            <label for="arrival">What do you need to be delivered</label>
+            <input type="text" class="form-control" placeholder="Iphone 8" ng-model="local.order.item">
+          </div>
+          <label for="">Item photo:</label>
+          <div class="form-group">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+
+              </div>
+
+              <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+
+              <div>
+                <input type="file" fileread="local.order.base64_image" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Additional information</label>
+            <textarea name="content" type="text" ng-model="local.order.message" class="form-control" placeholder="Additional information (link towards an item photo, color, size etc)"></textarea>
+          </div>
+
+        </form>
+
+        <form ng-if="local.stages[2]">
+          <div class="form-group">
+            <label for="arrival">Approximate price (in €)</label>
+            <input type="number" class="form-control" placeholder="100" ng-model="local.order.price">
+          </div>
+
+          <div class="form-group">
+            <label for="date">Quantity</label>
+            <input type="number" class="form-control" ng-model="local.order.quantity" placeholder="2">
+          </div>
+
+          <div class="form-group">
+            <label for="date">Reward for the traveller (in €)</label>
+            <input type="number" class="form-control" ng-model="local.order.reward" placeholder="Generally between 10€ and 2% of the total order">
+          </div>
+
+        </form>
+        <form ng-if="local.stages[3]">
+
+          <div class="form-group">
+            <label for="arrival">Summary</label>
+            <br/> You're about to publish the following purchase order:
+            <br/>
+            <div class="padding-top">
+              <span class="pull-left">From:</span><span class="pull-right">{{local.order.from.join(", ")}}</span>
+              <br/>
+              <span class="pull-left">To:</span><span class="pull-right">{{local.order.to}}</span>
+              <br/>
+              <span class="pull-left">Qty:</span><span class="pull-right">{{local.order.quantity}}</span>
+              <br/>
+              <span class="pull-left">Item:</span><span class="pull-right">{{local.order.item}}</span>
+              <br/> {{local.order.details}}
+              <br/>
+            </div>
+            <div class="padding-top">
+              <span class="pull-left">Total items price:</span><span class="pull-right">{{local.order.price*local.order.quantity}}€</span>
+              <br/>
+              <span class="pull-left">Traveller's reward:</span><span class="pull-right">{{local.order.reward}}€</span>
+              <br/>
+              <span class="pull-left">Shop'N'Ship fee:</span><span class="pull-right">{{local.order.price*local.order.quantity*0.03}}€</span>
+              <br/>
+            </div>
+
+            <div class="padding-top">
+              <h5 class="pull-left">Total:</h5>
+              <br/>
+              <span style="padding-top:10px" class="pull-right">{{local.order.reward +local.order.price*local.order.quantity + local.order.price*local.order.quantity*0.03}}€</span>
+              <br/>
+            </div>
+          </div>
+
+        </form>
+
+
+      </div>
+    </div>
+
+    <div class="row padding-top" ng-if="inherit.usertype == 'traveller'">
+      <div class="padding-top col-md-offset-2 col-md-8 text-center">
+        <form ng-if="local.stages[0]">
+          <label>From:</label>
+          <input ng-model="local.shipment.from" list="countries" type="text" class="form-control" placeholder="Country">
+          <datalist id="countries">
+            <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+          </datalist>
+          <label>To:</label>
+          <input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
+          <label for="date">Date:</label>
+          <input ng-model="local.shipment.date" type="date" class="form-control">
+        </form>
+
+      </div>
+    </div>
     <div class="col-md-offset-2 col-md-8">
-    	<div class="row">
-			<div class="row padding-top">
-	            <p ng-if="inherit.usertype == 'shopper'" class="lead text-center">Create a new purchase order</p>
-	            <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">Propose a new delivery</p>
-	        </div>        
-        	<ul class='nav nav-wizard' ng-if="inherit.usertype == 'shopper'">
-
-			  <li ng-class='{"active": local.stages[0]}'>Geographics</li>
-
-			  <li ng-class='{"active": local.stages[1]}'>Item description</li>
-
-			  <li ng-class='{"active": local.stages[2]}'>Price</li>
-			  <li ng-class='{"active": local.stages[3]}'>Summary and confirmation</li>
-
-			</ul>	
-		</div>
-		<div class="row padding-top" ng-if="inherit.usertype == 'shopper'">
-          <div class="padding-top col-md-offset-2 col-md-8 text-center">
-                <form ng-if = "local.stages[0]">
-				    <div class="form-group">
-				      <label for="departure">From:</label>
-
-			          <div class="checkbox">
-					    <label>
-					      <input type="checkbox" ng-model="local.anywhere" ng-change='console.log("here")'>
-					      Anywhere
-					    </label>
-					  </div>
-
-				      <my-countries anywhere="local.anywhere" tags="local.request.from" autocomplete="inherit.countrylist"></my-countries>
-				    </div>
-				    <div class="form-group">
-				      <label for="arrival">To:</label>
-				      <input type="text" class="form-control" ng-autocomplete="inherit.result" details="inherit.details" options="inherit.options" placeholder="City" ng-model="local.order.to"/>
-				    </div>
-				</form>
-                <form ng-if = "local.stages[1]">
-				    <div class="form-group">
-				      <label for="arrival">What do you need to be delivered</label>
-				      <input type="text" class="form-control" placeholder="Iphone 8" ng-model="local.order.item">
-				    </div>                
-				    <label for="">Item photo:</label>
-				    <div class="form-group">
-							<div class="fileinput fileinput-new" data-provides="fileinput">
-							  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-
-							  </div>
-
-							  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-							  
-							  <div>
-								<input type="file" fileread="local.order.base64_image"/>
-							  </div>
-							</div>
-				    </div>
-				    <div class="form-group">
-				        <label for="message">Additional information</label>
-				        <textarea name="content" type="text" ng-model="local.order.message" class="form-control" placeholder="Additional information (link towards an item photo, color, size etc)"></textarea>
-				    </div>				    
-
-				</form>
-
-				<form ng-if = "local.stages[2]">
-				    <div class="form-group">
-				      <label for="arrival">Approximate price (in €)</label>
-				      <input type="number" class="form-control" placeholder="100" ng-model="local.order.price">
-				    </div>
-				    
-				    <div class="form-group">
-				      <label for="date">Quantity</label>
-				      <input type="number" class="form-control" ng-model="local.order.quantity" placeholder="2">
-				    </div>
-				    
-				    <div class="form-group">
-				      <label for="date">Reward for the traveller (in €)</label>
-				      <input type="number" class="form-control" ng-model="local.order.reward" placeholder="Generally between 10€ and 2% of the total order">
-				    </div>
-
-				</form>
-				<form ng-if = "local.stages[3]">
-
-				    <div class="form-group">
-				      <label for="arrival">Summary</label><br/>
-
-				      You're about to publish the following purchase order:<br/>
-				      	<div class="padding-top">
-					      <span class="pull-left">From:</span><span class="pull-right">{{local.order.from.join(", ")}}</span><br/>
-					      <span class="pull-left">To:</span><span class="pull-right">{{local.order.to}}</span><br/>
-					      <span class="pull-left">Qty:</span><span class="pull-right">{{local.order.quantity}}</span><br/>
-					      <span class="pull-left">Item:</span><span class="pull-right">{{local.order.item}}</span><br/>
-					      {{local.order.details}}<br/>
-						</div>
-				      	<div class="padding-top">
-					      <span class="pull-left">Total items price:</span><span class="pull-right">{{local.order.price*local.order.quantity}}€</span><br/>
-					      <span class="pull-left">Traveller's reward:</span><span class="pull-right">{{local.order.reward}}€</span><br/>
-					      <span class="pull-left">Shop'N'Ship fee:</span><span class="pull-right">{{local.order.price*local.order.quantity*0.03}}€</span><br/>
-						</div>
-						
-						<div class="padding-top">
-							<h5 class="pull-left">Total:</h5><br/>
-							<span style="padding-top:10px" class="pull-right">{{local.order.reward +local.order.price*local.order.quantity + local.order.price*local.order.quantity*0.03}}€</span><br/>
-						</div>
-				    </div>
-
-				</form>
-
-
-          </div>
-		</div>
-
-		<div class="row padding-top" ng-if="inherit.usertype == 'traveller'">
-          <div class="padding-top col-md-offset-2 col-md-8 text-center">
-                <form ng-if = "local.stages[0]">
-						<label>From:</label>                            
-						<input ng-model="local.shipment.from" list="countries" type="text" class="form-control" placeholder="Country">
-						<datalist id="countries">
-						<option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
-						</datalist>
-						<label>To:</label>                                    
-						<input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
-						<label for="date">Date:</label>
-						<input ng-model="local.shipment.date" type="date" class="form-control">
-				</form>		
-
-          </div>
-		</div>
-
-		<div class="row padding-top">
-			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button><button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn btn-default navigate-button pull-right">Publish the order</button>
-			<button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the travel</button>
-			<button ng-if="!local.stages[local.stages.length-1]" ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
-		</div>
-	</div>
+      <div class="row" ng-if="inherit.usertype == 'shopper'">
+    <div class="row padding-top">
+      <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn btn-default navigate-button pull-right">Next</button>
+      <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn btn-default navigate-button pull-right">Publish the order</button>
+      <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the travel</button>
+      <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepBack()" class="btn btn-default navigate-button pull-left">Back</button>
+    </div>
+</div>
+</div>
+  </div>
 
 </div>

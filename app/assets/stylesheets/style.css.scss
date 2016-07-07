@@ -58,7 +58,7 @@ body {
 }
 
 .tags {
-   margin-bottom: 5px;
+
 }
 
 .tags .tag {
@@ -499,6 +499,59 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     padding-right: 0;
   }
 }
+
+.narrow-banner{
+    background-image: url("../images/narrow-banner.jpg");
+    height: 128px;
+    width:100%;
+    padding-top: 30px;
+    .row{
+      margin: 0;
+    }
+
+    h1{
+      color: white;
+      font-size: 36 px;
+      font-family: FaricyNew-Regular;
+    }
+    span{
+      font-family: FaricyNew-Light;
+    }
+}
+
+/***********Create ad************/
+
+.crate-form{
+  label{
+    font-family: FaricyNew-Regular;
+    font-size: 20px;
+    color: #666;
+    margin-top: 30px;
+  }
+}
+
+.input-w{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  height: 45px;
+  line-height: 45px;
+
+  *{
+    border: none;
+  }
+  input{
+    height: 43px;
+    font-family: FaricyNew-Light;
+    font-size: 20px;
+  }
+  a{
+    font-family: FaricyNew-Regular;
+    font-size: 20px;
+    color: #999;
+  }
+}
+
 @media (min-width: 1600px) {
     .container{
         width: 1530px;

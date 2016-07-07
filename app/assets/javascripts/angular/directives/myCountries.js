@@ -10,10 +10,10 @@ return {
             '<div class="tags">' +
             '<div ng-repeat="(idx, tag) in tags" class="tag label label-default">{{tag}} <a class="close" href ng-click="remove(idx)">×</a></div>' +
             '</div>' +
-            '<div class="input-group"><input ng-disabled="anywhere" type="text" class="form-control" placeholder="add a country..." ng-model="newValue" /> ' +
+            '<div class="input-group"><input ng-disabled="anywhere" type="text" class="form-control" placeholder="Country" ng-model="newValue" /> ' +
             '<span class="input-group-btn"><a ng-disabled="anywhere" class="btn btn-default" ng-click="add()">Add</a></span></div>',
         link: function ( $scope, $element ) {
-            
+
           var input = angular.element($element).find('input');
 
           // setup autocomplete
@@ -25,7 +25,7 @@ return {
               $scope.autocompleteSelect = function(event, ui) {
                 $scope.newValue = ui.item.value;
                 $scope.$apply( $scope.add );
-                
+
                 return false;
               };
               $($element).find('input').autocomplete({
@@ -56,8 +56,8 @@ return {
                       };
                     })(this)
                   });
-            } 
-                  
+            }
+
 
              // adds the new tag to the array
             $scope.add = function() {
@@ -67,12 +67,12 @@ return {
                 }
                 $scope.newValue = "";
             };
-            
+
             // remove an item
             $scope.remove = function ( idx ) {
                 $scope.tags.splice( idx, 1 );
             };
-            
+
             // capture keypresses
             input.bind( 'keypress', function ( event ) {
                 // enter was pressed

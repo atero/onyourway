@@ -19,18 +19,17 @@
                     <a ng-click="" class="btn btn-sm btn-act-ord">Active Ordres</a>
                 </li>
                 <li>
-                    <a ng-click="">About Us</a>
+                    <a ng-click="">About us</a>
                 </li>
                   <li ng-show="!inherit.user" class="signup">
                       <a ng-click="inherit.openSignup()">Sign up</a>
                   </li>
-                  <li ng-show="!inherit.user" class="signin">
-                      <a ng-click="inherit.openSignin()">Sign in</a>
-                  </li>
                   <li ng-show="inherit.user" class="signin">
                       <a ng-click="inherit.logOut()">Sign out</a>
                   </li>
-
+                  <li ng-show="!inherit.user" class="signin">
+                      <a ng-click="inherit.openSignin()">Sign in</a>
+                  </li>
                   <li ng-show="inherit.user" class="profile">
                       <a ng-click="inherit.goState('profile')"><i class="fa fa-user"></i></a>
                   </li>
