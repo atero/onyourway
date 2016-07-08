@@ -135,6 +135,7 @@ body {
     max-width:230px;
     margin:20px;
     display: inline-block;
+    border: none;
 }
 li.signup{
   background-color: rgba(255, 255, 255, 0.12);
@@ -150,7 +151,7 @@ li.profile{
     height:100px;
 }
 footer {
-    margin: 50px 0;
+    margin: 50px 0 0;
 }
 .profile-photo{
     width:130px;
@@ -658,10 +659,85 @@ button.btn-back:active{
       }
     }
   }
-
 }
 
-
+/***********Become travel************/
+.orders-block{
+  .table>thead>tr>th{
+    border-bottom: none;
+  }
+  form#form-block{
+    margin-bottom: 30px;
+    label{
+      display: inline-block;
+      font-size: 25px;
+      color: #646464;
+      font-family: FaricyNew-Regular;
+      margin-right: 20px;
+    }
+    input{
+      display: inline-block;
+      width: 320px;
+      height: 48px;
+      margin-right: 35px;
+    }
+    input[type="submit"]{
+      width: 164px;
+      background: #11e9de;
+      font-size: 24px;
+      color: #fff;
+      font-family: FaricyNew-Bold;
+    }
+  }
+  .orders-template{
+    h3{
+      font-size: 24px;
+      color: #969696;
+      font-family: FaricyNew-Bold;
+      letter-spacing: 2px;
+    }
+  }
+  .looking-block{
+    margin: 25px 0;
+    display: inline-block;
+    h6{
+      font-size: 24px;
+      color: #969696;
+      font-family: FaricyNew-Regular;
+      letter-spacing: 2px;
+    }
+    .create-ad-block{
+      background: #11e9de;
+      display: inline-block;
+      border-radius: 5px;
+      padding: 8px;
+      margin-top: 28px;
+      a{
+        width: 100%;
+        font-size: 21px;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.signup-block{
+  background: #ebebeb;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+.sign-up-header{
+  background: #fff;
+}
+.signin-btn{
+  width: 68px;
+  height: 34px;
+  border-radius: 5px;
+  color: #fff;
+  background: #11e9de;
+  font-size: 17px;
+  font-family: FaricyNew-Bold;
+}
 
 @media (min-width: 1600px) {
     .container{

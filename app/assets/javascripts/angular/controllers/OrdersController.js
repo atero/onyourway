@@ -17,7 +17,7 @@ App.controller('OrdersCtrl',['$scope', '$state','localuser', 'orders', 'Shipment
 	}
 
 	$scope.refuse_travel = function(order, shipment){
-		
+
 		swal({
 		  title: 'Are you sure you want to definitely delete this shipment from the list?',
 		  text: "You won't be able to see this shipment any more!",

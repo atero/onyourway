@@ -81,7 +81,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                 return d.promise;
           }]
         }
-      })    
+      })
 
     $stateProvider
      .state('orders', {
@@ -108,12 +108,13 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                 return d.promise;
           }]
         },
-      })  
+      })
 
     $stateProvider
      .state('shipments', {
         url:'/shipments',
-        templateUrl: "templateShipments.html",
+        // templateUrl: "templateShipments.html",
+        templateUrl: "templateOrders.html",
         controller: 'ShipmentsCtrl',
         resolve: {
           localuser:['$q', 'Auth', function($q, Auth){
@@ -135,5 +136,5 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
                 return d.promise;
           }]
         }
-      })  
+      })
 }]);

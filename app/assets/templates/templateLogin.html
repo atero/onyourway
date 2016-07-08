@@ -1,22 +1,22 @@
-<div class="modal-header">
+<div class="modal-header sign-up-header">
     <p ng-if="local.type == 'signup'" class="lead text-center">Sign up</p>
     <p ng-if="local.type == 'signin'" class="lead text-center">Sign in</p>
 </div>
-<div class="form-group text-center" ng-if="local.type == 'signup'">
-      <input ng-model="local.user.first_name" type="text" class="form-control search-input" placeholder="First name">
-      <input type="text" class="form-control search-input" placeholder="Last name" ng-model="local.user.last_name">
-      <input type="email" class="form-control search-input" ng-model="local.user.email" placeholder="Email">
-      <input type="password" ng-model="local.user.password" class="form-control search-input" placeholder="Password"></textarea>
-      <button class="btn btn-default" type="button" ng-click="signup()">Join</button>
+<div class="form-group text-center signup-block" ng-if="local.type == 'signup'">
+    <input ng-model="local.user.first_name" type="text" class="form-control search-input" placeholder="First name">
+    <input type="text" class="form-control search-input" placeholder="Last name" ng-model="local.user.last_name">
+    <input type="email" class="form-control search-input" ng-model="local.user.email" placeholder="Email">
+    <input type="password" ng-model="local.user.password" class="form-control search-input" placeholder="Password"></textarea>
+    <button class="btn btn-default signin-btn" type="button" ng-click="signup()">Join</button>
 </div>
 
-<div class="form-group text-center" ng-if="local.type == 'signin'">
-      <input type="email" class="form-control search-input" ng-model="local.user.email" placeholder="Email">
-      <input type="password" ng-model="local.user.password" class="form-control search-input" placeholder="Password"></textarea>
-      <button class="btn btn-default" type="button" ng-click="signup()">Sign in</button>
+<div class="form-group text-center signup-block" ng-if="local.type == 'signin'">
+  <input type="email" class="form-control search-input" ng-model="local.user.email" placeholder="Email">
+  <input type="password" ng-model="local.user.password" class="form-control search-input" placeholder="Password"></textarea>
+  <button class="btn btn-default" type="button" ng-click="signup()">Sign in</button>
 </div>
 
-<div class="modal-footer text-center">
+<div class="modal-footer text-center signup-block">
      <button class="btn btn-default" type="button" ng-click="change_type()" ng-if="local.type == 'signup'">Already have an account?</button>
      <button class="btn btn-default" type="button" ng-click="change_type()" ng-if="local.type == 'signin'">Do not have an account?</button>
 </div>
