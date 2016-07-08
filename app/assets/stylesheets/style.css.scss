@@ -318,6 +318,7 @@ src: url("../fonts/FaricyNew-Light.otf") format("opentype");
 @font-face {
 font-family: FaricyNew-Regular;
 src: url("../fonts/FaricyNew-Regular.otf") format("opentype");
+font-weight: normal;
 }
 
 @font-face {
@@ -529,7 +530,70 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     margin-top: 30px;
   }
 }
-
+.item-label{
+  font-family: FaricyNew-Regular;
+  color: #999;
+  letter-spacing: 2px;
+  font-size: 21px;
+}
+.form-group{
+  .item-label{
+    font-family: FaricyNew-Light;
+  }
+  .upload-img{
+    position: relative;
+    div.upload{
+      width: 111px;
+      height: 29px;
+      background: #11e9de;
+      overflow: hidden;
+      border-radius: 5px;
+      padding: 5px 0;
+      float: left;
+      label{
+        color: #fff;
+        font-family: FaricyNew-Light;
+        font-size: 15px;
+      }
+    }
+    div.upload input {
+      display: block !important;
+      width: 111px !important;
+      height: 29px !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      position: absolute;
+      top: 0;
+    }
+    .label-choosen{
+      padding: 5px 0;
+      font-size: 15px;
+      color: #646464;
+      font-family: FaricyNew-Light;
+      margin-left: 7px;
+    }
+  }
+  textarea{
+    resize: none;
+  }
+  .item-label-price{
+    font-family: FaricyNew-Regular;
+    color: #6e6e6e;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: normal;
+  }
+  .item-label-summary{
+    font-family: FaricyNew-Bold;
+    color: #6e6e6e;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+  .summary-span{
+    font-family: FaricyNew-Light;
+    color: #b3b3b3;
+  }
+}
 .input-w{
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -550,7 +614,54 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     font-size: 20px;
     color: #999;
   }
+  input[type="date"]{
+    color: #a7a7a7;
+  }
 }
+.btn-back{
+  width: 165px;
+  height: 45px;
+  border-left: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  border-right: 2px solid #ececec;
+  border-top: 2px solid #ececec;
+}
+.btn-next{
+  width: 165px;
+  height: 45px;
+}
+button.btn-next,
+button.btn-back:active{
+  background-color: #11e9de;
+  color: #fff;
+}
+.block-bottom{
+  margin: 0 5px;
+}
+
+
+/***********Item description************/
+.templateCreateblock{
+  padding: 20px 0 0;
+  .menu {
+    li{
+      display: inline-block;
+      list-style: none;
+      margin-right: 40px;
+      a{
+        font-size: 24px;
+        color: #999;
+        text-decoration: none;
+        font-family: FaricyNew-Regular;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+}
+
+
 
 @media (min-width: 1600px) {
     .container{
