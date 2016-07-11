@@ -75,7 +75,9 @@ body {
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td{
     vertical-align: middle !important;
 }
-
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td{
+    border-top: none;
+}
 .register-bottom{
     margin-top:100px;
 }
@@ -513,8 +515,13 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 
     h1{
       color: white;
-      font-size: 36 px;
+      font-size: 36px;
       font-family: FaricyNew-Regular;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    b{
+      font-family: FaricyNew-Bold;
     }
     span{
       font-family: FaricyNew-Light;
@@ -695,6 +702,14 @@ button.btn-back:active{
       color: #969696;
       font-family: FaricyNew-Bold;
       letter-spacing: 2px;
+    }
+    img.btn.btn-default{
+      width: 40px;
+      height: 40px;
+      padding: 10px 5px;
+    }
+    .table-img{
+      margin-right: 8%;
     }
   }
   .looking-block{
