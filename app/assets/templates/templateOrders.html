@@ -1,4 +1,4 @@
-<div class="narrow-banner">
+<div class="narrow-banner ng-scope">
   <div class="row">
     <div class="col-md-12">
       <div class="text-center">
@@ -11,7 +11,7 @@
   <div class="text-center container">
     <div class="row padding-top">
       <div class="padding-top col-md-12 text-center">
-        <form id="form-block">
+        <form id="form-block" class="ng-pristine">
           <label>From:</label>
           <input ng-model="local.shipment.from" list="countries" type="text" class="form-control" placeholder="Country">
           <datalist id="countries">
@@ -19,161 +19,162 @@
           </datalist>
           <label>To:</label>
           <input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
-          <input ng-model="local.shipment.date" type="submit" value="GO" class="form-control">
+          <input ng-model="local.shipment.date" type="submit" value="GO" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
         </form>
-      </div>
-    </div>
-  	<!-- <div class="col-md-12 orders-template">
-  		<h3 class="lead text-center">LIST OF SHOPPERS</h3>
-      <table class="table">
-        <thead>
-          <th class="home-table-th text-center"></th>
-          <th class="home-table-th text-center">What</th>
-          <th class="home-table-th text-center">From</th>
-          <th class="home-table-th text-center">To</th>
-          <th class="home-table-th text-center">Reward</th>
-          <th class="home-table-th text-center">Price</th>
-          <th class="home-table-th text-center">Quantity</th>
-        </thead>
-        <tbody>
-          <tr ng-repeat="order in local.orders" class="clickableRow">
-          <tr class="clickableRow">
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.from.join("/ ")}}</th>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
-            <td class="home-table-th text-right" valign="middle" ng-click="setOrder(order)"><img src="/images/images.jpg" class="table-img" alt="" /></td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Silver jewelry</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Argentina</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">London</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">50$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">649$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">1</td>
-            <td class="home-table-th text-center"><img class="btn btn-default" src="/images/smart-object.png" alt="" /></td>
-          </tr>
-          <tr>
-            <td class="home-table-th text-right" valign="middle" ng-click="setOrder(order)"><img src="/images/images.jpg" class="table-img" alt="" /></td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Silver jewelry</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Argentina</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">London</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">50$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">649$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">1</td>
-            <td class="home-table-th text-center"><img class="btn btn-default" src="/images/smart-object.png" alt="" /></td>
-          </tr>
-          <tr>
-            <td class="home-table-th text-right" valign="middle" ng-click="setOrder(order)"><img src="/images/images.jpg" class="table-img" alt="" /></td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Silver jewelry</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Argentina</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">London</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">50$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">649$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">1</td>
-            <td class="home-table-th text-center"><img class="btn btn-default" src="/images/smart-object.png" alt="" /></td>
-          </tr>
-          <tr>
-            <td class="home-table-th text-right" valign="middle" ng-click="setOrder(order)"><img src="/images/images.jpg" class="table-img" alt="" /></td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Silver jewelry</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">Argentina</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">London</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">50$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">649$</td>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">1</td>
-            <td class="home-table-th text-center"><img class="btn btn-default" src="/images/smart-object.png" alt="" /></td>
-          </tr>
-        </tbody>
-      </table>
-     </div> -->
-     <div class="looking-block text-center">
+        <div class="col-md-12 orders-template">
+        		<h3 class="lead text-center">LIST OF SHOPPERS</h3>
+            <table class="table">
+              <thead>
+                <tr><th class="home-table-th text-center"></th>
+                <th class="home-table-th text-center">What</th>
+                <th class="home-table-th text-center">From</th>
+                <th class="home-table-th text-center">To</th>
+                <th class="home-table-th text-center">Reward</th>
+                <th class="home-table-th text-center">Price</th>
+                <th class="home-table-th text-center">Quantity</th>
+              </tr></thead>
+              <tbody>
+              <tr ng-repeat="order in local.orders" class="clickableRow">
+                <td class="home-table-th text-right" valign="middle" ng-click="setOrder(order)"><img src="/images/images.jpg" class="table-img" alt=""></td>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.from.join("/ ")}}</th>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.reward}}</td>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.price}}</td>
+                <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.quantity}}</td>
+                <td class="home-table-th text-center"><img class="btn btn-default" src="/images/smart-object.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+         </div>
+       </div>
+       <div class="looking-block text-center">
        <h6>Did not find what you were looking for?</h6>
        <div class="create-ad-block">
          <a href="#">Create your own ad</a>
        </div>
 
      </div>
-     <div class="clearfix"></div>
-
-    <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
-      <p class="lead text-center" ng-if = "local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
-      <p class="lead text-center" ng-if = "local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
-      <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
-        <div class="col-md-2">
-          <img style="width:100%" class="profile-photo" ng-src="/images/nophoto.png" alt="">
-          {{shipment.user.first_name + ' ' + shipment.user.last_name}}
-        </div>
-        <div class="col-md-10">
-          <div class="col-md-12" style="padding:25px">
-          {{shipment.messages[0].text}}
-          </div>
-          <div class="col-md-12">
-            <table class="table">
-            <tbody>
-              <tr>
-                <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{shipment.from}}</th>
-                <td class="home-table-th text-center" valign="middle"><b>To:</b> {{shipment.to}}</th>
-                <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{shipment.date | date : mediumDate}}</th>
-                <td class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, shipment)"><i class="fa fa-check"></i></button></th>
-                <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)"><i class="fa fa-times"></i></button></th>
-              </tr>
-            </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </div>
-  <div class="col-md-7" ng-show="local.data_to_show && local.conversation_shipment">
-    <div class="col-md-12">
-      <table class="table" style="table-layout:fixed;">
-        <tbody>
-          <tr ng-repeat="message in local.conversation_shipment.messages">
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-            <td style='width:80%'class="home-table-th text-center" valign="middle">{{message.text}}</td>
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table">
-        <tbody>
-          <tr>
-            <td style='width:90%' class="home-table-th text-center" valign="middle">
-              <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
-            </td>
-            <td class="home-table-th text-center" valign="middle">
-              <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i class="fa fa-send">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-md-12">
-      <table class="table">
-        <tbody>
-          <tr>
-            <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
-            <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
-            <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
-            <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button></th>
-            <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button></th>
-            <td ng-show= "local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
-    <table class="table">
-      <thead>
-        <th class="home-table-th text-center">From</th>
-        <th class="home-table-th text-center">To</th>
-        <th class="home-table-th text-center">When</th>
-        <th class="home-table-th text-center">Message</th>
-      </thead>
-      <tbody>
-        <tr ng-repeat="shipment in local.data_to_show.shipments" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
-          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
-          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
-          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.message}}</th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+
+
+<!-- <div class="profile-body text-center">
+  			<div class="col-md-5">
+  				<p class="lead text-center">Items you have ordered</p>
+			    <table class="table">
+			      <thead>
+			        <th class="home-table-th text-center">What</th>
+			        <th class="home-table-th text-center">From</th>
+			        <th class="home-table-th text-center">To</th>
+			      </thead>
+			      <tbody>
+			        <tr ng-repeat="order in local.orders" class="clickableRow">
+			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.from.join("/ ")}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
+			        </tr>
+			      </tbody>
+				</table>
+             </div>
+             <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
+  				<p class="lead text-center" ng-if = "local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
+  				<p class="lead text-center" ng-if = "local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
+  				<div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
+  					<div class="col-md-2">
+  						<img style="width:100%" class="profile-photo" ng-src="/images/nophoto.png" alt="">
+  						{{shipment.user.first_name + ' ' + shipment.user.last_name}}
+  					</div>
+  					<div class="col-md-10">
+  						<div class="col-md-12" style="padding:25px">
+  							{{shipment.messages[0].text}}
+  						</div>
+  						<div class="col-md-12">
+  							<table class="table">
+						      <tbody>
+						        <tr>
+						          <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{shipment.from}}</th>
+						          <td class="home-table-th text-center" valign="middle"><b>To:</b> {{shipment.to}}</th>
+						          <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{shipment.date | date : mediumDate}}</th>
+								  <td class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, shipment)"><i class="fa fa-check"></i></button></th>
+						          <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)"><i class="fa fa-times"></i></button></th>
+						        </tr>
+						      </tbody>
+							</table>
+  						</div>
+  					</div>
+  				</div>
+             </div>
+  			 <div class="col-md-7" ng-show="local.data_to_show && local.conversation_shipment">
+  				<div class="col-md-12">
+  					<table class="table" style="table-layout:fixed;">
+					      <tbody>
+						        <tr ng-repeat="message in local.conversation_shipment.messages">
+						        	<td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+						          	<td style='width:80%'class="home-table-th text-center" valign="middle">{{message.text}}</td>
+						          	<td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+						        </tr>
+					      </tbody>
+					</table>
+					<table class="table">
+					      <tbody>
+						        <tr>
+						          <td style='width:90%' class="home-table-th text-center" valign="middle">
+						          		<textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
+						          </td>
+						          <td class="home-table-th text-center" valign="middle">
+						          		<button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i class="fa fa-send">
+						          </td>
+						        </tr>
+					      </tbody>
+					</table>
+				</div>
+				<div class="col-md-12">
+					<table class="table">
+				      <tbody>
+				        <tr>
+				          <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
+				          <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
+				          <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
+						  <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button></th>
+				          <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button></th>
+				          <td ng-show= "local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
+				        </tr>
+
+				      </tbody>
+
+					</table>
+
+				</div>
+
+			</div> -->
+<!-- 			    <table class="table">
+
+			      <thead>
+
+			        <th class="home-table-th text-center">From</th>
+			        <th class="home-table-th text-center">To</th>
+			        <th class="home-table-th text-center">When</th>
+			        <th class="home-table-th text-center">Message</th>
+
+			      </thead>
+
+
+			      <tbody>
+
+			        <tr ng-repeat="shipment in local.data_to_show.shipments" class="clickableRow">
+
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
+			          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.message}}</th>
+
+			        </tr>
+
+			      </tbody>
+
+				</table> -->
+
+
+<!-- </div> -->
