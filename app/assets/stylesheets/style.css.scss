@@ -721,6 +721,10 @@ button.btn-back:active{
     }
   }
 }
+
+/***********Sing Up************/
+
+
 .signup-block{
   background: #ebebeb;
   margin-bottom: 0;
@@ -728,8 +732,34 @@ button.btn-back:active{
 }
 .sign-up-header{
   background: #fff;
+  .sing-up{
+    margin: 0;
+    font-size: 23px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Regular;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .sing-in{
+    margin: 0;
+    font-size: 23px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Regular;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 }
 .signin-btn{
+  width: 69px;
+  height: 34px;
+  border-radius: 5px;
+  color: #fff;
+  background: #11e9de;
+  font-size: 17px;
+  font-family: FaricyNew-Bold;
+  border: none;
+}
+.signup-btn{
   width: 68px;
   height: 34px;
   border-radius: 5px;
@@ -737,7 +767,14 @@ button.btn-back:active{
   background: #11e9de;
   font-size: 17px;
   font-family: FaricyNew-Bold;
+  border: none;
 }
+
+
+
+
+
+
 
 @media (min-width: 1600px) {
     .container{
