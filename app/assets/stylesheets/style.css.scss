@@ -600,6 +600,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   .summary-span{
     font-family: FaricyNew-Light;
     color: #b3b3b3;
+    font-size: 17px;
   }
 }
 .input-w{
@@ -664,6 +665,9 @@ button.btn-back:active{
         font-weight: 300;
         letter-spacing: 2px;
       }
+    }
+    .block-active{
+      font-family: FaricyNew-Bold;
     }
   }
 }

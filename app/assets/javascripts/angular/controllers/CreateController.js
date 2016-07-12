@@ -1,6 +1,6 @@
 App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', function($scope,$state, localuser, Order, Shipment){
 	if (localuser) $scope.inherit.user = localuser;
-	
+
 	$scope.inherit.loading = false;
 
 	$scope.local = {
