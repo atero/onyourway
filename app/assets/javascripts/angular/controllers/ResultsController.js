@@ -1,15 +1,15 @@
 App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders','Shipment','Message', function($scope,$state,$uibModal, localuser, orders, Shipment, Message){
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
-	
-	
+
+
 	$scope.local={
 		results: orders
 	}
 
 	$scope.local.citylist = _.uniq(orders.map(function(d){return d.to})).sort()
 	$scope.local.countrylist =  _.uniq([].concat.apply([],orders.map(function(d){return d.from}))).sort()
-	
+
 
 	$scope.search = {
 		to:"",
@@ -27,7 +27,7 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 				return d.to.indexOf($scope.search.to) > -1
 			})
 		}
-		return filtered	
+		return filtered
 	}
 
 newShipments = function(shipment, result){
@@ -35,7 +35,7 @@ newShipments = function(shipment, result){
 	$scope.inherit.loading = true;
 console.log($scope.inherit.user)
 	Shipment.create({id:shipment.order_id, token:$scope.inherit.user.token}, {shipment:shipment}, function(res) {
-		
+
 		Message.create({shipment_id:res._id, token:$scope.inherit.user.token}, {message:{text:shipment.message, sender:$scope.inherit.user._id, recipient: result.user_id}}, function(res) {
 			$scope.inherit.loading = false;
 			$scope.inherit.goState("shipments")
@@ -57,7 +57,7 @@ console.log($scope.inherit.user)
         }
       }
     });
-	
+
 	modalInstance.result.then(function (shipment) {
 		if(shipment){
 			if (!$scope.inherit.user) {

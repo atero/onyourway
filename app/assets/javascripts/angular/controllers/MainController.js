@@ -1,5 +1,5 @@
 App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", function($scope,$rootScope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q){
-    
+
     $rootScope.$on('$stateChangeStart', function(){
         $scope.inherit.loading = true;
     })
