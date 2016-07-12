@@ -151,7 +151,7 @@
       <div class="row" ng-if="inherit.usertype == 'shopper'">
         <div class="row padding-top block-bottom">
           <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn-next btn btn-default navigate-button pull-right">Next</button>
-          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the order</button>
+          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn btn-default navigate-button pull-right">Publish the order</button>
           <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the travel</button>
           <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepBack()" class="btn-back btn btn-default navigate-button pull-left">Back</button>
         </div>
