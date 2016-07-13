@@ -1,11 +1,20 @@
 <!-- Page Content -->
-  <div class="container">
+<div class="narrow-banner ng-scope">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1><b>Search</b> for shopper’s <b>ads</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center result-block">
     <div class="row">
       <div class="col-md-12" style="border-left: 1px solid #ddd;">
         <div class="row" ng-show="inherit.usertype == 'traveller'">
           <div class="search-form padding-top text-center">
-          <p class="lead text-center">Search for shopper's ads</p>
-          <form ng-submit="">
+          <!-- <p class="lead text-center">Search for shopper's ads</p> -->
+          <form ng-submit="" id="form-block">
             <label>From:</label>
             <input ng-model="search.from" list="countries" type="text" class="form-control search-input" placeholder="Country">
             <datalist id="countries">
@@ -19,6 +28,7 @@
             <button type="submit" class="btn btn-default" ng-click="local.results = filterResults()">Go</button>
           </form>
           </div>
+          <p class="lead text-center result-p">List of shoppers</p>
         </div>
         <div class="row padding-top">
           <p ng-if="inherit.usertype == 'traveller'" class="lead text-center">List of shoppers</p>
@@ -50,12 +60,12 @@
           </div>
         </div>
       </div>
-      <div class="col-md-12 register-bottom">
-        <p class="lead text-center">Did not find what you were looking for?</p>
-        <div class="col-md-offset-5 col-md-2">
-          <button ng-click="inherit.goState('create')" style="display: block; width: 100%;" type="button" class="btn btn-custom large">Create you own ad</button>
-        </div>
-      </div>
+      <div class="text-center col-md-12 result-bottom">
+       <h6>Did not find what you were looking for?</h6>
+       <div class="col-md-offset-5 col-md-2 create-button">
+         <button ng-click="inherit.goState('create')" style="display: block; width: 100%;" type="button" class="btn btn-custom large">Create you own ad</button>
+       </div>
+     </div>
     </div>
   </div>
 
@@ -75,7 +85,8 @@
                   <label>From:</label>
                   <input ng-model="local.shipment.from" list="countries" type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Country">
                   <datalist id="countries">
-
+                    <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+                  </datalist>
                   <label>To:</label>
                   <input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="City">
                   <input ng-model="local.shipment.date" type="submit" value="GO" class="form-control ng-pristine ng-untouched ng-valid ng-empty">

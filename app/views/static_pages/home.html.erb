@@ -22,13 +22,13 @@
                     <a ng-click="">About us</a>
                 </li>
                   <li ng-show="!inherit.user" class="signup">
-                      <a ng-click="inherit.openSignup()">Sign up</a>
+                      <a ng-click="inherit.openSignup()" class="block-sign">Sign up</a>
                   </li>
                   <li ng-show="inherit.user" class="signin">
-                      <a ng-click="inherit.logOut()">Sign out</a>
+                      <a ng-click="inherit.logOut()" class="block-sign">Sign out</a>
                   </li>
                   <li ng-show="!inherit.user" class="signin">
-                      <a ng-click="inherit.openSignin()">Sign in</a>
+                      <a ng-click="inherit.openSignin()" class="block-sign">Sign in</a>
                   </li>
                   <li ng-show="inherit.user" class="profile">
                       <a ng-click="inherit.goState('profile')"><i class="fa fa-user"></i></a>

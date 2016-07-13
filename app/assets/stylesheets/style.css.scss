@@ -129,10 +129,10 @@ body {
     padding-top: 45px;
 }
 .search-input{
-    max-width:230px;
-    margin:20px;
-    display: inline-block;
-    border: none;
+    // max-width:230px;
+    // margin:20px;
+    // display: inline-block;
+    // border: none;
 }
 li.signup{
   background-color: rgba(255, 255, 255, 0.12);
@@ -336,9 +336,9 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   height: 80px;
   a{
     line-height: 46px;
-    color: #666;
-    font-size: 26px;
+    font-size: 22px;
     font-family: DistrictProThin, serif;
+    color: #7e7e7e;
   }
   a.btn-act-ord{
     background: #11e9de;
@@ -409,9 +409,9 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       font-family: DistrictProThin, serif;
     }
     h4{
-      margin: 20px;
+      margin: 30px 0 60px;
       color: white;
-      font-size: 36px;
+      font-size: 33px;
       font-family: DistrictProThin, serif;
     }
 }
@@ -474,6 +474,15 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       text-align: right;
     }
   }
+  p.welcome-p{
+    font-size: 25px;
+  }
+}
+.how-it-works{
+  .works-p{
+    font-size: 25px;
+    color:#a7a7a7;
+    }
 }
 
 .footer-wrapper{
@@ -736,6 +745,71 @@ button.btn-back:active{
   }
 }
 
+
+
+/***********Result************/
+
+.result-block{
+  .search-form{
+    #form-block{
+      margin-bottom: 30px;
+      label{
+        display: inline-block;
+        font-size: 25px;
+        color: #646464;
+        font-family: FaricyNew-Regular;
+        margin-right: 20px;
+      }
+      input{
+        display: inline-block;
+        width: 320px;
+        height: 48px;
+        margin-right: 35px;
+      }
+      button{
+        width: 164px;
+        background: #11e9de;
+        font-size: 24px;
+        color: #fff;
+        font-family: FaricyNew-Bold;
+      }
+    }
+  }
+  .result-bottom{
+    margin: 25px 0;
+    display: inline-block;
+    h6{
+      font-size: 24px;
+      color: #969696;
+      font-family: FaricyNew-Regular;
+      letter-spacing: 2px;
+    }
+    .create-button{
+      width: 20%;
+      display: inline-block;
+      border-radius: 5px;
+      padding: 8px;
+      margin-top: 28px;
+      button{
+        width: 100%;
+        font-size: 21px;
+        color: #fff;
+        background: #11e9de;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .result-p{
+    font-size: 24px;
+    color: #969696;
+    font-family: FaricyNew-Bold;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
 /***********Sing Up************/
 
 
@@ -796,12 +870,15 @@ button.btn-back:active{
 }
 .profile-block{
   display: inline-block;
-  input[type="file"]{
+  .profile-upload{
     width: 207px;
     height: 40px;
     color: #fff;
     background-color: #11e9de;
     text-align: center;
+    font-size: 23px;
+    padding: 3px 0;
+    border: none;
   }
 }
 .profile-thumbnail{
@@ -820,13 +897,14 @@ button.btn-back:active{
     margin-bottom: 16px;
     border: 1px solid #d7d7d7;
   }
-  input[type="submyt"]{
+  button{
     width: 77px;
     height: 29px;
     background-color: #11e9de;
     color: #fff;
     text-align: center;
-    border: 5px;
+    border: none;
+    border-radius: 5px;
     float: right;
     margin-right: 4px;
   }

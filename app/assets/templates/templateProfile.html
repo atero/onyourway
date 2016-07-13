@@ -8,9 +8,9 @@
 	    <div class="form-group profile-block">
 				<div class="fileinput fileinput-new" data-provides="fileinput">
 				  <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;"></div>
-				  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+				  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 208px; max-height: 208px;"></div>
 				  <div>
-				    <span class="btn btn-default btn-file"><span class="fileinput-new">Change image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+				    <span class="btn btn-default profile-upload btn-file"><span class="fileinput-new">Upload picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
 				    <a class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 				  </div>
 				</div>
@@ -37,7 +37,7 @@
           <datalist id="countries">
             <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
           </datalist><br/>
-          <input type="submyt" name="name" value="Save">
+          <button type="submyt" name="button">Save</button>
         </div>
       </form>
 	</div>
