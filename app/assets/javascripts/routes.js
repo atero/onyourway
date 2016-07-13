@@ -113,8 +113,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
      .state('shipments', {
         url:'/shipments',
-        templateUrl: "templateShipments.html",
-        // templateUrl: "templateOrders.html",
+        plateUrl: "templateShipments.html",
         controller: 'ShipmentsCtrl',
         resolve: {
           localuser:['$q', 'Auth', function($q, Auth){
