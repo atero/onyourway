@@ -5,7 +5,7 @@ App.controller('CreateCtrl',['$scope','$state','localuser','Order','Shipment', f
 
 	$scope.local = {
 		order:{
-			from:,
+			from:"",
 			to:"",
 			base64_image: null,
 			message: "",
