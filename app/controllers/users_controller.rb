@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     p save
     p "**************************************************************"
     if save
+      UserMailer.welcome_email(@user).deliver_later
       render json: @user, status: :accepted
     else
       render json: {messsage:'Bad request'}, status: 400
