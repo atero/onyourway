@@ -36,6 +36,7 @@
             <label for="arrival">To</label>
             <div class="input-w">
               <input type="text" class="form-control" ng-autocomplete="inherit.result" details="inherit.details" options="inherit.options" placeholder="City" ng-model="local.order.to" />
+              <!-- <input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City"> -->
             </div>
           </div>
           <div class="form-group">
@@ -141,7 +142,7 @@
             <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
           </datalist>
           <label>To:</label>
-          <input ng-model="local.shipment.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
+          <input ng-model="local.order.to" type="text" style="text-transform: capitalize;" class="form-control" placeholder="City">
           <label for="date">Date:</label>
           <input ng-model="local.shipment.date" type="date" class="form-control">
         </form>
