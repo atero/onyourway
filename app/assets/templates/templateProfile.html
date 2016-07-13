@@ -4,12 +4,10 @@
   <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
 </ul>
 <div class="profile-body">
-	<div class="col-md-12 text-center">
-	    <div class="form-group">
+	<div class="col-md-12 text-left">
+	    <div class="form-group profile-block">
 				<div class="fileinput fileinput-new" data-provides="fileinput">
-				  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-
-				  </div>
+				  <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;"></div>
 				  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 				  <div>
 				    <span class="btn btn-default btn-file"><span class="fileinput-new">Change image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
@@ -17,6 +15,31 @@
 				  </div>
 				</div>
 	    </div>
-	    First Name, Last Name, Age, Sex, Country
+	    <!-- First Name, Last Name, Age, Sex, Country -->
+      <form class="profile-form-block">
+        <div class="">
+          <label for="">First name</label>
+          <input type="text" name="name" value=""><br/>
+          <label for="">Last name</label>
+          <input type="text" name="name" value=""><br/>
+          <label for="" class="select-iam">I am</label>
+          <select class="profile-select">
+            <option value="male/fmale">male/fmale</option>
+            <option value="Male">Male</option>
+            <option value="Fmale">Fmale</option>
+          </select><br/>
+          <label for="" class="birth-date">Birth date</label>
+          <input type="date" name="name" value=""><br/>
+          <label for="" class="label-e-mail">E-mail</label>
+          <input type="email" name="name" value=""><br/>
+          <label for="" class="label-country">Country</label>
+          <input ng-model="local.shipment.from" list="countries" type="text" class="" placeholder="Country">
+          <datalist id="countries">
+            <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+          </datalist><br/>
+          <input type="submyt" name="name" value="Save">
+        </div>
+      </form>
 	</div>
+
 </div>

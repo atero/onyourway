@@ -110,11 +110,6 @@ body {
     color: #333;
 }
 
-.left-bar-border{
-
-}
-
-
 .how-text {
     font-size: 1.0em;
     margin-top: 80px;
@@ -792,10 +787,66 @@ button.btn-back:active{
 .orders-block{
   top:20%;
 }
-
-
-
-
+.orders-left-bar{
+  margin-top: 28px;
+}
+.shipments-left-bar li{
+  list-style: none;
+  padding: 10px 15px;
+}
+.profile-block{
+  display: inline-block;
+  input[type="file"]{
+    width: 207px;
+    height: 40px;
+    color: #fff;
+    background-color: #11e9de;
+    text-align: center;
+  }
+}
+.profile-thumbnail{
+  margin-right: 30px;
+}
+.profile-form-block{
+  display: inline-block;
+  label{
+    margin-right: 8px;
+  }
+  input{
+    width: 219px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 3px;
+    margin-bottom: 16px;
+    border: 1px solid #d7d7d7;
+  }
+  input[type="submyt"]{
+    width: 77px;
+    height: 29px;
+    background-color: #11e9de;
+    color: #fff;
+    text-align: center;
+    border: 5px;
+    float: right;
+    margin-right: 4px;
+  }
+  .profile-select{
+    margin-bottom: 16px;
+    width: 218px;
+  }
+  .select-iam{
+    margin-right: 50px;
+  }
+  .birth-date{
+    margin-right: 13px;
+  }
+  .label-e-mail{
+    margin-right: 34px;
+  }
+  .label-country{
+    margin-right: 24px;
+  }
+}
 
 @media (min-width: 1600px) {
     .container{

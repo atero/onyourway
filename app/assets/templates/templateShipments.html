@@ -1,4 +1,18 @@
-<div class="profile-body text-center">
+<div class="narrow-banner ng-scope">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1><b>Search</b> for shopper’s <b>ads</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+</ul>
+<div class="text-center profile-body orders-block">
 <div class="col-md-4">
   <p class="lead text-center">Travels you have proposed</p>
   <table class="table">
@@ -69,3 +83,4 @@
     </div>
   </div>
 </div>
+<div class="clearfix"></div>
