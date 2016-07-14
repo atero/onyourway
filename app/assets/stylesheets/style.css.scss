@@ -5,7 +5,7 @@
  */
 
 body {
-    padding-top: 80px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 66px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
   color: #2E6836;
@@ -131,9 +131,29 @@ body {
 li.signup{
   background-color: rgba(255, 255, 255, 0.12);
   cursor:pointer;
+  a{
+    font-size: 19px;
+    font-family: DistrictProThin, serif;
+  }
 }
 li.signin{
   cursor:pointer;
+  a{
+    font-size: 19px;
+    font-family: DistrictProThin, serif;
+  }
+}
+li.about-us{
+  a{
+    font-size: 19px;
+    font-family: DistrictProThin, serif;
+  }
+}
+li.active-oreders{
+  a{
+    font-size: 19px;
+    font-family: DistrictProThin, serif;
+  }
 }
 li.profile{
     cursor:pointer;
@@ -327,7 +347,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 .navbar-fixed-top{
   margin-bottom: 0;
   background: white;
-  height: 80px;
+  height: 62px;
   a{
     line-height: 46px;
     font-size: 22px;
@@ -355,7 +375,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 .shopper-button{
   background: #11e9de;
   font-family: FaricyNew-Bold;
-  font-size: 22px;
+  font-size: 20px;
   text-align: right;
   color: #666;
   margin: 6px;
@@ -364,7 +384,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   width: 270px;
   span{
     margin-top: -8px;
-    font-size: 21px;
+    font-size: 18px;
     display: block;
     font-family: DistrictProThin, serif;
     font-weight: normal;
@@ -373,7 +393,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 .travaller-button{
   background: #fee539;
   font-family: FaricyNew-Bold;
-  font-size: 22px;
+  font-size: 20px;
   text-align: left;
   color: #666;
   margin: 6px;
@@ -382,7 +402,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   width: 270px;
   span{
     margin-top: -8px;
-    font-size: 21px;
+    font-size: 18px;
     display: block;
     font-family: DistrictProThin, serif;
     font-weight: normal;
@@ -399,13 +419,13 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     }
     h1{
       color: white;
-      font-size: 90px;
+      font-size: 83px;
       font-family: DistrictProThin, serif;
     }
     h4{
       margin: 30px 0 60px;
       color: white;
-      font-size: 33px;
+      font-size: 24px;
       font-family: DistrictProThin, serif;
     }
 }
@@ -442,13 +462,13 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   .how-title {
       font-family: FaricyNew-Bold;
       text-align: center;
-      font-size: 42px;
+      font-size: 30px;
       color: #666;
   }
   h3 {
       font-family: FaricyNew-Bold;
       text-align: left;
-      font-size: 32px;
+      font-size: 20px;
       color: #666;
   }
   .vector-wrap{
@@ -469,12 +489,12 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     }
   }
   p.welcome-p{
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 .how-it-works{
   .works-p{
-    font-size: 25px;
+    font-size: 17px;
     color:#a7a7a7;
     }
 }
@@ -492,6 +512,9 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       padding: 30px 40px 30px 0;
       list-style: none;
       display: inline-block;
+      a{
+        font-size: 18px;
+      }
     }
   }
   p{
