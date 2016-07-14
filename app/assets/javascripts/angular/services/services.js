@@ -30,7 +30,7 @@ App.factory('Message',['$resource',function($resource){
 
 
 // App.factory('User',['$resource',function($resource){
-	
+//
 // 	return $resource(api_endpoint+'v1/users/:id/', {id:'@id'},
 // 	{
 // 		show: { method:"GET", params: {id :'@id'}, isArray : false },
@@ -38,6 +38,5 @@ App.factory('Message',['$resource',function($resource){
 // 		create: { method:"POST", params: {}, isArray : false },
 // 		update: { method:"PUT", params: {id :'@id'}, isArray : false }
 // 	});
-
+//
 // }]);
-

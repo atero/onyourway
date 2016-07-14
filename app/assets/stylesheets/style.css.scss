@@ -119,20 +119,14 @@ body {
     height: 150px;
 }
 .row-how {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    -webkit-transition: all .5s ease !important;
-    -o-transition: all .5s ease !important;
-    transition: all .5s ease !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-transition: all .5s ease !important;
+  -o-transition: all .5s ease !important;
+  transition: all .5s ease !important;
 }
 .padding-top{
-    padding-top: 45px;
-}
-.search-input{
-    // max-width:230px;
-    // margin:20px;
-    // display: inline-block;
-    // border: none;
+  padding-top: 45px;
 }
 li.signup{
   background-color: rgba(255, 255, 255, 0.12);
@@ -897,7 +891,7 @@ button.btn-back:active{
     margin-bottom: 16px;
     border: 1px solid #d7d7d7;
   }
-  button{
+  button.profile-btn{
     width: 77px;
     height: 29px;
     background-color: #11e9de;
@@ -925,6 +919,14 @@ button.btn-back:active{
     margin-right: 24px;
   }
 }
+
+.search-input{
+  max-width:230px;
+  margin:20px;
+  display: inline-block;
+  border: none;
+}
+
 
 @media (min-width: 1600px) {
     .container{
