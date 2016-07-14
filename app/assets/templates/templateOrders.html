@@ -1,9 +1,7 @@
-<div class="narrow-banner ng-scope">
+<div class="narrow-banner-orders ng-scope">
     <div class="row">
       <div class="col-md-12">
-        <div class="text-center">
-          <h1><b>Search</b> for shopper’s <b>ads</b></h1>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -16,28 +14,18 @@
   			<div class="col-md-5">
   				<p class="lead text-center">Items you have ordered</p>
 			    <table class="table">
-
 			      <thead>
-
 			        <th class="home-table-th text-center">What</th>
 			        <th class="home-table-th text-center">From</th>
 			        <th class="home-table-th text-center">To</th>
-
 			      </thead>
-
-
 			      <tbody>
-
 			        <tr ng-repeat="order in local.orders" class="clickableRow">
-
 			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
 			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.from.join("/ ")}}</th>
 			          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
-
 			        </tr>
-
 			      </tbody>
-
 				</table>
              </div>
 
