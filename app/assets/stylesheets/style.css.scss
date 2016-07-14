@@ -133,26 +133,29 @@ li.signup{
   cursor:pointer;
   a{
     font-size: 19px;
-    font-family: DistrictProThin, serif;
+    font-family: DistrictProThin;
   }
 }
 li.signin{
   cursor:pointer;
   a{
     font-size: 19px;
-    font-family: DistrictProThin, serif;
+    font-family: DistrictProThin;
   }
 }
 li.about-us{
   a{
     font-size: 19px;
-    font-family: DistrictProThin, serif;
+    font-family: DistrictProThin;
   }
 }
 li.active-oreders{
-  a{
+  a.orders-active-a{
     font-size: 19px;
-    font-family: DistrictProThin, serif;
+    font-family: DistrictProThin;
+    border-radius: 10px;
+    font-size: 19px;
+    padding: 3px;
   }
 }
 li.profile{
@@ -320,6 +323,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 @font-face {
 font-family: DistrictProThin;
 src: url("../fonts/DistProTh.otf") format("opentype");
+  font-weight: normal;
 }
 
 @font-face {
@@ -472,7 +476,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       color: #666;
   }
   .vector-wrap{
-    padding-right: 30px;
+    padding-right: 15px;
     padding-top: 24px;
     img{
       max-width: 100%;
@@ -482,7 +486,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
   .row-how-right{
     .vector-wrap{
       padding-right: 0;
-      padding-left: 30px;
+      padding-left: 15px;
     }
     h3{
       text-align: right;
@@ -514,6 +518,8 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       display: inline-block;
       a{
         font-size: 18px;
+        color: #698979;
+        font-family: FaricyNew-Light;
       }
     }
   }
@@ -522,6 +528,11 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     display: inline-block;
     float:  right;
     padding-right: 0;
+  }
+  .footer-copy-p{
+    font-size: 18px;
+    color: #698979;
+    font-family: FaricyNew-Light;
   }
 }
 
@@ -549,6 +560,13 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
     }
 }
 
+
+.narrow-banner-orders{
+  background-image: url("../images/order-bg.jpg");
+  height: 128px;
+  width:100%;
+  padding-top: 30px;
+}
 /***********Create ad************/
 
 .crate-form{
