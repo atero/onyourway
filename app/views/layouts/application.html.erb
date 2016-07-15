@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-
 <html>
-
-	<head>
-
-	  <title>Shop'N'Ship</title>
-
-	  <%= include_gon %>
-	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	  <%= csrf_meta_tags %>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
-
-	</head>
-
-	<body ng-app='ShopNShip' ng-controller="MainCtrl">
-
-		<%= yield %>
-
-	</body>
-
+  <head>
+    <title>Shop'N'Ship</title>
+    <%= include_gon %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="https://maps-api-ssl.google.com/maps/api/js?libraries=places&key=AIzaSyDzQvQxk8sCA01vRWFTMHg99pJZKW5icwQ"></script>
+  </head>
+  <body ng-app='ShopNShip' ng-controller="MainCtrl">
+    <%= yield %>
+  </body>
 </html>
