@@ -49,6 +49,9 @@ body {
 }
 .left-bar-profile{
   margin-top: 40px;
+  li a{
+    padding: 4px 15px;
+  }
 }
 .left-bar li.active a, .left-bar li.active a:focus, .left-bar li.active a:hover{
   background-color: white;
@@ -58,10 +61,12 @@ body {
 
 .left-bar li a{
   cursor: pointer;
-  color:black;
+  color:#6e6e6e;
   width: 100%;
   display: inline-block;
   text-align: right;
+  font-size: 22px;
+  font-weight: 300;
 }
 
 .tags {
@@ -937,6 +942,10 @@ button.btn-back:active{
     font-size: 23px;
     padding: 3px 0;
     border: none;
+    .fileinput-new{
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
   }
 }
 .profile-thumbnail{
@@ -947,8 +956,10 @@ button.btn-back:active{
   label{
     margin-right: 10px;
     color: #969696;
-    font-size: 21px;
+    font-size: 19px;
     font-family: FaricyNew-Light;
+    letter-spacing: 1px;
+    font-weight: 300;
   }
   input{
     width: 219px;
