@@ -544,6 +544,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
         font-size: 18px;
         color: #698979;
         font-family: FaricyNew-Light;
+        cursor: pointer;
       }
     }
   }
@@ -1044,12 +1045,32 @@ button.btn-back:active{
     color: #a7a7a7;
     font-family: FaricyNew-Bold;
     margin: 35px 0 28px;
+    letter-spacing: 2px;
   }
   .condition-padding{
     padding: 35px;
     margin: 0;
   }
 }
+.faq-block{
+  p{
+    font-size: 25px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Light;
+  }
+  h5{
+    font-size: 25px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Bold;
+    margin: 35px 0 28px;
+    letter-spacing: 2px;
+  }
+  .condition-padding{
+    padding: 35px;
+    margin: 0;
+  }
+}
+
 
 @media (min-width: 1600px) {
     .container{
