@@ -34,14 +34,14 @@ body {
 
 .profile-body{
   position: fixed;
-  padding: 40px;
+  padding: 40px 0;
   top: 60px;
-  left: 220px;
+  left: 178px;
   width: calc(100% - 220px);
 }
 
 .left-bar{
-  width: 220px;
+  width: 180px;
   height: 800px;
   border-right: rgba(0, 0, 0, 0.04) solid 2px;
   display: inline-block;
@@ -53,16 +53,18 @@ body {
 .left-bar-profile{
   margin-top: 40px;
 }
-
-
 .left-bar li.active a, .left-bar li.active a:focus, .left-bar li.active a:hover{
   background-color: white;
-  color:#BFBFBF;
+  color: #11e9de;
+  font-family: FaricyNew-Bold;
 }
 
 .left-bar li a{
   cursor: pointer;
   color:black;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
 }
 
 .tags {
@@ -168,6 +170,10 @@ li.active-oreders{
 }
 li.profile{
     cursor:pointer;
+    a{
+      font-size: 21px;
+      font-family: DistrictProThin;
+    }
 }
 .big-button{
     height:100px;
@@ -440,6 +446,12 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       font-size: 24px;
       font-family: DistrictProThin, serif;
     }
+}
+
+.home-block-fa{
+  .fa.fa-user{
+    color: #11e9de;
+  }
 }
 
 .land-content{
@@ -910,6 +922,7 @@ button.btn-back:active{
 }
 .orders-left-bar{
   margin-top: 28px;
+  padding: 0;
 }
 .shipments-left-bar li{
   list-style: none;
@@ -934,7 +947,10 @@ button.btn-back:active{
 .profile-form-block{
   display: inline-block;
   label{
-    margin-right: 8px;
+    margin-right: 10px;
+    color: #969696;
+    font-size: 21px;
+    font-family: FaricyNew-Light;
   }
   input{
     width: 219px;
@@ -943,6 +959,7 @@ button.btn-back:active{
     padding-left: 3px;
     margin-bottom: 16px;
     border: 1px solid #d7d7d7;
+    color: #d7d7d7;
   }
   button.profile-btn{
     width: 77px;
@@ -958,18 +975,37 @@ button.btn-back:active{
   .profile-select{
     margin-bottom: 16px;
     width: 218px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #fff; /* fallback color if gradients are not supported */
+    overflow: hidden;
+    background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
+    background-position: center right 7px;
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    height: 30px;
+    border: 1px solid #d7d7d7;
+    color: #d7d7d7;
+    z-index: 999;
   }
   .select-iam{
-    margin-right: 50px;
+    margin-right: 64px;
   }
   .birth-date{
     margin-right: 13px;
   }
   .label-e-mail{
-    margin-right: 34px;
+    margin-right: 45px;
   }
   .label-country{
-    margin-right: 24px;
+    margin-right: 32px;
   }
 }
 
