@@ -47,6 +47,14 @@ body {
   display: inline-block;
 }
 
+.profile-body-block{
+  top: 20%;
+}
+.left-bar-profile{
+  margin-top: 40px;
+}
+
+
 .left-bar li.active a, .left-bar li.active a:focus, .left-bar li.active a:hover{
   background-color: white;
   color:#BFBFBF;
@@ -415,7 +423,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 
 .welcome-image{
     background-image: url("../images/welcome_photo.jpg");
-    height: 700px;
+    height: 750px;
     width:100%;
     padding-top: 190px;
     .row{
@@ -498,7 +506,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 }
 .how-it-works{
   .works-p{
-    font-size: 17px;
+    font-size: 19px;
     color:#a7a7a7;
     }
 }
