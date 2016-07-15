@@ -811,7 +811,7 @@ button.btn-back:active{
 
 /***********Result************/
 
-.result-block{
+.result-block-home{
   .search-form{
     #form-block{
       margin-bottom: 30px;
@@ -1032,6 +1032,24 @@ button.btn-back:active{
   border: none;
 }
 
+
+.conditions-block{
+  p{
+    font-size: 25px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Light;
+  }
+  h5{
+    font-size: 25px;
+    color: #a7a7a7;
+    font-family: FaricyNew-Bold;
+    margin: 35px 0 28px;
+  }
+  .condition-padding{
+    padding: 35px;
+    margin: 0;
+  }
+}
 
 @media (min-width: 1600px) {
     .container{
