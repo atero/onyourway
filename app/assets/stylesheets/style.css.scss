@@ -33,22 +33,19 @@ body {
 }
 
 .profile-body{
-  position: fixed;
   padding: 40px 0;
-  top: 60px;
-  left: 178px;
-  width: calc(100% - 220px);
 }
 
 .left-bar{
   width: 180px;
-  height: 800px;
+  // height: 800px;
+  position: fixed;
   border-right: rgba(0, 0, 0, 0.04) solid 2px;
   display: inline-block;
 }
 
 .profile-body-block{
-  top: 20%;
+  padding: 40px 35px 0;
 }
 .left-bar-profile{
   margin-top: 40px;
@@ -429,7 +426,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
 
 .welcome-image{
     background-image: url("../images/welcome_photo.jpg");
-    height: 750px;
+    height: 759px;
     width:100%;
     padding-top: 190px;
     .row{
@@ -439,6 +436,7 @@ src: url("../fonts/FaricyNew-Bold.otf") format("opentype");
       color: white;
       font-size: 83px;
       font-family: DistrictProThin, serif;
+      padding-top: 25px;
     }
     h4{
       margin: 30px 0 60px;
@@ -987,9 +985,9 @@ button.btn-back:active{
     background-color: #fff; /* fallback color if gradients are not supported */
     overflow: hidden;
     background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
-    background-position: center right 7px;
+    background-position: center right -1px;
     background-repeat: no-repeat;
-    background-size: 15px 10px;
+    background-size: 29px 30px;
     height: 30px;
     border: 1px solid #d7d7d7;
     color: #d7d7d7;
@@ -1007,6 +1005,13 @@ button.btn-back:active{
   .label-country{
     margin-right: 32px;
   }
+}
+
+.profile-countries{
+  background-image: url(../images/bottom.png);
+  background-position: center right -1px;
+  background-repeat: no-repeat;
+  background-size: 29px 30px;
 }
 
 .search-input{
