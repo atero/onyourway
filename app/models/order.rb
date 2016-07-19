@@ -16,7 +16,7 @@ class Order
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
-   field :from, type: Array
+   field :from, type: String
    field :to, type: String
    field :date, type: Date
    field :item, type: String
@@ -51,17 +51,17 @@ class Order
         end
         true
       end
-      
+
       def check_status
 
         valid_states = ["pending_travel", "travel_accepted", "travel_failed"]
         if !valid_states.include?(self.status) then self.status = "pending_travel" end
 
-        sh = self.shipments.detect{|sh| sh.status == "accepted"}      
+        sh = self.shipments.detect{|sh| sh.status == "accepted"}
 
-        if sh then 
-          self.accepted_shipment = true 
-        else 
+        if sh then
+          self.accepted_shipment = true
+        else
           self.accepted_shipment = false
         end
 
