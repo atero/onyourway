@@ -32,13 +32,7 @@ body {
 .clickableRow:hover {
   background-color: #F5F5F5;
 }
-<<<<<<< HEAD
-.profile-body {
-  position: fixed;
-=======
-
 .profile-body{
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
   padding: 40px 0;
 }
 .left-bar {
@@ -48,14 +42,9 @@ body {
   border-right: rgba(0, 0, 0, 0.04) solid 2px;
   display: inline-block;
 }
-<<<<<<< HEAD
-.profile-body-block {
-  top: 20%;
-=======
 
 .profile-body-block{
   padding: 40px 35px 0;
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
 }
 .left-bar-profile {
   margin-top: 40px;
@@ -72,11 +61,7 @@ body {
 }
 .left-bar li a {
   cursor: pointer;
-<<<<<<< HEAD
-  color: black;
-=======
   color:#6e6e6e;
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
   width: 100%;
   display: inline-block;
   text-align: right;
@@ -796,16 +781,9 @@ button.btn-next {
   }
 }
 /***********Result************/
-<<<<<<< HEAD
-.result-block {
-  .search-form {
-    #form-block {
-=======
-
 .result-block-home{
   .search-form{
     #form-block{
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
       margin-bottom: 30px;
       label {
         display: inline-block;
@@ -981,14 +959,8 @@ button.btn-next {
     background-color: #fff;
     /* fallback color if gradients are not supported */
     overflow: hidden;
-<<<<<<< HEAD
-    background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff);
-    /* Standard syntax; must be last */
-    background-position: center right 7px;
-=======
     background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
     background-position: center right -1px;
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
     background-repeat: no-repeat;
     background-size: 29px 30px;
     height: 30px;
@@ -1009,14 +981,12 @@ button.btn-next {
     margin-right: 32px;
   }
 }
-<<<<<<< HEAD
 .search-input {
   max-width: 230px;
   margin: 20px;
   display: inline-block;
   border: none;
 }
-=======
 
 .profile-countries{
   background-image: url(../images/bottom.png);
@@ -1056,6 +1026,7 @@ button.btn-next {
     font-size: 25px;
     color: #a7a7a7;
     font-family: FaricyNew-Light;
+    margin-bottom: 20px; 
   }
   h5{
     font-size: 25px;
@@ -1070,8 +1041,6 @@ button.btn-next {
   }
 }
 
-
->>>>>>> 57d4f9940b0d6a61cd34c38fb7b877cad86bb055
 @media (min-width: 1600px) {
   .container {
     width: 1530px;
