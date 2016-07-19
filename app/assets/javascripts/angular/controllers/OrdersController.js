@@ -5,7 +5,7 @@ App.controller('OrdersCtrl',['$scope', '$state','localuser', 'orders', 'Shipment
 		orders: orders,
 		conversation_shipment: null
 	}
-
+	console.log($scope.local.orders);
 	$scope.accept_travel = function(order, shipment){
 		order.accepted_shipment = true;
 
