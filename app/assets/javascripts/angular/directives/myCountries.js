@@ -84,7 +84,7 @@ return {
         }
     };
 })
-.directive('resize', function($window) {
+.directive('resize', ['$window', function($window) {
   return function(scope, element) {
     var w = angular.element($window);
     var changeHeight = function() {
@@ -92,4 +92,4 @@ return {
     };
     changeHeight(); // when page loads
   }
-});
+}]);
