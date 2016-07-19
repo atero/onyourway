@@ -29,7 +29,7 @@ module Api
       @orders = Order.all
 
       if @orders.length > 0
-          render 'index'
+          render 'index_profile'
        else
          render json: {messsage:'No orders found'}, status: 404
       end
