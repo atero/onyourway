@@ -21,10 +21,10 @@ App.controller('CreateCtrl',['$scope','$state', 'localuser','Order','Shipment', 
 	}
 
 	$scope.toOptions = {
-		types: ['cities']
+
 	}
 	$scope.fromOptions = {
-		types: ['countries']
+		
 	}
 
 	newOrder = function(){
