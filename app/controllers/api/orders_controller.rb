@@ -25,7 +25,6 @@ module Api
 
     def index #all the orders
       p '******************All Orders*************************'
-      p Order.all
       @orders = Order.all
 
       if @orders.length > 0
