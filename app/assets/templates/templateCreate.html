@@ -99,9 +99,9 @@
             <!-- <br/> You're about to publish the following purchase order: -->
             <br/>
             <div class="padding-top">
-              <span class="pull-left summary-span">From:</span><br/><span class="pull-right summary-span">{{local.order.from.join(", ")}}</span>
+              <span class="pull-left summary-span">From:</span><br/><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name}}</span>
               <br/>
-              <span class="pull-left summary-span">To:</span><br/><span class="pull-right summary-span">{{local.order.to.}}</span>
+              <span class="pull-left summary-span">To:</span><br/><span class="pull-right summary-span">{{local.order.to.address_components[0].long_name}}</span>
               <br/>
               <span class="pull-left summary-span">Qty:</span><br/><span class="pull-right summary-span">{{local.order.quantity}}</span>
               <br/>
