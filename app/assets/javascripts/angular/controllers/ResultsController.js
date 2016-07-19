@@ -7,9 +7,6 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 		results: orders
 	}
 
-	$scope.local.citylist = _.uniq(orders.map(function(d){return d.to})).sort()
-	$scope.local.countrylist =  _.uniq([].concat.apply([],orders.map(function(d){return d.from}))).sort()
-
 
 	$scope.search = {
 		to:"",
