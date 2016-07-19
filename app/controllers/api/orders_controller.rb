@@ -1,7 +1,7 @@
 module Api
   class OrdersController < ApplicationController
 
-    before_filter :authenticate_user!, :except => :index 
+    before_filter :authenticate_user!, :except => :index
 
     def create
       @order = Order.new(order_params)
@@ -12,7 +12,7 @@ module Api
          render json: {messsage:'Bad request'}, status: 400
       end
     end
-    
+
     def show
       @order = Order.where(:id => params["id"]).first
       if @order
@@ -44,7 +44,7 @@ module Api
     private
 
     def order_params
-      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from => [])
+      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from)
     end
   end
 end
