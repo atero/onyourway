@@ -1,24 +1,10 @@
 App.directive('resize', function($window) {
   return function (scope, element) {
-         var w = angular.element($window);
-         scope.getWindowDimensions = function () {
-             return { 'h': w.height(), 'w': w.width() };
-         };
-         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
-             scope.windowHeight = newValue.h;
-             scope.windowWidth = newValue.w;
-
-             scope.style = function () {
-                 return {
-                     'height': (newValue.h - 300) + 'px',
-                     'width': (newValue.w - 300) + 'px'
-                 };
-             };
-
-         }, true);
-
-         w.bind('resize', function () {
-             scope.$apply();
-         });
-     }
+      var w = angular.element($window);
+      var changeHeight = function() {element.css('height', (w.height() -330) + 'px' );};
+          w.bind('resize', function () {
+            changeHeight();   // when window size gets changed
+      });
+      changeHeight(); // when page loads
+  }
 });
