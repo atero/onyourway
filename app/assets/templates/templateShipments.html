@@ -1,78 +1,80 @@
 <div class="narrow-banner-orders ng-scope">
-    <div class="row">
-      <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
 
-      </div>
     </div>
   </div>
-<ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
-</ul>
-<div class="text-center profile-body orders-block">
-<div class="col-md-4">
-  <p class="lead text-center">Travels you have proposed</p>
-  <table class="table">
-    <thead>
-      <th class="home-table-th text-center">From</th>
-      <th class="home-table-th text-center">To</th>
-      <th class="home-table-th text-center">When</th>
-    </thead>
-    <tbody>
-      <tr ng-repeat="shipment in local.shipments" class="clickableRow">
-        <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
-        <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
-        <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
-      </tr>
-    </tbody>
-  </table>
 </div>
-<div class="col-md-8" ng-show="local.data_to_show">
-  <p class="lead text-center">Details and current state of your travel</p>
-  Status: <b>{{local.data_to_show.status}}</b>
-  <div class='col-md-offset-1 col-md-10 padding-top'>
+<div class="text-center profile-body orders-block">
+  <div class="col-md-2">
+    <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <p class="lead text-center">Travels you have proposed</p>
     <table class="table">
       <thead>
-        <th class="home-table-th text-center"></th>
-        <th class="home-table-th text-center">What</th>
         <th class="home-table-th text-center">From</th>
         <th class="home-table-th text-center">To</th>
-        <th class="home-table-th text-center">Reward</th>
-        <th class="home-table-th text-center">Price</th>
-        <th class="home-table-th text-center">Quantity</th>
+        <th class="home-table-th text-center">When</th>
       </thead>
       <tbody>
-        <tr>
-          <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.from.join("/ ")}}</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.to}}</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
-          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.quantity}}</th>
+        <tr ng-repeat="shipment in local.shipments" class="clickableRow">
+          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
+            <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
+              <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
         </tr>
       </tbody>
     </table>
-    <div class="col-md-12">
+  </div>
+  <div class="col-md-6" ng-show="local.data_to_show">
+    <p class="lead text-center">Details and current state of your travel</p>
+    Status: <b>{{local.data_to_show.status}}</b>
+    <div class='col-md-offset-1 col-md-10 padding-top'>
+      <table class="table">
+        <thead>
+          <th class="home-table-th text-center"></th>
+          <th class="home-table-th text-center">What</th>
+          <th class="home-table-th text-center">From</th>
+          <th class="home-table-th text-center">To</th>
+          <th class="home-table-th text-center">Reward</th>
+          <th class="home-table-th text-center">Price</th>
+          <th class="home-table-th text-center">Quantity</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
+              <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
+                <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.from.join("/ ")}}</th>
+                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.to}}</th>
+                    <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+                      <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
+                        <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.quantity}}</th>
+          </tr>
+        </tbody>
+      </table>
       <div class="col-md-12">
-        <table class="table" style="table-layout:fixed;">
-          <tbody>
-            <tr ng-repeat="message in local.data_to_show.messages">
-              <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-              <td style='width:80%'class="home-table-th text-center" valign="middle">{{message.text}}</td>
-              <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table">
-          <tbody>
-            <tr>
-              <td style='width:90%' class="home-table-th text-center" valign="middle">
-                <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
-              </td>
-              <td class="home-table-th text-center" valign="middle">
-                <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.data_to_show)"><i class="fa fa-send">
+        <div class="col-md-12">
+          <table class="table" style="table-layout:fixed;">
+            <tbody>
+              <tr ng-repeat="message in local.data_to_show.messages">
+                <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+                <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
+                <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td style='width:90%' class="home-table-th text-center" valign="middle">
+                  <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
+                </td>
+                <td class="home-table-th text-center" valign="middle">
+                  <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.data_to_show)"><i class="fa fa-send">
               </td>
             </tr>
           </tbody>

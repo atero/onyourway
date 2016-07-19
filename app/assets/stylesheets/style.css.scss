@@ -37,8 +37,6 @@ body {
 }
 .left-bar {
   width: 180px;
-  // height: 800px;
-  position: fixed;
   border-right: rgba(0, 0, 0, 0.04) solid 2px;
   display: inline-block;
 }
@@ -1026,7 +1024,7 @@ button.btn-next {
     font-size: 25px;
     color: #a7a7a7;
     font-family: FaricyNew-Light;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
   h5{
     font-size: 25px;
