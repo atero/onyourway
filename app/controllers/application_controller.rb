@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  UserMailer.welcome_email("karen@aterostudio.com").deliver_later
+
   protect_from_forgery with: :null_session
   skip_before_filter :verify_authenticity_token
   # before_filter :set_gzip_deflate_header

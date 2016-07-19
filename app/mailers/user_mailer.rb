@@ -1,11 +1,14 @@
 class UserMailer < ApplicationMailer
   default from: 'contact@onyourway.com'
 
-  def welcome_email(user)
-    @user = user
-    p "************************{}}}}}}}}}}}}}**************************"
-    p @user
-    @url  = 'https://shopnship.herokuapp.com'
-    mail(to: @user.email, subject: 'Welcome to OnYourWay')
+  def welcome_email(email)
+
+    p '************************{}}}}}}}}}}}}}**************************'
+
+    @url = 'https://shopnship.herokuapp.com'
+    delivery_options = { user_name: 'contact@atero.solutions',
+                         password: '[h1*ISxpVUp7',
+                         address: 'mail.atero.solutions' }
+    mail(to: email, subject: 'Welcome to OnYourWay', delivery_method_options: delivery_options)
   end
 end
