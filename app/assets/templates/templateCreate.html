@@ -29,13 +29,13 @@
           <div class="form-group">
             <label for="departure">From</label>
             <div class="input-w">
-              <my-countries anywhere="local.anywhere" tags="local.request.from" options="inherit.options" autocomplete="inherit.countrylist" ng-model="local.order.from"></my-countries>
+              <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.order.from" />
             </div>
           </div>
           <div class="form-group">
             <label for="arrival">To</label>
             <div class="input-w">
-              <input type="text" class="form-control" g-places-autocomplete placeholder="City" ng-model="local.order.to" />
+              <input type="text" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.order.to" />
             </div>
           </div>
           <div class="form-group">
@@ -101,7 +101,7 @@
             <div class="padding-top">
               <span class="pull-left summary-span">From:</span><br/><span class="pull-right summary-span">{{local.order.from.join(", ")}}</span>
               <br/>
-              <span class="pull-left summary-span">To:</span><br/><span class="pull-right summary-span">{{local.order.to}}</span>
+              <span class="pull-left summary-span">To:</span><br/><span class="pull-right summary-span">{{local.order.to.}}</span>
               <br/>
               <span class="pull-left summary-span">Qty:</span><br/><span class="pull-right summary-span">{{local.order.quantity}}</span>
               <br/>

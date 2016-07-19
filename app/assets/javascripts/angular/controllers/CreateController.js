@@ -20,6 +20,13 @@ App.controller('CreateCtrl',['$scope','$state', 'localuser','Order','Shipment', 
 		}
 	}
 
+	$scope.toOptions = {
+		types: ['cities']
+	}
+	$scope.fromOptions = {
+		types: ['countries']
+	}
+
 	newOrder = function(){
 		$scope.local.order.from = $scope.local.anywhere?["Anywhere"]:$scope.local.order.from
 		$scope.inherit.loading = true;
