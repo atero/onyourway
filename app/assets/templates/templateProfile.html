@@ -1,52 +1,63 @@
 <div class="narrow-banner-orders ng-scope">
-    <div class="row">
-      <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
 
-      </div>
     </div>
   </div>
-<ul class="nav nav-pills nav-stacked left-bar left-bar-profile" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
-  <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
-</ul>
+</div>
+
 <div class="profile-body profile-body-block container">
-	<div class="col-md-12 text-left">
-	    <div class="form-group profile-block">
-				<div class="fileinput fileinput-new" data-provides="fileinput">
-				  <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;"></div>
-				  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 208px; max-height: 208px;"></div>
-				  <div>
-				    <span class="btn btn-default profile-upload btn-file"><span class="fileinput-new">Upload picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-				    <a class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-				  </div>
-				</div>
-	    </div>
-	    <!-- First Name, Last Name, Age, Sex, Country -->
-      <form class="profile-form-block">
-        <div class="">
-          <label for="">First name</label>
-          <input type="text" name="name" value=""><br/>
-          <label for="">Last name</label>
-          <input type="text" name="name" value=""><br/>
-          <label for="" class="select-iam">I am</label>
-          <select class="profile-select">
-            <option value="male/fmale">male/fmale</option>
-            <option value="Male">Male</option>
-            <option value="Fmale">Fmale</option>
-          </select><br/>
-          <label for="" class="birth-date">Birth date</label>
-          <input type="date" name="name" value=""><br/>
-          <label for="" class="label-e-mail">E-mail</label>
-          <input type="email" name="name" value=""><br/>
-          <label for="" class="label-country">Country</label>
-          <input ng-model="local.shipment.from" list="countries" type="text" class="profile-countries" placeholder="Country">
-          <datalist id="countries">
-            <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
-          </datalist><br/>
-          <button class="profile-btn btn btn-default" type="submyt" name="button">Save</button>
+  <div class="col-md-2">
+    <ul class="nav nav-pills nav-stacked left-bar left-bar-profile" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+    </ul>
+  </div>
+  <div class="col-md-10 text-left">
+    <div class="form-group profile-block">
+      <div class="fileinput fileinput-new" data-provides="fileinput">
+        <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;"></div>
+        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 208px; max-height: 208px;"></div>
+        <div>
+          <span class="btn btn-default profile-upload btn-file"><span class="fileinput-new">Upload picture</span><span class="fileinput-exists">Change</span>
+          <input type="file" name="...">
+          </span>
+          <a class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
         </div>
-      </form>
-	</div>
+      </div>
+    </div>
+    <!-- First Name, Last Name, Age, Sex, Country -->
+    <form class="profile-form-block">
+      <div class="">
+        <label for="">First name</label>
+        <input type="text" name="name" value="">
+        <br/>
+        <label for="">Last name</label>
+        <input type="text" name="name" value="">
+        <br/>
+        <label for="" class="select-iam">I am</label>
+        <select class="profile-select">
+          <option value="male/fmale">male/fmale</option>
+          <option value="Male">Male</option>
+          <option value="Fmale">Fmale</option>
+        </select>
+        <br/>
+        <label for="" class="birth-date">Birth date</label>
+        <input type="date" name="name" value="">
+        <br/>
+        <label for="" class="label-e-mail">E-mail</label>
+        <input type="email" name="name" value="">
+        <br/>
+        <label for="" class="label-country">Country</label>
+        <input ng-model="local.shipment.from" list="countries" type="text" class="profile-countries" placeholder="Country">
+        <datalist id="countries">
+          <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
+        </datalist>
+        <br/>
+        <button class="profile-btn btn btn-default" type="submyt" name="button">Save</button>
+      </div>
+    </form>
+  </div>
 
 </div>
