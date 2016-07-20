@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
       <ul class="menu text-center">
-        <li class="form-block"><a  href="#form-block">Geographics</a></li>
+        <li class="form-block"><a href="#form-block">Geographics</a></li>
         <li class="form-block1"><a href="#form-block1">Item description</a></li>
         <li class="form-block2"><a href="#form-block2">Price</a></li>
         <li class="form-block3"><a href="#form-block3">Summary and confirmation</a></li>
@@ -99,35 +99,36 @@
             <!-- <br/> You're about to publish the following purchase order: -->
             <br/>
             <div class="padding-top">
-              <span class="pull-left summary-span">From:</span><br/><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name}}</span>
-              <br/>
-              <span class="pull-left summary-span">To:</span><br/><span class="pull-right summary-span">{{local.order.to.address_components[0].long_name}}</span>
-              <br/>
-              <span class="pull-left summary-span">Qty:</span><br/><span class="pull-right summary-span">{{local.order.quantity}}</span>
-              <br/>
-              <span class="pull-left  summary-span">Item:</span><br/><span class="pull-right summary-span">{{local.order.item}}</span>
+              <div class="col-sm-12">  <span class="pull-left summary-span">From:</span><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name}}</span></div>
+              <div class="col-sm-12">
+                <span class="pull-left summary-span">To:</span><span class="pull-right summary-span">{{local.order.to.address_components[0].long_name}}</span>
+              </div>
+              <div class="col-sm-12">
+                <span class="pull-left summary-span">Qty:</span><span class="pull-right summary-span">{{local.order.quantity}}</span>
+              </div>
+              <div class="col-sm-12">
+                <span class="pull-left  summary-span">Item:</span><span class="pull-right summary-span">{{local.order.item}}</span>
+              </div>
               <br/> {{local.order.details}}
               <br/>
+              <div class="col-sm-12">
+                <span class="pull-left summary-span">Total items price:</span><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}€</span>
+              </div>
+              <div class="col-sm-12">
+                <span class="pull-left summary-span">Traveller's reward:</span><span class="pull-right summary-span">{{local.order.reward}}€</span>
+              </div>
+              <div class="col-sm-12">
+                <span class="pull-left summary-span">Shop'N'Ship fee:</span><span class="pull-right summary-span summary-span">{{local.order.price*local.order.quantity*0.03}}€</span>
+              </div>
             </div>
-            <div class="padding-top">
-              <span class="pull-left summary-span">Total items price:</span><br /><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}€</span>
-              <br/>
-              <span class="pull-left summary-span">Traveller's reward:</span><br /><span class="pull-right summary-span">{{local.order.reward}}€</span>
-              <br/>
-              <span class="pull-left summary-span">Shop'N'Ship fee:</span><br /><span class="pull-right summary-span summary-span">{{local.order.price*local.order.quantity*0.03}}€</span>
-              <br/>
-            </div>
-            <div class="padding-top">
+            <div class="padding-top col-sm-12">
               <h5 class="pull-left summary-span">Total:</h5>
               <br/>
               <span style="padding-top:10px" class="pull-right summary-span">{{local.order.reward +local.order.price*local.order.quantity + local.order.price*local.order.quantity*0.03}}€</span>
               <br/>
             </div>
           </div>
-
         </form>
-
-
       </div>
     </div>
 
@@ -150,8 +151,8 @@
       <div class="row" ng-if="inherit.usertype == 'shopper'">
         <div class="row padding-top block-bottom">
           <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn-next btn btn-default navigate-button pull-right">Next</button>
-          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn btn-default navigate-button pull-right">Publish the order</button>
-          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn btn-default navigate-button pull-right">Publish the travel</button>
+          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn-next btn btn-default navigate-button pull-right">Publish the order</button>
+          <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn-next btn btn-default navigate-button pull-right">Publish the travel</button>
           <button ng-if="!local.stages[0]" ng-click="stepBack()" class="btn-back btn btn-default navigate-button pull-left">Back</button>
         </div>
       </div>
