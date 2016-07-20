@@ -43,19 +43,19 @@
         <img style="width:100%" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name}}
       </div>
       <div class="col-md-10">
-        <div class="col-md-12" style="padding:25px">
+        <div class="col-md-12" >
           <ul class="offer-details">
             <li><span>What:</span> {{shipment.item}}</li>
             <li><span>To:</span> {{shipment.to}}</li>
             <li><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
-          <p class="offer-text">
+          <p class="offer-text text-left">
             {{shipment.messages[0].text}}
           </p>
         </div>
         <div class="col-md-12">
-          <button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, shipment)"><i class="fa fa-check"></i></button>
-          <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)"><i class="fa fa-times"></i></button>
+          <button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>
+          <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)">REJECT</button>
         </div>
       </div>
 

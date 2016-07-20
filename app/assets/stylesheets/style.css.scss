@@ -313,7 +313,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .profile-travel {
   border: 1px solid #F5F5F5;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0;
   margin: 5px;
   cursor: pointer;
 }
@@ -591,6 +591,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 }
 .offer-details{
   border-bottom: 1px solid #aaa;
+  text-align: left;
 
   li{
     font-family: FaricyNew-Light;
