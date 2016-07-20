@@ -37,7 +37,7 @@
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
 
-    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
+    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2">
         <img style="width:100%" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name}}
@@ -53,7 +53,7 @@
             {{shipment.messages[0].text}}
           </p>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 offer-buttons">
           <button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>
           <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)">REJECT</button>
         </div>

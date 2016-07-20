@@ -589,6 +589,14 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .order-table-th{
 
 }
+.offer-wrapper{
+  position: relative;
+  .offer-buttons{
+    position: absolute;
+    right: -1px;
+    border-bottom: -1px;
+  }
+}
 .offer-details{
   border-bottom: 1px solid #aaa;
   text-align: left;
