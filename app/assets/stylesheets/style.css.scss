@@ -578,18 +578,39 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
  {
      background-color:#eee;
 }
+.order-lead{
+  font-size: 26px;
+  font-family: FaricyNew-Light;
+}
+.order-lead-small{
+  font-size: 16px;
+  font-family: FaricyNew-Light;
+}
 .order-table-th{
 
 }
+.offer-details{
+  li{
+    font-family: FaricyNew-Light;
+    font-size: 18px;
+    span{
+      font-family: FaricyNew-Regular;
+    }
+  }
+}
+.offer-text{
+  font-family: FaricyNew-Light;
+  font-size: 16px;
+}
 .orders-table{
   th{
-    font-family: FaricyNew-Bold;
-    font-size: 24px;
+    font-family: FaricyNew-Regular;
+    font-size: 20px;
     color: #666;
   }
   td{
     font-family: FaricyNew-Light;
-    font-size: 20px;
+    font-size: 16px;
     color: #999;
   }
 }
