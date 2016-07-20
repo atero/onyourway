@@ -590,9 +590,14 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 
 }
 .offer-details{
+  border-bottom: 1px solid #aaa;
+
   li{
     font-family: FaricyNew-Light;
     font-size: 18px;
+    list-style: none;
+    display: inline-block;
+    margin-right: 16px;
     span{
       font-family: FaricyNew-Regular;
     }
