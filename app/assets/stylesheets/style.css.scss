@@ -592,8 +592,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .offer-details{
   border-bottom: 1px solid #aaa;
   text-align: left;
+  padding-left: 4px;
 
   li{
+    line-height: 30px;
     font-family: FaricyNew-Light;
     font-size: 18px;
     list-style: none;
