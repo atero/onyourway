@@ -2,9 +2,7 @@ object @orders
 
 attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price, :shipments, :user_id, :accepted_shipment, :photo_file_name
 
-node :photo do |order|
-  order.photo.url(:photo_file_name)
-end
+
 
 child :shipments do |_shipment|
   attributes :id, :from, :to, :date, :status, :messages
