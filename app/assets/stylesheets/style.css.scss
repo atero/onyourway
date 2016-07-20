@@ -573,6 +573,26 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 /***********Create ad************/
+.container > .row > .table > tr.active,
+.container > .row > .table > tbody > tr.active
+ {
+     background-color:#eee;
+}
+.order-table-th{
+
+}
+.orders-table{
+  th{
+    font-family: FaricyNew-Bold;
+    font-size: 24px;
+    color: #666;
+  }
+  td{
+    font-family: FaricyNew-Light;
+    font-size: 20px;
+    color: #999;
+  }
+}
 .crate-form {
   label {
     font-family: FaricyNew-Regular;

@@ -16,17 +16,17 @@
   </div>
   <div class="col-md-4">
     <p class="lead text-center">Items you have ordered</p>
-    <table class="table">
+    <table class="table orders-table">
       <thead>
-        <th class="home-table-th text-center">What</th>
-        <th class="home-table-th text-center">From</th>
-        <th class="home-table-th text-center">To</th>
+        <th class="order-table-th text-left">What</th>
+        <th class="order-table-th text-left">From</th>
+        <th class="order-table-th text-left">To</th>
       </thead>
       <tbody>
-        <tr ng-repeat="order in local.orders" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
-            <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.from}}</th>
-              <td class="home-table-th text-center" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
+        <tr ng-repeat="order in local.orders" class="clickableRow ">
+          <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
+            <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</th>
+              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
         </tr>
       </tbody>
     </table>
