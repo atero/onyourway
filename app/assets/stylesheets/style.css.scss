@@ -573,6 +573,9 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 /***********Create ad************/
+.button-themed{
+  background: #11e9de;
+}
 .container > .row > .table > tr.active,
 .container > .row > .table > tbody > tr.active
  {
@@ -595,6 +598,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     position: absolute;
     right: -1px;
     bottom: -1px;
+    padding: 0;
+    button{
+      margin-left: 12px;
+    }
   }
 }
 .offer-details{
