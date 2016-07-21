@@ -575,9 +575,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 /***********Create ad************/
 .button-themed{
   background: #11e9de;
+  color: #fff;
 }
-.container > .row > .table > tr.active,
-.container > .row > .table > tbody > tr.active
+.container > .row  .table > tr.active,
+.container > .row  .table > tbody > tr.active
  {
      background-color:#eee;
 }
@@ -601,6 +602,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     padding: 0;
     button{
       margin-left: 12px;
+      font-size: 22px;
     }
   }
 }
