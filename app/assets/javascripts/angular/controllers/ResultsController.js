@@ -2,6 +2,7 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 	if (localuser) $scope.inherit.user = localuser;
 	$scope.inherit.usertype = 'traveller'
 
+	console.log(results);
 
 	$scope.local={
 		results: orders
