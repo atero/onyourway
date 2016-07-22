@@ -1071,19 +1071,36 @@ button.btn-next {
   border: none;
 }
 
-
+.conditions-head{
+  color: #999;
+  font-family: FaricyNew-Regular;
+  font-size: 20px;
+  h2{
+    font-size: 26px;
+    font-family: FaricyNew-Bold;
+    margin-bottom: 20px;
+  }
+}
 .conditions-block{
   p{
-    font-size: 25px;
+    font-size: 20px;
     color: #a7a7a7;
     font-family: FaricyNew-Light;
+    text-align: left;
   }
   h5{
-    font-size: 25px;
+    font-size: 22px;
     color: #a7a7a7;
     font-family: FaricyNew-Bold;
-    margin: 35px 0 28px;
+    margin: 35px 0 12px;
     letter-spacing: 2px;
+    text-align: left;
+  }
+  i{
+    text-align: left;
+    font-family: FaricyNew-Light;
+    font-size: 20px;
+    color: #999;
   }
   .condition-padding{
     padding: 35px;
@@ -1109,7 +1126,12 @@ button.btn-next {
     margin: 0;
   }
 }
-
+.faq-content{
+  p{
+    text-align: left;
+    padding-bottom: 24px;
+  }
+}
 @media (min-width: 1600px) {
   .container {
     width: 1530px;
