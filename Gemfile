@@ -58,7 +58,7 @@ gem 'momentjs-rails'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem 'aws-s3'
 gem 'aws-sdk-v1'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 2.3'
 gem 'angularjs-file-upload-rails', '~> 2.2.0'
 
 gem 'es6-promise-rails'
