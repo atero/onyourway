@@ -10,7 +10,7 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance', "order_id", function($
 		if($scope.local.validated){
 			$uibModalInstance.close($scope.local.shipment)
 		}else{
-			$scope.local.validated = true			
+			$scope.local.validated = true
 		}
 	}
 	$scope.cancel = function(){
@@ -43,8 +43,11 @@ App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($sco
 		$uibModalInstance.close($scope.local)
 	}
 
-	$scope.signup = function(){
-		$uibModalInstance.close($scope.local)
+	$scope.signup = function(isValid){
+		if (isValid) {
+      $uibModalInstance.close($scope.local)
+    }
+
 	}
 
 	$scope.change_type = function(){

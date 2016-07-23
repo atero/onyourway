@@ -31,7 +31,7 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     $scope.local.order.from = $scope.local.order.from.address_components[0].long_name || "Anywhere";
     $scope.local.order.to = $scope.local.order.to.address_components[0].long_name;
     $scope.inherit.loading = true;
-    $scope.local.order.total_price = $scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity + $scope.local.order.price * $scope.local.order.quantity * 0.03
+    $scope.local.order.total_price = $scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity;// + $scope.local.order.price * $scope.local.order.quantity * 0.03
     Order.create({
       token: $scope.inherit.user.token
     }, {
