@@ -46,10 +46,10 @@
         <input type="date" name="name" value="" ng-model="inherit.user.birth_date">
         <br/>
         <label for="" class="label-e-mail">E-mail</label>
-        <input type="email" name="name" value="">
+        <input type="email" name="name" value="" ng-model="inherit.user.email">
         <br/>
         <label for="" class="label-country">Country</label>
-        <input ng-model="local.shipment.from" list="countries" type="text" class="profile-countries" placeholder="Country">
+        <input ng-model="inherit.user.country" list="countries" type="text" class="profile-countries" placeholder="Country">
         <datalist id="countries">
           <option ng-repeat="x1 in inherit.countrylist" value="{{x1}}">
         </datalist>
