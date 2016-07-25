@@ -4,6 +4,7 @@ module Api
     def create
       @shipment = Shipment.where(:id => params[:shipment_id]).first
       @message = Message.new(message_params)
+      UserMailer.welcome_email(@shipment.user).deliver_later
       if @shipment then @message.shipment = @shipment end
 
       if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
@@ -13,7 +14,7 @@ module Api
          render json: {messsage:'Bad request'}, status: 400
       end
     end
-    
+
     def index
       @shipment = Shipment.where(:id => params[:shipment_id]).first
       if @shipment then @messages = @shipment.messages else @messages = [] end
