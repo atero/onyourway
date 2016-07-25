@@ -6,8 +6,8 @@ App.controller('ProfileCtrl',['$scope','$state','localuser', function($scope,$st
 
 	}
 
-	$scope.saveProfile = () =>{
+	$scope.saveProfile = function(){
 		console.log("saving");
-	}
+	};
 
 }]);
