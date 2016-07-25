@@ -1,7 +1,6 @@
 <div class="narrow-banner-orders ng-scope">
   <div class="row">
     <div class="col-md-12">
-
     </div>
   </div>
 </div>
@@ -31,10 +30,10 @@
     <form class="profile-form-block">
       <div class="">
         <label for="">First name</label>
-        <input type="text" name="name" value="">
+        <input type="text" name="name" value="" ng-model="inherit.user.first_name">
         <br/>
         <label for="">Last name</label>
-        <input type="text" name="name" value="">
+        <input type="text" name="name" value="" ng-model="inherit.user.last_name">
         <br/>
         <label for="" class="select-iam">I am</label>
         <select class="profile-select">
@@ -44,7 +43,7 @@
         </select>
         <br/>
         <label for="" class="birth-date">Date of birth</label>
-        <input type="date" name="name" value="">
+        <input type="date" name="name" value="" ng-model="inherit.user.birth_date">
         <br/>
         <label for="" class="label-e-mail">E-mail</label>
         <input type="email" name="name" value="">
