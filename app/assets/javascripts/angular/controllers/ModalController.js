@@ -50,6 +50,7 @@ App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($sco
 
 	}
 
+
 	$scope.change_type = function(){
 		$scope.local.type = ($scope.local.type == "signin")?"signup":"signin"
 	}
