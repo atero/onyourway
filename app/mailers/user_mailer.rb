@@ -6,6 +6,6 @@ class UserMailer < ApplicationMailer
     p '************************{}}}}}}}}}}}}}**************************'
 
     @url = 'https://shopnship.herokuapp.com'
-    mail(to: 'karen@aterostudio.com', subject: 'Welcome to OnYourWay', delivery_method_options: delivery_options)
+    mail(to: 'karen@aterostudio.com', subject: 'Welcome to OnYourWay')
   end
 end
