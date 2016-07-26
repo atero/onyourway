@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     p user_params
     p "**************************************************************"
     if @user.save
-      UserMailer.welcome_email(@user.email).deliver_later
+      UserMailer.welcome_email(@user.email, @user.first_name).deliver_later
       render json: @user, status: :accepted
     else
       render json: {messsage:'Bad request'}, status: 400
