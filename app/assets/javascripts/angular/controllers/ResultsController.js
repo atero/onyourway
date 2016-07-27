@@ -17,12 +17,12 @@ App.controller('ResultsCtrl',['$scope','$state', "$uibModal",'localuser','orders
 		filtered = orders
 		if($scope.search.from && $scope.search.from!=""){
 			filtered = filtered.filter(function(d){
-				return d.from.indexOf($scope.search.from) > -1
+				return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
 			})
 		}
 		if($scope.search.to && $scope.search.to!=""){
 			filtered = filtered.filter(function(d){
-				return d.to.indexOf($scope.search.to) > -1
+				return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
 			})
 		}
 		return filtered
