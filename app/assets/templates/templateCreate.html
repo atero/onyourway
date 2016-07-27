@@ -99,7 +99,7 @@
             <!-- <br/> You're about to publish the following purchase order: -->
             <br/>
             <div class="padding-top">
-              <div class="col-sm-12">  <span class="pull-left summary-span">From:</span><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name}}</span></div>
+              <div class="col-sm-12">  <span class="pull-left summary-span">From:</span><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name || 'Anywhere'}}</span></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">To:</span><span class="pull-right summary-span">{{local.order.to.address_components[0].long_name}}</span>
               </div>
