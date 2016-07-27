@@ -21,7 +21,7 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   }
 
   $scope.toOptions = {
-
+    types: ['cities']
   }
   $scope.fromOptions = {
 
