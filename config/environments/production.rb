@@ -67,7 +67,7 @@ Rails.application.configure do
        :bucket => ENV['S3_BUCKET_NAME'],
        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-       
+
      }
    }
 
@@ -78,12 +78,12 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings =
   {
 
-    :address            => 'smtp.gmail.com',
+    :address            => 'email-smtp.us-west-2.amazonaws.com',
     :port               => 587,
-    :domain             => 'gmail.com', #you can also use google.com
-    :authentication     => :plain,
-    :user_name          => 'karen.chobanyan@gmail.com',
-    :password           => 'Kz%19831987'
+    :authentication => :login,
+    :enable_starttls_auto => true
+    :user_name          => 'AKIAIVKFQCBHMWA4X7OA',
+    :password           => 'AmLayPide+jXMyTPLJO5Mo5TpKTLQwNgBg84AXrNMyDo'
   }
 
 end
