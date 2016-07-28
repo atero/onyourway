@@ -6,6 +6,8 @@ production:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       uri: mongodb://heroku_9mg7mwjj:h4vf4nv5psef4ao6g934cmdgq4@ds013545.mlab.com:13545/heroku_9mg7mwjj
+      #uri: mongodb://heroku_8q2crbcv:3nst8k5eh11oluh84arsnv6guj@ds029655.mlab.com:29655/heroku_8q2crbcv
+
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       options:
@@ -23,6 +25,8 @@ development:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       uri: mongodb://heroku_9mg7mwjj:h4vf4nv5psef4ao6g934cmdgq4@ds013545.mlab.com:13545/heroku_9mg7mwjj
+    # uri: mongodb://heroku_8q2crbcv:3nst8k5eh11oluh84arsnv6guj@ds029655.mlab.com:29655/heroku_8q2crbcv
+
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
 
