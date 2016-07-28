@@ -28,7 +28,7 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   }
 
   newOrder = function() {
-    if (!!$scope.local.order.from) {
+    if (!!$scope.local.order.from.address_components) {
       $scope.local.order.from = $scope.local.order.from.address_components[0].long_name;
     }
     else{
