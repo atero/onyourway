@@ -1179,6 +1179,19 @@ button.btn-next {
   .navbar-toggle{
     margin-top: 15px;
   }
+  .shopper-button{
+    text-align: center;
+  }
+  .travaller-button{
+    text-align: center;
+  }
+  .footer-wrapper .footer-nav li{
+    padding: 20px 0;
+    margin: 0 10px;
+  }
+  .land-content p.welcome-p{
+    padding: 0 16px;
+  }
 }
 @media (max-width: 320px){
   .welcome-image h1{
@@ -1189,6 +1202,7 @@ button.btn-next {
   }
   .land-content p.welcome-p{
     font-size: 20px;
+    padding: 0 16px;
   }
   .land-content .how-title{
     font-size: 27px;
@@ -1225,5 +1239,18 @@ button.btn-next {
   }
   .container-fluid>.navbar-collapse{
     margin-right: 0;
+  }
+  .shopper-button{
+    text-align: center;
+  }
+  .travaller-button{
+    text-align: center;
+  }
+  .footer-wrapper .footer-nav li{
+    padding: 20px 0;
+    margin: 0 10px;
+  }
+  .land-content .vector-wrap img{
+    max-width: 35px;
   }
 }
