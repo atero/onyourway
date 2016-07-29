@@ -1192,6 +1192,19 @@ button.btn-next {
   .land-content p.welcome-p{
     padding: 0 16px;
   }
+  .narrow-banner{
+    background-size: 100% 130px;
+  }
+  .narrow-banner h1{
+    font-size: 25px;
+    margin-top: 50px;
+  }
+  .templateCreateblock .menu li a{
+    font-size: 20px;
+  }
+  .form-group .summary-span{
+    font-size: 14px;
+  }
 }
 @media (max-width: 320px){
   .welcome-image h1{
@@ -1252,5 +1265,41 @@ button.btn-next {
   }
   .land-content .vector-wrap img{
     max-width: 35px;
+  }
+  .narrow-banner h1{
+    font-size: 17px;
+  }
+  .templateCreateblock .menu li a{
+    font-size: 18px;
+  }
+  .input-w input{
+    font-size: 14px;
+  }
+  .btn-next {
+    width: 140px;
+    height: 35px;
+  }
+  .item-label{
+    font-size: 19px;
+  }
+  .btn-next{
+    width: 110px;
+  }
+  .btn-back{
+    width: 110px;
+    height: 35px;
+  }
+  .form-group .item-label-price{
+    font-size: 20px;
+  }
+  .btn-next,
+  .btn-back{
+    font-size: 12px;
+  }
+  .form-group .summary-span{
+    font-size: 14px;
+  }
+  .table>thead>tr>th{
+    padding: 0;
   }
 }
