@@ -1150,7 +1150,80 @@ button.btn-next {
     width: 1530px;
   }
 }
-
+@media (max-width: 768px) {
+  .navbar-toggle{
+    background: url("../images/menu-icon.png") center center no-repeat;
+    border: 1px solid #11e9de;
+    margin-top: 30px;
+  }
+  .main-col-center{
+    text-align: center;
+  }
+  .footer-wrapper .footer-copy-p{
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}
 @media (max-width: 480px) {
-  
+  body{
+    padding-top: 0;
+  }
+  .welcome-image{
+    background: url("../images/welcome_photo1.jpg") center center no-repeat;
+    background-size: 100% 550px;
+  }
+  .welcome-image h1{
+    font-size: 55px;
+  }
+  .navbar-toggle{
+    margin-top: 15px;
+  }
+}
+@media (max-width: 320px){
+  .welcome-image h1{
+    font-size: 35px;
+  }
+  .welcome-image h4{
+    font-size: 22px;
+  }
+  .land-content p.welcome-p{
+    font-size: 20px;
+  }
+  .land-content .how-title{
+    font-size: 27px;
+  }
+  .how-it-works .works-p{
+    font-size: 17px;
+  }
+  .land-content h3{
+    font-size: 18px;
+  }
+  .footer-wrapper .footer-copy-p{
+    padding: 28px 0;
+    padding-bottom: 0;
+  }
+  .land-content .thumb-items p{
+    font-size: 16px;
+  }
+  .navbar-fixed-top a{
+    padding: 0;
+  }
+  .navbar-header{
+    width: 100%;
+  }
+  .nav-wrapper{
+    padding: 0;
+  }
+  .navbar-fixed-top a{
+    padding: 0;
+    margin-top: 12px;
+    margin-left: 25px;
+  }
+  .navbar-toggle{
+    margin-right: 5px;
+  }
+  .container-fluid>.navbar-collapse{
+    margin-right: 0;
+  }
 }
