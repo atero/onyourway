@@ -1169,12 +1169,20 @@ button.btn-next {
   body{
     padding-top: 0;
   }
+  .welcome-image h4{
+    font-size: 22px;
+    margin: 18px 0 60px;
+    margin-bottom: 15px;
+  }
   .welcome-image{
     background: url("../images/welcome_photo1.jpg") center center no-repeat;
     background-size: 100% auto;
+    padding-top: 40px;
+    margin-top: -40px;
   }
   .welcome-image h1{
-    font-size: 40px;
+    font-size: 34px;
+    padding-top: 63px;
   }
   .navbar-toggle{
     margin-top: 15px;
@@ -1228,6 +1236,22 @@ button.btn-next {
     display: block;
     text-align: center;
   }
+  .nav-wrapper {
+    padding-left: 20px;
+    padding-right: 12px;
+  }
+  .shopper-button,
+  .travaller-button{
+    width: 250px;
+    height: 50px;
+    font-size: 18px
+  }
+  .padding-top{
+    padding-top: 0;
+  }
+  .thumbs-row{
+    margin-top: 0;
+  }
 }
 @media (max-width: 320px){
   .thumbs-row{
@@ -1248,7 +1272,7 @@ button.btn-next {
   }
   .welcome-image h1{
     font-size: 25px;
-    padding-top: 50px;
+    padding-top: 75px;
   }
   .welcome-image h4{
     font-size: 20px;
