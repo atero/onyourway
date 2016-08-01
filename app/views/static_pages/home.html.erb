@@ -76,14 +76,7 @@
     </div>
 </body>
 <script type="text/javascript">
-$(document).ready(function () {
-  jQuery('body').bind('click', function(e) {
-      if(jQuery(e.target).closest('.navbar').length == 0) {
-          var opened = jQuery('.navbar-collapse').hasClass('collapse in');
-          if ( opened === true ) {
-              jQuery('.navbar-collapse').collapse('hide');
-          }
-      }
-  });
-});
+$(document).on('click',function(){
+	$('.collapse').collapse('hide');
+})
 </script>
