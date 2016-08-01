@@ -1150,3 +1150,221 @@ button.btn-next {
     width: 1530px;
   }
 }
+@media (max-width: 768px) {
+  .navbar-toggle{
+    background: url("../images/menu-icon.png") center center no-repeat;
+    border: 1px solid #11e9de;
+    margin-top: 30px;
+  }
+  .main-col-center{
+    text-align: center;
+  }
+  .footer-wrapper .footer-copy-p{
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  body{
+    padding-top: 0;
+  }
+  .welcome-image{
+    background: url("../images/welcome_photo1.jpg") center center no-repeat;
+    background-size: 100% auto;
+  }
+  .welcome-image h1{
+    font-size: 40px;
+  }
+  .navbar-toggle{
+    margin-top: 15px;
+  }
+  .shopper-button{
+    text-align: center;
+  }
+  .travaller-button{
+    text-align: center;
+  }
+  .footer-wrapper .footer-nav li{
+    padding: 20px 0;
+    margin: 0 10px;
+  }
+  .land-content p.welcome-p{
+    padding: 0 16px;
+  }
+  .narrow-banner{
+    background-size: 100% 130px;
+  }
+  .narrow-banner h1{
+    font-size: 25px;
+    margin-top: 50px;
+  }
+  .templateCreateblock .menu li a{
+    font-size: 20px;
+  }
+  .form-group .summary-span{
+    font-size: 14px;
+  }
+  .faq-block p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .conditions-head h2{
+    font-size: 30px;
+  }
+  .conditions-head{
+    font-size: 18px;
+  }
+  .conditions-block p{
+    font-size: 18px;
+    text-align: center;
+    padding: 0 15px;
+  }
+  .conditions-block h5{
+    text-align: center;
+    font-size: 25px;
+  }
+  .conditions-block i{
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 320px){
+  .thumbs-row{
+    margin-top: -60px;
+  }
+  .padding-top{
+    padding-top: 0;
+  }
+  .shopper-button,
+  .travaller-button{
+    font-size: 17px;
+    width: 230px;
+    height: 50px;
+  }
+  .welcome-image{
+    background-size: 100% auto;
+    margin-top: -40px;
+  }
+  .welcome-image h1{
+    font-size: 25px;
+    padding-top: 50px;
+  }
+  .welcome-image h4{
+    font-size: 20px;
+    margin: 15px 0 60px;
+    margin-bottom: 20px;
+  }
+  .land-content p.welcome-p{
+    font-size: 20px;
+    padding: 0 16px;
+  }
+  .land-content .how-title{
+    font-size: 27px;
+  }
+  .how-it-works .works-p{
+    font-size: 17px;
+  }
+  .land-content h3{
+    font-size: 18px;
+  }
+  .footer-wrapper .footer-copy-p{
+    padding: 28px 0;
+    padding-bottom: 0;
+  }
+  .land-content .thumb-items p{
+    font-size: 16px;
+  }
+  .navbar-fixed-top a{
+    padding: 0;
+  }
+  .navbar-header{
+    width: 100%;
+  }
+  .nav-wrapper{
+    padding: 0;
+  }
+  .navbar-fixed-top a{
+    padding: 0;
+    margin-top: 12px;
+    margin-left: 25px;
+  }
+  .navbar-toggle{
+    margin-right: 5px;
+  }
+  .container-fluid>.navbar-collapse{
+    margin-right: 0;
+  }
+  .shopper-button{
+    text-align: center;
+  }
+  .travaller-button{
+    text-align: center;
+  }
+  .footer-wrapper .footer-nav li{
+    padding: 20px 0;
+    margin: 0 10px;
+  }
+  .land-content .vector-wrap img{
+    max-width: 35px;
+  }
+  .narrow-banner h1{
+    font-size: 17px;
+  }
+  .templateCreateblock .menu li a{
+    font-size: 18px;
+  }
+  .input-w input{
+    font-size: 14px;
+  }
+  .btn-next {
+    width: 140px;
+    height: 35px;
+  }
+  .item-label{
+    font-size: 19px;
+  }
+  .btn-next{
+    width: 110px;
+  }
+  .btn-back{
+    width: 110px;
+    height: 35px;
+  }
+  .form-group .item-label-price{
+    font-size: 20px;
+  }
+  .btn-next,
+  .btn-back{
+    font-size: 12px;
+  }
+  .form-group .summary-span{
+    font-size: 14px;
+  }
+  .table>thead>tr>th{
+    padding: 0;
+  }
+  .faq-block p{
+    font-size: 15px;
+    text-align: center;
+  }
+  .conditions-head h2{
+    font-size: 24px;
+  }
+  .conditions-head{
+    font-size: 16px;
+  }
+  .conditions-block p{
+    font-size: 15px;
+    text-align: center;
+    padding: 0 15px;
+  }
+  .conditions-block h5{
+    text-align: center;
+    font-size: 20px;
+  }
+  .conditions-block i{
+    display: block;
+    text-align: center;
+  }
+}
