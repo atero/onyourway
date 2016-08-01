@@ -1181,8 +1181,8 @@ button.btn-next {
     margin-top: -40px;
   }
   .welcome-image h1{
-    font-size: 34px;
-    padding-top: 63px;
+    font-size: 30px;
+    padding-top: 75px;
   }
   .navbar-toggle{
     margin-top: 15px;
@@ -1204,11 +1204,11 @@ button.btn-next {
     background-size: 100% 130px;
   }
   .narrow-banner h1{
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 50px;
   }
   .templateCreateblock .menu li a{
-    font-size: 20px;
+    font-size: 17px;
   }
   .form-group .summary-span{
     font-size: 14px;
@@ -1251,6 +1251,18 @@ button.btn-next {
   }
   .thumbs-row{
     margin-top: 0;
+  }
+  .input-w input{
+    font-size: 15px;
+  }
+  .signup-btn{
+    display: block;
+    margin: auto;
+  }
+  .btn-next,
+  .btn-back{
+    width: 115px;
+    height: 40px;
   }
 }
 @media (max-width: 320px){
@@ -1336,7 +1348,7 @@ button.btn-next {
     font-size: 17px;
   }
   .templateCreateblock .menu li a{
-    font-size: 18px;
+    font-size: 15px;
   }
   .input-w input{
     font-size: 14px;
