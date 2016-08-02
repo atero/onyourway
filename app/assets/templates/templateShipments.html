@@ -13,7 +13,7 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
     </ul>
   </div>
-  <div class="col-md-4">
+  <!-- <div class="col-md-4">
     <p class="lead text-center">Travels you have proposed</p>
     <table class="table">
       <thead>
@@ -29,6 +29,11 @@
         </tr>
       </tbody>
     </table>
+  </div> -->
+  <p class="lead text-center">Travels you have proposed</p>
+  <div class="col-sm-4"ng-repeat="shipment in local.shipments">
+    <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
+
   </div>
   <div class="col-md-6 main-status-travels" ng-show="local.data_to_show">
     <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
