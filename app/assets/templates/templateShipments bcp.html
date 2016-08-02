@@ -23,7 +23,6 @@
       </thead>
       <tbody>
         <tr ng-repeat="shipment in local.shipments" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle">{{shipment.item}}</th>
           <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
             <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
               <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
