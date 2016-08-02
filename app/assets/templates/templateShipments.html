@@ -31,7 +31,8 @@
       </tbody>
     </table>
   </div> -->
-  <div class="col-sm-6" ng-repeat="shipment in local.shipments">
+  <p class="lead text-center">Travels you have proposed</p>
+  <div class="col-sm-4" ng-repeat="shipment in local.shipments">
     <span>{{shipment.from}} -</span><span> {{shipment.to}} -</span><span> {{shipment.date | date : mediumDate}}</span>
   </div>
   <div class="col-md-6 main-status-travels" ng-show="local.data_to_show">
