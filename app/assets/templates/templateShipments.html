@@ -17,19 +17,10 @@
     <p class="lead text-center">Travels you have proposed</p>
     <table class="table">
       <thead>
-        <th class="home-table-th text-center"></th>
-        <th class="home-table-th text-center">What</th>
-        <th class="home-table-th text-center">From</th>
-        <th class="home-table-th text-center">To</th>
-        <th class="home-table-th text-center">Reward</th>
-        <th class="home-table-th text-center">Price</th>
-        <th class="home-table-th text-center">Quantity</th>
-      </thead>
-      <!-- <thead>
         <th class="home-table-th text-center">From</th>
         <th class="home-table-th text-center">To</th>
         <th class="home-table-th text-center">When</th>
-      </thead> -->
+      </thead>
       <tbody>
         <tr ng-repeat="shipment in local.shipments" class="clickableRow">
           <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
@@ -44,7 +35,7 @@
     <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as Sasha accepts it.</p>
     <div class='col-md-offset-1 col-md-10 padding-top'>
       <table class="table">
-        <!-- <thead>
+        <thead>
           <th class="home-table-th text-center"></th>
           <th class="home-table-th text-center">What</th>
           <th class="home-table-th text-center">From</th>
@@ -52,7 +43,7 @@
           <th class="home-table-th text-center">Reward</th>
           <th class="home-table-th text-center">Price</th>
           <th class="home-table-th text-center">Quantity</th>
-        </thead> -->
+        </thead>
         <tbody>
           <tr>
             <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
