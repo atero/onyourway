@@ -42,7 +42,7 @@
         </thead>
         <tbody>
           <tr>
-            <td class="home-table-td text-center"><img style="width:50px; height:50px;" class="profile-photo" ng-src="{{shipment.photo}}" alt="">{{shipments.order.name}}</th>
+            <td class="home-table-td text-center"><img style="width:50px; height:50px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">{{shipments.order.name}}</th>
               <td class="home-table-th text-center" valign="middle">{{shipment.order.price}}€</th>
               <td class="home-table-th text-center" valign="middle">{{shipment.order.reward}}€</th>
           </tr>
@@ -50,7 +50,7 @@
       </table>
     </div>
   </div>
-  <div class="col-md-6 main-status-travels" ng-repeat="shipment in local.shipments" ng-show="local.data_to_show">
+  <div class="col-md-6 main-status-travels" ng-repeat="shipment in local.shipments">
     <p class="status-travels">Status:</p> <b class="main-pending">{{shipment.status}}</b>
     <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as Sasha accepts it.</p>
     <div class='col-md-offset-1 col-md-10 padding-top'>
