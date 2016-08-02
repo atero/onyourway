@@ -13,7 +13,7 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
     </ul>
   </div>
-  <!-- <div class="col-md-4">
+  <div class="col-md-4">
     <p class="lead text-center">Travels you have proposed</p>
     <table class="table">
       <thead>
@@ -23,26 +23,12 @@
       </thead>
       <tbody>
         <tr ng-repeat="shipment in local.shipments" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle">{{shipment.item}}</th>
-          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
+          <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.from}}</th>
             <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
               <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
         </tr>
       </tbody>
     </table>
-  </div> -->
-  <p class="lead text-center">Travels you have proposed</p>
-  <div class="col-sm-4" ng-repeat="shipment in local.shipments">
-    <span>{{shipment.from}} -</span><span> {{shipment.to}} -</span><span> {{shipment.date | date : mediumDate}}</span>
-    <div class="">
-      <img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}
-    </div>
-    <span>{{local.data_to_show.order.item}}</span>
-    <span>{local.data_to_show.order.from.join("/ ")}}</span>
-    <span>{{local.data_to_show.order.to}}</span>
-    <span>{{local.data_to_show.order.reward}}€</span>
-    <span>{{local.data_to_show.order.price}}€</span>
-    <span>{{local.data_to_show.order.quantity}}</span>
   </div>
   <div class="col-md-6 main-status-travels" ng-show="local.data_to_show">
     <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
