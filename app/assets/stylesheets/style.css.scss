@@ -1152,7 +1152,11 @@ button.btn-next {
 .main-status-travels .status-travels{
   display: inline-block;
   font-size: 20px;
-  font-weight: bold;
+  background: #11e9de;
+  color: white;
+  font-weight: normal;
+  padding: 0px 15px;
+  border-radius: 8px;
 }
 .main-status-travels .main-lead{
   font-size: 18px;
