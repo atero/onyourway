@@ -30,23 +30,25 @@
       </tbody>
     </table>
   </div> -->
-  <p style="text-align:left;" class="lead text-center">Travels you have proposed</p>
-  <div class="col-md-4"ng-repeat="shipment in local.shipments">
-    <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
-    <table class="table">
-      <thead>
-        <th class="home-table-th text-center">What</th>
-        <th class="home-table-th text-center">Price</th>
-        <th class="home-table-th text-center">Reward</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="width:50px" class="home-table-td text-center"><img style="width:50px; height:50px;" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
-            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
-            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
-        </tr>
-      </tbody>
-    </table>
+  <div class="col-md-4">
+    <p style="text-align:left;" class="lead text-center">Travels you have proposed</p>
+    <div class="col-md-4"ng-repeat="shipment in local.shipments">
+      <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
+      <table class="table">
+        <thead>
+          <th class="home-table-th text-center">What</th>
+          <th class="home-table-th text-center">Price</th>
+          <th class="home-table-th text-center">Reward</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width:50px" class="home-table-td text-center"><img style="width:50px; height:50px;" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
+              <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
+              <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="col-md-6 main-status-travels" ng-show="local.data_to_show">
     <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
