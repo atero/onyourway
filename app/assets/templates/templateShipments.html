@@ -81,9 +81,9 @@
             <div class="col-md-12">
               <table class="table" style="table-layout:fixed;">
                 <tbody>
-                  <tr ng-repeat="message in local.data_to_show.messages">
+                  <tr ng-repeat="message in local.shipments">
                     <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-                    <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
+                    <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.message.text}}</td>
                     <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
                   </tr>
                 </tbody>
@@ -92,7 +92,7 @@
                 <tbody>
                   <tr>
                     <td style='width:90%' class="home-table-th text-center" valign="middle">
-                      <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text{{$index}}"></textarea>
+                      <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
                     </td>
                     <td class="home-table-th text-center" valign="middle">
                       <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.data_to_show)"><i class="fa fa-send">
