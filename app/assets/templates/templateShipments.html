@@ -13,7 +13,7 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
     </ul>
   </div>
-  <!-- <div class="col-md-4">
+  <div class="col-md-4">
     <p class="lead text-center">Travels you have proposed</p>
     <table class="table">
       <thead>
@@ -23,28 +23,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="shipment in local.shipments" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.from}}</th>
-            <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.to}}</th>
-              <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
-  <p style="text-align:left;" class="lead text-center">Travels you have proposed</p>
-  <div class="col-md-4"ng-repeat="shipment in local.shipments">
-    <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
-    <table class="table">
-      <thead>
-        <th class="home-table-th text-center">What</th>
-        <th class="home-table-th text-center">Price</th>
-        <th class="home-table-th text-center">Reward</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
-            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
-            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
-            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+          <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.from}}</th>
+            <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.to}}</th>
+              <td class="home-table-th text-center" valign="middle" ng-click="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
         </tr>
       </tbody>
     </table>
