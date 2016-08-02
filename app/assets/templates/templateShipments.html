@@ -32,7 +32,7 @@
   </div> -->
   <div class="col-md-4">
     <p style="text-align:left;" class="lead text-center">Travels you have proposed</p>
-    <div class="col-md-4"ng-repeat="shipment in local.shipments">
+    <div ng-repeat="shipment in local.shipments">
       <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
       <table class="table">
         <thead>
@@ -54,7 +54,7 @@
     <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
     <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as Sasha accepts it.</p>
     <div class='col-md-offset-1 col-md-10 padding-top'>
-      <table class="table">
+      <!-- <table class="table">
         <thead>
           <th class="home-table-th text-center"></th>
           <th class="home-table-th text-center">What</th>
@@ -75,7 +75,7 @@
                         <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.quantity}}</th>
           </tr>
         </tbody>
-      </table>
+      </table> -->
       <div class="col-md-12">
         <div class="col-md-12">
           <table class="table" style="table-layout:fixed;">
