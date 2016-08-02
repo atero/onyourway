@@ -39,12 +39,14 @@
         <th class="home-table-th text-center">Price</th>
         <th class="home-table-th text-center">Reward</th>
       </thead>
-      <div class="">
-        <img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}
-        <p>{{local.data_to_show.order.item}}</p>
-        <p>{{local.data_to_show.order.price}}€</p>
-        <p>{{local.data_to_show.order.reward}}€</p>
-      </div>      
+      <tbody>
+        <tr>
+          <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
+            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
+            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
+            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+        </tr>
+      </tbody>
     </table>
   </div>
   <div class="col-md-6 main-status-travels" ng-show="local.data_to_show">
