@@ -1199,6 +1199,13 @@ button.btn-next {
 .from-to-date {
   margin-bottom: 30px;
   background-color: #f5f5f5;
+  position: relative;
+}
+.absolute{
+  position: absolute;
+  background-color: #fff;
+  width: 140px;
+  height: 130px;
 }
 .separator-gray{
   background-color: #f2f2f2;

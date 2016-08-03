@@ -33,6 +33,7 @@
   <div class="col-md-5">
     <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
     <div class="from-to-date" ng-repeat="shipment in local.shipments">
+      <div class="absolute"></div>
       <span class="from">{{shipment.from}} - </span><span class="to">{{shipment.to}} - </span><span class="date">{{shipment.date | date : 'dd.MM.yyyy'}} </span>
       <table class="table">
         <tbody>
