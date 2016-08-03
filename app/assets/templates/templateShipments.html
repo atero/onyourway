@@ -36,7 +36,7 @@
       <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
       <table class="table">
         <tbody>
-          <tr>
+          <div>
             <thead>
               <th class="home-table-th text-center">What</th>
               <th class="home-table-th text-center">Price</th>
@@ -46,7 +46,7 @@
               <th class="home-table-th text-center" valign="middle">{{shipment.order.item}}</th>
               <th class="home-table-th text-center" valign="middle">{{shipment.order.price}}€</th>
               <th class="home-table-th text-center" valign="middle">{{shipment.order.reward}}€</th>
-          </tr>
+          </div>
         </tbody>
       </table>
     </div>
