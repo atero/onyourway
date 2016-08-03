@@ -32,7 +32,7 @@
   </div> -->
   <div class="col-md-5">
     <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
-    <div class="order-image">
+    <div class="order-image" ng-repeat="shipment in local.shipments">
       <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
     </div>
     <div class="from-to-date" ng-repeat="shipment in local.shipments">
