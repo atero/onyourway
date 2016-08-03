@@ -45,7 +45,7 @@
               <span class="home-table-th text-center">Reward</span>
             </div>
             <div class="home-table-td text-center main-home-div">{{shipments.order.name}}</div>
-              <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}}</span>
+              <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name | shipment.user.last_name}}</span>
               <span class="home-table-th text-center home-span1" valign="middle">{{shipment.order.item}}</span>
               <span class="home-table-th text-center home-span2" valign="middle">{{shipment.order.price}}$</span>
               <span class="home-table-th text-center home-span3" valign="middle">{{shipment.order.reward}}$</span>
