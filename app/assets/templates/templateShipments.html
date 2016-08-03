@@ -33,14 +33,12 @@
   <div class="col-md-5">
     <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
     <div class="from-to-date" ng-repeat="shipment in local.shipments">
-      <div class="order-image">
-        <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
-      </div>
       <span class="from">{{shipment.from}} - </span><span class="to">{{shipment.to}} - </span><span class="date">{{shipment.date | date : 'dd.MM.yyyy'}} </span>
       <table class="table">
         <tbody>
           <div>
             <div class="main-home-table-div">
+              <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
               <span class="home-table-th text-center">What</span>
               <span class="home-table-th text-center">Price</span>
               <span class="home-table-th text-center">Reward</span>
