@@ -38,11 +38,11 @@
           <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
           <p class="offers">You have sent 3 offers for this trip</p>
         </div>
-        <div class="col-sm-3 first-last-name text-center">
+        <div class="col-sm-2 first-last-name text-center">
           <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}} {{shipment.user.last_name.split('')[0]}}.</span>
           <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
         </div>
-            <div class="col-sm-9 right-side">
+            <div class="col-sm-10 right-side">
                 <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
                   <div class="home-table-th text-center home-span1" valign="middle">{{shipment.order.item}}</div>
                 </div>
