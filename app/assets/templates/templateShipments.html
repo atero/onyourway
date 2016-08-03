@@ -35,24 +35,23 @@
       <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
       <div class="from-to-date" ng-repeat="shipment in local.shipments">
         <div class="col-sm-12">
-          <span class="from">{{shipment.from}} - </span>
-          <span class="to">{{shipment.to}} - </span>
-          <span class="date">{{shipment.date | date : 'dd.MM.yyyy'}} </span>
+          <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
         </div>
-        <div class="col-sm-3 first-last-name">
+        <div class="col-sm-3 first-last-name text-center">
           <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}}  </span><span class="home-table-th text-center" valign="middle">{{shipment.user.last_name.split('')[0]}}.</span>
           <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
         </div>
-            <div class="col-sm-9">
-              <div class="main-home-table-div">
-                <div class="col-sm-3" class="home-table-th text-center">What</div>
-                <div class="col-sm-3" class="home-table-th text-center">Price</div>
-                <div class="col-sm-3" class="home-table-th text-center">Reward</div>
-              </div>
-              <div class="home-table-td text-center main-home-div">{{shipments.order.name}}</div>
-                <div class="home-table-th text-center home-span1 col-sm-3" valign="middle">{{shipment.order.item}}</div>
-                <div class="home-table-th text-center home-span2 col-sm-3" valign="middle">{{shipment.order.price}}$</div>
-                <div class="home-table-th text-center home-span3 col-sm-3" valign="middle">{{shipment.order.reward}}$</div>
+            <div class="col-sm-9 right-side">
+                <div class="col-sm-4" class="home-table-th text-center">What
+                  <div class="home-table-th text-center home-span1" valign="middle">{{shipment.order.item}}</div>
+                </div>
+                <div class="col-sm-4" class="home-table-th text-center">Price
+                  <div class="home-table-th text-center home-span2" valign="middle">{{shipment.order.price}}$</div>
+                </div>
+                <div class="col-sm-4" class="home-table-th text-center">Reward
+                  <div class="home-table-th text-center home-span3 col-sm-3" valign="middle">{{shipment.order.reward}}$</div>
+                </div>
+              <!-- <div class="home-table-td text-center main-home-div">{{shipments.order.name}}</div> -->
             </div>
           <div class="clearfix"></div>
         <div class="separator-gray"></div>
