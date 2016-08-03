@@ -34,13 +34,15 @@
     <div class="col-md-12">
       <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
       <div class="from-to-date" ng-repeat="shipment in local.shipments">
-        <div class="col-sm-12">
+        <div class="col-sm-12 first-last-name">
           <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}}  </span><span class="home-table-th text-center" valign="middle">{{shipment.user.last_name.split('')[0]}}.</span>
         </div>
         <div class="absolute"></div>
-        <span class="from">{{shipment.from}} - </span>
-        <span class="to">{{shipment.to}} - </span>
-        <span class="date">{{shipment.date | date : 'dd.MM.yyyy'}} </span>
+        <div class="col-sm-12">
+          <span class="from">{{shipment.from}} - </span>
+          <span class="to">{{shipment.to}} - </span>
+          <span class="date">{{shipment.date | date : 'dd.MM.yyyy'}} </span>
+        </div>
         <table class="table">
           <tbody>
             <div>
