@@ -39,7 +39,7 @@
         <tbody>
           <div>
             <div class="main-home-table-div">
-              <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}}</span><span class="home-table-th text-center" valign="middle">{{shipment.user.last_name}}</span>
+              <span class="home-table-th text-center" valign="middle">{{shipment.user.first_name}}</span><span class="home-table-th text-center" valign="middle">{{shipment.user.last_name.split('')[0]}}.</span>
               <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
               <span class="home-table-th text-center">What</span>
               <span class="home-table-th text-center">Price</span>
