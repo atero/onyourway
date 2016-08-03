@@ -33,7 +33,7 @@
   <div class="col-md-4">
     <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
     <div ng-repeat="shipment in local.shipments">
-      <span>{{shipment.from}}-</span><span>{{shipment.to}}-</span><span>{{shipment.date | date : mediumDate}}</span>
+      <span>{{shipment.from}} -</span><span>{{shipment.to}} -</span><span>{{shipment.date | date : mediumDate}}</span>
       <table class="table">
         <tbody>
           <div>
@@ -44,9 +44,9 @@
               <span class="home-table-th text-center">Reward</span>
             </div>
             <div class="home-table-td text-center main-home-div">{{shipments.order.name}}</div>
-              <span class="home-table-th text-center" valign="middle">{{shipment.order.item}}</span>
-              <span class="home-table-th text-center" valign="middle">{{shipment.order.price}}€</span>
-              <span class="home-table-th text-center" valign="middle">{{shipment.order.reward}}€</span>
+              <span class="home-table-th text-center home-span1" valign="middle">{{shipment.order.item}}</span>
+              <span class="home-table-th text-center home-span2" valign="middle">{{shipment.order.price}}€</span>
+              <span class="home-table-th text-center home-span3" valign="middle">{{shipment.order.reward}}€</span>
           </div>
         </tbody>
       </table>
