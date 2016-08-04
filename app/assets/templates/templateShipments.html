@@ -33,7 +33,7 @@
   <div class="col-md-5">
     <div class="col-md-12">
       <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
-      <div class="from-to-date" ng-repeat="shipment in local.shipments">
+      <div class="from-to-date" ng-repeat="shipment in local.shipments" class="clickableRow">
         <div class="col-sm-12">
           <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
           <p class="offers">You have sent {{shipment.order.message.length}} offers for this trip</p>
