@@ -74,11 +74,11 @@
     <div class="col-md-12">
       <div class="table" style="table-layout:fixed;">
           <div ng-repeat="message in local.conversation_shipment.messages">
-            <div style='width:10%' class="home-table-th text-center col-sm-6" valign="middle">
-              <img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
+            <div class="home-table-th text-center col-sm-6" valign="middle">
+              <img class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
             </div>
-            <div style='width:80%' class="home-table-th text-center col-sm-6" valign="middle">{{message.text}}</div>
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+            <div  class="home-table-th text-center col-sm-6" valign="middle">{{message.text}}</div>
+            <td class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
           </div>
       </div>
     </div>
