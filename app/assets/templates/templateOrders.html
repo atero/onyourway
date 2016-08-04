@@ -72,14 +72,12 @@
         </th> -->
             <!-- <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th> -->
     <div class="col-md-12">
-      <div class="table" style="table-layout:fixed;">
-          <div ng-repeat="message in local.conversation_shipment.messages">
-            <div class="home-table-th text-center col-sm-6" valign="middle">
-              <img class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
-            </div>
-            <div  class="home-table-th text-center col-sm-6" valign="middle">{{message.text}}</div>
-            <td class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-          </div>
+      <div ng-repeat="message in local.conversation_shipment.messages">
+        <div class="home-table-th text-center col-sm-6" valign="middle">
+          <img class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
+        </div>
+        <div  class="home-table-th text-center col-sm-6" valign="middle">{{message.text}}</div>
+        <td class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
       </div>
     </div>
       <div class="table col-sm-12">
@@ -99,7 +97,12 @@
 				          <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
 				          <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
 				          <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
-						
+						  <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
+              </th>
+              <td ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
+                <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
+                </th>
+                <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
           </tr>
 
         </tbody>
