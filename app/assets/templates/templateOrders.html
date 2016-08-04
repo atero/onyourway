@@ -62,7 +62,6 @@
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
-    <div class="col-md-12">
       <div class="home-table-th text-center col-sm-4" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</div>
       <div class="home-table-th text-center col-sm-4" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</div>
       <div class="home-table-th text-center col-sm-4" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</div>
@@ -72,7 +71,6 @@
         <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
         </th> -->
             <!-- <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th> -->
-    </div>
     <div class="col-md-12">
       <div class="table" style="table-layout:fixed;">
           <div ng-repeat="message in local.conversation_shipment.messages">
