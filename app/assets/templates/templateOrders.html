@@ -81,8 +81,8 @@
             <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
           </div>
       </div>
-      <table class="table">
-        <tbody>
+    </div>
+      <div class="table col-sm-12">
           <tr>
             <td style='width:90%' class="home-table-th text-center" valign="middle">
               <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
@@ -91,9 +91,7 @@
               <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i class="fa fa-send">
 						          </td>
 						        </tr>
-					      </tbody>
-					</table>
-				</div>
+					</div>
 				<!-- <div class="col-md-12">
 					<table class="table">
 				      <tbody>
