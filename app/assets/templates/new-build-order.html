@@ -34,7 +34,7 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
 
-    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
+    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">You have accepted this travel!</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
 
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
@@ -62,18 +62,25 @@
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
+      <div class="home-table-th text-center col-sm-4" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</div>
+      <div class="home-table-th text-center col-sm-4" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</div>
+      <div class="home-table-th text-center col-sm-4" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</div>
+      <!-- <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
+      </th>
+      <td ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
+        <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
+        </th> -->
+            <!-- <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th> -->
     <div class="col-md-12">
-      <table class="table" style="table-layout:fixed;">
-        <tbody>
-          <tr ng-repeat="message in local.conversation_shipment.messages">
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-            <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table">
-        <tbody>
+      <div ng-repeat="message in local.conversation_shipment.messages">
+        <div class="home-table-th text-center col-sm-6" valign="middle">
+          <img class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
+        </div>
+        <div  class="home-table-th text-center col-sm-6" valign="middle">{{message.text}}</div>
+        <td class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
+      </div>
+    </div>
+      <div class="table col-sm-12">
           <tr>
             <td style='width:90%' class="home-table-th text-center" valign="middle">
               <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
@@ -82,10 +89,8 @@
               <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i class="fa fa-send">
 						          </td>
 						        </tr>
-					      </tbody>
-					</table>
-				</div>
-				<div class="col-md-12">
+					</div>
+				<!-- <div class="col-md-12">
 					<table class="table">
 				      <tbody>
 				        <tr>
@@ -104,7 +109,7 @@
 
       </table>
 
-    </div>
+    </div> -->
 
   </div>
   <!-- 			    <table class="table">
