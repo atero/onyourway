@@ -34,7 +34,7 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
 
-    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
+    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">You have accepted this travel!</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
 
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
@@ -56,12 +56,32 @@
       </div>
       <div class="col-md-12 offer-buttons">
         <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)">REJECT</button>
-        <button type="button" class="btn btn-default pull-right button-themed" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>        
+        <button type="button" class="btn btn-default pull-right button-themed" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>
       </div>
     </div>
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
+    <div class="col-md-12">
+      <table class="table">
+          <tbody>
+            <tr>
+              <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
+              <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
+              <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
+          <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
+          </th>
+          <td ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
+            <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
+            </th>
+            <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
     <div class="col-md-12">
       <table class="table" style="table-layout:fixed;">
         <tbody>
@@ -85,7 +105,7 @@
 					      </tbody>
 					</table>
 				</div>
-				<div class="col-md-12">
+				<!-- <div class="col-md-12">
 					<table class="table">
 				      <tbody>
 				        <tr>
@@ -104,7 +124,7 @@
 
       </table>
 
-    </div>
+    </div> -->
 
   </div>
   <!-- 			    <table class="table">
