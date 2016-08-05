@@ -50,6 +50,8 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
 
   newShipment = function(shipment) {
     $scope.inherit.loading = true;
+    $scope.local.shipment.to = $scope.local.shipment.to.address_components[0].long_name;
+    $scope.local.shipment.from = $scope.local.shipment.from.address_components[0].long_name;
     Shipment.create({
       token: $scope.inherit.user.token
     }, {
