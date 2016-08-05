@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   post '/users/sign_up.json', to: 'users#create'
 
-  get "/payment_token" do
-    Braintree::ClientToken.generate
-  end
   namespace :api, path: '/api', defaults: { format: 'json' } do
     match '/orders', to: 'orders#show', via: [:options]
     post '/orders', to: 'orders#create'
