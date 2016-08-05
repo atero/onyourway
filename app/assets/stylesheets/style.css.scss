@@ -1269,7 +1269,7 @@ button.btn-next {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
     border: 1px solid #11e9de;
