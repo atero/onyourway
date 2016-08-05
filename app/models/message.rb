@@ -11,7 +11,7 @@ class Message
 
   def users_consistency
     p self.shipment.orders.last
-    u1 = self.shipment.order.user
+    u1 = self.shipment.orders.last.user
     u2 = self.shipment.user
     if !(u1 == self.sender && u2 == self.recipient || u2 == self.sender && u1 == self.recipient)
       errors.add(:message, "user is not supposed to be able to send this message")
