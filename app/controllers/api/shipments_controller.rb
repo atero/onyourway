@@ -13,7 +13,8 @@ module Api
         @order = Order.where(:id => params["order_id"])
         if @order then @shipment.order = @shipment.order.push(@order) end
       end
-
+      puts "Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      puts @shipment.order
       if @shipment.save
           render json: @shipment, status: :accepted
        else
