@@ -4,19 +4,8 @@ module Api
     before_filter :authenticate_user!
 
     def create
-
       @shipment = Shipment.new(shipment_params)
-
       @shipment.user = current_user
-
-      if params[:order_id]
-        puts params["order_id"] + "!!!!!!!!!!!!!"
-        @order = Order.where(:id => params["order_id"]).first
-        puts @order.from
-        if @order
-
-        end
-      end
 
       if @shipment.save
           render json: @shipment, status: :accepted
