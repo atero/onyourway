@@ -10,7 +10,7 @@ class Message
    validate :users_consistency
 
   def users_consistency
-    p self.shipment.orders.last
+    p self.shipment.order.last
     u1 = self.shipment.orders.last.user
     u2 = self.shipment.user
     if !(u1 == self.sender && u2 == self.recipient || u2 == self.sender && u1 == self.recipient)
