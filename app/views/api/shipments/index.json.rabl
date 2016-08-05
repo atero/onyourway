@@ -1,19 +1,21 @@
 object @shipments
 
-attributes :id, :from, :to, :date, :item, :messages, :status
+attributes :id, :from, :to, :date,:item,:messages,:status
 
-child :user do
-  attributes :id, :first_name, :last_name
+child :user do |u|
+	attributes :id, :first_name, :last_name
 end
 
-child :order do 
-  attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price
+child :order do |shipment|
 
-  child :user do |_u|
-    attributes :id, :first_name, :last_name
-  end
+      	attributes :id, :from, :to,:date,:item,:message,:price,:quantity,:reward,:total_price
 
-  node :photo do |order|
-    order.photo.url(:square)
-  end
+      	child :user do |u|
+			attributes :id, :first_name, :last_name
+		end
+
+	    node :photo do |order|
+		     order.photo.url(:square)
+		end
+
 end
