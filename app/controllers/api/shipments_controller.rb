@@ -11,7 +11,7 @@ module Api
 
       if params[:order_id]
         @order = Order.where(:id => params["order_id"]).first
-        if @order then @shipment.order = [] end
+        if @order then @shipment.order = [params["order_id"]] end
       end
 
       if @shipment.save
