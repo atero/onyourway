@@ -3,9 +3,8 @@ module Api
     before_filter :authenticate_user!
 
     def create
-      @ext = Shipment.where().first
+      @ext = Shipment.where(date: params['date']).first
       puts params['date']
-      puts @ext.date
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
