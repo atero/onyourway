@@ -52,7 +52,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :from, :status)
+      params.require(:shipment).permit(:to, :date, :from, :status, :order_id)
     end
   end
 end
