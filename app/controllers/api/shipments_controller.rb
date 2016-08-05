@@ -7,7 +7,8 @@ module Api
       @shipment = Shipment.new(shipment_params)
       @order = Order.where(:id => params["order_id"]).first
       @shipment.user = current_user
-      # @shipment.order = @order
+      @shipment.order = @order
+      
       if @shipment.save
         puts "Saved!!!!!!"
           render json: @shipment, status: :accepted
