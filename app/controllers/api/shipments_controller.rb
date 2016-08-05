@@ -3,7 +3,7 @@ module Api
     before_filter :authenticate_user!
 
     def create
-      @ext = Shipment.where([to: shipment_params['to'], from: shipment_params['from']]).first
+      @ext = Shipment.where({to: shipment_params['to'], from: shipment_params['from']}).first
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
