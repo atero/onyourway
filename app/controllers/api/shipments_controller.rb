@@ -7,6 +7,18 @@ module Api
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
+        @shipment.user = current_user
+        if params[:order_id]
+          puts params[:order_id] + '***************************************'
+          @order = Order.where(id: params['order_id']).first
+          @shipment.order = @shipment.order.push(@order) if @order
+          puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+          puts @shipment.order
+          if @shipment.save
+            render json: @shipment, status: :accepted
+          else
+            render json: { messsage: 'Bad request' }, status: 400
+          end
       else
         @shipment = Shipment.new(shipment_params)
         @shipment.user = current_user
