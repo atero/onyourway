@@ -14,7 +14,7 @@ module Api
         @order = Order.where(:id => params["order_id"]).first
         puts @order.from
         if @order
-          @shipment.order = @order
+          @shipment.order = @order.collect(&:id)
         end
       end
 
