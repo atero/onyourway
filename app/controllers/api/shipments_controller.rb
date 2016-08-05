@@ -6,7 +6,6 @@ module Api
     def create
 
       @shipment = Shipment.new(shipment_params)
-
       @shipment.user = current_user
 
       if params[:order_id]

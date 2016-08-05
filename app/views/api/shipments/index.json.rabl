@@ -7,6 +7,7 @@ child :user do |_u|
 end
 
 child :order do |_shipment|
+	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price
 
   child :user do |_u|
