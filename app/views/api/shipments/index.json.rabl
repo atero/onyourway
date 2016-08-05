@@ -6,7 +6,7 @@ child :user do |_u|
   attributes :id, :first_name, :last_name
 end
 
-child :order_id
+node :order_id
 	@order_id.map do |order|
 		{  :id => order.id, :from => order.from} #, :to, :date, :item, :message, :price, :quantity, :reward, :total_price }
 	end
