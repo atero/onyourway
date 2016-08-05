@@ -4,7 +4,7 @@ module Api
 
     def create
       @ext = Shipment.where(date: params['date']).first
-      if ext
+      if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
       else
