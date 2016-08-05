@@ -6,8 +6,8 @@ child :user do |_u|
   attributes :id, :first_name, :last_name
 end
 
-child :orders do |order|
-	@orders.map do |order|
+child :order_id
+	@order_id.map do |order|
 		{  :id => order.id, :from => order.from} #, :to, :date, :item, :message, :price, :quantity, :reward, :total_price }
 	end
   # attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price
