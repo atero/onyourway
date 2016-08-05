@@ -4,18 +4,22 @@ module Api
     before_filter :authenticate_user!
 
     def create
+
       @shipment = Shipment.new(shipment_params)
-      @order = Order.where(:id => params["order_id"]).first
+
       @shipment.user = current_user
-      @shipment.order = [@order]
+
+      if params[:order_id]
+        @order = Order.where(:id => params["order_id"]).first
+        if @order then @shipment.order = @order end
+      end
 
       if @shipment.save
-        puts "Saved!!!!!!"
           render json: @shipment, status: :accepted
        else
-         puts "ERROR 400 !!!!!!"
          render json: {messsage:'Bad request'}, status: 400
       end
+
     end
 
     def list
@@ -24,7 +28,9 @@ module Api
     end
 
     def update
+
       @shipment = Shipment.where(:id=> params[:shipment_id]).first
+
       if @shipment && @shipment.update(shipment_params)
         @shipment.order.save
         render json: @shipment, status: :accepted
