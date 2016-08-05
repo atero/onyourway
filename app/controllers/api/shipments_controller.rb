@@ -13,7 +13,9 @@ module Api
         puts params["order_id"] + "!!!!!!!!!!!!!"
         @order = Order.where(:id => params["order_id"]).first
         puts @order.from
-        # if @order then @shipment.order = @order end
+        if @order
+          @shipment.order = @order
+        end
       end
 
       if @shipment.save
@@ -52,7 +54,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :from, :status, :order_id)
+      params.require(:shipment).permit(:to, :date, :from, :status)
     end
   end
 end
