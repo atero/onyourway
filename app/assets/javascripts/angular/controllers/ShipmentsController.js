@@ -5,5 +5,5 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', func
 	$scope.local={
 		shipments: shipments
 	}
-	console.log($scope.local.shipments);
+	console.log($scope.local.shipments.orders);
 }]);
