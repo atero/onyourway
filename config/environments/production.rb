@@ -71,7 +71,7 @@ Rails.application.configure do
      }
    }
 
-  config.action_mailer.default_url_options = { :host => 'onyourway.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'onyourway.io' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.perform_deliveries = true
   ActionMailer::Base.raise_delivery_errors = true
