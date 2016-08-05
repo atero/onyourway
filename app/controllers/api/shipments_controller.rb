@@ -23,6 +23,7 @@ module Api
 
     def list
       @shipments = current_user.shipments
+      puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       for @shpm in @shipments
         puts @shpm
       end
