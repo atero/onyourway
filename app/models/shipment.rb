@@ -10,7 +10,7 @@ class Shipment
    field :status, type: String
    ## RELATIONSHIPS
    belongs_to :user
-   has_many :order
+   belongs_to :order
    has_many :messages
    ## METHODS
    before_save :check_status
