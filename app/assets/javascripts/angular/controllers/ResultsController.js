@@ -32,6 +32,8 @@ newShipments = function(shipment, result){
 
 	$scope.inherit.loading = true;
 console.log($scope.inherit.user)
+shipment.to = shipment.to.address_components[0].long_name;
+shipment.from = shipment.from.address_components[0].long_name;
 	Shipment.create({id:shipment.order_id, token:$scope.inherit.user.token}, {shipment:shipment}, function(res) {
 
 		Message.create({shipment_id:res._id, token:$scope.inherit.user.token}, {message:{text:shipment.message, sender:$scope.inherit.user._id, recipient: result.user_id}}, function(res) {
