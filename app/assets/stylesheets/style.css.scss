@@ -1145,11 +1145,130 @@ button.btn-next {
     padding-bottom: 24px;
   }
 }
+
+
+/******-Main CSS-******/
+
+.main-status-travels .status-travels{
+  display: inline-block;
+  font-size: 20px;
+  background: #11e9de;
+  color: white;
+  font-weight: normal;
+  padding: 0px 15px;
+  border-radius: 8px;
+}
+.main-status-travels .main-lead{
+  font-size: 18px;
+  color: #969696;
+}
+.main-status-travels .main-pending{
+  color: #646464;
+  font-size: 20px;
+  font-weight: normal;
+}
+.main-home-table-div span{
+  margin: 0 67px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6e6e6e;
+}
+.home-span1{
+  font-size: 16px;
+  color: #7a7a7a;
+  font-weight: bold;
+  line-height: 3.5;
+  text-align: left;
+}
+.home-span2{
+  font-size: 16px;
+  color: #7a7a7a;
+  font-weight: bold;
+  line-height: 3.5;
+  text-align: left;
+}
+.home-span3{
+  font-size: 16px;
+  color: #7a7a7a;
+  font-weight: bold;
+  line-height: 3.5;
+  text-align: left;
+}
+.from{
+  font-size: 18px;
+  display: block;
+  color: #6e6e6e;
+}
+.from-to-date {
+  margin-bottom: 30px;
+}
+
+.separator-gray{
+  background-color: #f2f2f2;
+  height: 1px;
+  margin: 20px 0;
+}
+.main-home-table-div img{
+  position: relative;
+  z-index: 9999;
+}
+.right-side{
+  background-color: #f5f5f5;
+  text-align: left;
+}
+.first-last-name span{
+  display: block;
+  font-size: 14px;
+  color: #6e6e6e;
+}
+.offers{
+  font-size: 18px;
+  color: #11e9de;
+  margin-bottom: 25px;
+}
+.home-table-structure{
+  font-size: 16px;
+  color: #6e6e6e;
+  margin-top: 10px;
+}
+.hover-div:hover{
+  background-color: #d5d5d5;
+}
+.hover-div{
+  padding: 15px 0;
+}
+
+
+
+
+
+
 @media (min-width: 1600px) {
   .container {
     width: 1530px;
   }
 }
+@media (min-width: 1280px){
+  .first-last-name{
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px){
+  .first-last-name{
+    width: 100%;
+  }
+  .right-side{
+    width: 100%;
+    text-align: center;
+  }
+  .home-span1,
+  .home-span2,
+  .home-span3{
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
