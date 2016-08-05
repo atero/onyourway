@@ -1248,6 +1248,12 @@ button.btn-next {
     width: 1530px;
   }
 }
+@media (min-width: 1280px){
+  .first-last-name{
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
