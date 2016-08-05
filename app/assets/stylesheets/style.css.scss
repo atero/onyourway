@@ -1254,6 +1254,21 @@ button.btn-next {
   }
 }
 
+@media (min-width: 1024px){
+  .first-last-name{
+    width: 100%;
+  }
+  .right-side{
+    width: 100%;
+    text-align: center;
+  }
+  .home-span1,
+  .home-span2,
+  .home-span3{
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
