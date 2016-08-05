@@ -1,47 +1,41 @@
 module Api
   class ShipmentsController < ApplicationController
+
     before_filter :authenticate_user!
 
     def create
-      @existshpmnt = Shipment.where(date: shipment_params[:date]).first
-      puts "????????????????????????????????????????????"
-      if @existshpmnt
-        @existshpmnt.order.save
-      else
-        @shipment = Shipment.new(shipment_params)
-        @shipment.user = current_user
 
-        if params[:order_id]
-          @order = Order.where(id: params['order_id']).first
-          @shipment.order = @order if @order
-        end
+      @shipment = Shipment.new(shipment_params)
 
-        if @shipment.save
+      @shipment.user = current_user
+
+      if params[:order_id]
+        @order = Order.where(:id => params["order_id"]).first
+        if @order then @shipment.order = @order end
+      end
+
+      if @shipment.save
           render json: @shipment, status: :accepted
-        else
-          render json: { messsage: 'Bad request' }, status: 400
-        end
+       else
+         render json: {messsage:'Bad request'}, status: 400
       end
 
     end
 
     def list
       @shipments = current_user.shipments
-      puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      for @shpm in @shipments
-        puts @shpm.from + " " + @shpm.to
-      end
       render 'index'
     end
 
     def update
-      @shipment = Shipment.where(id: params[:shipment_id]).first
+
+      @shipment = Shipment.where(:id=> params[:shipment_id]).first
 
       if @shipment && @shipment.update(shipment_params)
         @shipment.order.save
         render json: @shipment, status: :accepted
       else
-        render json: { messsage: 'No orders found' }, status: 404
+        render json: {messsage:'No orders found'}, status: 404
       end
     end
 
