@@ -2,7 +2,7 @@ class Shipment
    include Mongoid::Document
    include Mongoid::Timestamps
 
-   validates :from, :to, :date, :user, :order, :presence => true
+   validates :from, :to, :date, :user, :presence => true
 
    field :from, type: String
    field :to, type: String
