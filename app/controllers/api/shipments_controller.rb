@@ -1,18 +1,26 @@
 module Api
   class ShipmentsController < ApplicationController
-
     before_filter :authenticate_user!
 
     def create
       @shipment = Shipment.new(shipment_params)
+
       @shipment.user = current_user
 
-      if @shipment.save
-          render json: @shipment, status: :accepted
-       else
-         render json: {messsage:'Bad request'}, status: 400
+      if params[:order_id]
+        puts params['order_id'] + '!!!!!!!!!!!!!'
+        @order = Order.where(id: params['order_id']).first
+        puts @order.from
+        @shipment.order = @order if @order
       end
 
+      if @shipment.save
+        puts 'Saved!!!!!!'
+        render json: @shipment, status: :accepted
+
+      else
+        render json: { messsage: 'Bad request' }, status: 400
+      end
     end
 
     def list
@@ -21,12 +29,12 @@ module Api
     end
 
     def update
-      @shipment = Shipment.where(:id=> params[:shipment_id]).first
+      @shipment = Shipment.where(id: params[:shipment_id]).first
       if @shipment && @shipment.update(shipment_params)
         @shipment.order.save
         render json: @shipment, status: :accepted
       else
-        render json: {messsage:'No orders found'}, status: 404
+        render json: { messsage: 'No orders found' }, status: 404
       end
     end
 
