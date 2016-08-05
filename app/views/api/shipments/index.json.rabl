@@ -6,9 +6,9 @@ child :user do |_u|
   attributes :id, :first_name, :last_name
 end
 
-child :order do |_shipment|
+child :order do |order|
 	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-	puts _shipment
+	puts order
   attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price
 
   child :user do |_u|
