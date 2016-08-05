@@ -6,19 +6,19 @@
 <div ng-if="!local.validated" class="modal-body">
 
     <div class="form-group">
-      <label>From:</label>                            
-      <input ng-model="local.shipment.from" list="my_countries" type="text" class="form-control search-input" placeholder="Country">
-      <datalist id="my_countries">
-          <option ng-repeat="x1 in countrylist" value="{{x1}}">
-      </datalist>      
+      <label>From:</label>
+      <div class="input-w">
+        <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country - Leave blank for Anywhere" ng-model="local.shipment.from" />
+      </div>
     </div>
 
     <div class="form-group">
       <label for="arrival">To:</label>
-      <input type="text" class="form-control search-input" ng-autocomplete="local.result" details="local.details" options="local.options" placeholder="City" ng-model="local.shipment.to"/>      
-<!--       <input type="text" class="form-control search-input" placeholder="City" ng-model="local.shipment.to" ng-change="local.shipment.to = local.shipment.to.charAt(0).toUpperCase() + local.shipment.to.slice(1);"> -->
+      <div class="input-w">
+        <input type="text" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.shipment.to" />
+      </div>
     </div>
-    
+
     <div class="form-group">
       <label for="date">Date:</label>
       <input type="date" class="form-control search-input" ng-model="local.shipment.date">
@@ -42,17 +42,17 @@
       <label for="arrival">Approximate price (in €)</label>
       <input type="number" class="form-control" placeholder="100" ng-model="local.order_price">
     </div>
-    
+
     <div class="form-group">
       <label for="date">Quantity</label>
       <input type="number" class="form-control" ng-model="local.order_q" placeholder="2">
     </div>
-    
+
     <div class="form-group">
       <label for="date">Reward (in €)</label>
       <input type="number" class="form-control" ng-model="local.order_reward" placeholder="Generally between 10€ and 2% of the total order">
     </div>
-    
+
     <div class="form-group">
         <label for="message">Message</label>
         <textarea name="content" type="text" ng-model="local.order_message" class="form-control" placeholder="Additional information (link towards an item photo, color, size etc...)"></textarea>

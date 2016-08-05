@@ -13,6 +13,7 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance', "order_id", function($
 			$scope.local.validated = true
 		}
 	}
+	
 	$scope.cancel = function(){
 		if($scope.local.validated){
 			$scope.local.validated = false
