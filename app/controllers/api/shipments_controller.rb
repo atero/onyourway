@@ -25,7 +25,7 @@ module Api
       @shipments = current_user.shipments
       puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       for @shpm in @shipments
-        puts @shpm.to
+        puts @shpm.from + " " + @shpm.to
       end
       render 'index'
     end
