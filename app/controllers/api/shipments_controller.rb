@@ -10,8 +10,8 @@ module Api
       @shipment.user = current_user
 
       if params[:order_id]
-        @order = Order.where(:id => params["order_id"]).first
-        if @order then @shipment.order = ["asdasd"] end
+        @order = Order.where(:id => params["order_id"])
+        if @order then @shipment.order = @shipment.order.push(@order) end
       end
 
       if @shipment.save
