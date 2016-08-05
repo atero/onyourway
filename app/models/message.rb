@@ -6,11 +6,11 @@ class Message
    ## RELATIONSHIPS
    belongs_to :shipment
    belongs_to :sender, class_name: "User", inverse_of: :outgoing
-   belongs_to :recipient, class_name: "User", inverse_of: :ingoing 
+   belongs_to :recipient, class_name: "User", inverse_of: :ingoing
    validate :users_consistency
-   
+
   def users_consistency
-    p self.shipment.order
+    p self.shipment
     u1 = self.shipment.order.user
     u2 = self.shipment.user
     if !(u1 == self.sender && u2 == self.recipient || u2 == self.sender && u1 == self.recipient)

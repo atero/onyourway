@@ -12,7 +12,7 @@ module Api
       if params[:order_id]
         puts params[:order_id] + "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
         @order = Order.where(:id => params["order_id"]).first
-        if @order then @shipment.order = @shipment.order.push(@order) end
+        if @order then @shipment.order = [@order] end
       end
       puts "Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
       puts @shipment.order
