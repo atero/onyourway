@@ -12,8 +12,9 @@ module Api
           puts params[:order_id] + '***************************************'
           @order = Order.where(id: params['order_id']).first
           @shipment.order.push(@order) if @order
-          puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+          puts 'Order #################################'
           puts @shipment.order
+          puts 'Order #################################'
           if @shipment.save
             render json: @shipment, status: :accepted
           else
