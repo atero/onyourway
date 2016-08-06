@@ -19,6 +19,7 @@ module Api
           else
             render json: { messsage: 'Bad request' }, status: 400
           end
+        end
       else
         @shipment = Shipment.new(shipment_params)
         @shipment.user = current_user
