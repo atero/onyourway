@@ -11,7 +11,7 @@ module Api
         if params[:order_id]
           puts params[:order_id] + '***************************************'
           @order = Order.where(id: params['order_id']).first
-          @shipment.order = @shipment.order.push(@order) if @order
+          @shipment.order.push(@order) if @order
           puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
           puts @shipment.order
           if @shipment.save
