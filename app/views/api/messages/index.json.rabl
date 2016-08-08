@@ -1,3 +1,3 @@
 object @messages
 
-attributes :id, :shipment, :sender, :recipient, :text
+attributes :id, :shipment, :order, :sender, :recipient, :text
