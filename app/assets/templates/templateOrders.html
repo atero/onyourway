@@ -40,7 +40,7 @@
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
-        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name}}
+        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
       </div>
       <div class="col-md-10">
         <div class="col-md-12" >
