@@ -4,18 +4,24 @@ module Api
 
     def create
       @ext = Shipment.where({to: shipment_params['to'], from: shipment_params['from'], date: shipment_params['date']}).first
+      @order = Order.where(id: params['order_id']).first
+
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
         @shipment.user = current_user
         if params[:order_id]
           puts params[:order_id] + '***************************************'
-          @order = Order.where(id: params['order_id']).first
           @shipment.order.push(@order) if @order
           puts 'Order #################################'
           puts @shipment.order
           puts 'Order #################################'
           if @shipment.save
+            if @order.shipment
+              @order.shipment.push(@shipment)
+            else
+              @order.shipment = [@shipment]
+            end
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
@@ -26,11 +32,17 @@ module Api
         @shipment.user = current_user
         if params[:order_id]
           puts params[:order_id] + '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-          @order = Order.where(id: params['order_id']).first
           @shipment.order = [@order] if @order
           puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
           puts @shipment.order
           if @shipment.save
+            if @order.shipment
+              @order.shipment.push(@shipment)
+              puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+            else
+              @order.shipment = [@shipment]
+              puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+            end
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
@@ -54,16 +66,6 @@ module Api
         render json: { messsage: 'No orders found' }, status: 404
       end
     end
-
-    # def list
-    #   @orders = current_user.orders
-    #   @shipments = @orders.map(&:shipments)
-    #   if @shipments.length > 0
-    #       render 'index'
-    #    else
-    #      render json: {messsage:'No orders found'}, status: 404
-    #   end
-    # end
 
     private
 
