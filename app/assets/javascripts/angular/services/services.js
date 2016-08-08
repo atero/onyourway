@@ -5,7 +5,7 @@ App.factory('Order',['$resource',function($resource){
 		create: { method:"POST", params: {}, isArray : false },
 		index: { method:"GET", params: {}, isArray : true },
 		list: { method:"GET", params: {id :'@id'}, isArray : true }
-
+		update: {method: "PUT", params:{id : '@id'}, isArray : false}
 	});
 }]);
 
