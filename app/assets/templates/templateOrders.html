@@ -36,7 +36,7 @@
 
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
-
+    <div class="col-sm-12">You have 2 offers</div>
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
@@ -45,7 +45,6 @@
       <div class="col-md-10">
         <div class="col-md-12" >
           <ul class="offer-details main-offer-details">
-            <span class="">{{local.data_to_show.length}}</span>
             <li class="col-sm-4"><span>What:</span> {{local.data_to_show.item}}</li>
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
