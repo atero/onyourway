@@ -14,7 +14,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Mes
 
 
 	$scope.sendMessage = function(order, shipment){
-		console.log($scope.shipmen_to_show);
+		console.log($scope.local.shipmen_to_show);
 		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id}
 		$scope.inherit.loading = true
 		console.log(shipment);
