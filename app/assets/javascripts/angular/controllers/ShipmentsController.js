@@ -5,5 +5,11 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', func
 	$scope.local={
 		shipments: shipments
 	}
+	$scope.toOptions = {
+		types: ['(cities)'],
+	}
+	$scope.fromOptions = {
+
+	}
 	console.log($scope.local.shipments);
 }]);

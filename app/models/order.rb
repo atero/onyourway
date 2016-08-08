@@ -30,7 +30,7 @@ class Order
    field :accepted_shipment, type: Boolean, :default => false
    ## RELATIONSHIPS
    belongs_to :user
-   has_many :shipments
+   has_and_belongs_to_many :shipments
    before_save :process_base64_image, :check_status
 
       def process_base64_image

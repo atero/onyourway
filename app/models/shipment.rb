@@ -2,7 +2,7 @@ class Shipment
    include Mongoid::Document
    include Mongoid::Timestamps
 
-   validates :from, :to, :date, :user, :order, :presence => true
+   validates :from, :to, :date, :user, :presence => true
 
    field :from, type: String
    field :to, type: String
@@ -10,7 +10,7 @@ class Shipment
    field :status, type: String
    ## RELATIONSHIPS
    belongs_to :user
-   belongs_to :order
+   has_and_belongs_to_many :order
    has_many :messages
    ## METHODS
    before_save :check_status
