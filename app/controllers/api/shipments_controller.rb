@@ -36,13 +36,14 @@ module Api
           puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
           puts @shipment.order
           if @shipment.save
-            if @order.shipment
-              @order.shipment.push(@shipment)
+            if @order.shipments
+              @order.shipments.push(@shipment)
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             else
-              @order.shipment = [@shipment]
+              @order.shipments = [@shipment]
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             end
+            @order.save
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
