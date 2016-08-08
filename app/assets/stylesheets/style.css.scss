@@ -1327,6 +1327,12 @@ button.btn-next {
     float: none;
     text-align: center;
   }
+  .menu li{
+    display: none;
+  }
+  .menu li.strong{
+    display: block;
+  }
 }
 @media (max-width: 480px) {
   body{
