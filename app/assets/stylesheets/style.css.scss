@@ -1327,12 +1327,6 @@ button.btn-next {
     float: none;
     text-align: center;
   }
-  .menu li{
-    display: none;
-  }
-  .menu li.strong{
-    display: block;
-  }
 }
 @media (max-width: 480px) {
   body{
@@ -1431,6 +1425,12 @@ button.btn-next {
   .btn-back{
     width: 115px;
     height: 40px;
+  }
+  .menu li{
+    display: none !important;
+  }
+  .menu li.strong{
+    display: block !important;
   }
 }
 @media (max-width: 320px){
