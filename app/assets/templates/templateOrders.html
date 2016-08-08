@@ -40,14 +40,14 @@
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
-        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name}}
+        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
       </div>
       <div class="col-md-10">
         <div class="col-md-12" >
           <ul class="offer-details main-offer-details">
-            <li class="col-sm-4"><span>What:</span> {{shipment.item}}</li>
-            <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
-            <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
+            <li class="col-sm-4"><span>What:</span> {{order.item}}</li>
+            <li class="col-sm-4"><span>To:</span> {{order.to}}</li>
+            <li class="col-sm-4"><span>Date:</span> {{order.date | date : mediumDate}}</li>
           </ul>
           <p class="offer-text text-left">
             {{shipment.messages[0].text}}
@@ -56,7 +56,7 @@
       </div>
       <div class="col-md-12 offer-buttons main-offer-buttons">
         <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, shipment)">REJECT</button>
-        <button type="button" class="btn btn-default pull-right button-themed" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>
+        <button style="border-color:none;" type="button" class="btn btn-default pull-right button-themed" ng-click="accept_travel(local.data_to_show, shipment)">ACCEPT</button>
       </div>
     </div>
   </div>
