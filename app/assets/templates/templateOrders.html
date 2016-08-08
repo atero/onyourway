@@ -45,9 +45,9 @@
       <div class="col-md-10">
         <div class="col-md-12" >
           <ul class="offer-details main-offer-details">
-            <li class="col-sm-4"><span>What:</span> {{order.item}}</li>
-            <li class="col-sm-4"><span>To:</span> {{order.to}}</li>
-            <li class="col-sm-4"><span>Date:</span> {{order.date | date : mediumDate}}</li>
+            <li class="col-sm-4"><span>What:</span> {{shipment.order.item}}</li>
+            <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
+            <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
           <p class="offer-text text-left">
             {{shipment.messages[0].text}}
