@@ -13,23 +13,7 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
     </ul>
   </div>
-  <!-- <div class="col-md-4">
-    <p class="lead text-center">Travels you have proposed</p>
-    <table class="table">
-      <thead>
-        <th class="home-table-th text-center">From</th>
-        <th class="home-table-th text-center">To</th>
-        <th class="home-table-th text-center">When</th>
-      </thead>
-      <tbody>
-        <tr ng-repeat="shipment in local.shipments" class="clickableRow">
-          <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.from}}</th>
-            <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.to}}</th>
-              <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+
   <div class="col-md-5">
     <div class="col-md-12">
       <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
@@ -120,3 +104,20 @@
       </tr>
     </tbody>
   </table> -->
+  <!-- <div class="col-md-4">
+    <p class="lead text-center">Travels you have proposed</p>
+    <table class="table">
+      <thead>
+        <th class="home-table-th text-center">From</th>
+        <th class="home-table-th text-center">To</th>
+        <th class="home-table-th text-center">When</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="shipment in local.shipments" class="clickableRow">
+          <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.from}}</th>
+            <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.to}}</th>
+              <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
