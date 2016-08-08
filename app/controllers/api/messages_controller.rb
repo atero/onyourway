@@ -20,7 +20,8 @@ module Api
     def index
       @shipment = Shipment.where(:id => params[:shipment_id]).first
       @order = Order.where(:id => params[:order_id]).first
-      if @shipment then @messages = @shipment.messages else @messages = [] end
+      if @shipment  then @messages = @shipment.messages end
+      if @order  then @messages = @order.messages else @messages = [] end
       if @messages.length > 0 && (@shipment.user == current_user || @order.user == current_user)
           render 'index'
        else
