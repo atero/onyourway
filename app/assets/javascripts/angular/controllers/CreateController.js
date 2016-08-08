@@ -63,7 +63,9 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     })
   }
 
-  if ($scope.inherit.usertype == "shopper") {
+  var windowidth = $(window).width();
+
+  if ($scope.inherit.usertype == "shopper" && windowidth >= 768 ) {
     $scope.local.stages = [true, false, false, false]
   } else {
     $scope.local.stages = [true]
