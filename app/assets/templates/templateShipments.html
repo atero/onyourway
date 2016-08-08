@@ -39,7 +39,7 @@
           <p class="offers">You have sent {{shipment.order.message.length}} offers for this trip</p>
         </div>
         <div class="" ng-repeat="order in shipment.orders">
-          <div class="col-sm-12 hover-div" ng-click="local.data_to_show = order">
+          <div class="col-sm-12 hover-div" ng-click="local.data_to_show = order; shipmen_to_show = shipment">
             <div class="col-sm-2 first-last-name text-center">
               <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
               <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{shipment.order.photo}}" alt="">
@@ -78,7 +78,7 @@
                   <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
                 </td>
                 <td class="home-table-th text-center" valign="middle">
-                  <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.data_to_show)"><i class="fa fa-send">
+                  <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, shipmen_to_show)"><i class="fa fa-send">
                   </td>
                 </tr>
               </tbody>
