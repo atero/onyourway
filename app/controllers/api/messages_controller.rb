@@ -3,7 +3,7 @@ module Api
 
     def create
       @shipment = Shipment.where(:id => params[:shipment_id]).first
-      @order = Order.where(:id => params[:ordert_id]).first
+      @order = Order.where(:id => params[:order_id]).first
       @message = Message.new(message_params)
       # UserMailer.welcome_email(@shipment.user).deliver_later
       if @shipment then @message.shipment = @shipment end
