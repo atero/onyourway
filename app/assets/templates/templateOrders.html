@@ -36,7 +36,6 @@
 
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
-    <div class="col-sm-12">You have 2 offers</div>
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
