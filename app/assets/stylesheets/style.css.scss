@@ -1370,7 +1370,7 @@ button.btn-next {
     display: none;
   }
   .templateCreateblock .menu li a{
-    font-size: 17px;
+    font-size: 28px;
   }
   .form-group .summary-span{
     font-size: 14px;
@@ -1425,6 +1425,15 @@ button.btn-next {
   .btn-back{
     width: 115px;
     height: 40px;
+  }
+  .menu li{
+    display: none !important;
+  }
+  .menu li.strong{
+    display: block !important;
+  }
+  .btn{
+    font-size: 13px;
   }
 }
 @media (max-width: 320px){
