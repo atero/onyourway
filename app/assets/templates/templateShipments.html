@@ -69,10 +69,10 @@
             </table>
             <table class="table" style="table-layout:fixed;">
               <tbody>
-                <tr ng-repeat="message in local.shipmen_to_show.messages">
+                <tr ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show.id">
                   <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
                   <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
-                  <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.recipient_id == inherit.user._id && message.order_id == local.data_to_show.id" ng-src="/images/nophoto.png" alt=""></td>
+                  <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.recipient_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
                 </tr>
               </tbody>
             </table>

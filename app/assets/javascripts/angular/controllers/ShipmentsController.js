@@ -11,7 +11,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Mes
 	$scope.fromOptions = {
 
 	}
-	console.log($scope.local.shipments);
+	console.log($scope.local.data_to_show);
 
 	$scope.sendMessage = function(order, shipment){
 		console.log($scope.local.new_message.text);
