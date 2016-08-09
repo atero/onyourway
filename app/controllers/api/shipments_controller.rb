@@ -17,8 +17,8 @@ module Api
           puts @shipment.order
           puts 'Order #################################'
           if @shipment.save
-            if @order.shipment
-              @order.shipment.push(@shipment)
+            if @order.shipment.length > 0
+               @order.shipment.push(@shipment)
             else
               @order.shipment = [@shipment]
             end

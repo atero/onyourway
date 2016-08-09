@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   devise_for :users
   post '/users/sign_up.json', to: 'users#create'
+  # post '/users/:user_id', to: 'users#update'
 
   namespace :api, path: '/api', defaults: { format: 'json' } do
     match '/orders', to: 'orders#show', via: [:options]

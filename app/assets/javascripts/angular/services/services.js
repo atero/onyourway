@@ -31,7 +31,7 @@ App.factory('Message',['$resource',function($resource){
 
 // App.factory('User',['$resource',function($resource){
 //
-// 	return $resource(api_endpoint+'v1/users/:id/', {id:'@id'},
+// 	return $resource(api_endpoint+'users/:id/', {id:'@id'},
 // 	{
 // 		show: { method:"GET", params: {id :'@id'}, isArray : false },
 // 		index: { method:"GET", params: {}, isArray : true },
