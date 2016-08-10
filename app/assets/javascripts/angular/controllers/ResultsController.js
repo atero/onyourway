@@ -40,7 +40,8 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     }, {
       shipment: shipment
     }, function(res) {
-
+			console.log('sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf');
+			console.log(res);
       Message.create({
         shipment_id: res._id,
 				order_id: res.order_id,
