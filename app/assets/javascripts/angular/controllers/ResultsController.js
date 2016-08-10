@@ -29,7 +29,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
 
   newShipments = function(shipment, result) {
-		console.log(result);
+		console.log(result.id + '**************************');
     $scope.inherit.loading = true;
     console.log($scope.inherit.user)
     shipment.to = shipment.to.address_components[0].long_name;
@@ -44,7 +44,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
 			console.log(res);
       Message.create({
         shipment_id: res._id,
-				order_id: "res.order_id",
+				order_id: result.id,
         token: $scope.inherit.user.token
       }, {
         message: {
