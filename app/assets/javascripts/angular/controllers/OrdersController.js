@@ -47,8 +47,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         })
       }
     })
-
-
   }
 
   $scope.setOrder = function(order) {
