@@ -43,7 +43,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
 
       Message.create({
         shipment_id: res._id,
-				order_id: "result.id",
+				order_id: res.order_id,
         token: $scope.inherit.user.token
       }, {
         message: {
