@@ -43,21 +43,19 @@ module Api
       end
     end
 
-    # def update
-    #   @order = order.where(id: params[:order_id]).first
-    #
-    #   if @order && @order.update(order_params)
-    #     @order.shipment.save
-    #     render json: @order, status: :accepted
-    #   else
-    #     render json: { messsage: 'No orders found' }, status: 404
-    #   end
-    # end
+    def update
+      @order = Order.where(id: params[:order_id]).first
+      if @order && @order.update(order_params)
+        render json: @order, status: :accepted
+      else
+        render json: { messsage: 'No orders found' }, status: 404
+      end
+    end
 
     private
 
     def order_params
-      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from)
+      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from, :accepted_shipment)
     end
   end
 end

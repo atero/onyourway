@@ -17,8 +17,8 @@ module Api
           puts @shipment.order
           puts 'Order #################################'
           if @shipment.save
-            if @order.shipment
-              @order.shipment.push(@shipment)
+            if @order.shipment.length > 0
+               @order.shipment.push(@shipment)
             else
               @order.shipment = [@shipment]
             end
@@ -61,7 +61,7 @@ module Api
       @shipment = Shipment.where(id: params[:shipment_id]).first
 
       if @shipment && @shipment.update(shipment_params)
-        @shipment.order.save
+        # @shipment.order.save
         render json: @shipment, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404

@@ -1163,6 +1163,7 @@ button.btn-next {
   color: #969696;
 }
 .main-status-travels .main-pending{
+  text-transform: capitalize;
   color: #646464;
   font-size: 20px;
   font-weight: normal;
@@ -1267,6 +1268,12 @@ button.btn-next {
   right: 0;
 }
 
+.user-w{
+  width: 60px;
+  font-size: 12px;
+  float: left;
+  text-align: center;
+}
 
 
 

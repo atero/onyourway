@@ -33,17 +33,15 @@
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
-
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0">Travels proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
-
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
         <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
       </div>
       <div class="col-md-10">
-        <div class="col-md-12" >
+        <div class="col-md-12">
           <ul class="offer-details main-offer-details">
             <li class="col-sm-4"><span>What:</span> {{shipment.item}}</li>
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
@@ -63,15 +61,16 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
     <div class="col-md-12">
-      <table class="table" style="table-layout:fixed;">
-        <tbody>
-          <tr ng-repeat="message in local.conversation_shipment.messages">
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-            <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="message col-md-12" ng-repeat="message in local.conversation_shipment.messages">
+        <div class="user-w">
+            <img style='width:100%' class="profile-photo" ng-src="/images/nophoto.png" alt="">
+            {{message.user.first_name + ' ' + message.user.last_name.split('')[0]}}
+        </div>
+        <p>
+          {{message.text}}
+        </p>
+
+      </div>
       <table class="table">
         <tbody>
           <tr>

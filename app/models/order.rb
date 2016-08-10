@@ -27,11 +27,11 @@ class Order
    field :total_price, type: Float
    field :base64_image, type: String
    field :status, type: String
-   field :accepted_shipment, type: Boolean, :default => false
+   field :accepted_shipment, type: String, :default => 'false'
    ## RELATIONSHIPS
    belongs_to :user
    has_and_belongs_to_many :shipments
-   before_save :process_base64_image, :check_status
+   before_save :process_base64_image #, :check_status
 
       def process_base64_image
 
