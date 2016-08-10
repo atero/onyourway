@@ -44,9 +44,9 @@ module Api
     end
 
     def update
-      @order = order.where(id: params[:order_id]).first
+      @order = Order.where(id: params[:order_id]).first
 
-      if @order && @order.update(order_params)        
+      if @order && @order.update(order_params)
         render json: @order, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404
