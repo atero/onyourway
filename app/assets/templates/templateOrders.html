@@ -43,7 +43,7 @@
       <div class="col-md-10">
         <div class="col-md-12">
           <ul class="offer-details main-offer-details">
-            <li class="col-sm-4"><span>What:</span> {{local.data_to_show.item}}</li>
+            <li class="col-sm-4"><span>What:</span> {{shipment.item}}</li>
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
@@ -61,12 +61,32 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
     <div class="col-md-12">
-      <div class="message col-md-12" ng-repeat="message in local.conversation_shipment.messages">
+      <table class="table">
+          <tbody>
+            <tr>
+              <td style="text-align: left; border-bottom: 1px solid #f2f2f2; font-size: 20px;color: #6e6e6e;" class="home-table-th text-center" valign="middle" ><b style="font-size: 20px; color:#6e6e6e;">From:</b> {{local.conversation_shipment.from}}</th>
+              <td style="border-bottom: 1px solid #f2f2f2; text-align: right; font-size: 20px;color: #6e6e6e;" class="home-table-th text-center" valign="middle"><b style="font-size: 20px; color:#6e6e6e;">To:</b> {{local.conversation_shipment.to}}</th>
+              <td style="border-bottom: 1px solid #f2f2f2; text-align: right; font-size: 20px;color: #6e6e6e;" class="home-table-th text-center" valign="middle"><b style="font-size: 20px; color:#6e6e6e;">Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
+          <td style="display:none;" ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
+          </th>
+          <td style="display:none;" ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
+            <button  type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
+            </th>
+            <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
+      </tr>
+
+    </tbody>
+
+  </table>
+  <div class="gray-separator"></div>
+  </div>
+    <div class="col-md-12">
+      <div class="message col-md-12 main-message" ng-repeat="message in local.conversation_shipment.messages">
         <div class="user-w">
             <img style='width:100%' class="profile-photo" ng-src="/images/nophoto.png" alt="">
             {{message.user.first_name + ' ' + message.user.last_name.split('')[0]}}
         </div>
-        <p>
+        <p class="col-sm-10" style="text-align: left; font-size:14px; color:#969696; padding-top: 20px;">
           {{message.text}}
         </p>
 
@@ -78,32 +98,12 @@
               <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
             </td>
             <td class="home-table-th text-center" valign="middle">
-              <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i class="fa fa-send">
+              <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.conversation_shipment)"><i style="color:#11e8dd;" class="fa fa-send">
 						          </td>
 						        </tr>
 					      </tbody>
 					</table>
 				</div>
-				<div class="col-md-12">
-					<table class="table">
-				      <tbody>
-				        <tr>
-				          <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
-				          <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
-				          <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
-						  <td ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
-              </th>
-              <td ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
-                <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
-                </th>
-                <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
 
   </div>
   <!-- 			    <table class="table">
