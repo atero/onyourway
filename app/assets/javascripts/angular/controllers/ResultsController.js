@@ -40,22 +40,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     }, {
       shipment: shipment
     }, function(res) {
-			console.log('sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf');
-			console.log(res);
-      Message.create({
-        shipment_id: res._id,
-				order_id: res.order_id,
-        token: $scope.inherit.user.token
-      }, {
-        message: {
-          text: shipment.message,
-          sender: $scope.inherit.user._id,
-          recipient: result.user_id
-        }
-      }, function(res) {
-        $scope.inherit.loading = false;
-        $scope.inherit.goState("shipments")
-      })
+			
     })
 
   }

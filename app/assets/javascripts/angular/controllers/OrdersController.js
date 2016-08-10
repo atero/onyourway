@@ -68,7 +68,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
 
     console.log(shipment);
-    if ($scope.local.new_message.text != '') {
+  
 			$scope.inherit.loading = true
       Message.create({
         shipment_id: shipment.id,
@@ -80,7 +80,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         shipment.messages.push(res);
         $scope.local.new_message.text = '';
       })
-    }
+
   }
 
 }]);
