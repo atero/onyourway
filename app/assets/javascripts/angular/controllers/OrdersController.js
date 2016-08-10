@@ -56,7 +56,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     $scope.local.data_to_show = order;
     if ($scope.local.data_to_show.accepted_shipment != 'false') {
       $scope.local.conversation_shipment = $scope.local.data_to_show.shipments.filter(function(d) {
-        return d.status == "accepted-" + order.id;
+        return d.id == order.accepted_shipment;
       })[0]
     }
   }
