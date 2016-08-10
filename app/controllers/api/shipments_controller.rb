@@ -20,7 +20,7 @@ module Api
             if @order.has_attribute?(:shipment)
                @order.shipment.push(@shipment)
             else
-              @order.shipment = [@shipment]
+              @order[:shipment] = [@shipment]
             end
             render json: @shipment, status: :accepted
           else
