@@ -17,7 +17,7 @@ module Api
           puts @shipment.order
           puts 'Order #################################'
           if @shipment.save
-            if @order.has_attribute?(shipment)
+            if @order.has_attribute?(:shipment)
                @order.shipment.push(@shipment)
             else
               @order.shipment = [@shipment]
