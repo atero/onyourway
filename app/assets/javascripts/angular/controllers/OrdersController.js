@@ -52,11 +52,11 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
   }
 
   $scope.setOrder = function(order) {
-    $scope.local.conversation_shipment = null
+    $scope.local.conversation_shipment = null;
     $scope.local.data_to_show = order;
-    if ($scope.local.data_to_show.accepted_shipment) {
+    if ($scope.local.data_to_show.accepted_shipment != 'false') {
       $scope.local.conversation_shipment = $scope.local.data_to_show.shipments.filter(function(d) {
-        return d.status == "accepted"
+        return d.status == "accepted-" + order.id;
       })[0]
     }
   }
@@ -69,15 +69,17 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
     $scope.inherit.loading = true
     console.log(shipment);
-    Message.create({
-      shipment_id: shipment.id
-    }, {
-      message: message
-    }, function(res) {
-      $scope.inherit.loading = false
-      shipment.messages.push(res)
-      $scope.local.new_message.text = '';
-    })
+    if ($scope.local.new_message.text != '') {
+      Message.create({
+        shipment_id: shipment.id
+      }, {
+        message: message
+      }, function(res) {
+        $scope.inherit.loading = false
+        shipment.messages.push(res)
+        $scope.local.new_message.text = '';
+      })
+    }
   }
 
 }]);
