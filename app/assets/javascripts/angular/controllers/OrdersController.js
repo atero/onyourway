@@ -59,6 +59,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         return d.id == order.accepted_shipment;
       })[0]
     }
+		console.log($scope.local.conversation_shipment.messages);
   }
 
   $scope.sendMessage = function(order, shipment) {

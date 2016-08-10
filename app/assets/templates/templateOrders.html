@@ -61,17 +61,13 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
     <div class="col-md-12">
-      <table class="table" style="table-layout:fixed;">
-        <tbody>
-          <tr ng-repeat="message in local.conversation_shipment.messages">
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt=""></td>
-            <td style='width:80%' class="home-table-th text-center" valign="middle">{{message.text}}</td>
-            <td style='width:10%' class="home-table-th text-center" valign="middle"><img style='width:100%' class="profile-photo" ng-show="message.sender_id != inherit.user._id" ng-src="/images/nophoto.png" alt="">
-              {{local.conversation_shipment.user.first_name + ' ' + local.conversation_shipment.user.last_name.split('')[0]}}
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="message col-md-12" ng-repeat="message in local.conversation_shipment.messages">
+        <div class="user-w">
+            <img style='width:100%' class="profile-photo" ng-show="message.sender_id == inherit.user._id" ng-src="/images/nophoto.png" alt="">
+            {{local.conversation_shipment.user.first_name + ' ' + local.conversation_shipment.user.last_name.split('')[0]}}
+        </div>
+        {{message.text}}
+      </div>
       <table class="table">
         <tbody>
           <tr>
