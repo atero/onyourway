@@ -49,8 +49,11 @@
         <input type="email" name="name" value="" ng-model="inherit.user.email">
         <br/>
         <label for="" class="label-country">Country</label>
-        <input type="text" class="form-control profile-countries" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="inherit.user.country" />
-        <br/>
+        <input type="text" class="form-control profile-countries pull-right" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="inherit.user.country" />
+        <br>
+        <div class="">
+
+        </div>
         <button class="profile-btn btn btn-default" type="submyt" name="button" ng-click="saveProfile()">Save</button>
       </div>
     </form>
