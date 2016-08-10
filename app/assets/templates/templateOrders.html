@@ -70,7 +70,7 @@
           <td style="display:none;" ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
           </th>
           <td style="display:none;" ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
-            <button type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
+            <button style="color:#11e8dd;" type="button" class="btn btn-default pull-right" ng-click="refuse_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-times"></i></button>
             </th>
             <td ng-show="local.conversation_shipment.status == 'accepted'" class="home-table-th text-center" valign="middle ">You have accepted this travel <i class="fa fa-thumbs-up" aria-hidden="true"></i> </th>
       </tr>
