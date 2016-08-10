@@ -61,7 +61,7 @@ module Api
       @shipment = Shipment.where(id: params[:shipment_id]).first
 
       if @shipment && @shipment.update(shipment_params)
-        @shipment.order.save
+        # @shipment.order.save
         render json: @shipment, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404

@@ -17,6 +17,13 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       shipment: shipment
     }, function(res) {
       // some callback if needed
+    });
+    Order.update({
+      id: order.id
+    }, {
+      order: order
+    }, function(res) {
+      // some callback if needed
     })
   }
 
