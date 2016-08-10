@@ -67,9 +67,10 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       sender: $scope.inherit.user._id,
       recipient: shipment.user.id
     }
-    $scope.inherit.loading = true
+
     console.log(shipment);
     if ($scope.local.new_message.text != '') {
+			$scope.inherit.loading = true
       Message.create({
         shipment_id: shipment.id
       }, {
