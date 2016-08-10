@@ -13,7 +13,7 @@ class Shipment
    has_and_belongs_to_many :order
    has_many :messages
    ## METHODS
-  #  before_save :check_status
+   before_save :check_status
 
       def check_status
 
