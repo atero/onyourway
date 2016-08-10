@@ -64,9 +64,9 @@
       <table class="table">
           <tbody>
             <tr>
-              <td class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
-              <td class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
-              <td class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
+              <td style="text-align: left;" class="home-table-th text-center" valign="middle" ><b>From:</b> {{local.conversation_shipment.from}}</th>
+              <td style="text-align: left;" class="home-table-th text-center" valign="middle"><b>To:</b> {{local.conversation_shipment.to}}</th>
+              <td style="text-align: left;" class="home-table-th text-center" valign="middle"><b>Date:</b> {{local.conversation_shipment.date | date : mediumDate}}</th>
           <td style="display:none;" ng-show= "!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle "><button type="button" class="btn btn-default pull-right" ng-click="accept_travel(local.data_to_show, local.conversation_shipment)"><i class="fa fa-check"></i></button>
           </th>
           <td style="display:none;" ng-show="!(local.conversation_shipment.status == 'accepted')" class="home-table-th text-center" valign="middle">
@@ -78,7 +78,7 @@
     </tbody>
 
   </table>
-
+  <div class="gray-separator"></div>
   </div>
     <div class="col-md-12">
       <div class="message col-md-12" ng-repeat="message in local.conversation_shipment.messages">
