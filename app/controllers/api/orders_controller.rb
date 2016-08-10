@@ -45,7 +45,6 @@ module Api
 
     def update
       @order = Order.where(id: params[:order_id]).first
-
       if @order && @order.update(order_params)
         render json: @order, status: :accepted
       else
@@ -56,7 +55,7 @@ module Api
     private
 
     def order_params
-      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from)
+      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from, :accepted_shipment)
     end
   end
 end
