@@ -50,8 +50,8 @@
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
-          <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show.id">
-            {{message.text}} - {{message.order_id}}
+          <p class="offer-text text-left" ng-repeat="message in shipment.messages" >
+            {{message.text}} - {{message.order}}
           </p>
         </div>
       </div>
