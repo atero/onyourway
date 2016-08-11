@@ -53,7 +53,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       size: "md",
       resolve: {
         order_id: function() {
-          return result.id;
+          return shipment.id;
         }
       }
     });
