@@ -24,9 +24,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="order in local.orders" class="clickableRow ">
-          <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
-            <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</th>
-              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
+          <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</td>
+            <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</td>
+              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</td>
         </tr>
       </tbody>
     </table>
@@ -38,7 +38,7 @@
     <div class="text-left offers-account-div">
       <p class="offers-account">You have {{local.data_to_show.shipments.length}} offers</p>
     </div>
-    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
+    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
         <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
@@ -50,8 +50,8 @@
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
-          <p class="offer-text text-left">
-            {{shipment.messages[0].text}}
+          <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show._id">
+            {{message.text}}
           </p>
         </div>
       </div>
