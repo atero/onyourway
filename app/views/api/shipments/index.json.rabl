@@ -3,7 +3,7 @@ object @shipments
 attributes :id, :from, :to, :date, :item, :messages, :status
 
 child :user do |_u|
-  attributes :id, :first_name, :last_name
+  attributes :id, :first_name, :last_name, :provider
 end
 
 child :order do |order|
