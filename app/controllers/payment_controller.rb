@@ -19,6 +19,6 @@ class PaymentController < ApplicationController
     rescue Stripe::CardError => e
       # The card has been declined
     end
+    sign_in_and_redirect @user, :event => :authentication
   end
-  sign_in_and_redirect @user, :event => :authentication
 end
