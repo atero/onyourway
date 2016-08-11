@@ -20,4 +20,5 @@ Rails.application.routes.draw do
     post '/messages/:shipment_id', to: 'messages#create'
     get '/messages/:shipment_id', to: 'messages#index'
   end
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 end
