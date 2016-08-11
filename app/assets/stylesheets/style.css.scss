@@ -1304,6 +1304,12 @@ button.btn-next {
 
 
 /* CSS for Credit Card Payment form */
+.credit-card-box{
+  margin: auto;
+}
+.stripe-logo img{
+  margin: 16px;
+}
 .credit-card-box .panel-title {
     display: inline;
     font-weight: bold;
