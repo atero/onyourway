@@ -1294,7 +1294,12 @@ button.btn-next {
   width: 50%;
   margin-bottom: 20px;
 }
-
+.main-offer-details p{
+  display: none;
+}
+.main-offer-details p:first-child{
+  display: block;
+}
 
 
 
