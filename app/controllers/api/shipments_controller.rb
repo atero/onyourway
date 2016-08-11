@@ -22,7 +22,7 @@ module Api
             else
               @order[:shipment] = [@shipment]
             end
-            @order.save
+            @order.save!
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
@@ -41,10 +41,10 @@ module Api
               @order.shipments.push(@shipment)
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             else
-              @order.shipments = [@shipment]
+              @order[:shipment] = [@shipment]
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             end
-            @order.save
+            @order.save!
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
