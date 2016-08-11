@@ -1,4 +1,4 @@
-App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipment', 'Order', 'Message', function($scope, $state, localuser, orders, Shipment, Order, Message) {
+App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipment', 'Order', 'Message', "$uibModal", function($scope, $state, localuser, orders, Shipment, Order, Message, $uibModal) {
   if (localuser) $scope.inherit.user = localuser;
 
   $scope.local = {
