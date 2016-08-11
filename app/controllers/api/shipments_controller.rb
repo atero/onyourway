@@ -22,7 +22,6 @@ module Api
             else
               @order[:shipment] = [@shipment]
             end
-            @order.save!
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400
