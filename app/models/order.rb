@@ -31,6 +31,7 @@ class Order
    ## RELATIONSHIPS
    belongs_to :user
    has_and_belongs_to_many :shipments
+   has_many :messages
    before_save :process_base64_image #, :check_status
 
       def process_base64_image
