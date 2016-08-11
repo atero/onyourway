@@ -3,6 +3,7 @@ class PaymentController < ApplicationController
   def create
       # Set your secret key: remember to change this to your live secret key in production
     # See your keys here https://dashboard.stripe.com/account/apikeys
+
     Stripe.api_key = "sk_test_Foadiw9gjgVZ87JsXfOf2vhD"
 
     # Get the credit card details submitted by the form
@@ -19,6 +20,7 @@ class PaymentController < ApplicationController
     rescue Stripe::CardError => e
       # The card has been declined
     end
-    sign_in_and_redirect @user, :event => :authentication
+    orders#index
+    redirect_to :controller => 'orders', :action => 'index'
   end
 end
