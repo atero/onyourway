@@ -67,7 +67,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="message col-md-12 main-message" ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show.id">
+            <div class="message col-md-12 main-message" ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show._id">
               <div class="user-w">
                   <img style='width:100%' class="profile-photo" ng-src="/images/nophoto.png" alt="">
                   {{message.user.first_name + ' ' + message.user.last_name.split('')[0]}}
