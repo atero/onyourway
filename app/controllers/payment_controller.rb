@@ -20,4 +20,5 @@ class PaymentController < ApplicationController
       # The card has been declined
     end
   end
+  sign_in_and_redirect @user, :event => :authentication
 end
