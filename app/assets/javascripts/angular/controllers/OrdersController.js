@@ -28,13 +28,13 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       var token = response.id;
 
       // Insert the token ID into the form so it gets submitted to the server:
-      $form.append($('<input type="hidden" name="stripeToken">').val(token));
+      $form.append(jQuery('<input type="hidden" name="stripeToken">').val(token));
       // Submit the form:
       $form.get(0).submit();
     }
   };
 
-    var $form = $('#payment-form');
+    var $form = jQuery('#payment-form');
     $form.submit(function(event) {
       // Disable the submit button to prevent repeated clicks:
       $form.find('.submit').prop('disabled', true);
