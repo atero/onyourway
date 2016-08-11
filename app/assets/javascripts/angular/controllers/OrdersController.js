@@ -57,7 +57,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         return d.id == order.accepted_shipment;
       })[0]
     }
-		console.log($scope.local.conversation_shipment.messages);
   }
 
   $scope.sendMessage = function(order, shipment) {
@@ -68,7 +67,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
 
     console.log(shipment);
-  
+
 			$scope.inherit.loading = true
       Message.create({
         shipment_id: shipment.id,
