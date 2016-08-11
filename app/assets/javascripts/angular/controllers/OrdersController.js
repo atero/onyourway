@@ -45,23 +45,42 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
   });
 
   $scope.accept_travel = function(order, shipment) {
-    order.accepted_shipment = shipment.id;
-    shipment.status = "accepted-" + order.id;
-    $scope.local.conversation_shipment = shipment;
-    Shipment.update({
-      id: shipment.id
-    }, {
-      shipment: shipment
-    }, function(res) {
-      // some callback if needed
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'templateStripe.html',
+      controller: 'OrdersCtrl',
+      size: "md",
+      resolve: {
+        order_id: function() {
+          return result.id;
+        }
+      }
     });
-    Order.update({
-      id: order.id
-    }, {
-      order: order
-    }, function(res) {
-      // some callback if needed
+
+    modalInstance.result.then(function(shipment) {
+
+      console.log('pay');
     })
+
+
+    // order.accepted_shipment = shipment.id;
+    // shipment.status = "accepted-" + order.id;
+    // $scope.local.conversation_shipment = shipment;
+    // Shipment.update({
+    //   id: shipment.id
+    // }, {
+    //   shipment: shipment
+    // }, function(res) {
+    //   // some callback if needed
+    // });
+    // Order.update({
+    //   id: order.id
+    // }, {
+    //   order: order
+    // }, function(res) {
+    //   // some callback if needed
+    // })
   }
 
   $scope.refuse_travel = function(order, shipment) {
