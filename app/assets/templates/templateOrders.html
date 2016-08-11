@@ -55,7 +55,7 @@
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
-          <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show.id" ng-if="local.data_to_show.shipments.message.length > 1">
+          <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show.id">
             {{message.text}}
           </p>
         </div>
