@@ -26,6 +26,12 @@ class User
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
 
+  ## STRIPE
+  field :publishable_key,     type: String
+  field :provider,            type: String
+  field :uid,                 type: String
+  field :access_code,         type: String
+
   has_many :orders
   has_many :shipments
   has_many :outgoings, class_name: "Message", inverse_of: :sender
