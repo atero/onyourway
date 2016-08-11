@@ -24,12 +24,14 @@
       </thead>
       <tbody>
         <tr ng-repeat="order in local.orders" class="clickableRow ">
-          <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</th>
-            <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</th>
-              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</th>
+          <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</td>
+            <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</td>
+              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</td>
         </tr>
       </tbody>
     </table>
+    <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_8wIjTOAyxZ77dCJAl7mVWh04R0MAyg1t&scope=read_only
+"> <img src="/images/stripe-connect.png" alt="" /> </a>
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
@@ -38,10 +40,12 @@
     <div class="text-left offers-account-div">
       <p class="offers-account">You have {{local.data_to_show.shipments.length}} offers</p>
     </div>
-    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments| filter: { status: 'pending' }">
+    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending' }">
 
       <div class="col-md-2 img-col">
-        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt=""> {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
+        <img style="width:85px;" class="profile-photo" ng-src="/images/nophoto.png" alt="">
+        <div class="clearfix"></div>
+        {{shipment.user.first_name + ' ' + shipment.user.last_name.split('')[0]}}.
       </div>
       <div class="col-md-10">
         <div class="col-md-12">
@@ -50,8 +54,8 @@
             <li class="col-sm-4"><span>To:</span> {{shipment.to}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
-          <p class="offer-text text-left">
-            {{shipment.messages[0].text}}
+          <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show.id">
+            {{message.text}}
           </p>
         </div>
       </div>
@@ -84,7 +88,7 @@
   <div class="gray-separator"></div>
   </div>
     <div class="col-md-12">
-      <div class="message col-md-12 main-message" ng-repeat="message in local.conversation_shipment.messages">
+      <div class="message col-md-12 main-message" ng-repeat="message in local.conversation_shipment.messages" ng-show="message.order_id == local.data_to_show.id">
         <div class="user-w">
             <img style='width:100%' class="profile-photo" ng-src="/images/nophoto.png" alt="">
             {{message.user.first_name + ' ' + message.user.last_name.split('')[0]}}

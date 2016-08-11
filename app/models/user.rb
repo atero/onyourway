@@ -4,7 +4,7 @@ class User
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -25,6 +25,12 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
+
+  ## STRIPE
+  field :publishable_key,     type: String
+  field :provider,            type: String
+  field :uid,                 type: String
+  field :access_code,         type: String
 
   has_many :orders
   has_many :shipments

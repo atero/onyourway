@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   post '/users/sign_up.json', to: 'users#create'
 
   namespace :api, path: '/api', defaults: { format: 'json' } do

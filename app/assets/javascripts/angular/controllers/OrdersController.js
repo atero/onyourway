@@ -52,6 +52,8 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
   $scope.setOrder = function(order) {
     $scope.local.conversation_shipment = null;
     $scope.local.data_to_show = order;
+    console.log('data to show');
+    console.log($scope.local.data_to_show);
     if ($scope.local.data_to_show.accepted_shipment != 'false') {
       $scope.local.conversation_shipment = $scope.local.data_to_show.shipments.filter(function(d) {
         return d.id == order.accepted_shipment;
