@@ -17,10 +17,10 @@ module Api
           puts @shipment.order
           puts 'Order #################################'
           if @shipment.save
-            if @order.shipment.length > 0
+            if @order.has_attribute?(:shipment)
                @order.shipment.push(@shipment)
             else
-              @order.shipment = [@shipment]
+              @order[:shipment] = [@shipment]
             end
             render json: @shipment, status: :accepted
           else
@@ -40,10 +40,10 @@ module Api
               @order.shipments.push(@shipment)
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             else
-              @order.shipments = [@shipment]
+              @order[:shipment] = [@shipment]
               puts 'Shipment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
             end
-            @order.save
+            @order.save!
             render json: @shipment, status: :accepted
           else
             render json: { messsage: 'Bad request' }, status: 400

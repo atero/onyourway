@@ -47,8 +47,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         })
       }
     })
-
-
   }
 
   $scope.setOrder = function(order) {
@@ -70,18 +68,19 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
 
     console.log(shipment);
-    if ($scope.local.new_message.text != '') {
+  
 			$scope.inherit.loading = true
       Message.create({
-        shipment_id: shipment.id
+        shipment_id: shipment.id,
+				order_id: order.id
       }, {
         message: message
       }, function(res) {
-        $scope.inherit.loading = false
-        shipment.messages.push(res)
+        $scope.inherit.loading = false;
+        shipment.messages.push(res);
         $scope.local.new_message.text = '';
       })
-    }
+
   }
 
 }]);
