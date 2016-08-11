@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class PaymentController < ApplicationController
 
   def create
       # Set your secret key: remember to change this to your live secret key in production
