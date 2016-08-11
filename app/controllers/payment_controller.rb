@@ -20,7 +20,6 @@ class PaymentController < ApplicationController
     rescue Stripe::CardError => e
       # The card has been declined
     end
-    orders#index
     redirect_to :controller => 'orders', :action => 'index'
   end
 end
