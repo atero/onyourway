@@ -1,4 +1,5 @@
-App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipment', 'Order', 'Message', "$uibModal", function($scope, $state, localuser, orders, Shipment, Order, Message, $uibModal) {
+App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipment', 'Order', 'Message',  function($scope, $state, localuser, orders, Shipment, Order, Message) {
+
   if (localuser) $scope.inherit.user = localuser;
 
   $scope.local = {
@@ -49,7 +50,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',
-      controller: 'OrdersCtrl',
+      controller: 'ModalCtrl',
       size: "md",
       resolve: {
         order_id: function() {
