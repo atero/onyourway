@@ -18,7 +18,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       controller: 'ModalCtrl',
       size: "md",
       resolve: {
-          customer_name: $scope.inherit.user.first_name + ' ' + $scope.inherit.user.last_name,
+          customer_name: $scope.inherit.user.first_name ,
           order: order,
           shipment: shipment
         }
