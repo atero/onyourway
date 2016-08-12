@@ -18,8 +18,9 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       controller: 'ModalCtrl',
       size: "md",
       resolve: {
-        order_id: function() {
-          return shipment.id;
+          customer_name: $scope.inherit.user.first_name + ' ' + $scope.inherit.user.last_name,
+          order: order,
+          shipment: shipment
         }
       }
     });
