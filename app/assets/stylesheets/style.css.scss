@@ -1404,40 +1404,42 @@ button.btn-next {
     float: none;
     text-align: center;
   }
-  table, thead, tbody, th, td, tr {
-  		display: block;
-  	}
-  	thead tr {
-  		position: absolute;
-  		top: -9999px;
-  		left: -9999px;
-  	}
-  	tr { border: 1px solid #ccc; }
+  .main-active-order{
+    table, thead, tbody, th, td, tr {
+    		display: block;
+    	}
+    	thead tr {
+    		position: absolute;
+    		top: -9999px;
+    		left: -9999px;
+    	}
+    	tr { border: 1px solid #ccc; }
 
-  	td {
-  		border: none;
-  		border-bottom: 1px solid #eee;
-  		position: relative;
-  		padding-left: 50%;
-  	}
-  	td:before {
-  		position: absolute;
-  		top: 6px;
-  		left: 6px;
-  		width: 45%;
-  		padding-right: 10px;
-  		white-space: nowrap;
-  	}
+    	td {
+    		border: none;
+    		border-bottom: 1px solid #eee;
+    		position: relative;
+    		padding-left: 50%;
+    	}
+    	td:before {
+    		position: absolute;
+    		top: 6px;
+    		left: 6px;
+    		width: 45%;
+    		padding-right: 10px;
+    		white-space: nowrap;
+    	}
 
-    td:nth-of-type(2):before { content: "What"; }
-  	td:nth-of-type(3):before { content: "From"; }
-  	td:nth-of-type(4):before { content: "To"; }
-  	td:nth-of-type(5):before { content: "Reward"; }
-  	td:nth-of-type(6):before { content: "Price"; }
-  	td:nth-of-type(7):before { content: "Quantity"; }
-    .main-btn{
-      width: 30%;
-    }
+      td:nth-of-type(2):before { content: "What"; }
+    	td:nth-of-type(3):before { content: "From"; }
+    	td:nth-of-type(4):before { content: "To"; }
+    	td:nth-of-type(5):before { content: "Reward"; }
+    	td:nth-of-type(6):before { content: "Price"; }
+    	td:nth-of-type(7):before { content: "Quantity"; }
+      .main-btn{
+        width: 30%;
+      }
+  }  
 }
 @media (max-width: 480px) {
   body{
