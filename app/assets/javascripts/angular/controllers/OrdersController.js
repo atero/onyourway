@@ -15,7 +15,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',
-      controller: 'ModalCtrl',
+      controller: 'StripeCtrl',
       controllerAs: 'vm',
       size: "md",
       resolve: {
