@@ -14,7 +14,10 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
     order.accepted_shipment = shipment.id;
     shipment.status = "accepted-" + order.id;
-
+    console.log(';;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
+    console.log(order);
+    console.log(shipment);
+    console.log(';;;;;;;;;;;;;;;;;;;;;;;;;;');
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',
