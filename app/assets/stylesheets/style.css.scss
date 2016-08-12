@@ -1546,6 +1546,13 @@ button.btn-next {
   .btn{
     font-size: 13px;
   }
+  .result-block-home .search-form #form-block label{
+    display: block;
+  }
+  .result-block-home .search-form #form-block button{
+    display: block;
+    margin: auto;
+  }
 }
 @media (max-width: 320px){
   .thumbs-row{
