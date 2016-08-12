@@ -16,11 +16,13 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',
       controller: 'ModalCtrl',
+      controllerAs: 'vm',
       size: "md",
       resolve: {
-          customer_name: $scope.inherit.user.first_name ,
-          order: order,
-          shipment: shipment
+        payment_details: function() {
+          return {  customer_name: $scope.inherit.user.first_name + ' ' + $scope.inherit.user.last_name,
+                    order: order,
+                    shipment: shipment};
         }
       }
     });
