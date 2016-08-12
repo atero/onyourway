@@ -9,7 +9,7 @@ class PaymentController < ApplicationController
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
     name = params[:customer_name]
-    order_id = params[:oreder_id]
+    order_id = params[:order_id]
     shipment_id = params[:shipment_id]
     p "name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     p name
