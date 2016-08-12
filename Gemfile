@@ -7,6 +7,7 @@ gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
 gem 'oauth2'
 gem 'omniauth-stripe-connect'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'binding_of_caller'
 gem 'json', '~> 1.8.3'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

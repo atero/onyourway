@@ -1,0 +1,148 @@
+<!-- <form action="" method="POST" id="payment-form">
+  <span class="payment-errors"></span>
+
+  <div class="form-row form-group">
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" data-stripe="number" class="form-control">
+    </label>
+  </div>
+
+  <div class="form-row form-group">
+    <label>
+      <span>Expiration (MM/YY)</span>
+      <input type="text" size="2" data-stripe="exp_month" class="form-control">
+    </label>
+    <span> / </span>
+    <input type="text" size="2" data-stripe="exp_year" class="form-control">
+  </div>
+
+  <div class="form-row form-group">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc" class="form-control">
+    </label>
+  </div>
+
+  <div class="form-row form-group">
+    <label>
+      <span>Billing Zip</span>
+      <input type="text" size="6" data-stripe="address_zip" class="form-control">
+    </label>
+  </div>
+
+  <input type="submit" class="submit" value="Submit Payment">
+</form> -->
+<div class="container">
+  <div class="row">
+    <!-- You can make it whatever width you want. I'm making it full width
+             on <= small devices and 4/12 page width on >= medium devices -->
+    <div class="col-xs-12 col-md-4">
+
+
+      <!-- CREDIT CARD FORM STARTS HERE -->
+      <div class="panel panel-default credit-card-box">
+        <div class="">
+          <div class="row text-center stripe-logo">
+            <img src="/images/newsletter-logo.png" alt="" />
+          </div>
+        </div>
+        <div class="panel-heading display-table">
+          <div class="row display-tr">
+            <h3 class="panel-title display-td">Payment Details</h3>
+            <div class="display-td">
+              <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <form role="form" id="payment-form" method="POST" action="/payment">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="cardNumber">CARD NUMBER</label>
+                  <div class="input-group">
+                    <input type="tel" class="form-control"  data-stripe="number" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-7 col-md-7">
+                <div class="form-group">
+                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                  <input type="tel" class="form-control" placeholder="MM" required size="2" data-stripe="exp_month"/> /
+                    <input type="tel" class="form-control" placeholder="YY" required size="2" data-stripe="exp_year"/>
+                </div>
+              </div>
+              <div class="col-xs-5 col-md-5 pull-right">
+                <div class="form-group">
+                  <label for="cardCVC">CV CODE</label>
+                  <input type="tel" class="form-control"  data-stripe="cvc" placeholder="CVC"required />
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="customer_name" value="{{payment_details.customer_name}}">
+            <input type="hidden" name="order_id"    value="{{payment_details.order.id}}">
+            <input type="hidden" name="shipment_id" value="{{payment_details.shipment.id}}">
+            <!-- <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="couponCode">COUPON CODE</label>
+                  <input type="text" class="form-control" name="couponCode" />
+                </div>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col-xs-12">
+                <button class="submit subscribe btn btn-success btn-lg btn-block" type="submit">Accept The Shipment</button>
+              </div>
+            </div>
+            <div class="row" style="display:none;">
+              <div class="col-xs-12">
+                <p class="payment-errors"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+<script type="text/javascript">
+function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+  console.log('Status:');
+  console.log(status);
+  console.log('Response:');
+  console.log(response);
+
+  if (response.error) { // Problem!
+
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append(jQuery('<input type="hidden" name="stripeToken">').val(token));
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
+
+  var $form = jQuery('#payment-form');
+  $form.submit(function(event) {
+    // Disable the submit button to prevent repeated clicks:
+    $form.find('.submit').prop('disabled', true);
+
+    // Request a token from Stripe:
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from being submitted:
+    return false;
+  });
+</script>

@@ -89,6 +89,4 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
 
 
 
-
-
 }]);
