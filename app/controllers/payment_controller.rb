@@ -15,7 +15,7 @@ class PaymentController < ApplicationController
     p name
     p order_id
     p shipment_id
-    
+
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
@@ -30,7 +30,7 @@ class PaymentController < ApplicationController
 
     @order = Order.where(id: order_id).first
     @shipment = Shipment.where(id: shipment_id).first
-    @order.accepted_shipment = shipment.id
+    @order.accepted_shipment = shipment_id
     @shipment.status = "accepted-" + order_id
     @order.save
     @shipment.save
