@@ -12,6 +12,9 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
   $scope.accept_travel = function(order, shipment) {
 
+    order.accepted_shipment = shipment.id;
+    shipment.status = "accepted-" + order.id;
+
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',

@@ -9,8 +9,13 @@ class PaymentController < ApplicationController
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
     name = params[:customer_name]
+    order_id = params[:oreder_id]
+    shipment_id = params[:shipment_id]
     p "name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     p name
+    p order_id
+    p shipment_id
+    
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
@@ -23,6 +28,12 @@ class PaymentController < ApplicationController
       # The card has been declined
     end
 
+    @order = Order.where(id: order_id).first
+    @shipment = Shipment.where(id: shipment_id).first
+    @order.accepted_shipment = shipment.id
+    @shipment.status = "accepted-" + order_id
+    @order.save
+    @shipment.save
     redirect_to(:back)
   end
 end
