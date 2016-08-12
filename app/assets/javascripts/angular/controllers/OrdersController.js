@@ -16,7 +16,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       animation: $scope.animationsEnabled,
       templateUrl: 'templateStripe.html',
       controller: 'StripeCtrl',
-      controllerAs: 'vm',
       size: "md",
       resolve: {
         payment_details: function() {

@@ -1,4 +1,4 @@
-App.controller('StripeCtrl',['$scope','$uibModalInstance', "payment_details", function($scope,$uibModalInstance,order_id){
+App.controller('StripeCtrl',['$scope','$uibModalInstance', "payment_details", function($scope,$uibModalInstance,payment_details){
 	$scope.local={
 		shipment: {
 			order_id: order_id,
@@ -6,6 +6,7 @@ App.controller('StripeCtrl',['$scope','$uibModalInstance', "payment_details", fu
 			to: null
 		}
 	}
+	$scope.payment_details;
 	$scope.ok = function(){
 		if($scope.local.validated){
 			$uibModalInstance.close($scope.local.shipment)
