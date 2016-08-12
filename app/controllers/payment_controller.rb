@@ -11,15 +11,17 @@ class PaymentController < ApplicationController
     name = params[:customer_name]
     order_id = params[:order_id]
     shipment_id = params[:shipment_id]
+    total_to_pay = params[:total_to_pay]
     p "name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     p name
     p order_id
     p shipment_id
+    p 'To Pay:'
 
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        :amount => 1000, # amount in cents, again
+        :amount => total_to_pay * 100, # amount in cents, again
         :currency => "eur",
         :source => token,
         :description => "Example charge"
