@@ -21,7 +21,7 @@ class PaymentController < ApplicationController
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        :amount => total_to_pay * 100, # amount in cents, again
+        :amount => total_to_pay.to_i * 100, # amount in cents, again
         :currency => "eur",
         :source => token,
         :description => "Example charge"
