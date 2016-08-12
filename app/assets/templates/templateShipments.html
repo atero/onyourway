@@ -7,10 +7,11 @@
 </div>
 <div class="text-center profile-body orders-block container-fluid" resize>
   <div class="col-md-2">
-    <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
+    <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments', 'payout'].indexOf(inherit.currentState()) > -1">
       <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
       <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
       <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
     </ul>
   </div>
 
