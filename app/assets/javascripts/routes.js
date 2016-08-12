@@ -147,5 +147,32 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
           }]
         }
       })
+
+    $stateProvider
+      .state('payout', {
+        url: '/payout',
+        templateUrl: "templatePayout.html",
+        controller: 'PayoutCtrl',
+        resolve: {
+          localuser: ['$q', 'Auth', function($q, Auth) {
+            var d = $q.defer();
+            var user = Auth.currentUser().then(function(user) {
+              d.resolve(user);
+            }, function(error) {
+              d.resolve(null);
+            });
+            return d.promise;
+          }],
+          shipments: ['$q', 'Auth', 'Shipment', 'localuser', function($q, Auth, Shipment, localuser) {
+            var d = $q.defer();
+            var shipments = Shipment.list({}, function(res) {
+              d.resolve(res);
+            }, function(error) {
+              d.resolve(null);
+            });
+            return d.promise;
+          }]
+        }
+      })
   }
 ]);
