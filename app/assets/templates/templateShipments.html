@@ -52,13 +52,13 @@
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.shipment.status}}</b>
       <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
       <div class="col-sm-9">
-        <div class="additional-div" ng-repeat="messages.text in local.shipmen_to_show.messages.text" ng-show="messages.text.order_id == local.data_to_show.id">
+        <div class="additional-div">
           Additional information
         </div>
       </div>
       <div class="col-sm-2">
         <div class="photos-div">
-        <img class="profile-photo" ng-src="{{order.photo}}" alt="">
+          Photo
         </div>
       </div>
       <table class="table">
