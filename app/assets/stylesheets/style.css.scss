@@ -1364,7 +1364,10 @@ button.btn-next {
 .offer-details li span{
   font-family: FaricyNew-Bold;
 }
-
+.col-md-offset-1{
+  margin-left: 0;
+  padding-top: 0;
+}
 
 
 @media (min-width: 1600px) {
