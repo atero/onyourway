@@ -636,7 +636,8 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 }
 .offer-text{
   font-family: FaricyNew-Light;
-  font-size: 16px;
+  font-size: 15px;
+  color: #969696;
 }
 .orders-table{
   th{
@@ -1300,7 +1301,9 @@ button.btn-next {
 .offer-wrapper p:first-of-type{
   display: block;
 }
-
+.mian-style-btn{
+  border: none;
+}
 
 
 /* CSS for Credit Card Payment form */
