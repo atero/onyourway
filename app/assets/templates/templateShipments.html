@@ -52,7 +52,17 @@
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.shipment.status}}</b>
       <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
       <table class="table">
-
+        <tbody>
+          <tr>
+            <td style='width:90%' class="home-table-th text-center" valign="middle">
+              <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
+            </td>
+            <td class="home-table-th text-center" valign="middle">
+              <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.shipmen_to_show)"><i class="fa fa-send">
+              </td>
+            </tr>
+          </tbody>
+        </table>
       <div class='col-md-offset-1 col-md-10 padding-top'>
         <div class="col-md-12 padding-none">
             <div class="message col-md-12 main-message" ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show.id">
@@ -65,17 +75,6 @@
               </p>
 
             </div>
-            <tbody>
-              <tr>
-                <td style='width:90%' class="home-table-th text-center" valign="middle">
-                  <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text"></textarea>
-                </td>
-                <td class="home-table-th text-center" valign="middle">
-                  <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.shipmen_to_show)"><i class="fa fa-send">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
 
         </div>
       </div>
