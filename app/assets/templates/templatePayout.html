@@ -15,5 +15,52 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
     </ul>
   </div>
+  <div class="col-md-10 text-left">
+    <label for="departure">From</label>
+    <div class="input-w col-xs-6">
+      <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.payout.country" />
+    </div>
+    <div class="clearfix">
 
+    </div>
+    We can send people in France with these payment methods:
+    <table class="table">
+      <tr>
+        <th>
+          Payout method
+        </th>
+        <th>
+          Processing time
+        </th>
+        <th>
+          Additional fees
+        </th>
+        <th>
+          Details
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Paypal
+        </td>
+        <td>
+          3-4 hours
+        </td>
+        <td>
+          Paypal withdrawl fees
+        </td>
+        <td>
+          Connect you existing Paypal account
+        </td>
+      </tr>
+    </table>
+    <div class="paypal-details" ng-show="!is_spa">
+      Enter the email address associated with your existing PayPal account.
+      <input type="text" size="20" class="form-control" options="fromOptions" placeholder="Country" ng-model="local.payout.paypal_email" />
+      <button type="button" class="btn btn-default" name="button" ng-click="save_payout()">OK</button>
+    </div>
+    <div class="bank_account" ng-show="is_spa">
+
+    </div>
+  </div>
 </div>
