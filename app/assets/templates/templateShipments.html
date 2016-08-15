@@ -51,9 +51,6 @@
     <div class="main-status-travels">
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.shipment.status}}</b>
       <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
-      <div class="" ng-repeat="message[0].text in local.shipmen_to_show.messages[0].text" ng-show="message.text.order_id == local.data_to_show.id">
-
-
       <div class="col-sm-9">
         <div class="additional-div">
           Additional information
@@ -76,7 +73,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
       <div class='col-md-offset-1 col-md-10 padding-top'>
         <div class="col-md-12 padding-none">
             <div class="message col-md-12 main-message" ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show.id">
