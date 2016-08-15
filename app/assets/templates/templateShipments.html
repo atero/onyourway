@@ -58,7 +58,7 @@
       </div>
       <div class="col-sm-2">
         <div class="photos-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
-          {{order.photo}}
+          <img src="{{order.photo}}" alt="" />
         </div>
       </div>
       <table class="table">
