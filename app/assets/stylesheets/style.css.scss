@@ -1415,10 +1415,16 @@ button.btn-next {
 .main-modal-btn{
   padding: 7px 22px;
 }
-.main-modal-title p{
+.main-modal-title .modal-title{
   margin-left: 33%;
   font-size: 20px;
   color: #969696;
+}
+.main-modal-title .message-button{
+  float: right;
+  margin-right: 7%;
+  color: #333;
+  font-weight: bold;
 }
 
 
