@@ -3,32 +3,32 @@
     <!-- <p ng-if="local.usertype == 'shopper'" class="lead text-center">Request a delivery</p> -->
 </div>
 <div class="main-modal-title">
-  <p>TITLE</p>
+  <p ng-if="!local.validated" class="modal-title">Send Message</p>
 </div>
 <div ng-if="!local.validated" class="modal-body main-modal-body">
 
-    <div class="form-group">
+    <div class="form-group main-from-group">
       <label>From:</label>
       <div class="input-w">
         <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.shipment.from" />
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group main-to-group">
       <label for="arrival">To:</label>
       <div class="input-w">
         <input type="text" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.shipment.to" />
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group main-date-group">
       <label for="date">Date:</label>
-      <input type="date" class="form-control search-input" ng-model="local.shipment.date">
+      <input type="date" class="form-control search-input main-search-input" ng-model="local.shipment.date">
     </div>
 
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
+    <div class="form-group main-message-group">
+        <label for="message">Message:</label>
+        <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control main-additional-textarea" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
     </div>
 
 </div>
@@ -62,21 +62,21 @@
 
 </div> -->
 
-<div ng-if="local.validated" class="modal-body">
+<div ng-if="local.validated" class="modal-body second-modal-body">
 
 <h5>You're about to send the following message:</h5>
 
-<p>Hi, I'm travelling from {{local.shipment.from.address_components[0].long_name}} to {{local.shipment.to.address_components[0].long_name}} on the {{local.shipment.date| date : mediumDate}}.
+<p class="second-modal-text">Hi, I'm travelling from {{local.shipment.from.address_components[0].long_name}} to {{local.shipment.to.address_components[0].long_name}} on the {{local.shipment.date| date : mediumDate}}.
 {{local.shipment.message}}</p>
 
 <!-- <p ng-if = "local.usertype == 'shopper'">Hi, I need {{local.order_q}} {{local.order_item}} to be delivered from {{local.ad.from}} to {{local.ad.to}}. An approximative price would be of {{local.order_q*local.order_price}}€ and you reward would be of {{local.order_reward}}€.
 {{local.order_message}}</p> -->
 
-Looking forward to hearing from you!
+<p class="second-modal-text">Looking forward to hearing from you!</p>
 
 </div>
 
 <div class="modal-footer main-modal-footer">
-    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
