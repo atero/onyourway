@@ -24,32 +24,4 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Mes
 		});
 	}
 
-
-	var myApp = angular.module('myApp',[]);
-myApp
-  .config(function($httpProvider){
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-});
-myApp.directive('checkImage', function($http) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            attrs.$observe('ngSrc', function(ngSrc) {
-                $http.get(ngSrc).success(function(){
-                    alert('image exist');
-                }).error(function(){
-                    alert('image not exist');
-                    element.attr('src', 'https://shopnship.herokuapp.com/images/nophoto.png'); // set default image
-                });
-            });
-        }
-    };
-});
-
-function myCtrl($scope){
-    $scope.img = 'http://www.example.com/image_not_exist.png'; // img not exist
-}
-
-
-
 }]);
