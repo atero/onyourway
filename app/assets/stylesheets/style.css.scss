@@ -1475,7 +1475,7 @@ button.btn-next {
   font-family: FaricyNew-Regular;
 }
 .second-modal-body{
-  background-color: #ebebeb;
+  background-color: #fff;
   text-align: center;
   margin-top: 40px;
 }
@@ -1491,7 +1491,9 @@ button.btn-next {
   margin: 0;
   font-family: FaricyNew-Regular;
 }
-
+.main-modal-body + .main-modal-footer{
+  background-color: #ebebeb;
+}
 
 
 
