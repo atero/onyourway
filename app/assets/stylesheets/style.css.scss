@@ -1447,7 +1447,7 @@ button.btn-next {
 }
 .main-to-group label{
   font-size: 23px;
-  padding: 0 37px;
+  padding: 0 47px 0 23px;
   color: #646464;
   font-family: FaricyNew-Regular;
 }
@@ -1456,12 +1456,13 @@ button.btn-next {
 }
 .main-date-group label{
   font-size: 23px;
-  padding: 0 0px 0 25px;
+  padding: 0 0px 0 23px;
   color: #646464;
   font-family: FaricyNew-Regular;
 }
 .main-date-group .main-search-input{
   max-width: 213px;
+  height: 45px;
 }
 .main-message-group .main-additional-textarea{
   height: 90px;
