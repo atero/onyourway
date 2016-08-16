@@ -636,7 +636,8 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 }
 .offer-text{
   font-family: FaricyNew-Light;
-  font-size: 16px;
+  font-size: 15px;
+  color: #969696;
 }
 .orders-table{
   th{
@@ -1161,6 +1162,7 @@ button.btn-next {
 .main-status-travels .main-lead{
   font-size: 18px;
   color: #969696;
+  font-family: FaricyNew-Regular;
 }
 .main-status-travels .main-pending{
   text-transform: capitalize;
@@ -1247,10 +1249,13 @@ button.btn-next {
 .offer-wrapper .main-offer-buttons .btn{
   padding: 5px 18px;
   font-size: 16.5px;
+  font-family: FaricyNew-Regular;
 }
 .img-col{
   font-size: 16px;
   color: #6e6e6e;
+  font-family: FaricyNew-Regular;
+  padding-left: 0;
 }
 .main-offer-details span{
   color: #6e6e6e;
@@ -1262,11 +1267,12 @@ button.btn-next {
 .order-lead{
   font-size: 23px;
   color: #646464;
+  font-family: DistrictProThin;
 }
-.shipmentt-details{
-  position: fixed;
-  right: 0;
-}
+// .shipmentt-details{
+//   position: fixed;
+//   right: 0;
+// }
 
 .user-w{
   width: 70px;
@@ -1281,26 +1287,32 @@ button.btn-next {
 .user-w{
   font-size: 13px;
   color: #969696;
+  font-family: FaricyNew-Light;
 }
 .main-message{
   margin-bottom: 20px;
+  padding-left: 0;
 }
 .offers-account{
   font-size: 20px;
   color: #6e6e6e;
+  font-family: FaricyNew-Regular;
 }
 .offers-account-div{
   border-bottom: 1px solid #f2f2f2;
   width: 50%;
   margin-bottom: 20px;
 }
-// .offer-wrapper p{
-//   display: none;
-// }
-// .offer-wrapper p:first-of-type{
-//   display: block;
-// }
-
+.offer-wrapper p{
+  display: none;
+}
+.offer-wrapper p:first-of-type{
+  display: block;
+}
+.mian-style-btn{
+  border: none;
+  font-family: FaricyNew-Regular;
+}
 
 
 /* CSS for Credit Card Payment form */
@@ -1350,6 +1362,32 @@ button.btn-next {
 .credit-card-box .panel-heading img {
     min-width: 180px;
 }
+.offer-details li span{
+  font-family: FaricyNew-Bold;
+}
+.col-md-offset-1{
+  margin-left: 0;
+  padding-top: 0;
+}
+.padding-none{
+  padding-left: 0;
+}
+.additional-div{
+  height: 90px;
+  border: 1px solid #f2f2f2;
+  line-height: 90px;
+  color: #969696;
+  font-size: 18px;
+  font-family: FaricyNew-Regular;
+}
+.photos-div{
+  height: 90px;
+  border: 1px solid #f2f2f2;
+}
+.photos-div img{
+  width: 88px;
+}
+
 
 
 
