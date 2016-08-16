@@ -1425,7 +1425,44 @@ button.btn-next {
   margin-right: 7%;
   color: #333;
   font-weight: bold;
+  font-size: 20px;
 }
+.main-from-group{
+  display: inline-block;
+  margin-top: 15px;
+  width: 70%;
+}
+.main-from-group label{
+  font-size: 25px;
+  padding: 0 20px;
+  color: #333;
+}
+.main-from-group .input-w{
+  display: inline-block;
+}
+.main-to-group{
+  display: inline-block;
+  width: 70%;
+  margin-top: 15px;
+}
+.main-to-group label{
+  font-size: 25px;
+  padding: 0 37px;
+}
+.main-to-group .input-w{
+  display: inline-block;
+}
+.main-date-group label{
+  font-size: 25px;
+  padding: 0 0px 0 25px;
+}
+
+
+
+
+
+
+
 
 
 

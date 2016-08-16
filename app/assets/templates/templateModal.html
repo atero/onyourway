@@ -8,21 +8,21 @@
 </div>
 <div ng-if="!local.validated" class="modal-body main-modal-body">
 
-    <div class="form-group">
+    <div class="form-group main-from-group">
       <label>From:</label>
       <div class="input-w">
         <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.shipment.from" />
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group main-to-group">
       <label for="arrival">To:</label>
       <div class="input-w">
         <input type="text" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.shipment.to" />
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group main-date-group">
       <label for="date">Date:</label>
       <input type="date" class="form-control search-input" ng-model="local.shipment.date">
     </div>
