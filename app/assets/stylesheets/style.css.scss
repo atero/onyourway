@@ -1500,7 +1500,9 @@ button.btn-next {
   background-color: #ebebeb;
   padding-top: 0;
 }
-
+.welcome-image .main-welcome-p{
+  display: none;
+}
 
 
 
@@ -1589,6 +1591,13 @@ button.btn-next {
       .main-btn{
         width: 30%;
       }
+  }
+  .welcome-image .my-syitcase,
+  .welcome-image .get-the-world{
+    display: none;
+  }
+  .welcome-image .main-welcome-p{
+    display: block;;
   }
 }
 @media (max-width: 480px) {
