@@ -11,8 +11,8 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', function($scope, 
   }
 
   $scope.check_list = function() {
-		console.log($scope.local.payout.country);
-    if (!!$scope.local.payout.country && $scope.local.payout.spa_list.indexOf($scope.local.payout.country) > 0) {
+		console.log($scope.local.payout.country.address_components[0].short_name);
+    if (!!$scope.local.payout.country.address_components[0].short_name && $scope.local.payout.spa_list.indexOf($scope.local.payout.country.address_components[0].short_name) > 0) {
 
       $scope.is_spa = true;
     } else {
