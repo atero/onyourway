@@ -62,12 +62,12 @@
     </div>
 
     <div class="pay-pal-account" ng-show="is_spa">
-      <p class="account-email">Please, enter your bank account information.</p>
-      <p class="account-email">Name of account holder (English alphabet)</p>
+      <p class="account-bank">Please, enter your bank account information.</p>
+      <p class="account-bank">Name of account holder (English alphabet)</p>
       <input type="text" size="20" class="form-control" ng-model="local.payout.name" />
-      <p class="account-email">IBAN</p>
+      <p class="account-bank">IBAN</p>
       <input type="text" size="20" class="form-control" ng-model="local.payout.iban" />
-      <p class="account-email">8 or 11 character SWIFT ID</p>
+      <p class="account-bank">8 or 11 character SWIFT ID</p>
       <input type="text" size="20" class="form-control" ng-model="local.payout.swift" />
 
       <button  type="button" class="btn btn-default payout-btn" name="button" ng-click="save_payout()">OK</button>
