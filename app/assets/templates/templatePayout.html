@@ -16,7 +16,7 @@
     </ul>
   </div>
   <div class="col-md-10 text-left">
-    <label for="departure">From</label>
+    <label for="departure">Country</label>
     <div class="input-w col-xs-6">
       <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.payout.country" />
     </div>
@@ -62,15 +62,18 @@
     <div class="bank_account" ng-show="is_spa">
 
     </div>
-    <!-- <div class="pay-pal-account">
+
+    <div class="pay-pal-account" ng-show="is_spa">
+      Please, enter your bank account information.
       <p>Name of account holder (English alphabet)</p>
-      <input type="text" size="20" class="form-control" ng-model="" />
+      <input type="text" size="20" class="form-control" ng-model="local.payout.name" />
       <p>IBAN</p>
-      <input type="text" size="20" class="form-control" ng-model="" />
+      <input type="text" size="20" class="form-control" ng-model="local.payout.iban" />
       <p>8 or 11 character SWIFT ID</p>
-      <input type="text" size="20" class="form-control" ng-model="" />
-      <span>So instead of "Enter the email address associated with your existing PayPal account" we write "Please, enter your bank account information."</span>
+      <input type="text" size="20" class="form-control" ng-model="local.payout.swift" />
+
       <button type="button" class="btn btn-default" name="button" ng-click="save_payout()">OK</button>
-    </div> -->
+    </div>
+
   </div>
 </div>
