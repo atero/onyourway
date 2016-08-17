@@ -53,7 +53,7 @@
       </tr>
     </table>
     <div class="paypal-details" ng-show="!is_spa">
-      Enter the email address associated with your existing PayPal account.
+      <p class="account-email">Enter the email address associated with your existing PayPal account.</p>
       <input type="text" size="20" class="form-control" options="fromOptions" placeholder="Country" ng-model="local.payout.paypal_email" />
       <button type="button" class="btn btn-default" name="button" ng-click="save_payout()">OK</button>
     </div>
