@@ -1500,7 +1500,9 @@ button.btn-next {
   background-color: #ebebeb;
   padding-top: 0;
 }
-
+.welcome-image .main-welcome-p{
+  display: none;
+}
 
 
 
@@ -1589,6 +1591,22 @@ button.btn-next {
       .main-btn{
         width: 30%;
       }
+  }
+  .welcome-image .my-syitcase,
+  .welcome-image .get-the-world{
+    display: none;
+  }
+  .welcome-image .main-welcome-p{
+    display: block;
+    color: white;
+    font-size: 60px;
+    font-family: DistrictProThin, serif;
+    padding-top: 25px;
+    line-height: 1;
+    padding-bottom: 83px;
+  }
+  .mobile-hidden-block{
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -1708,6 +1726,12 @@ button.btn-next {
   .result-block-home .search-form #form-block input{
     text-align: center;
   }
+  .welcome-image .main-welcome-p{
+    font-size: 45px;
+    padding-top: 75px;
+    padding-bottom: 20px;
+  }
+
 }
 @media (max-width: 320px){
   .thumbs-row{
@@ -1849,5 +1873,9 @@ button.btn-next {
   }
   .result-block-home .search-form #form-block input{
     text-align: center;
+  }
+  .welcome-image .main-welcome-p{
+    font-size: 30px;
+    padding-top: 100px;
   }
 }
