@@ -1597,7 +1597,16 @@ button.btn-next {
     display: none;
   }
   .welcome-image .main-welcome-p{
-    display: block;;
+    display: block;
+    color: white;
+    font-size: 60px;
+    font-family: DistrictProThin, serif;
+    padding-top: 25px;
+    line-height: 1;
+    padding-bottom: 83px;
+  }
+  .mobile-hidden-block{
+    display: none;
   }
 }
 @media (max-width: 480px) {
