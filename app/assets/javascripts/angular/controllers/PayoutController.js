@@ -9,12 +9,14 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', function($scope, 
   $scope.fromOptions = {
 
   }
-
-  if (!!$scope.local.payout.country && spa_list.indexOf($scope.local.payout.country) > 0) {
-    console.log($scope.local.payout.country);
-    $scope.is_spa = true;
-  } else {
-    $scope.is_spa = false;
+  $scope.check_list = () => {
+    if (!!$scope.local.payout.country && spa_list.indexOf($scope.local.payout.country) > 0) {
+      console.log($scope.local.payout.country);
+      $scope.is_spa = true;
+    } else {
+      $scope.is_spa = false;
+    }
   }
+
 
 }]);
