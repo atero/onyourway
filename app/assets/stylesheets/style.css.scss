@@ -1515,6 +1515,7 @@ button.btn-next {
   padding-right: 40px;
   line-height: 2;
   margin-left: 80px;
+  margin-bottom: 25px;
 }
 .payout-block .input-w{
   height: 35px;
@@ -1532,7 +1533,11 @@ button.btn-next {
   font-family: FaricyNew-Light;
   margin-left: 80px;
 }
-
+.payout-block .table>tbody>tr>th{
+  font-size: 18px;
+  color: #8c8c8c;
+  font-family: FaricyNew-Light;
+}
 
 
 
