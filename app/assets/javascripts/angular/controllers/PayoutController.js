@@ -9,7 +9,7 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', function($scope, 
   $scope.fromOptions = {
 
   }
-  $scope.check_list = () => {
+  $scope.check_list = function() {
     if (!!$scope.local.payout.country && spa_list.indexOf($scope.local.payout.country) > 0) {
       console.log($scope.local.payout.country);
       $scope.is_spa = true;
