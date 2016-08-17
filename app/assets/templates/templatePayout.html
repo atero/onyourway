@@ -15,7 +15,7 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
     </ul>
   </div>
-  <div class="col-md-10 text-left">
+  <div class="col-md-10 text-left payout-block">
     <label for="departure">Country</label>
     <div class="input-w col-xs-6">
       <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.payout.country" ng-change="check_list()" />
