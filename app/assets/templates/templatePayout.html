@@ -22,6 +22,7 @@
     </div>
     <div class="clearfix"></div>
     <p class="payment-method">We can send people in France with these payment methods:</p>
+    <div class="paypal-details" ng-show="!is_spa">
     <table class="table">
       <tr>
         <th>
@@ -52,7 +53,7 @@
         </td>
       </tr>
     </table>
-    <div class="paypal-details" ng-show="!is_spa">
+
       <p class="account-email">Enter the email address associated with your existing PayPal account.</p>
       <input type="text" size="20" class="form-control payout-form-control" options="fromOptions" placeholder="Email" ng-model="local.payout.paypal_email" />
       <button type="button" class="btn btn-default payout-btn" name="button" ng-click="save_payout()">OK</button>
