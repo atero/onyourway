@@ -1506,9 +1506,22 @@ button.btn-next {
 .payout-block label{
   display: block;
   float: left;
+  font-size: 20px;
+  color: #969696;
+  font-family: FaricyNew-Light;
+  padding-right: 40px;
+  line-height: 2;
 }
-
-
+.payout-block .input-w{
+  height: 35px;
+  width: 20%;
+}
+.payout-block .input-w input{
+  height: 33px;
+  font-size: 16px;
+  color: #a7a7a7;
+  font-family: FaricyNew-Light;
+}
 
 
 
