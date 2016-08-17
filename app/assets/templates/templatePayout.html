@@ -58,7 +58,36 @@
       <button type="button" class="btn btn-default payout-btn" name="button" ng-click="save_payout()">OK</button>
     </div>
     <div class="bank_account" ng-show="is_spa">
-
+      <table class="table">
+        <tr>
+          <th>
+            Payout method
+          </th>
+          <th>
+            Processing time
+          </th>
+          <th>
+            Additional fees
+          </th>
+          <th>
+            Details
+          </th>
+        </tr>
+        <tr>
+          <td>
+            Paypal
+          </td>
+          <td>
+            3-4 hours
+          </td>
+          <td>
+            Paypal withdrawl fees
+          </td>
+          <td>
+            Connect you existing Paypal account
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="pay-pal-account" ng-show="is_spa">
