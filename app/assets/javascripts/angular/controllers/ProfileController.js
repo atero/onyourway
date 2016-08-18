@@ -13,7 +13,8 @@ App.controller('ProfileCtrl',['$scope','$state','localuser', 'User', function($s
 		console.log("saving");
 		$scope.inherit.loading = true;
 		User.update({
-      token: $scope.inherit.user.token
+      token: $scope.inherit.user.token,
+			id: $scope.inherit.user.id
     }, {
       user: $scope.inherit.user
     }, function(res) {
