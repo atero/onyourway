@@ -1840,10 +1840,12 @@ button.btn-next {
   }
   .welcome-image .main-welcome-p{
     font-size: 27px;
+    padding-bottom: 0;
   }
   .shopper-button{
     width: 230px;
     height: 45px;
+    margin: 0;
   }
   .travaller-button{
     width: 230px;
@@ -1994,5 +1996,9 @@ button.btn-next {
   .welcome-image .main-welcome-p{
     font-size: 30px;
     padding-top: 100px;
+  }
+  .welcome-image{
+    background: url("../images/Image_home1.jpg") center center no-repeat;
+    background-size: 100% auto;
   }
 }
