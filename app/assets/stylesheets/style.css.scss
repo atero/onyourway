@@ -415,7 +415,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 
 
 .welcome-image{
-    background: url("../images/welcome_photo.jpg") center center no-repeat;
+    background: url("../images/Image_home1.jpg") center center no-repeat;
     background-size: 100% auto;
     height: 550px;
     width:100%;
@@ -1706,7 +1706,7 @@ button.btn-next {
   }
   .welcome-image{
     background: url("../images/Image_home1.jpg") center center no-repeat;
-    background-size: 100% auto;
+    background-size: auto 100%;
   }
   .thumbs-row{
     margin-bottom: 0;
@@ -1724,7 +1724,7 @@ button.btn-next {
   }
   .welcome-image{
     background: url("../images/Image_home1.jpg") center center no-repeat;
-    background-size: 100% auto;
+    background-size: auto 55%;
     padding-top: 40px;
     margin-top: -40px;
   }
