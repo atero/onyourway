@@ -2,7 +2,9 @@ App.controller('ProfileCtrl',['$scope','$state','localuser', 'User', function($s
 
 	if (localuser) $scope.inherit.user = localuser;
 	console.log($scope.inherit.user);
-
+	if(!!$scope.inherit.user.birthdate){
+		$scope.inherit.user.birthdate = new Date($scope.inherit.user.birthdate);
+	}
 	$scope.local={
 		user:{
 
