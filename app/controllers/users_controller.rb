@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.where(id: params[:user_id]).first
 
     if @user && @user.update(user_params)
-      render json: @shipment, status: :accepted
+      render json: @user, status: :accepted
     else
       render json: { messsage: 'No orders found' }, status: 404
     end
