@@ -1708,7 +1708,6 @@ button.btn-next {
     background: url("../images/Image_home1.jpg") center center no-repeat;
     background-size: 100% auto;
   }
-
 }
 @media (max-width: 480px) {
   body{
@@ -1832,7 +1831,20 @@ button.btn-next {
     padding-top: 75px;
     padding-bottom: 20px;
   }
-
+  .welcome-image{
+    height: 400px;
+  }
+  .welcome-image .main-welcome-p{
+    font-size: 27px;
+  }
+  .shopper-button{
+    width: 230px;
+    height: 45px;
+  }
+  .travaller-button{
+    width: 230px;
+    height: 45px;
+  }
 }
 @media (max-width: 320px){
   .thumbs-row{
