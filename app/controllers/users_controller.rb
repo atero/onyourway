@@ -14,15 +14,15 @@ class UsersController < ApplicationController
     end
   end
 
-  # def update
-  #   @user = User.where(id: params[:user_id]).first
-  #
-  #   if @user && @user.update(user_params)
-  #     render json: @shipment, status: :accepted
-  #   else
-  #     render json: { messsage: 'No orders found' }, status: 404
-  #   end
-  # end
+  def update
+    @user = User.where(id: params[:user_id]).first
+
+    if @user && @user.update(user_params)
+      render json: @shipment, status: :accepted
+    else
+      render json: { messsage: 'No orders found' }, status: 404
+    end
+  end
 
   private
 

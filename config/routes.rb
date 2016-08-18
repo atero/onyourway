@@ -20,5 +20,7 @@ Rails.application.routes.draw do
     match '/messages', to: 'messages#show', via: [:options]
     post '/messages/:shipment_id', to: 'messages#create'
     get '/messages/:shipment_id', to: 'messages#index'
+
+    put '/userss/:user_id', to: 'users#update'
   end
 end
