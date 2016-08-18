@@ -13,7 +13,7 @@ module Api
     private
 
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :password, :country)
+      params.require(:user).permit(:email, :first_name, :last_name, :password, :country, :birthdate, :base64_image, :sex)
     end
   end
 end
