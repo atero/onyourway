@@ -21,6 +21,6 @@ Rails.application.routes.draw do
     post '/messages/:shipment_id', to: 'messages#create'
     get '/messages/:shipment_id', to: 'messages#index'
 
-    put '/userss/:user_id', to: 'users#update'
+    put '/users/:user_id', to: 'users#update'
   end
 end
