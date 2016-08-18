@@ -12,6 +12,9 @@ class User
   field :first_name , :type => String
   field :last_name , :type => String
   field :base64_image, type: String
+  field :country, type: String
+  field :sex, type: String
+  field :birtdate, type: Date
   ## Recoverable
   field :reset_password_token,   type: String
   field :reset_password_sent_at, type: Time
@@ -50,25 +53,25 @@ class User
   validates :last_name, :presence => true
   validates :email, :presence => true
   validates_uniqueness_of :email, :case_sensitive => false
-  # before_save :process_base64_image
-  #
-  # def process_base64_image
-  #
-  #   if self.base64_image && self.base64_image.length > 0
-  #
-  #     regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
-  #     data_uri_parts = self.base64_image.match(regexp) || []
-  #     extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
-  #     file_name = SecureRandom.hex
-  #     data = StringIO.new(Base64.decode64(data_uri_parts[2]))
-  #     data.class.class_eval { attr_accessor :original_filename, :content_type }
-  #     data.original_filename = file_name
-  #     data.content_type = extension
-  #     self.photo = data # self.image is a paperclip field
-  #     self.base64_image = ""
-  #
-  #   end
-  #   true
-  # end
+  before_save :process_base64_image
+
+  def process_base64_image
+
+    if self.base64_image && self.base64_image.length > 0
+
+      regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
+      data_uri_parts = self.base64_image.match(regexp) || []
+      extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
+      file_name = SecureRandom.hex
+      data = StringIO.new(Base64.decode64(data_uri_parts[2]))
+      data.class.class_eval { attr_accessor :original_filename, :content_type }
+      data.original_filename = file_name
+      data.content_type = extension
+      self.photo = data # self.image is a paperclip field
+      self.base64_image = ""
+
+    end
+    true
+  end
 
 end
