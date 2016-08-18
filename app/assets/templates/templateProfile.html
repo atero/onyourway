@@ -37,14 +37,14 @@
         <input type="text" name="name" value="" ng-model="inherit.user.last_name">
         <br/>
         <label for="" class="select-iam">I am</label>
-        <select class="profile-select">
+        <select class="profile-select" ng-model="inherit.user.sex">
           <option value="male/fmale">Male/Female</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
         <br/>
         <label for="" class="birth-date">Birth date</label>
-        <input type="date" name="name" value="" ng-model="inherit.user.birth_date">
+        <input type="date" name="name" value="" ng-model="inherit.user.birthdate">
         <br/>
         <label for="" class="label-e-mail">E-mail</label>
         <input type="email" name="name" value="" ng-model="inherit.user.email">
