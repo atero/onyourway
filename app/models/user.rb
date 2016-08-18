@@ -14,7 +14,7 @@ class User
   field :base64_image, type: String
   field :country, type: String
   field :sex, type: String
-  field :birtdate, type: Date
+  field :birthdate, type: Date
   ## Recoverable
   field :reset_password_token,   type: String
   field :reset_password_sent_at, type: Time
