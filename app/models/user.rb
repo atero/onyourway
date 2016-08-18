@@ -76,7 +76,7 @@ class User
       data.class.class_eval { attr_accessor :original_filename, :content_type }
       data.original_filename = file_name
       data.content_type = extension
-      self.photo = data # self.image is a paperclip field
+      self.photo = data.url # self.image is a paperclip field
       self.base64_image = ''
 
     end
