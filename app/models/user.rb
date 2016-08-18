@@ -6,11 +6,20 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  has_mongoid_attached_file :photo, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+
+  # Validate the attached image is image/jpg, image/png, etc
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
+
   ## Database authenticatable
-  field :email,              type: String, default: ""
-  field :encrypted_password, type: String, default: ""
-  field :first_name , :type => String
-  field :last_name , :type => String
+  field :email,              type: String, default: ''
+  field :encrypted_password, type: String, default: ''
+  field :first_name, type: String
+  field :last_name, type: String
   field :base64_image, type: String
   field :country, type: String
   field :sex, type: String
@@ -37,8 +46,8 @@ class User
 
   has_many :orders
   has_many :shipments
-  has_many :outgoings, class_name: "Message", inverse_of: :sender
-  has_many :ingoings, class_name: "Message", inverse_of: :recepient
+  has_many :outgoings, class_name: 'Message', inverse_of: :sender
+  has_many :ingoings, class_name: 'Message', inverse_of: :recepient
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time
@@ -49,18 +58,17 @@ class User
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
-  validates :first_name, :presence => true
-  validates :last_name, :presence => true
-  validates :email, :presence => true
-  validates_uniqueness_of :email, :case_sensitive => false
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates_uniqueness_of :email, case_sensitive: false
   before_save :process_base64_image
 
   def process_base64_image
-
-    if self.base64_image && self.base64_image.length > 0
+    if base64_image && !base64_image.empty?
 
       regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
-      data_uri_parts = self.base64_image.match(regexp) || []
+      data_uri_parts = base64_image.match(regexp) || []
       extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
       file_name = SecureRandom.hex
       data = StringIO.new(Base64.decode64(data_uri_parts[2]))
@@ -68,10 +76,9 @@ class User
       data.original_filename = file_name
       data.content_type = extension
       self.photo = data # self.image is a paperclip field
-      self.base64_image = ""
+      self.base64_image = ''
 
     end
     true
   end
-
 end
