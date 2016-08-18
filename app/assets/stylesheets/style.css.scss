@@ -416,7 +416,6 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 
 .welcome-image{
     background: url("../images/welcome_photo.jpg") center center no-repeat;
-    background-size: 100% auto;
     height: 550px;
     width:100%;
     padding-top: 70px;
@@ -1715,7 +1714,7 @@ button.btn-next {
     margin-bottom: 15px;
   }
   .welcome-image{
-    background: url("../images/welcome_photo1.jpg") center center no-repeat;
+    background: url("../images/welcome_photo.jpg") center center no-repeat;
     background-size: 100% auto;
     padding-top: 40px;
     margin-top: -40px;
