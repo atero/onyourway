@@ -25,7 +25,7 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   };
 
   $scope.check_list = function() {
-    if (!!$scope.local.payout.country.address_components && $scope.local.payout.spa_list.indexOf($scope.local.payout.country.address_components[0].short_name) > 0) {
+    if (!!$scope.inherit.user.country.address_components && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country.address_components[0].short_name) > 0) {
       $scope.inherit.user.is_spa = true;
     } else {
       $scope.inherit.user.is_spa= false;
