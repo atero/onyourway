@@ -1,5 +1,16 @@
 module Api
   class UsersController < ApplicationController
+
+    def show
+      @order = User.where(:id => params["id"]).first
+      if @order
+        @order.photo = @order.photo.url(:square)
+        render json: @order, status: :accepted
+       else
+         render json: {messsage:'Not found'}, status: 404
+      end
+    end
+
     def update
       @user = User.where(id: params[:user_id]).first
 
@@ -13,7 +24,7 @@ module Api
     private
 
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :password, :country, :birthdate, :base64_image, :sex)
+      params.require(:user).permit(:email, :first_name, :last_name, :password, :country, :birthdate, :base64_image, :sex, :paypal_email, :payout_name, :payout_iban, :payout_swift)
     end
   end
 end
