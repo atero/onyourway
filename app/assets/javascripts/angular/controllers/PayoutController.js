@@ -2,7 +2,7 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   if (localuser) $scope.inherit.user = localuser;
   $scope.local = {
     payout: {
-      spa_list: ["FI", "AT", "BE", "BG", "EE", "HR", "CY", "CZ", "DK", "FL", "FR", "GF", "DE", "GI", "GP", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "MQ", "YT", "MC", "NL", "NO", "PL", "PT", "RE", "RO", "BL", "MF", "PM", "SK", "SI", "ES", "SE", "CH", "GB"],
+      spa_list: ["Åland Islands", "Aland Islands",,"Austria", "Belgium", "Bulgaria", "Canary Islands", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "French Guiana", "Germany", "Gibraltar", "Greece", "Guadeloupe", "Hungary", "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Martinique", "Mayotte", "Monaco", "Netherlands", "Norway", "Poland", "Portugal", "Réunion", "Reunion", "Romania", "Saint Barthélemy","Saint Barthelemy", "Saint Martin", "Saint Pierre and Miquelon", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "United Kingdom"],
     }
   };
 
@@ -25,7 +25,7 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   };
 
   $scope.check_list = function() {
-    if (!!$scope.inherit.user.country.address_components && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country.address_components[0].short_name) > 0) {
+    if (!!$scope.inherit.user.country && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country) > 0) {
       $scope.inherit.user.is_spa = true;
     } else {
       $scope.inherit.user.is_spa= false;
