@@ -25,12 +25,13 @@ class User
   field :country, type: String
   field :sex, type: String
   field :birthdate, type: Date
-  
+
   #Payout
   field :paypal_email, type: String
   field :payout_name, type: String
   field :payout_iban, type: String
   field :payout_swift, type: String
+  field :is_spa, type: Boolean
   ## Recoverable
   field :reset_password_token,   type: String
   field :reset_password_sent_at, type: Time
