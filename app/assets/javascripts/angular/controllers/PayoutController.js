@@ -32,6 +32,15 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
     }
   }
 
+  var myApp = angular.module('myApp', []);
+
+
+  myApp.controller("PayoutControler", function ($scope, $document) {
+
+      var name = angular.element($('#Text1')).val();
+       console.log(name);
+
+  });
 
 
 }]);
