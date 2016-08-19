@@ -19,4 +19,15 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', function($scope, 
   }
 
 
+  angular.module("payoutModule",[]).controller("PayoutCntrl",function($scope){
+  $scope.something='';
+
+  $scope.myChange=function(val){
+  console.log("on-change",$scope.something);
+  console.log("on-change",val);
+  };
+
+  });
+
+
 }]);
