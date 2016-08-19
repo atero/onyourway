@@ -25,6 +25,7 @@ class User
   field :country, type: String
   field :sex, type: String
   field :birthdate, type: Date
+  
   #Payout
   field :paypal_email, type: String
   field :payout_name, type: String

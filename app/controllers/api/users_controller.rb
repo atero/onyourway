@@ -24,7 +24,7 @@ module Api
     private
 
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :password, :country, :birthdate, :base64_image, :sex)
+      params.require(:user).permit(:email, :first_name, :last_name, :password, :country, :birthdate, :base64_image, :sex, :paypal_email, :payout_name, :payout_iban, :payout_swift)
     end
   end
 end
