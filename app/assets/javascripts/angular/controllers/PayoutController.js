@@ -31,8 +31,6 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
       $scope.is_spa = false;
     }
   }
-  $scope.input={
-    local.payout.country:''
-  }
+
 
 }]);
