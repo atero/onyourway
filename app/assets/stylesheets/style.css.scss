@@ -1579,11 +1579,7 @@ button.btn-next {
   margin-top: 22px;
   margin-bottom: 0;
 }
-.messege-block h3{
-  font-size: 18.19px;
-  color: #6e6e6e;
-  font-family: FaricyNew-Bold;
-}
+
 
 
 
@@ -1594,6 +1590,13 @@ button.btn-next {
     width: 1530px;
   }
 }
+
+@media (max-width: 1450px) {
+  background: url("../images/Image_home1.jpg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+
 @media (max-width: 1280px){
   .first-last-name{
     padding: 0;
