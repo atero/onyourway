@@ -1,5 +1,16 @@
 module Api
   class UsersController < ApplicationController
+
+    def show
+      @order = User.where(:id => params["id"]).first
+      if @order
+        @order.photo = @order.photo.url(:square)
+        render json: @order, status: :accepted
+       else
+         render json: {messsage:'Not found'}, status: 404
+      end
+    end
+
     def update
       @user = User.where(id: params[:user_id]).first
 

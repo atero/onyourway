@@ -67,7 +67,6 @@ class User
 
   def process_base64_image
     if base64_image && !base64_image.empty?
-
       regexp = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
       data_uri_parts = base64_image.match(regexp) || []
       extension = MIME::Types[data_uri_parts[1]].first.preferred_extension
@@ -76,9 +75,8 @@ class User
       data.class.class_eval { attr_accessor :original_filename, :content_type }
       data.original_filename = file_name
       data.content_type = extension
-      self.photo = data.url # self.image is a paperclip field
+      self.photo = data # self.image is a paperclip field
       self.base64_image = ''
-
     end
     true
   end
