@@ -34,6 +34,9 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     console.log($scope.inherit.user)
     shipment.to = shipment.to.address_components[0].long_name;
     shipment.from = shipment.from.address_components[0].long_name;
+    console.log('???????????????????????/');
+    console.log(shipment);
+    console.log('////////////////////////');
     Shipment.create({
       id: shipment.order_id,
       token: $scope.inherit.user.token
