@@ -1578,17 +1578,26 @@ button.btn-next {
   margin-top: 22px;
   margin-bottom: 0;
 }
-
-
-
-
+.main-faq-block p{
+  font-size: 16px;
+  padding-bottom: 0;
+}
+.main-faq-block strong{
+  font-family: FaricyNew-Regular;
+}
+.conditions-block h5{
+  font-size: 20px;
+}
+.conditions-block p{
+  font-size: 16px;
+}
 
 
 
 
 @media (min-width: 1600px) {
   .container {
-    width: 1530px;
+    width: 970px;
   }
 }
 @media (max-width: 1450px) {
@@ -1716,8 +1725,8 @@ button.btn-next {
     background-size: 100% auto;
   }
   .thumbs-row{
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 50px ;
+    margin-top: 50px ;
   }
 }
 @media (max-width: 480px) {
@@ -2002,7 +2011,7 @@ button.btn-next {
     padding-top: 100px;
   }
   .shopper-button span{
-    font-size: 15px;
+    font-size: 18px ;
   }
   .travaller-button span{
     font-size: 18px;
