@@ -91,7 +91,7 @@ class User
 
   def process_photo
     if self.photo
-      self.photo_url = semf.photo.url
+      self.photo_url = self.photo.url
     end
     true
   end
