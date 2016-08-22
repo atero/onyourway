@@ -22,7 +22,7 @@ class User
   field :first_name, type: String
   field :last_name, type: String
   field :base64_image, type: String
-  field :country, type: String
+  field :country, type: Hash
   field :sex, type: String
   field :birthdate, type: Date
 
