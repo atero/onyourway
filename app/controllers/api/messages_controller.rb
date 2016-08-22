@@ -1,31 +1,31 @@
 module Api
   class MessagesController < ApplicationController
-
     def create
-      @shipment = Shipment.where(:id => params[:shipment_id]).first
-      @order = Order.where(:id => params[:order_id]).first
+      @shipment = Shipment.where(id: params[:shipment_id]).first
+      @order = Order.where(id: params[:order_id]).first
       @message = Message.new(message_params)
-      # UserMailer.welcome_email(@shipment.user).deliver_later
-      if @shipment then @message.shipment = @shipment end
-      if @order then @message.order = @order end
+      @user = User.where(id: message_params['recipient']).first
+      @message.shipment = @shipment if @shipment
+      @message.order = @order if @order
 
       if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
-          # @messages = @shipment.messages
-         render json: @message, status: :accepted
-       else
-         render json: {messsage:'Bad request'}, status: 400
+        # @messages = @shipment.messages
+        UserMailer.message_email(@user.email, @user.first_name, message_params['text']).deliver_later
+        render json: @message, status: :accepted
+      else
+        render json: { messsage: 'Bad request' }, status: 400
       end
     end
 
     def index
-      @shipment = Shipment.where(:id => params[:shipment_id]).first
-      @order = Order.where(:id => params[:order_id]).first
-      if @shipment  then @messages = @shipment.messages end
-      if @order  then @messages = @order.messages else @messages = [] end
-      if @messages.length > 0 && (@shipment.user == current_user || @order.user == current_user)
-          render 'index'
-       else
-         render json: {messsage:'No messages found'}, status: 404
+      @shipment = Shipment.where(id: params[:shipment_id]).first
+      @order = Order.where(id: params[:order_id]).first
+      @messages = @shipment.messages if @shipment
+      @messages = @order ? @order.messages : []
+      if !@messages.empty? && (@shipment.user == current_user || @order.user == current_user)
+        render 'index'
+      else
+        render json: { messsage: 'No messages found' }, status: 404
       end
     end
 
