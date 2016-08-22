@@ -16,6 +16,11 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
       $scope.inherit.user.country = $scope.inherit.user.country.address_components[0].long_name;
     }
     $scope.inherit.loading = true;
+    if (!!$scope.inherit.user.country.address_components && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country.address_components[0].long_name) > 0) {
+      $scope.inherit.user.is_spa = true;
+    } else {
+      $scope.inherit.user.is_spa= false;
+    }
     User.update({
       token: $scope.inherit.user.token,
       id: $scope.inherit.user._id
@@ -28,11 +33,11 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   };
 
   $scope.check_list = function() {
-    if (!!$scope.inherit.user.country.address_components && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country.address_components[0].long_name) > 0) {
-      $scope.inherit.user.is_spa = true;
-    } else {
-      $scope.inherit.user.is_spa= false;
-    }
+    // if (!!$scope.inherit.user.country.address_components && $scope.local.payout.spa_list.indexOf($scope.inherit.user.country.address_components[0].long_name) > 0) {
+    //   $scope.inherit.user.is_spa = true;
+    // } else {
+    //   $scope.inherit.user.is_spa= false;
+    // }
   }
 
 
