@@ -14,7 +14,7 @@ class Order
   }
 
   # Validate the attached image is image/jpg, image/png, etc
-  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :photo, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png|gif)$/, :message => 'file type is not allowed (only jpeg/png/gif images)'
 
    field :from, type: String
    field :to, type: String
