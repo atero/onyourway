@@ -68,13 +68,35 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
       .state('faq', {
         url: '/faq',
         controller: 'FaqCtrl',
-        templateUrl: "templateFaq.html"
+        templateUrl: "templateFaq.html",
+        resolve: {
+          localuser: ['$q', 'Auth', function($q, Auth) {
+            var d = $q.defer();
+            var user = Auth.currentUser().then(function(user) {
+              d.resolve(user);
+            }, function(error) {
+              d.resolve(null);
+            });
+            return d.promise;
+          }]
+        }
       })
     $stateProvider
       .state('conditions', {
         url: '/conditions',
         controller: 'ConditionsCtrl',
-        templateUrl: "templateConditions.html"
+        templateUrl: "templateConditions.html",
+        resolve: {
+          localuser: ['$q', 'Auth', function($q, Auth) {
+            var d = $q.defer();
+            var user = Auth.currentUser().then(function(user) {
+              d.resolve(user);
+            }, function(error) {
+              d.resolve(null);
+            });
+            return d.promise;
+          }]
+        }
       })
     $stateProvider
       .state('profile', {
