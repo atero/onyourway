@@ -91,7 +91,7 @@ class User
 
   def process_photo
     if self.photo
-      self.photo_url = self.photo.url(:square)
+      self.photo = self.photo.url(:square)
     end
     true
   end
