@@ -1845,7 +1845,7 @@ button.btn-next {
   }
   .welcome-image{
     height: 550px;
-  }  
+  }
 }
 @media (max-width: 320px){
   .thumbs-row{
@@ -1993,26 +1993,25 @@ button.btn-next {
     padding-top: 100px;
   }
   .welcome-image{
-    background: url("../images/Image_home1.jpg") center center no-repeat;
-    background-size: 100% 40%;
+    background: url("../images/new-home-bg1.jpg") center center no-repeat;
+    background-size: 100% auto;
+    margin-top: -40px;
+    height: 550px;
   }
   .welcome-image .main-welcome-p{
-    font-size: 22px;
+    font-size: 30px;
     padding-top: 100px;
   }
   .shopper-button span{
     font-size: 15px;
   }
   .travaller-button span{
-    font-size: 15px;
+    font-size: 18px;
   }
   .shopper-button,
   .travaller-button{
-    font-size: 15px;
-    width: 210px;
-    height: 40px;
-  }
-  .welcome-image{
-    height: 450px;
+    font-size: 17px;
+    width: 230px;
+    height: 50px;
   }
 }
