@@ -67,11 +67,13 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
       .state('faq', {
         url: '/faq',
+        controller: 'FaqCtrl',
         templateUrl: "templateFaq.html"
       })
     $stateProvider
       .state('conditions', {
         url: '/conditions',
+        controller: 'ConditionsCtrl',
         templateUrl: "templateConditions.html"
       })
     $stateProvider
