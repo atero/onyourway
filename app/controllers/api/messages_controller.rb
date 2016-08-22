@@ -10,7 +10,7 @@ module Api
 
       if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
         # @messages = @shipment.messages
-        UserMailer.message_email(@user.email, @user.first_name).deliver_later
+        UserMailer.message_email(@user.email, @user.first_name, message_params['text']).deliver_later
         render json: @message, status: :accepted
       else
         render json: { messsage: 'Bad request' }, status: 400

@@ -10,8 +10,9 @@ class UserMailer < ApplicationMailer
     mail(to: email, subject: 'Welcome to OnYourWay')
   end
 
-  def message_email(email, name)
+  def message_email(email, name, txt)
     @email = email
+    @message_text = txt
     @first_name = name
     p '************************NEW MESSAGE**************************'
 
