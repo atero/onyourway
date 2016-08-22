@@ -73,7 +73,7 @@ class User
   validates :email, presence: true
   validates_uniqueness_of :email, case_sensitive: false
   before_save :process_base64_image
-  # after_save :process_photo
+
 
   def process_base64_image
     if base64_image && !base64_image.empty?
@@ -87,17 +87,7 @@ class User
       data.content_type = extension
       self.photo = data # self.image is a paperclip field
       self.base64_image = ''
-      self.photo = self.photo.url(:square)
-    end
-    true
-  end
-
-  def process_photo
-    if self.photo
-      self.photo = self.photo.url(:square)
-      p '///////////////////////////////////////'
-      p self.photo
-      p '///////////////////////////////////////'
+      self.photo = photo.url(:square)
     end
     true
   end
