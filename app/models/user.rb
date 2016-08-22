@@ -22,7 +22,7 @@ class User
   field :first_name, type: String
   field :last_name, type: String
   field :base64_image, type: String
-  field :country, type: Hash, :default => Hash.new
+  field :country, type: String
   field :sex, type: String
   field :birthdate, type: Date
 
