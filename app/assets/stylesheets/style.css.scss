@@ -1579,7 +1579,7 @@ button.btn-next {
   margin-bottom: 0;
 }
 .main-faq-block p{
-  font-size: 16px;
+  font-size: 17px;
   padding-bottom: 0;
 }
 .main-faq-block strong{
@@ -1589,15 +1589,34 @@ button.btn-next {
   font-size: 20px;
 }
 .conditions-block p{
-  font-size: 17px;
+  font-size: 17px ;
 }
 .main-margin-block{
-  width: 970px;
+  width: 1100px ;
   margin: auto;
 }
 .main-faq-block h5{
-  font-size: 30px;
+  font-size: 30px ;
 }
+.conditions-head h2{
+  font-size: 30px;
+  color: #a7a7a7;
+}
+.main-conditions-head strong{
+  font-size: 17px;
+}
+.main-margin-block i{
+  font-size: 17px;
+  display: block;
+  margin-bottom: 30px;
+}
+.main-margin-block h5{
+  font-size: 17px;
+}
+
+
+
+
 
 @media (min-width: 1600px) {
   .container {
