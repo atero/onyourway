@@ -1,4 +1,6 @@
 class User
+  require 'aws-sdk-v1'
+  require 'aws-sdk'
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Paperclip
@@ -85,7 +87,7 @@ class User
       data.content_type = extension
       self.photo = data # self.image is a paperclip field
       self.base64_image = ''
-      self.photo = self.photo.url(:square)
+      self.photo = data.url(:square)
     end
     true
   end
