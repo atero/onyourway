@@ -87,7 +87,6 @@ class User
       data.content_type = extension
       self.photo = data # self.image is a paperclip field
       self.base64_image = ''
-      # self.photo = photo.url(:square)
     end
     true
   end
