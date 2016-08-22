@@ -1713,8 +1713,8 @@ button.btn-next {
     margin-left: 0;
   }
   .welcome-image{
-    background: url("../images/Image_home1.jpg") center center no-repeat;
-    background-size: auto 100%;
+    background: url("../images/new-home-bg.jpg") center center no-repeat;
+    background-size: 100% auto;
   }
   .thumbs-row{
     margin-bottom: 0;
@@ -1731,8 +1731,8 @@ button.btn-next {
     margin-bottom: 15px;
   }
   .welcome-image{
-    background: url("../images/Image_home1.jpg") center center no-repeat;
-    background-size: auto 55%;
+    background: url("../images/new-home-bg1.jpg") center center no-repeat;
+    background-size: 100% auto;
     padding-top: 40px;
     margin-top: -40px;
   }
@@ -1844,12 +1844,9 @@ button.btn-next {
     padding-bottom: 20px;
   }
   .welcome-image{
-    height: 410px;
+    height: 550px;
   }
-  .welcome-image .main-welcome-p{
-    font-size: 27px;
-    padding-bottom: 0;
-  }
+
   .shopper-button{
     width: 230px;
     height: 45px;
