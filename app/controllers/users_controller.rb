@@ -13,12 +13,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = current_user
-    p '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-    
-  end
-
   # def update
   #   @user = User.where(id: params[:user_id]).first
   #
