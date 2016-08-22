@@ -92,6 +92,9 @@ class User
   def process_photo
     if self.photo
       self.photo = self.photo.url(:square)
+      p '///////////////////////////////////////'
+      p self.photo
+      p '///////////////////////////////////////'
     end
     true
   end
