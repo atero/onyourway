@@ -1,5 +1,10 @@
 App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function($scope, $state, localuser, User) {
-  if (localuser) $scope.inherit.user = localuser;
+  if (localuser){
+     $scope.inherit.user = localuser;
+     if(!!$scope.inherit.user.country){
+       $scope.inherit.user.country = [$scope.inherit.user.country];
+     }
+   }
   $scope.local = {
     payout: {
       spa_list: ["Åland Islands", "Aland Islands",,"Austria", "Belgium", "Bulgaria", "Canary Islands", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "French Guiana", "Germany", "Gibraltar", "Greece", "Guadeloupe", "Hungary", "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Martinique", "Mayotte", "Monaco", "Netherlands", "Norway", "Poland", "Portugal", "Réunion", "Reunion", "Romania", "Saint Barthélemy","Saint Barthelemy", "Saint Martin", "Saint Pierre and Miquelon", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "United Kingdom"],
@@ -13,6 +18,9 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   $scope.save_payout = function(){
     console.log("saving");
     $scope.inherit.loading = true;
+    if(!!$scope.inherit.user.country){
+      $scope.inherit.user.country = $scope.inherit.user.country[0];
+    }
     User.update({
       token: $scope.inherit.user.token,
       id: $scope.inherit.user._id
@@ -20,7 +28,6 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
       user: $scope.inherit.user
     }, function(res) {
       $scope.inherit.loading = false;
-      //$scope.inherit.goState('pr');
     })
   };
 
