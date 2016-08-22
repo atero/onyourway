@@ -1805,7 +1805,7 @@ button.btn-next {
     padding-top: 0;
   }
   .thumbs-row{
-    margin-top: 0;
+    margin-bottom: 50px;
   }
   .input-w input{
     font-size: 15px;
@@ -1845,17 +1845,7 @@ button.btn-next {
   }
   .welcome-image{
     height: 550px;
-  }
-
-  .shopper-button{
-    width: 230px;
-    height: 45px;
-    margin: 0;
-  }
-  .travaller-button{
-    width: 230px;
-    height: 45px;
-  }
+  }  
 }
 @media (max-width: 320px){
   .thumbs-row{
