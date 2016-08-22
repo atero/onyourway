@@ -1591,13 +1591,15 @@ button.btn-next {
 .conditions-block p{
   font-size: 16px;
 }
-
-
+.main-margin-block{
+  width: 970px;
+  margin: auto;
+}
 
 
 @media (min-width: 1600px) {
   .container {
-    width: 970px;
+    width: 1530px;
   }
 }
 @media (max-width: 1450px) {
@@ -1640,6 +1642,9 @@ button.btn-next {
   }
   .right-side{
     width: 80%;
+  }
+  .main-margin-block{
+    width: 100%;
   }
 }
 
