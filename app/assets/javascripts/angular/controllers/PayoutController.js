@@ -1,9 +1,6 @@
 App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function($scope, $state, localuser, User) {
   if (localuser){
      $scope.inherit.user = localuser;
-     if(!!$scope.inherit.user.country){
-       $scope.inherit.user.country = [$scope.inherit.user.country];
-     }
    }
   $scope.local = {
     payout: {
@@ -18,9 +15,6 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   $scope.save_payout = function(){
     console.log("saving");
     $scope.inherit.loading = true;
-    if(!!$scope.inherit.user.country){
-      $scope.inherit.user.country = $scope.inherit.user.country[0];
-    }
     User.update({
       token: $scope.inherit.user.token,
       id: $scope.inherit.user._id
