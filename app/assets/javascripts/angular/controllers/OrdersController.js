@@ -34,27 +34,27 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
     modalInstance.result.then(function(shipment) {
 
+      order.accepted_shipment = shipment.id;
+      shipment.status = "accepted-" + order.id;
+      $scope.local.conversation_shipment = shipment;
+      Shipment.update({
+        id: shipment.id
+      }, {
+        shipment: shipment
+      }, function(res) {
+        // some callback if needed
+      });
+      Order.update({
+        id: order.id
+      }, {
+        order: order
+      }, function(res) {
+        
+      })
+
       console.log('pay');
     })
 
-
-    // order.accepted_shipment = shipment.id;
-    // shipment.status = "accepted-" + order.id;
-    // $scope.local.conversation_shipment = shipment;
-    // Shipment.update({
-    //   id: shipment.id
-    // }, {
-    //   shipment: shipment
-    // }, function(res) {
-    //   // some callback if needed
-    // });
-    // Order.update({
-    //   id: order.id
-    // }, {
-    //   order: order
-    // }, function(res) {
-    //   // some callback if needed
-    // })
   }
 
   $scope.refuse_travel = function(order, shipment) {
