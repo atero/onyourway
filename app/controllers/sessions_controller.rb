@@ -12,7 +12,7 @@ class SessionsController < Devise::SessionsController
       p '88888888888888888888888888888888888888'
       p resource.photo.url(:square)
       p '88888888888888888888888888888888888888'
-      resource[:photo_url] = resource.photo.url
+      resource[:photo_url] = resource.photo.url(:square)
       format.json { render json: resource } # this code will get executed for json request
 
     end
