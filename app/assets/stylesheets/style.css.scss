@@ -1620,6 +1620,8 @@ button.btn-next {
 .shipmentt-details{
   position: fixed;
   right: 0;
+  max-height: 50%;
+  overflow: auto;
 }
 
 
