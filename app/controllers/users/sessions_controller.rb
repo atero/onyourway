@@ -1,4 +1,7 @@
 class Users::SessionsController < Devise::SessionsController
+
+	p '1212122212121212121212221&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+  respond_to :json
 # before_filter :configure_sign_in_params, only: [:create]
 
   #GET /resource/sign_in
