@@ -23,7 +23,7 @@
 
     <div class="form-group main-date-group">
       <label for="date">Date:</label>
-      <input type="date" class="form-control search-input main-search-input" ng-model="local.shipment.date">
+      <input type="date" id="datein" class="form-control search-input main-search-input" ng-model="local.shipment.date">
     </div>
 
     <div class="form-group main-message-group">
@@ -44,7 +44,7 @@
 <script>
 if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
     jQuery(function($){ //on document.ready
-        $('#birthday').datepicker();
+        $('#datein').datepicker();
     })
 }
 </script>
