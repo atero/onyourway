@@ -1,7 +1,6 @@
 class SessionsController < Devise::SessionsController
   require 'aws-sdk-v1'
   require 'aws-sdk'
-  include Mongoid::Timestamps
   include Mongoid::Paperclip
 
   def create
