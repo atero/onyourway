@@ -80,3 +80,15 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
+
+<script>
+    $(function(){
+        if (!Modernizr.inputtypes.date) {
+            $('input[type=date]').datepicker({
+                    dateFormat : 'yy-mm-dd'
+                },
+                $.datepicker.regional['it']
+            );
+        }
+    });
+</script>
