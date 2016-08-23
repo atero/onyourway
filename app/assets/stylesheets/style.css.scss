@@ -114,6 +114,10 @@ input.ng-invalid{
 .thumbnail img {
   height: 150px;
 }
+.profile-thumbnail.thumbnail img{
+  width: 100%;
+  height: auto;
+}
 .thumbnail .caption-full {
   padding: 9px;
   color: #333;
