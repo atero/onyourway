@@ -77,7 +77,10 @@
 </body>
 <script type="text/javascript">
 $(document).on('click',function(){
-	$('.collapse').collapse('hide');
-  console.log('test');
+  if ($('.collapse:visible')) {
+    $('.collapse').collapse('hide');
+  }else{
+    $('.collapse').collapse('show');
+  }
 })
 </script>
