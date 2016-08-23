@@ -6,6 +6,8 @@ class SessionsController < Devise::SessionsController
     yield resource if block_given?
     respond_with resource, :location => after_sign_in_path_for(resource) do |format|
       format.json {render :json => resource } # this code will get executed for json request
+      p '88888888888888888888888888888888888888'
+      p resource
     end
   end
 
