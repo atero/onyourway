@@ -80,15 +80,3 @@ $(document).on('click',function(){
   }
 })
 </script>
-
-<script>
-    $(function(){
-        if (!Modernizr.inputtypes.date) {
-            $('input[type=date]').datepicker({
-                    dateFormat : 'yy-mm-dd'
-                },
-                $.datepicker.regional['it']
-            );
-        }
-    });
-</script>

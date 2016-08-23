@@ -31,6 +31,19 @@
         <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control main-additional-textarea" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
     </div>
 
+    <script>
+        $(function(){
+            if (!Modernizr.inputtypes.date) {
+                $('input[type=date]').datepicker({
+                        dateFormat : 'yy-mm-dd'
+                    },
+                    $.datepicker.regional['it']
+                );
+            }
+        });
+    </script>
+
+
 </div>
 
 <!-- <div ng-if="local.usertype == 'shopper' && !local.validated" class="modal-body">
