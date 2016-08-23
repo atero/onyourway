@@ -31,12 +31,6 @@
         <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control main-additional-textarea" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
     </div>
 
-    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
-    <script>
-        webshims.setOptions('forms-ext', {types: 'date'});
-        webshims.polyfill('forms forms-ext');
-    </script>
-
 </div>
 
 <!-- <div ng-if="local.usertype == 'shopper' && !local.validated" class="modal-body">
@@ -86,3 +80,10 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+</script>
