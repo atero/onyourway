@@ -4,8 +4,8 @@ class PaymentController < ApplicationController
       # Set your secret key: remember to change this to your live secret key in production
     # See your keys here https://dashboard.stripe.com/account/apikeys
 
-    # Stripe.api_key = "sk_test_Foadiw9gjgVZ87JsXfOf2vhD"
-    Stripe.api_key = "sk_live_OEmkzOULQhmnjPoOHKddTCcC"
+    Stripe.api_key = "sk_test_Foadiw9gjgVZ87JsXfOf2vhD"
+    # Stripe.api_key = "sk_live_OEmkzOULQhmnjPoOHKddTCcC"
 
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
