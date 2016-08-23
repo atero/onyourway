@@ -17,7 +17,9 @@
   <div class="col-md-10 text-left">
     <div class="form-group profile-block">
       <div class="fileinput fileinput-new" data-provides="fileinput">
-        <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;"></div>
+        <div class="fileinput-new thumbnail profile-thumbnail" style="width: 208px; height: 208px;">
+          <img src="{{inherit.user.photo_url}}" alt="" />
+        </div>
         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 208px; max-height: 208px;"></div>
         <div>
           <span class="btn btn-default profile-upload btn-file"><span class="fileinput-new">Upload picture</span><span class="fileinput-exists">Change</span>
