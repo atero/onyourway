@@ -1,15 +1,12 @@
 class SessionsController < Devise::SessionsController
   def create
-    build_resource
-    resource = User.find_for_database_authentication(email: params[:user][:email])
-    return invalid_login_attempt unless resource
-
-    if resource.valid_password?(params[:user][:password])
-      sign_in('user', resource)
-      render json: { success: true, auth_token: resource.authentication_token, email: resource.email }
-      return
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message(:notice, :signed_in) if is_flashing_format?
+    sign_in(resource_name, resource)
+    yield resource if block_given?
+    respond_with resource, :location => after_sign_in_path_for(resource) do |format|
+      format.json {render :json => resource } # this code will get executed for json request
     end
-    invalid_login_attempt
-end
+  end
 
 end
