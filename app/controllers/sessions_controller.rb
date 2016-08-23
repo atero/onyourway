@@ -10,7 +10,7 @@ class SessionsController < Devise::SessionsController
     yield resource if block_given?
     respond_with resource, location: after_sign_in_path_for(resource) do |format|
       p '88888888888888888888888888888888888888'
-      p resource.photo.url
+      p resource.photo.url(:square)
       p '88888888888888888888888888888888888888'
       resource[:photo_url] = resource.photo.url
       format.json { render json: resource } # this code will get executed for json request
