@@ -20,10 +20,14 @@
       </div>
     </div>
 
-    <div class="form-group main-date-group">
+    <div class="form-group main-date-group input-group date" id="datetimepicker1">
       <label for="date">Date:</label>
-      <input type="date" class="form-control search-input main-search-input" ng-model="local.shipment.date">
+      <input type="text" class="form-control search-input main-search-input" ng-model="local.shipment.date">
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
     </div>
+
 
     <div class="form-group main-message-group">
         <label for="message">Message:</label>
@@ -78,3 +82,8 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
+<script type="text/javascript">
+           $(function () {
+               $('#datetimepicker1').datetimepicker();
+           });
+       </script>
