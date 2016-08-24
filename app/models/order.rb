@@ -26,7 +26,7 @@ class Order
    field :reward, type: Float
    field :total_price, type: Float
    field :base64_image, type: String
-   field :status, type: String
+   field :status, type: String, :default => 'pending'
    field :accepted_shipment, type: String, :default => 'false'
    ## RELATIONSHIPS
    belongs_to :user
