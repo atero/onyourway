@@ -55,7 +55,7 @@ module Api
     private
 
     def order_params
-      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from, :accepted_shipment)
+      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from, :accepted_shipment, :status)
     end
   end
 end
