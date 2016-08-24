@@ -40,16 +40,14 @@
   </head>
   <body ng-app='ShopNShip' ng-controller="MainCtrl">
     <%= yield %>
-
         <script type="text/javascript">
                $(function () {
                    $('#datepicker2').datepicker({
-                       locale: 'en',
                        format: "dd/mm/yyyy"
                    });
                });
            </script>
-           <script src="js/jquery-1.9.1.min.js"></script>
+         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/bootstrap-datepicker.js"></script>
   </body>
 </html>
