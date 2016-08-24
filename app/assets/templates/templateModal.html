@@ -78,3 +78,16 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
+<script>
+webshims.setOptions('forms-ext', {types: 'date'});
+webshims.polyfill('forms forms-ext');
+$.webshims.formcfg = {
+en: {
+  dFormat: '-',
+  dateSigns: '-',
+  patterns: {
+      d: "yy-mm-dd"
+  }
+}
+};
+</script>
