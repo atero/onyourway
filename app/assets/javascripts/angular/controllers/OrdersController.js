@@ -35,7 +35,8 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     modalInstance.result.then(function(shipment) {
 
       order.accepted_shipment = shipment.id;
-      shipment.status = "accepted-" + order.id;
+      order.status = "accepted"
+      //shipment.status = "accepted-" + order.id;
       $scope.local.conversation_shipment = shipment;
       Shipment.update({
         id: shipment.id
@@ -49,7 +50,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       }, {
         order: order
       }, function(res) {
-        
+
       })
 
       console.log('pay');
