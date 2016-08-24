@@ -1,0 +1,90 @@
+<div class="narrow-banner-orders ng-scope">
+  <div class="row">
+    <div class="col-md-12">
+
+    </div>
+  </div>
+</div>
+<div class="text-center profile-body orders-block container-fluid" resize>
+  <div class="col-md-2">
+    <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments', 'payout'].indexOf(inherit.currentState()) > -1">
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+      <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-5">
+    <div class="col-md-12">
+      <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
+      <div class="from-to-date" ng-repeat="shipment in local.shipments">
+        <div class="col-sm-12">
+          <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
+          <p class="offers">You have sent {{shipment.orders.length}} offers for this trip</p>
+        </div>
+        <div class="" ng-repeat="order in shipment.orders">
+          <div class="col-sm-12 hover-div" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
+            <div class="col-sm-2 first-last-name text-center">
+              <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
+              <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.photo}}" alt="">
+            </div>
+            <div class="col-sm-10 right-side">
+              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
+                <div class="home-table-th text-center home-span1" valign="middle">{{order.item}}</div>
+              </div>
+              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Price
+                <div class="home-table-th text-center home-span2" valign="middle">{{order.price}}€</div>
+              </div>
+              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Reward
+                <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}€</div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="separator-gray"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <table class="table">
+    <thead>
+      <th class="home-table-th text-center"></th>
+      <th class="home-table-th text-center">What</th>
+      <th class="home-table-th text-center">From</th>
+      <th class="home-table-th text-center">To</th>
+      <th class="home-table-th text-center">Reward</th>
+      <th class="home-table-th text-center">Price</th>
+      <th class="home-table-th text-center">Quantity</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="width:50px" class="home-table-td text-center"><img style="width:50px" class="profile-photo" ng-src="{{local.data_to_show.order.photo}}" alt="">{{local.data_to_show.order.name}}</th>
+          <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.item}}</th>
+            <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.from.join("/ ")}}</th>
+              <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.to}}</th>
+                <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.reward}}€</th>
+                  <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.price}}€</th>
+                    <td class="home-table-th text-center" valign="middle">{{local.data_to_show.order.quantity}}</th>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- <div class="col-md-4">
+    <p class="lead text-center">Travels you have proposed</p>
+    <table class="table">
+      <thead>
+        <th class="home-table-th text-center">From</th>
+        <th class="home-table-th text-center">To</th>
+        <th class="home-table-th text-center">When</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="shipment in local.shipments" class="clickableRow">
+          <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.from}}</th>
+            <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.to}}</th>
+              <td class="home-table-th text-center" valign="middle" ng-show="local.data_to_show = shipment">{{shipment.date | date : mediumDate}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
