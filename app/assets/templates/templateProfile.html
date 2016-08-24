@@ -18,7 +18,7 @@
     <div class="form-group profile-block">
       <div class="fileinput fileinput-new" data-provides="fileinput">
         <div class="fileinput-new thumbnail profile-thumbnail" style="width: 200px; height: 200px;">
-          <img ng-show="!!inherit.user.photo_url" src="{{inherit.user.photo_url}}" alt="" />
+          <img ng-show="!!inherit.user.photo_url" ng-src="{{inherit.user.photo_url}}" alt="" />
         </div>
         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
         <div>
