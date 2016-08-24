@@ -20,24 +20,21 @@
       </div>
     </div>
 
-    <div class="form-group main-date-group" id="datetimepicker1">
+    <div class="form-group main-date-group date" id="datetimepicker1">
       <label for="date">Date:</label>
       <input type="text" class="form-control search-input main-search-input" ng-model="local.shipment.date">
-      <span class="input-group-addon">
-          <span class="glyphicon glyphicon-calendar"></span>
-      </span>
+      <script type="text/javascript">
+            $(function () {
+                $("#datetimepicker1").datetimepicker();
+            });
+        </script>
     </div>
-
 
     <div class="form-group main-message-group">
         <label for="message">Message:</label>
         <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control main-additional-textarea" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
     </div>
-    <script type="text/javascript">
-               $(function () {
-                   $('#datetimepicker1').datetimepicker();
-               });
-           </script>
+
 </div>
 
 <!-- <div ng-if="local.usertype == 'shopper' && !local.validated" class="modal-body">
@@ -87,3 +84,8 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
+<script type="text/javascript">
+           $(function () {
+               $('#datetimepicker1').datetimepicker();
+           });
+       </script>
