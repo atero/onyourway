@@ -46,7 +46,7 @@
         </select>
         <br/>
         <label for="" class="birth-date">Birth date</label>
-        <input type="date" name="name" value="" ng-model="inherit.user.birthdate" data-provide="datepicker">
+        <input type="date" id="datepicker2" name="name" value="" ng-model="inherit.user.birthdate" data-provide="datepicker">
         <br/>
         <label for="" class="label-e-mail">E-mail</label>
         <input type="email" name="name" value="" ng-model="inherit.user.email">
@@ -61,5 +61,16 @@
       </div>
     </form>
   </div>
+
+  <script type="text/javascript">
+              $(document).ready(function () {
+
+                  $('#datepicker2').datepicker({
+                      format: "mm/dd/yyyy"
+                  });
+
+              });
+          </script>
+
 
 </div>
