@@ -20,22 +20,24 @@
       </div>
     </div>
 
-    <div class="form-group main-date-group date" id="datetimepicker1 ">
+    <div class="form-group main-date-group date">
       <label for="date">Date:</label>
-      <input type="text" class="form-control search-input main-search-input" ng-model="local.shipment.date">
+      <input type="text" id="datepicker2" class="form-control search-input main-search-input" placeholder="Click to show date" ng-model="local.shipment.date">
     </div>
 
     <div class="form-group main-message-group">
         <label for="message">Message:</label>
         <textarea name="content" type="text" ng-model="local.shipment.message" class="form-control main-additional-textarea" placeholder="Additional information (max weight to deliver, reward etc...)"></textarea>
     </div>
+    <script type="text/javascript">
+                $(document).ready(function () {
 
-    <script  type="text/javascript">
-          $(function () {
-              $("#datetimepicker1 ").datetimepicker();
-          });
-      </script>
+                    $('#datepicker2').datepicker({
+                        format: "mm/dd/yyyy"
+                    });
 
+                });
+            </script>
 </div>
 
 <!-- <div ng-if="local.usertype == 'shopper' && !local.validated" class="modal-body">
@@ -85,8 +87,3 @@
     <button class="btn btn-default cancel-modal-btn" type="button" ng-click="cancel()">Cancel</button>
     <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
-<script type="text/javascript">
-           $(function () {
-               $('#datetimepicker1').datetimepicker();
-           });
-       </script>
