@@ -1,4 +1,4 @@
-App.controller('ModalCtrl',['$scope','$uibModalInstance', '$windowProvider', "order_id", function($scope,$uibModalInstance,order_id,$windowProvider){
+App.controller('ModalCtrl',['$scope','$uibModalInstance',  "order_id", function($scope,$uibModalInstance,order_id){
 	var $window = $windowProvider.$get();
 	$scope.local={
 		shipment: {
@@ -36,7 +36,8 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance', '$windowProvider', "or
 
 }]);
 
-App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($scope, $uibModalInstance, type){
+App.controller('LoginCtrl',['$scope', '$uibModalInstance', '$windowProvider', 'type', function($scope, $uibModalInstance, type, $windowProvider){
+var $window = $windowProvider.$get();
 	$scope.local={
 		type:type
 	}
