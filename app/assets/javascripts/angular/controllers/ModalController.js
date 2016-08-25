@@ -47,7 +47,7 @@ App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($sco
 	$scope.signup = function(isValid){
 		if (isValid) {
       $uibModalInstance.close($scope.local)
-			_fbq.push(['track','899238753537316']);
+			_fbq.push(['track','899238753537316', {'action' : 'signup'}]);
     }
 
 	}
