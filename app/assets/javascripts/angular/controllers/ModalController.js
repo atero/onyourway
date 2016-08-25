@@ -1,4 +1,5 @@
-App.controller('ModalCtrl',['$scope','$uibModalInstance', "order_id", function($scope,$uibModalInstance,order_id){
+App.controller('ModalCtrl',['$scope','$uibModalInstance', '$windowProvider', "order_id", function($scope,$uibModalInstance,order_id,$windowProvider){
+	var $window = $windowProvider.$get();
 	$scope.local={
 		shipment: {
 			order_id: order_id,
@@ -48,6 +49,7 @@ App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($sco
 		if (isValid) {
       $uibModalInstance.close($scope.local)
 			_fbq.push(['track','899238753537316', {'action' : 'signup'}]);
+			$window.fbq('track', 'CompleteRegistration');
     }
 
 	}
