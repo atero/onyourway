@@ -35,7 +35,7 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance',  "order_id", function(
 
 }]);
 
-App.controller('LoginCtrl',['$scope', '$uibModalInstance', '$window', 'type', function($scope, $uibModalInstance, type, $window){
+App.controller('LoginCtrl',['$scope', '$uibModalInstance', 'type', function($scope, $uibModalInstance, type){
 
 	$scope.local={
 		type:type
