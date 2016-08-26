@@ -14,7 +14,6 @@
       <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
     </ul>
   </div>
-
   <div class="col-md-5">
     <div class="col-md-12">
       <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
@@ -49,8 +48,10 @@
   </div>
   <div class="col-md-5 shipmentt-details" ng-if="!!local.shipmen_to_show" resize>
     <div class="main-status-travels">
-      <p class="status-travels">Status:</p> <b class="main-pending">{{local.shipmen_to_show.status}}</b>
-      <p class="lead text-center main-lead">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
+      <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
+      <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
+      <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer.</p>
+      <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id">We are sorry, {{local.data_to_show.user.first_name}} has rejected your offer.</p>
       <div class="col-sm-9">
         <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
           {{order.message}}

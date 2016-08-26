@@ -35,6 +35,7 @@ class PaymentController < ApplicationController
     @shipment = Shipment.where(id: shipment_id).first
     @order.accepted_shipment = shipment_id
     @shipment.status = "accepted-" + order_id
+    @order.status = "accepted"
     @order.save
     @shipment.save
     redirect_to(:back)
