@@ -36,10 +36,9 @@ class UserMailer < ApplicationMailer
 
   def token_email(email, name, traveler_name, token)
     @email = email
-    @message_text = txt
     @first_name = name
     @traveler_name = traveler_name
-    
+
     p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
 
     @url = 'https://shopnship.herokuapp.com'
