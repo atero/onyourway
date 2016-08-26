@@ -1,4 +1,5 @@
 class UserMailer < ApplicationMailer
+
   default from: 'support@onyourway.io'
 
   def welcome_email(email, name)
@@ -18,6 +19,32 @@ class UserMailer < ApplicationMailer
 
     @url = 'https://shopnship.herokuapp.com'
     mail(to: email, subject: 'New Message on OnYourWay')
+
+  end
+
+  def accepted_email(email, name, shoper_name)
+    @email = email
+    @first_name = name
+    @shoper_name = shoper_name
+
+    p '************************NEW MESSAGE - ACCEPTED**************************'
+
+    @url = 'https://shopnship.herokuapp.com'
+    mail(to: email, subject: 'OnYourWay - Travel accepted')
+
+  end
+
+  def token_email(email, name, traveler_name, token)
+    @email = email
+    @message_text = txt
+    @first_name = name
+    @traveler_name = traveler_name
+    @token = rand(100000 .. 999999)
+    p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
+
+    @url = 'https://shopnship.herokuapp.com'
+    mail(to: email, subject: 'OnYourWay - Get your token')
+
   end
 
 end

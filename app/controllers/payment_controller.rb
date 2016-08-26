@@ -33,11 +33,17 @@ class PaymentController < ApplicationController
 
     @order = Order.where(id: order_id).first
     @shipment = Shipment.where(id: shipment_id).first
+    @shoper =  User.where(id: @order.user_id).first
+    @traveler = User.where(id: @shipment.user_id).first
     @order.accepted_shipment = shipment_id
     @shipment.status = "accepted-" + order_id
     @order.status = "accepted"
     @order.save
     @shipment.save
+
+    UserMailer.accepted_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
+    UserMailer.token_email(@shoper.email, @shoper.first_name, @traveler.first_name, @token).deliver_later
+
     redirect_to(:back)
   end
 end
