@@ -38,6 +38,7 @@ class UserMailer < ApplicationMailer
     @email = email
     @first_name = name
     @traveler_name = traveler_name
+    @token = token
 
     p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
 
