@@ -39,7 +39,7 @@ class UserMailer < ApplicationMailer
     @message_text = txt
     @first_name = name
     @traveler_name = traveler_name
-    @token = rand(100000 .. 999999)
+    
     p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
 
     @url = 'https://shopnship.herokuapp.com'

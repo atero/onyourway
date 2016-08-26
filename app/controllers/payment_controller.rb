@@ -40,6 +40,7 @@ class PaymentController < ApplicationController
     @order.status = "accepted"
     @order.save
     @shipment.save
+    @token = rand(100000 .. 999999)
 
     UserMailer.accepted_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
     UserMailer.token_email(@shoper.email, @shoper.first_name, @traveler.first_name, @token).deliver_later
