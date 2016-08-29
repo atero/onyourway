@@ -44,6 +44,9 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     }, function(res) {
       console.log('sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf');
       console.log(res);
+      if (result.id == 'noid') {
+        $scope.inherit.loading = false;
+      }
       if (result.id != 'noid') {
         Message.create({
           shipment_id: res._id,
