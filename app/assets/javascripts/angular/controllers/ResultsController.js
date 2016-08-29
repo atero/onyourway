@@ -8,7 +8,6 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     results: orders
   }
 
-
   $scope.search = {
     to: "",
     from: ""
@@ -64,6 +63,15 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
 
   $scope.propose = function(type, result) {
+
+    if (!result){
+      result = {id: 0};
+    }
+
+    if(!$scope.inherit.user){
+      $scope.inherit.openSignin();
+      return;
+    }
 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
