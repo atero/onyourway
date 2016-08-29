@@ -47,13 +47,13 @@ module Api
           else
             render json: { messsage: 'Bad request' }, status: 400
           end
+        else
+          if @shipment.save
+              render json: @shipment, status: :accepted
+            else
+              render json: { messsage: 'Bad request' }, status: 400
+            end
         end
-      else
-        if @shipment.save
-            render json: @shipment, status: :accepted
-          else
-            render json: { messsage: 'Bad request' }, status: 400
-          end
       end
     end
 
