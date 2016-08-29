@@ -9,7 +9,7 @@ module Api
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
-        if params[:order_id] && params[:order_id] != 0
+        if params[:order_id] && params[:order_id] != "0"
           puts params[:order_id] + '***************************************'
           @shipment.order.push(@order) if @order
           puts 'Order #################################'
@@ -29,7 +29,7 @@ module Api
       else
         @shipment = Shipment.new(shipment_params)
         @shipment.user = current_user
-        if params[:order_id] && params[:order_id] != 0
+        if params[:order_id] && params[:order_id] != "0"
           puts params[:order_id] + '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
           @shipment.order = [@order] if @order
           puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
