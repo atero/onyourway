@@ -65,7 +65,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   $scope.propose = function(type, result) {
 
     if (!result){
-      result = {id: 0};
+      result = {id: "noid"};
     }
 
     if(!$scope.inherit.user){
