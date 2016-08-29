@@ -5,11 +5,11 @@ module Api
     def create
       @ext = Shipment.where({to: shipment_params['to'], from: shipment_params['from'], date: shipment_params['date'], user: current_user}).first
       @order = Order.where(id: params['order_id']).first
-      
+
       if @ext
         puts 'Exist!!!!!!!!!!!!!!!!!!'
         @shipment = @ext
-        if params[:order_id]
+        if params[:order_id] && params[:order_id] != "0"
           puts params[:order_id] + '***************************************'
           @shipment.order.push(@order) if @order
           puts 'Order #################################'
@@ -29,7 +29,7 @@ module Api
       else
         @shipment = Shipment.new(shipment_params)
         @shipment.user = current_user
-        if params[:order_id]
+        if params[:order_id] && params[:order_id] != "0"
           puts params[:order_id] + '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
           @shipment.order = [@order] if @order
           puts 'Order ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
@@ -47,6 +47,12 @@ module Api
           else
             render json: { messsage: 'Bad request' }, status: 400
           end
+        else
+          if @shipment.save
+              render json: @shipment, status: :accepted
+            else
+              render json: { messsage: 'Bad request' }, status: 400
+            end
         end
       end
     end
