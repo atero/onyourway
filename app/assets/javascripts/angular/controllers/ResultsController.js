@@ -28,7 +28,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
 
   newShipments = function(shipment, result) {
-		console.log(result.id + '**************************');
+    console.log(result.id + '**************************');
     $scope.inherit.loading = true;
     console.log($scope.inherit.user)
     shipment.to = shipment.to.address_components[0].long_name;
@@ -42,33 +42,40 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     }, {
       shipment: shipment
     }, function(res) {
-			console.log('sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf');
-			console.log(res);
-      Message.create({
-        shipment_id: res._id,
-				order_id: result.id,
-        token: $scope.inherit.user.token
-      }, {
-        message: {
-          text: shipment.message,
-          sender: $scope.inherit.user._id,
-          recipient: result.user_id
-        }
-      }, function(res) {
+      console.log('sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf');
+      console.log(res);
+      if (result.id == 'noid') {
         $scope.inherit.loading = false;
-        $scope.inherit.goState("shipments")
-      })
+      }
+      if (result.id != 'noid') {
+        Message.create({
+          shipment_id: res._id,
+          order_id: result.id,
+          token: $scope.inherit.user.token
+        }, {
+          message: {
+            text: shipment.message,
+            sender: $scope.inherit.user._id,
+            recipient: result.user_id
+          }
+        }, function(res) {
+          $scope.inherit.loading = false;
+          $scope.inherit.goState("shipments")
+        });
+      }
     })
 
   }
 
   $scope.propose = function(type, result) {
 
-    if (!result){
-      result = {id: 0};
+    if (!result) {
+      result = {
+        id: "noid"
+      };
     }
 
-    if(!$scope.inherit.user){
+    if (!$scope.inherit.user) {
       $scope.inherit.openSignin();
       return;
     }
