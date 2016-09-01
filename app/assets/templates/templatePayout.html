@@ -38,7 +38,7 @@
             Details
           </th>
         </tr>
-        <tr style="background-color: #f5f5f5;" ng-show="!inherit.user.is_spa && inherit.user.country != 'Lebanon'">
+        <tr style="background-color: #f5f5f5;" ng-show="!inherit.user.is_spa && inherit.user.country != 'Lebanon' && inherit.user.country.address_components[0].long_name != 'Lebanon'">
           <td>
             Paypal
           </td>
