@@ -100,29 +100,37 @@
             <!-- <br/> You're about to publish the following purchase order: -->
             <br/>
             <div class="padding-top">
-              <div class="col-sm-12">  <span class="pull-left summary-span">From:</span><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name || 'Anywhere'}}</span></div>
+              <div class="col-sm-12">  <span class="pull-left summary-span">From:</span><span class="pull-right summary-span">{{local.order.from.address_components[0].long_name || 'Anywhere'}}</span>
+              </div>
+              <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">To:</span><span class="pull-right summary-span">{{local.order.to.address_components[0].long_name}}</span>
               </div>
+              <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">Quantity:</span><span class="pull-right summary-span">{{local.order.quantity}}</span>
               </div>
+              <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left  summary-span">Item:</span><span class="pull-right summary-span">{{local.order.item}}</span>
               </div>
-              <br/> {{local.order.details}}
-              <br/>
+              <div class="clearfix"></div>
+               {{local.order.details}}
+               <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}€</span>
               </div>
+              <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">Traveller's reward:</span><span class="pull-right summary-span">{{local.order.reward}}€</span>
               </div>
+              <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">On Your Way's fee:</span><span class="pull-right summary-span summary-span">
                   {{(( local.order.price*local.order.quantity + local.order.reward )* 0.07 + 6).toFixed(2)}}€
                 </span>
               </div>
+              <div class="clearfix"></div>
             </div>
             <div class="padding-top col-sm-12">
               <h5 class="pull-left summary-span">Total:</h5>
