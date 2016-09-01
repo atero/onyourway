@@ -129,5 +129,12 @@
       <input type="text" size="20" class="form-control payout-form-control" options="fromOptions" placeholder="Email" ng-model="inherit.user.paypal_email" />
       <button type="button" class="btn btn-default payout-btn" name="button" ng-click="save_payout()">OK</button>
     </div>
+    <div class="pay-pal-account" ng-show="inherit.user.country == 'Lebanon' || inherit.user.country.address_components[0].long_name == 'Lebanon'">
+      <p class="account-bank-info">First name</p>
+      <input type="text" size="20" class="form-control" ng-model="inherit.user.first_name" />
+      <p class="account-bank">Last name</p>
+      <input type="text" size="20" class="form-control" ng-model="inherit.user.last_iban" />
+      <button type="button" class="btn btn-default payout-btn" name="button" ng-click="save_payout()">OK</button>
+    </div>
   </div>
 </div>
