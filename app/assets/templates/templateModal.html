@@ -1,10 +1,11 @@
 <div class="modal-header main-modal-header">
-  <p ng-if="local.usertype == 'traveller' && with_order" class="lead text-center">Propose to deliver</p>
-  <p ng-if="local.usertype == 'traveller' && !with_order" class="lead text-center">Register my trip</p>
+  <p ng-if="local.usertype == 'traveller' && with_order" class="lead text-center">Propose to delivery</p>
+
   <!-- <p ng-if="local.usertype == 'shopper'" class="lead text-center">Request a delivery</p> -->
 </div>
 <div class="main-modal-title">
-  <p ng-if="!local.validated" class="modal-title">Send Message</p>
+  <p ng-if="!local.validated && with_order" class="modal-title">Send Message</p>
+  <p ng-if="local.usertype == 'traveller' && !with_order" class="lead text-center">Register my trip</p>
 </div>
 <div ng-if="!local.validated" class="modal-body main-modal-body">
   <div class="form-group main-from-group">
