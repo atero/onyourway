@@ -67,13 +67,12 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
 
   }
 
-  $scope.propose = function(type, result) {
-    $scope.with_order = true;
+  $scope.propose = function(type, result) {    
     if (result == false) {
       result = {
         id: "noid"
       };
-      $scope.with_order = false;
+
     }
 
     if (!$scope.inherit.user) {

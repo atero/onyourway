@@ -6,6 +6,10 @@ App.controller('ModalCtrl',['$scope','$uibModalInstance',  "order_id", function(
 			to: null
 		}
 	}
+	$scope.with_order = true;
+	if(order_id == 'noid'){
+		$scope.with_order = false;
+	}
 	$scope.ok = function(){
 		if($scope.local.validated){
 			$uibModalInstance.close($scope.local.shipment)
