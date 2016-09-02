@@ -74,13 +74,13 @@
   <h5 ng-if="with_order">You're about to send the following message:</h5>
   <h5 ng-if="!with_order">Thank you, we will send you an email when there are new items matching your trip.</h5>
 
-  <p class="second-modal-text" ng-if="local.usertype == 'with_order">Hi, I'm travelling from {{local.shipment.from.address_components[0].long_name}} to {{local.shipment.to.address_components[0].long_name}} on the {{local.shipment.date| date : mediumDate}}. {{local.shipment.message}}
+  <p class="second-modal-text" ng-if="with_order">Hi, I'm travelling from {{local.shipment.from.address_components[0].long_name}} to {{local.shipment.to.address_components[0].long_name}} on the {{local.shipment.date| date : mediumDate}}. {{local.shipment.message}}
   </p>
 
   <!-- <p ng-if = "local.usertype == 'shopper'">Hi, I need {{local.order_q}} {{local.order_item}} to be delivered from {{local.ad.from}} to {{local.ad.to}}. An approximative price would be of {{local.order_q*local.order_price}}€ and you reward would be of {{local.order_reward}}€.
 {{local.order_message}}</p> -->
 
-  <!-- <p class="second-modal-text">Looking forward to hearing from you!</p> -->
+  <p class="second-modal-text" ng-if="with_order">Looking forward to hearing from you!</p> 
 
 </div>
 
