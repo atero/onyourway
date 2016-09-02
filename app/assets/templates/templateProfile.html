@@ -46,7 +46,7 @@
         </select>
         <br/>
         <label for="" class="birth-date">Birth date</label>
-        <input id="datepicker22" name="name" placeholder="dd/mm/yyyy" ng-model="inherit.user.birthdate" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+        <input id="datepicker22" name="name" placeholder="dd/mm/yyyy" ng-model="inherit.user.birthdate" data-provide="datepicker" data-date-format="dd/mm/yyyy" class="form-control">
         <br/>
         <label for="" class="label-e-mail">E-mail</label>
         <input type="email" name="name" value="" ng-model="inherit.user.email">
@@ -66,7 +66,11 @@
           $('#datepicker22').datepicker({
               dateFormat: "dd/mm/yy"
           });
-          var date = $('#datepicker22').val();
+          $('#datepicker22').on("changeDate", function() {
+    $('#datepicker22').val(
+        $('#datepicker22').datepicker('getFormattedDate')
+    );
+});
       });
   </script>
 </div>
