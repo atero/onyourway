@@ -71,8 +71,8 @@
 
 <div ng-if="local.validated" class="modal-body second-modal-body">
 
-  <h5 ng-if="local.usertype == 'with_order">You're about to send the following message:</h5>
-  <h5 ng-if="local.usertype == 'traveller' && !with_order">Thank you, we will send you an email when there are new items matching your trip.</h5>
+  <h5 ng-if="with_order">You're about to send the following message:</h5>
+  <h5 ng-if="!with_order">Thank you, we will send you an email when there are new items matching your trip.</h5>
 
   <p class="second-modal-text" ng-if="local.usertype == 'with_order">Hi, I'm travelling from {{local.shipment.from.address_components[0].long_name}} to {{local.shipment.to.address_components[0].long_name}} on the {{local.shipment.date| date : mediumDate}}. {{local.shipment.message}}
   </p>
@@ -85,6 +85,6 @@
 </div>
 
 <div class="modal-footer main-modal-footer">
-  <button class="btn btn-default cancel-modal-btn" ng-if="local.usertype == 'with_order" type="button" ng-click="cancel()">Cancel</button>
+  <button class="btn btn-default cancel-modal-btn" ng-if="with_order" type="button" ng-click="cancel()">Cancel</button>
   <button class="btn btn-default main-modal-btn" type="button" ng-click="ok()">OK</button>
 </div>
