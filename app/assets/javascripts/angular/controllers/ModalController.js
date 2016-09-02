@@ -19,7 +19,7 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
       }
     }
 		else{
-			$('ng-invalid').addClass('error');
+			$('.ng-invalid').addClass('error');
 		}
   }
 
