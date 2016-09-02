@@ -3,7 +3,7 @@ App.controller('ProfileCtrl', ['$scope', '$state', 'localuser', 'User', function
   if (localuser) $scope.inherit.user = localuser;
   console.log($scope.inherit.user);
   if (!!$scope.inherit.user.birthdate) {
-    var today = = new Date($scope.inherit.user.birthdate);
+    var today = new Date($scope.inherit.user.birthdate);
     var dd = today.getDate();
     var mm = today.getMonth() + 1; //January is 0!
 
@@ -17,6 +17,7 @@ App.controller('ProfileCtrl', ['$scope', '$state', 'localuser', 'User', function
     var today = dd + '/' + mm + '/' + yyyy;
     $scope.inherit.user.birthdate = today;
   }
+
   $scope.local = {
     user: {
 
