@@ -18,6 +18,9 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
         $scope.local.validated = true
       }
     }
+		else{
+			$('ng-invalid').addClass('error');
+		}
   }
 
   $scope.cancel = function() {
