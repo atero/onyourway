@@ -26,21 +26,80 @@
                     <p class="lead text-center welcome-p">Buy anything from anywhere, even if it’s not sold online</p>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4 main-col-center">
-                        <div class="thumb-items">
-                            <img src="/images/item-images.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4 main-col-center">
-                        <div class="thumb-items">
-                            <img src="/images/item-images2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4 main-col-center">
-                        <div class="thumb-items">
-                            <img src="/images/item-images3.jpg" alt="">
-                        </div>
-                    </div>
+                  <script>
+    jQuery(document).ready(function ($) {
+        var jssor_1_options = {
+          $AutoPlay: true,
+          $AutoPlaySteps: 1,
+          $SlideDuration: 160,
+          $SlideWidth: 460,
+          $SlideSpacing: 50,
+          $Cols: 3,
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$,
+            $Steps: 1
+          }
+        };
+
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales while window resizing
+        function ScaleSlider() {
+            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+            if (refSize) {
+                refSize = Math.min(refSize, 1480);
+                jssor_1_slider.$ScaleWidth(refSize);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 26);
+            }
+        }
+        ScaleSlider();
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        //responsive code end
+    });
+</script>
+
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1480px; height: 307px; overflow: hidden; visibility: hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+        <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+    </div>
+    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1480px; height: 307px; overflow: hidden;">
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images.jpg" />
+        </div>
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images2.jpg" />
+        </div>
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images3.jpg" />
+        </div>
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images2.jpg" />
+        </div>
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images2.jpg" />
+        </div>
+        <div style="display: none;">
+            <img data-u="image" src="/images/item-images2.jpg" />
+        </div>
+    </div>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+        <!-- bullet navigator item prototype -->
+        <div data-u="prototype" style="width:21px;height:21px;">
+            <div data-u="numbertemplate"></div>
+        </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+</div>
                 </div>
             </div>
 </div>
