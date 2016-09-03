@@ -1,0 +1,84 @@
+  <div id="overlay" ng-if='inherit.loading'></div>
+  <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid nav-wrapper">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" /></a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse pull-right home-block-fa" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active-orders">
+                    <a ng-click="inherit.goState('results')" class="btn btn-sm btn-act-ord orders-active-a">Active Orders</a>
+                </li>
+                <!-- <li class="about-us">
+                    <a ng-click="">About us</a>
+                </li> -->
+                  <li ng-show="!inherit.user" class="signup">
+                      <a ng-click="inherit.openSignup()">Sign up</a>
+                  </li>
+                  <li ng-show="inherit.user" class="signin">
+                      <a ng-click="inherit.logOut()">Sign out</a>
+                  </li>
+                  <li ng-show="!inherit.user" class="signin">
+                      <a ng-click="inherit.openSignin()">Sign in</a>
+                  </li>
+                  <li ng-show="inherit.user" class="profile">
+                      <a ng-click="inherit.goState('profile')"><i class="fa fa-user"></i> {{inherit.user.first_name}}</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+<!-- <ul class="nav nav-pills nav-stacked left-bar" ng-show="['profile', 'orders', 'shipments'].indexOf(inherit.currentState()) > -1">
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+  <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+</ul> -->
+  <ui-view autoscroll="true">
+    <h2>The card has been declined!</h2>
+  </ui-view>
+    <div class="footer-wrapper">
+        <!-- Footer -->
+        <footer class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6 col-md-6 main-col-center">
+                              <ul class="footer-nav">
+                                  <li>
+                                      <a ng-click="inherit.goState('faq')">FAQ</a>
+                                  </li>
+                                  <li>
+                                      <a ng-click="inherit.goState('conditions')">Terms of use</a>
+                                  </li>
+                                  <!-- <li>
+                                      <a href="#">Contact Us</a>
+                                  </li> -->
+                              </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-6 col-md-6 text-right">
+                          <p class="footer-copy-p">&copy; On Your Way 2016</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script type="text/javascript">
+$(document).on('click',function(){
+  if ($('.collapse').css('display') == 'block') {
+    $('.collapse').collapse('hide');
+  }
+})
+</script>
