@@ -38,21 +38,20 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       order.status = "accepted"
       console.log('8********************************');
       $scope.local.conversation_shipment = shipment;
-      Shipment.update({
-        id: shipment.id
-      }, {
-        shipment: shipment
-      }, function(res) {
-        // some callback if needed
-      });
-      Order.update({
-        id: order.id
-      }, {
-        order: order
-      }, function(res) {
-
-      })
-
+      // Shipment.update({
+      //   id: shipment.id
+      // }, {
+      //   shipment: shipment
+      // }, function(res) {
+      //   // some callback if needed
+      // });
+      // Order.update({
+      //   id: order.id
+      // }, {
+      //   order: order
+      // }, function(res) {
+      //
+      // })
       console.log('pay');
     })
 
