@@ -50,7 +50,17 @@
     <div class="main-status-travels">
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
       <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
-      <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer.</p>
+      <div class=""  ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
+        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer.</p>
+        Enter the code here:
+        <div class="code-wrapper">
+          <input type="text" name="name" value="">
+          <button type="button" name="button" class="btn btn-success" onclick="sendToken()">Send</button>
+        </div>
+
+      </div>
+
+
       <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.data_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult Active orders for many other items awaiting a delivery.</p>
       <div class="col-sm-9">
         <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
