@@ -1,4 +1,4 @@
-App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Order', 'Message', function($scope, Order, $state, localuser, shipments, Message){
+App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Order', 'Message', function($scope, $state, localuser, shipments, Order, Message){
 
 	if (localuser) $scope.inherit.user = localuser;
 
@@ -22,7 +22,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
 		});
-	}
+	};
 
 	$scope.sendToken = function(order, shipment){
 		if($scope.acc_token != ''){

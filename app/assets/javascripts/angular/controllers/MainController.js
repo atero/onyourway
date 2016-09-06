@@ -1,5 +1,11 @@
 App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", function($scope,$rootScope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q){
 
+  $(document).on('click',function(){
+    if ($('.collapse').css('display') == 'block') {
+      $('.collapse').collapse('hide');
+    }
+  })
+
     $rootScope.$on('$stateChangeStart', function(){
         $scope.inherit.loading = true;
     })
