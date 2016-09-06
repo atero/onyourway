@@ -1,4 +1,4 @@
-App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Message', function($scope,$state, localuser, shipments, Message){
+App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Order', 'Message', function($scope, Order, $state, localuser, shipments, Message){
 
 	if (localuser) $scope.inherit.user = localuser;
 
