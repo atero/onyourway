@@ -984,10 +984,11 @@ button.btn-next {
   button{
     position: absolute;
     right: 0;
+    top: 0;
     z-index: 9;
   }
   input{
-    height: 32px;
+    height: 34px;
     border-radius: 3px;
     width: 100%;
     border: 1px solid #ccc;

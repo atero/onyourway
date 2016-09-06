@@ -24,4 +24,18 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Mes
 		});
 	}
 
+	$scope.sendToken = function(order, shipment){
+		if($scope.acc_token != ''){
+			order.confirm_token = $scope.acc_token;
+			Order.update({
+			  id: order.id
+			}, {
+			  order: order
+			}, function(res) {
+
+			})
+		}
+	}
+
+
 }]);
