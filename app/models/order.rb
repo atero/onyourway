@@ -30,6 +30,7 @@ class Order
    field :accepted_shipment, type: String, :default => 'false'
    field :accepted_token, type: String
    field :confirm_token, type: String
+   
    ## RELATIONSHIPS
    belongs_to :user
    has_and_belongs_to_many :shipments

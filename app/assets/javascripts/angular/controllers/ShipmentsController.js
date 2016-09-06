@@ -1,7 +1,6 @@
 App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Order', 'Message', function($scope, $state, localuser, shipments, Order, Message){
 
 	if (localuser) $scope.inherit.user = localuser;
-
 	$scope.local={
 		shipments: shipments
 	}
@@ -25,8 +24,8 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 	};
 
 	$scope.sendToken = function(order, shipment){
-		if($scope.acc_token != ''){
-			order.confirm_token = $scope.acc_token;
+		console.log(order.confirm_token + " Tok");
+		if(order.confirm_token != ''){
 			Order.update({
 			  id: order.id
 			}, {
