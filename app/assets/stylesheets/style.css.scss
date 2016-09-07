@@ -978,7 +978,7 @@ button.btn-next {
   padding: 10px 15px;
 }
 .code-wrapper{
-  width: 300px;
+  width: 180px;
   margin: 6px auto;
   position: relative;
   button{
@@ -986,6 +986,7 @@ button.btn-next {
     right: 0;
     top: 0;
     z-index: 9;
+    background: #11e9de;
   }
   input{
     height: 34px;
