@@ -51,7 +51,7 @@
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
       <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
       <div class=""  ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
-        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}€ (=item price +reward) as soon as you enter the confirmation code</p>
+        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}€  as soon as you enter the confirmation code</p>
         Enter the code here:
         <div class="code-wrapper">
           <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token">
