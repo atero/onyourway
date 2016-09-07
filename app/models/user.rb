@@ -33,6 +33,8 @@ class User
   field :payout_name, type: String
   field :payout_iban, type: String
   field :payout_swift, type: String
+  field :payout_first_name, type: String
+  field :payout_last_name, type: String
   field :is_spa, type: Boolean
   ## Recoverable
   field :reset_password_token,   type: String
