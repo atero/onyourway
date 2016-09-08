@@ -36,7 +36,7 @@
 
   </div>
 
-  <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
+  <div class="col-md-6" ng-show="local.data_to_show">
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">Travels proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'accepted'">You have accepted this travel.</p>
