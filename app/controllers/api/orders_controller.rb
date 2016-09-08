@@ -47,11 +47,12 @@ module Api
       @order = Order.where(id: params[:order_id]).first
       if order_params['confirm_token'] && order_params['confirm_token'] == @order.accepted_token
         order_params['status'] = 'delivered'
+        @ord_par = order_params
       end
-      if @order && @order.update(order_params)
+      if @order && @order.update(@ord_par)
 
         p '999999999999999999999999999999999999999999'
-        p order_params
+        p @ord_par
         p '9999999999999999999999999999999999999999999'
         render json: @order, status: :accepted
       else
