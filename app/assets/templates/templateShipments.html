@@ -58,7 +58,8 @@
           <button type="button" name="button" class="btn btn-success" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
         </div>
       </div>
-      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.data_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult Active orders for many other items awaiting a delivery.</p>
+      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status != 'pending' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.data_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult Active orders for many other items awaiting a delivery.</p>
+      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'delivered' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id)">Thanks for delivering the item! You will receive {{(local.data_to_show.total_price - 6) / 1.07}}€ via your prefered payout method in the upcoming days.</p>
       <div class="col-sm-9">
         <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
           {{order.message}}
