@@ -45,7 +45,7 @@ module Api
 
     def update
       @order = Order.where(id: params[:order_id]).first
-      if order_params.confirm_token && order_params.confirm_token == @order.accepted_token
+      if order_params['confirm_token'] && order_params['confirm_token'] == @order.accepted_token
         @order.status = 'delivered'
       end
       if @order && @order.update(order_params)
