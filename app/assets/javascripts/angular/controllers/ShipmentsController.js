@@ -4,6 +4,8 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 	$scope.local={
 		shipments: shipments
 	}
+	$scope.local.shipmen_to_show = shipments[0];
+	$scope.local.data_to_show = shipments[0].orders[0];
 	$scope.toOptions = {
 		types: ['(cities)'],
 	}
