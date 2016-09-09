@@ -54,8 +54,8 @@
         <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}€  as soon as you enter the confirmation code</p>
         Enter the code here:
         <div class="code-wrapper">
-          <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token">
-          <button type="button" name="button" class="btn btn-success" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
+          <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
+          <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
         </div>
       </div>
       <p class="lead text-center main-lead" ng-if="(local.data_to_show.status != 'pending' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.data_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult Active orders for many other items awaiting a delivery.</p>
