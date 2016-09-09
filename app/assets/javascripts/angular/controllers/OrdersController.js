@@ -6,6 +6,8 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     orders: orders,
     conversation_shipment: null
   }
+  $scope.local.data_to_show = orders[0];
+  $scope.local.conversation_shipment = $scope.local.data_to_show.shipments[0];
   console.log($scope.local.orders);
 
 
