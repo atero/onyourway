@@ -7,7 +7,11 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     conversation_shipment: null
   }
   $scope.local.data_to_show = orders[0];
-  $scope.local.conversation_shipment = $scope.local.data_to_show.shipments[0];
+  if ($scope.local.data_to_show.shipments) {
+    $scope.local.conversation_shipment = $scope.local.data_to_show.shipments[0];
+  }
+
+
   console.log($scope.local.orders);
 
 
@@ -27,9 +31,11 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       size: "md",
       resolve: {
         payment_details: function() {
-          return {  customer_name: $scope.inherit.user.first_name + ' ' + $scope.inherit.user.last_name,
-                    order: order,
-                    shipment: shipment};
+          return {
+            customer_name: $scope.inherit.user.first_name + ' ' + $scope.inherit.user.last_name,
+            order: order,
+            shipment: shipment
+          };
         }
       }
     });
