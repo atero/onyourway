@@ -43,7 +43,7 @@ class UserMailer < ApplicationMailer
     p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
 
     @url = 'https://shopnship.herokuapp.com'
-    mail(to: email, subject: 'OnYourWay - Payment recieved')
+    mail(to: email, subject: 'OnYourWay - Payment received')
 
   end
 
