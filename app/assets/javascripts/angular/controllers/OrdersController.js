@@ -7,14 +7,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     conversation_shipment: null
   }
 
-  if (orders.length > 0) {
-    $scope.local.data_to_show = orders[0];
-    if ($scope.local.data_to_show.shipments) {
-      if ($scope.local.data_to_show.shipments.length > 0) {
-        $scope.local.conversation_shipment = $scope.local.data_to_show.shipments[0];
-      }
-    }
-  }
+
 
 
   console.log($scope.local.orders);
