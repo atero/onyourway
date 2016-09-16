@@ -30,13 +30,14 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   newOrder = function() {
     if (!!$scope.local.order.from.address_components) {
       $scope.local.order.from = $scope.local.order.from.address_components[0].long_name;
-    } else {
-      $scope.local.order.from = "Anywhere";
+    }
+    else{
+      $scope.local.order.from =   "Anywhere";
     }
 
     $scope.local.order.to = $scope.local.order.to.address_components[0].long_name;
     $scope.inherit.loading = true;
-    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity) * 1.07 + 6
+    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity)*1.07 + 6
     Order.create({
       token: $scope.inherit.user.token
     }, {
@@ -71,11 +72,8 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   $scope.stepForward = function() {
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
-    if (!$scope.local.order.price < 0) {
-      $scope.local.stages[curr_stage] = false
-      $scope.local.stages[curr_stage + 1] = true
-    }
-
+    $scope.local.stages[curr_stage] = false
+    $scope.local.stages[curr_stage + 1] = true
   }
   $scope.stepBack = function() {
     curr_stage = $scope.local.stages.indexOf(true)
