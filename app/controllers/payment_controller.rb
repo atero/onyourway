@@ -53,7 +53,7 @@ class PaymentController < ApplicationController
 
       UserMailer.accepted_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
       UserMailer.token_email(@shoper.email, @shoper.first_name, @traveler.first_name, @token).deliver_later
-      redirect_to(:back)
+      redirect_to("/#/orders")
     end
   end
 end
