@@ -70,9 +70,14 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   }
 
   $scope.stepForward = function() {
-    curr_stage = $scope.local.stages.indexOf(true)
-    $scope.local.stages[curr_stage] = false
-    $scope.local.stages[curr_stage + 1] = true
+    if ( $scope.local.order.price > 0) {
+      curr_stage = $scope.local.stages.indexOf(true)
+      $scope.local.stages[curr_stage] = false
+      $scope.local.stages[curr_stage + 1] = true
+    } else {
+      alert("err")
+    }
+
   }
   $scope.stepBack = function() {
     curr_stage = $scope.local.stages.indexOf(true)
