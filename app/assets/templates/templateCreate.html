@@ -80,17 +80,17 @@
         <form ng-if="local.stages[2]" class= "form-block2" id="form-block2" novalidate>
           <div class="form-group" ng-class="{'has error': form-block2.price.$invalid }">
             <label for="arrival" class="item-label-price">Price per item (in €)</label>
-            <input type="number" min="0" class="form-control" name="price" placeholder="100" ng-model="local.order.price">
+            <input type="number" min="0" class="form-control" name="price" ng-pattern="hexPattern" placeholder="100" ng-model="local.order.price">
           </div>
 
           <div class="form-group" ng-class="{'has error': form-block2.quantity.$invalid }">
             <label for="date" class="item-label-price">Quantity</label>
-            <input type="number" min="0" class="form-control" name="quantity" ng-model="local.order.quantity" placeholder="2">
+            <input type="number" min="0" class="form-control" name="quantity" ng-pattern="hexPattern" ng-model="local.order.quantity" placeholder="2">
           </div>
 
           <div class="form-group" ng-class="{'has error': form-block2.reward.$invalid }">
             <label for="date" class="item-label-price">Reward for the traveller (in €)</label>
-            <input type="number" min="0" class="form-control" name="reward" ng-model="local.order.reward" placeholder="Generally between 10€ and 2% of the total order">
+            <input type="number" min="0" class="form-control" name="reward"  ng-pattern="hexPattern" ng-model="local.order.reward" placeholder="Generally between 10€ and 2% of the total order">
           </div>
 
         </form>
