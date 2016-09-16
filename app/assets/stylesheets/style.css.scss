@@ -979,7 +979,7 @@ button.btn-next {
 }
 .code-wrapper{
   width: 180px;
-  margin: 6px auto;
+  margin: 6px auto 24px;
   position: relative;
   button{
     position: absolute;
@@ -987,12 +987,14 @@ button.btn-next {
     top: 0;
     z-index: 9;
     background: #11e9de;
+    color: #fff;
   }
   input{
     height: 34px;
     border-radius: 3px;
     width: 100%;
     border: 1px solid #ccc;
+    padding-left: 4px;
   }
 }
 .profile-block {

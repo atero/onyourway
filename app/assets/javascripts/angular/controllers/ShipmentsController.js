@@ -37,7 +37,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			}, {
 			  order: order
 			}, function(res) {
-
+				location.reload();
 			})
 		}
 	}
