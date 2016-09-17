@@ -30,14 +30,13 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   newOrder = function() {
     if (!!$scope.local.order.from.address_components) {
       $scope.local.order.from = $scope.local.order.from.address_components[0].long_name;
-    }
-    else{
-      $scope.local.order.from =   "Anywhere";
+    } else {
+      $scope.local.order.from = "Anywhere";
     }
 
     $scope.local.order.to = $scope.local.order.to.address_components[0].long_name;
     $scope.inherit.loading = true;
-    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity)*1.07 + 6
+    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity) * 1.07 + 6
     Order.create({
       token: $scope.inherit.user.token
     }, {
@@ -72,43 +71,47 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   $scope.stepForward = function() {
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
-    if(curr_stage == 1 && jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0 ){
+    if (curr_stage != 2) {
+      $scope.local.stages[curr_stage] = false
+      $scope.local.stages[curr_stage + 1] = true;
+    } else if (jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0) {
       jQuery('#price, #revard, #quantity').removeClass('error');
       $scope.local.stages[curr_stage] = false
       $scope.local.stages[curr_stage + 1] = true;
-    }
-    else{
-      if(!jQuery('#price').val() > 0){
+    } else {
+      if (!jQuery('#price').val() > 0) {
         jQuery('#price').addClass('error');
       }
-      if(!jQuery('#reward').val() > 0){
+      if (!jQuery('#reward').val() > 0) {
         jQuery('#reward').addClass('error');
       }
-      if(!jQuery('#quantity').val() > 0){
+      if (!jQuery('#quantity').val() > 0) {
         jQuery('#quantity').addClass('error');
       }
     }
 
   }
-  $scope.stepBack = function() {
-    curr_stage = $scope.local.stages.indexOf(true)
-    $scope.local.stages[curr_stage] = false
-    $scope.local.stages[curr_stage - 1] = true
-  }
-  $scope.publishOrder = function() {
-    if (!$scope.inherit.user) {
-      $scope.inherit.openSignin().then(function(res) {
-        newOrder()
-      });
-    } else {
+
+}
+$scope.stepBack = function() {
+  curr_stage = $scope.local.stages.indexOf(true)
+  $scope.local.stages[curr_stage] = false
+  $scope.local.stages[curr_stage - 1] = true
+}
+$scope.publishOrder = function() {
+  if (!$scope.inherit.user) {
+    $scope.inherit.openSignin().then(function(res) {
       newOrder()
-    }
-  }
-  $scope.publishShipment = function() {
-    if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res) {
-      newShipment()
     });
-    else newShipment()
+  } else {
+    newOrder()
   }
+}
+$scope.publishShipment = function() {
+  if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res) {
+    newShipment()
+  });
+  else newShipment()
+}
 
 }]);
