@@ -9,7 +9,6 @@
     </div>
   </div>
 </div>
-
 <div class="container" resize>
   <div class="templateCreateblock">
     <div class="container">
@@ -77,7 +76,7 @@
 
         </form>
 
-        <form ng-if="local.stages[2]" class= "form-block2" id="form-block2" novalidate>
+        <form ng-if="local.stages[2]" class= "form-block2" id="form-block2" validate>
           <div class="form-group" ng-class="{'has error': form-block2.price.$invalid }">
             <label for="arrival" class="item-label-price">Price per item (in €)</label>
             <input type="number" min="0" class="form-control" name="price" ng-pattern="hexPattern" placeholder="100" ng-model="local.order.price">
