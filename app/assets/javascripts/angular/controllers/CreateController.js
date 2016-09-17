@@ -73,7 +73,22 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
     $scope.local.stages[curr_stage] = false
-    $scope.local.stages[curr_stage + 1] = true
+    if(curr_stage == 1 && jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0 ){
+      jQuery('#price, #revard, #quantity').removeClass('error');
+      $scope.local.stages[curr_stage + 1] = true;
+    }
+    else{
+      if(!jQuery('#price').val() > 0){
+        jQuery('#price').addClass('error');
+      }
+      if(!jQuery('#reward').val() > 0){
+        jQuery('#reward').addClass('error');
+      }
+      if(!jQuery('#quantity').val() > 0){
+        jQuery('#quantity').addClass('error');
+      }
+    }
+
   }
   $scope.stepBack = function() {
     curr_stage = $scope.local.stages.indexOf(true)
