@@ -74,7 +74,7 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     }
   });
 
-  jQuery('#price, #revard, #quantity').focus(function(){
+  jQuery('#price, #revard, #quantity').blur(function(){
     if($(this).val()== ''){
       $(this).val(0);
     }
