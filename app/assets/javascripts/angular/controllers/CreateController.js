@@ -82,13 +82,13 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
         $scope.local.stages[curr_stage + 1] = true;
       } else
       {
-        if (!jQuery('#price').val() > 0) {
+        if (!(jQuery('#price').val() > 0)) {
           jQuery('#price').addClass('error');
         }
-        if (!jQuery('#reward').val() > 0) {
+        if (!(jQuery('#reward').val() > 0)) {
           jQuery('#reward').addClass('error');
         }
-        if (!jQuery('#quantity').val() > 0) {
+        if (!(jQuery('#quantity').val() > 0)) {
           jQuery('#quantity').addClass('error');
         }
       }
