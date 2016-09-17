@@ -23,7 +23,7 @@
           <p class="offers">You have sent {{shipment.orders.length || 'no'}} offers for this trip</p>
         </div>
         <div class="" ng-repeat="order in shipment.orders">
-          <div class="col-sm-12 hover-div" ng-class="activeorder: order.id == local.data_to_show.id" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
+          <div class="col-sm-12 hover-div" ng-class="{activeorder: order.id == local.data_to_show.id}" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
             <div class="col-sm-2 first-last-name text-center">
               <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
               <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.photo}}" alt="">
