@@ -79,9 +79,6 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     if (curr_stage != 2) {
       $scope.local.stages[curr_stage] = false
       $scope.local.stages[curr_stage + 1] = true;
-    }
-
-    if (curr_stage == 2) {
       jQuery('#price, #reward, #quantity').focus(function(){
         if($(this).val() == 0){
           $(this).val('');
@@ -93,6 +90,10 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
           $(this).val(0);
         }
       });
+    }
+
+    if (curr_stage == 2) {
+
       if (jQuery('#price').val() > 0 && jQuery('#reward').val() > 0 && jQuery('#quantity').val() > 0) {
         jQuery('#price, #reward, #quantity').removeClass('error');
         $scope.local.stages[curr_stage] = false
