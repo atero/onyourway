@@ -68,6 +68,18 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     $scope.local.stages = [true]
   }
 
+  jQuery('#price, #revard, #quantity').focus(function(){
+    if($(this).val()==0){
+      $(this).val('');
+    }
+  });
+
+  jQuery('#price, #revard, #quantity').focus(function(){
+    if($(this).val()== ''){
+      $(this).val(0);
+    }
+  });
+
   $scope.stepForward = function() {
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
