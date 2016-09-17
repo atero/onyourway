@@ -72,9 +72,9 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   $scope.stepForward = function() {
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
-    $scope.local.stages[curr_stage] = false
     if(curr_stage == 1 && jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0 ){
       jQuery('#price, #revard, #quantity').removeClass('error');
+      $scope.local.stages[curr_stage] = false
       $scope.local.stages[curr_stage + 1] = true;
     }
     else{
