@@ -85,11 +85,18 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
         if (!(jQuery('#price').val() > 0)) {
           jQuery('#price').addClass('error');
         }
+        else{
+          jQuery('#price').removeClass('error');
+        }
         if (!(jQuery('#reward').val() > 0)) {
           jQuery('#reward').addClass('error');
+        }else{
+          jQuery('#reward').removeClass('error');
         }
         if (!(jQuery('#quantity').val() > 0)) {
           jQuery('#quantity').addClass('error');
+        }else{
+          jQuery('#quantity').removeClass('error');
         }
       }
     }
