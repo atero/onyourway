@@ -74,44 +74,44 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     if (curr_stage != 2) {
       $scope.local.stages[curr_stage] = false
       $scope.local.stages[curr_stage + 1] = true;
-    } else if (jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0) {
-      jQuery('#price, #revard, #quantity').removeClass('error');
-      $scope.local.stages[curr_stage] = false
-      $scope.local.stages[curr_stage + 1] = true;
     } else {
-      if (!jQuery('#price').val() > 0) {
-        jQuery('#price').addClass('error');
-      }
-      if (!jQuery('#reward').val() > 0) {
-        jQuery('#reward').addClass('error');
-      }
-      if (!jQuery('#quantity').val() > 0) {
-        jQuery('#quantity').addClass('error');
+      if (jQuery('#price').val() > 0 && jQuery('#revard').val() > 0 && jQuery('#quantity').val() > 0) {
+        jQuery('#price, #revard, #quantity').removeClass('error');
+        $scope.local.stages[curr_stage] = false
+        $scope.local.stages[curr_stage + 1] = true;
+      } else {
+        if (!jQuery('#price').val() > 0) {
+          jQuery('#price').addClass('error');
+        }
+        if (!jQuery('#reward').val() > 0) {
+          jQuery('#reward').addClass('error');
+        }
+        if (!jQuery('#quantity').val() > 0) {
+          jQuery('#quantity').addClass('error');
+        }
       }
     }
-
   }
-
-}
-$scope.stepBack = function() {
-  curr_stage = $scope.local.stages.indexOf(true)
-  $scope.local.stages[curr_stage] = false
-  $scope.local.stages[curr_stage - 1] = true
-}
-$scope.publishOrder = function() {
-  if (!$scope.inherit.user) {
-    $scope.inherit.openSignin().then(function(res) {
+  
+  $scope.stepBack = function() {
+    curr_stage = $scope.local.stages.indexOf(true)
+    $scope.local.stages[curr_stage] = false
+    $scope.local.stages[curr_stage - 1] = true
+  }
+  $scope.publishOrder = function() {
+    if (!$scope.inherit.user) {
+      $scope.inherit.openSignin().then(function(res) {
+        newOrder()
+      });
+    } else {
       newOrder()
-    });
-  } else {
-    newOrder()
+    }
   }
-}
-$scope.publishShipment = function() {
-  if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res) {
-    newShipment()
-  });
-  else newShipment()
-}
+  $scope.publishShipment = function() {
+    if (!$scope.inherit.user) $scope.inherit.openSignin().then(function(res) {
+      newShipment()
+    });
+    else newShipment()
+  }
 
 }]);
