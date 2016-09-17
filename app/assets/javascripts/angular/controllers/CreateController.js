@@ -108,17 +108,21 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
         }
       }
     }
-    jQuery('#price, #reward, #quantity').focus(function(){
-      if($(this).val() == 0){
-        $(this).val('');
-      }
-    });
+    setTimeout(function(){
+      jQuery('#price, #reward, #quantity').focus(function(){
+        if($(this).val() == 0){
+          $(this).val('');
+        }
+      });
 
-    jQuery('#price, #reward, #quantity').blur(function(){
-      if($(this).val()== ''){
-        $(this).val(0);
-      }
-    });
+      jQuery('#price, #reward, #quantity').blur(function(){
+        if($(this).val()== ''){
+          $(this).val(0);
+        }
+      });
+    }, 150);
+
+
   }
 
   $scope.stepBack = function() {
