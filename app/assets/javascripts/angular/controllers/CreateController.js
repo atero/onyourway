@@ -68,19 +68,21 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     $scope.local.stages = [true]
   }
 
-  jQuery('#price, #revard, #quantity').focus(function(){
-    if($(this).val()==0){
-      $(this).val('');
-    }
-  });
 
-  jQuery('#price, #revard, #quantity').blur(function(){
-    if($(this).val()== ''){
-      $(this).val(0);
-    }
-  });
 
   $scope.stepForward = function() {
+    jQuery('#price, #revard, #quantity').focus(function(){
+      if($(this).val()==0){
+        $(this).val('');
+      }
+    });
+
+    jQuery('#price, #revard, #quantity').blur(function(){
+      if($(this).val()== ''){
+        $(this).val(0);
+      }
+    });
+    
     curr_stage = $scope.local.stages.indexOf(true)
     console.log(curr_stage);
     if (curr_stage != 2) {
