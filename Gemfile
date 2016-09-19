@@ -70,7 +70,7 @@ gem "better_errors"
 gem "quiet_assets"
 gem "pry-byebug"
 gem "letter_opener"
-gem 'debug'
+#gem 'debugger'
 #end
 
 group :production do

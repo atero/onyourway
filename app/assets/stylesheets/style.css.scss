@@ -508,6 +508,34 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     font-size: 23px;
   }
 }
+
+.jssor_1 {
+  text-align: right;
+  position: absolute;
+  display: block;
+  background-color: #11E9DE;
+  opacity: 0.6;
+  width: 95%;
+  bottom: 55px;
+  left: 11px;
+  border-radius: 10px;
+    h3{
+      margin: 0;
+      margin-top: 7px;
+      margin-right: 20px;
+      font-weight:bold;
+      color:#fff;
+      text-align:right;
+    }
+    p{
+      margin: 0;
+      font-weight:bolder;
+      font-size: 19px;
+      padding: 0;
+      margin-right: 20px;
+      color: #fff;
+    }
+}
 .how-it-works {
   .works-p {
     font-size: 19px;
@@ -675,10 +703,11 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     font-family: FaricyNew-Light;
   }
   .upload-img {
+    margin-top: 15px;
     position: relative;
     div.upload {
-      width: 111px;
-      height: 29px;
+      width: 130px;
+      height: 33px;
       background: #11e9de;
       overflow: hidden;
       border-radius: 5px;
@@ -687,7 +716,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       label {
         color: #fff;
         font-family: FaricyNew-Light;
-        font-size: 15px;
+        font-size: 21px;
       }
     }
     div.upload input {
@@ -701,7 +730,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     }
     .label-choosen {
       padding: 5px 0;
-      font-size: 15px;
+      font-size: 18px;
       color: #646464;
       font-family: FaricyNew-Light;
       margin-left: 7px;
@@ -795,6 +824,13 @@ button.btn-next {
       font-family: FaricyNew-Bold;
     }
   }
+}
+.nopay{
+  color: #11e9de;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 /***********Become travel************/
 .orders-block {

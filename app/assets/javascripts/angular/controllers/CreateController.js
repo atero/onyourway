@@ -30,13 +30,14 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   newOrder = function() {
     if (!!$scope.local.order.from.address_components) {
       $scope.local.order.from = $scope.local.order.from.address_components[0].long_name;
-    } else {
-      $scope.local.order.from = "Anywhere";
+    }
+    else{
+      $scope.local.order.from =   "Anywhere";
     }
 
     $scope.local.order.to = $scope.local.order.to.address_components[0].long_name;
     $scope.inherit.loading = true;
-    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity) * 1.07 + 6
+    $scope.local.order.total_price = ($scope.local.order.reward + $scope.local.order.price * $scope.local.order.quantity)*1.07 + 6
     Order.create({
       token: $scope.inherit.user.token
     }, {
@@ -68,63 +69,11 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
     $scope.local.stages = [true]
   }
 
-
-
   $scope.stepForward = function() {
-
-
-
     curr_stage = $scope.local.stages.indexOf(true)
-    console.log(curr_stage);
-    if (curr_stage != 2) {
-      $scope.local.stages[curr_stage] = false
-      $scope.local.stages[curr_stage + 1] = true;
-
-    }
-
-    if (curr_stage == 2) {
-
-      if (jQuery('#price').val() > 0 && jQuery('#reward').val() > 0 && jQuery('#quantity').val() > 0) {
-        jQuery('#price, #reward, #quantity').removeClass('error');
-        $scope.local.stages[curr_stage] = false
-        $scope.local.stages[curr_stage + 1] = true;
-      } else
-      {
-        if (!(jQuery('#price').val() > 0)) {
-          jQuery('#price').addClass('error');
-        }
-        else{
-          jQuery('#price').removeClass('error');
-        }
-        if (!(jQuery('#reward').val() > 0)) {
-          jQuery('#reward').addClass('error');
-        }else{
-          jQuery('#reward').removeClass('error');
-        }
-        if (!(jQuery('#quantity').val() > 0)) {
-          jQuery('#quantity').addClass('error');
-        }else{
-          jQuery('#quantity').removeClass('error');
-        }
-      }
-    }
-    setTimeout(function(){
-      jQuery('#price, #reward, #quantity').focus(function(){
-        if($(this).val() == 0){
-          $(this).val('');
-        }
-      });
-
-      jQuery('#price, #reward, #quantity').blur(function(){
-        if($(this).val()== ''){
-          $(this).val(0);
-        }
-      });
-    }, 150);
-
-
+    $scope.local.stages[curr_stage] = false
+    $scope.local.stages[curr_stage + 1] = true
   }
-
   $scope.stepBack = function() {
     curr_stage = $scope.local.stages.indexOf(true)
     $scope.local.stages[curr_stage] = false
