@@ -71,8 +71,35 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
 
   $scope.stepForward = function() {
     curr_stage = $scope.local.stages.indexOf(true)
-    $scope.local.stages[curr_stage] = false
-    $scope.local.stages[curr_stage + 1] = true
+    if(curr_stage != 1 ){
+      $scope.local.stages[curr_stage] = false
+      $scope.local.stages[curr_stage + 1] = true
+    }
+    if(curr_stage == 1 ){
+        if($('#price').val() > 0 && $('#reward').val() > 0 && $('#quantity').val() > 0){
+          $scope.local.stages[curr_stage] = false
+          $scope.local.stages[curr_stage + 1] = true
+        }else{
+          if(!($('#price').val() > 0)){
+            $('#price').addClass('error');
+          }else{$('#price').removeClass('error');}
+          if(!($('#reward').val() > 0)){
+            $('#reward').addClass('error');
+          }else{$('#reward').removeClass('error');}
+          if(!($('#quantity').val() > 0)){
+            $('#quantity').addClass('error');
+          }else{$('#quantity').removeClass('error');}
+        }
+
+    }
+    setTimeout(function(){
+      $('#quantity, #reward, #price').focus(function(){
+        if($(this).val() == 0 ){$(this).val('')}
+      });
+      $('#quantity, #reward, #price').blur(function(){
+        if($(this).val() == '' ){$(this).val(0)}
+      });
+    },150);
   }
   $scope.stepBack = function() {
     curr_stage = $scope.local.stages.indexOf(true)
