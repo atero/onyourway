@@ -24,7 +24,7 @@
   </div>
   <div class="col-md-offset-2 col-md-8">
     <div class="row" ng-if="inherit.usertype == 'shopper'">
-      <h4 class='nopay'>No payment is needed now.you will only need to pay when you'll find a traveler</h4>
+      <h4 class='nopay'>No payment now! We will only ask you to pay when you find a traveler that suits your needs.</h4>
       <div class="padding-top col-md-offset-2 col-md-8 text-center">
         <form ng-if="local.stages[2]" class="crate-form" id="form-block">
           <div class="form-group">
@@ -81,7 +81,7 @@
 
         <form ng-if="local.stages[1]" class= "form-block2" id="form-block2" novalidate>
           <div class="form-group" ng-class="{'has error': form-block2.price.$invalid }">
-            <label for="arrival" class="item-label-price">Price per item (in €)</label>
+            <label for="arrival" class="item-label-price">Price per item (in $)</label>
             <input type="number" min="0" class="form-control" name="price" id="price" ng-pattern="hexPattern" placeholder="100" ng-model="local.order.price">
           </div>
 
@@ -91,8 +91,8 @@
           </div>
 
           <div class="form-group" ng-class="{'has error': form-block2.reward.$invalid }">
-            <label for="date" class="item-label-price">Reward for the traveller (in €)</label>
-            <input type="number" min="0" class="form-control" name="reward"  id="reward" ng-pattern="hexPattern" ng-model="local.order.reward" placeholder="Generally between 10€ and 2% of the total order">
+            <label for="date" class="item-label-price">Reward for the traveller (in $)</label>
+            <input type="number" min="0" class="form-control" name="reward"  id="reward" ng-pattern="hexPattern" ng-model="local.order.reward" placeholder="Reward for the traveller">
           </div>
 
         </form>
