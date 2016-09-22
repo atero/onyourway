@@ -3,6 +3,8 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   $scope.inherit.usertype = 'traveller'
 
   console.log(orders);
+  ga('set', 'page', '/results');
+  ga('send', 'pageview');
 
   $scope.local = {
     results: orders
@@ -67,7 +69,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
 
   }
 
-  $scope.propose = function(type, result) {    
+  $scope.propose = function(type, result) {
     if (result == false) {
       result = {
         id: "noid"

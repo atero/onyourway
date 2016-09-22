@@ -6,7 +6,8 @@ App.controller('ProfileCtrl', ['$scope', '$state', 'localuser', 'User', function
     var today = new Date($scope.inherit.user.birthdate);
     var dd = today.getDate();
     var mm = today.getMonth() + 1; //January is 0!
-
+    ga('set', 'page', '/profile');
+    ga('send', 'pageview');
     var yyyy = today.getFullYear();
     if (dd < 10) {
       dd = '0' + dd
