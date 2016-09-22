@@ -9,7 +9,8 @@ App.controller('PayoutCtrl', ['$scope', '$state', 'localuser', 'User', function(
   $scope.fromOptions = {
 
   }
-
+  ga('set', 'page', '/payout');
+  ga('send', 'pageview');
   $scope.save_payout = function(){
     console.log("saving");
     if(!!$scope.inherit.user.country.address_components){

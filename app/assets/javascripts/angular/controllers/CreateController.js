@@ -1,6 +1,8 @@
 App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipment', function($scope, $state, localuser, Order, Shipment) {
   if (localuser) $scope.inherit.user = localuser;
   $scope.inherit.loading = false;
+  ga('set', 'page', '/create');
+  ga('send', 'pageview');
   $scope.local = {
     order: {
       from: [],
