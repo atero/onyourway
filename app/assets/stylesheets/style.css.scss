@@ -1886,6 +1886,22 @@ button.btn-next {
     margin-bottom: 50px ;
     margin-top: 50px ;
   }
+  .left-bar{
+    width: 60%;
+    padding-bottom: 10px;
+  }
+  .nav-stacked>li{
+    float: left;
+  }
+  .shipments-left-bar li{
+    display: inline-block;
+  }
+  .payout-block .payout-form-control{
+    display: inline-block;
+  }
+  .main-message{
+    min-height: 70px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2014,6 +2030,35 @@ button.btn-next {
   }
   .navbar-header .navbar-brand img{
     width: 180px;
+  }
+}
+@media (max-width: 375px){
+  .profile-body{
+    padding: 0;
+  }
+  .left-bar{
+    width: 75%;
+  }
+  .nav-stacked>li{
+    float: left;
+  }
+  .shipments-left-bar li{
+    display: inline-block;
+  }
+  .main-message{
+    min-height: 70px;
+  }
+  .paypal-details{
+    margin-left: 4px;
+  }
+  .payout-block .payout-form-control{
+    width: 60%;
+  }
+  .payout-block .input-w{
+    width: 42%;
+  }
+  .table >tbody>tr>td{
+    vertical-align: top;
   }
 }
 @media (max-width: 320px){
