@@ -79,20 +79,20 @@
 
         </form>
 
-        <form ng-if="local.stages[1]" class= "form-block2" id="form-block2" novalidate>
-          <div class="form-group" ng-class="{'has error': form-block2.price.$invalid }">
+        <form ng-if="local.stages[1]" id="form-block2" >
+          <div class="form-group" >
             <label for="arrival" class="item-label-price">Price per item (in $)</label>
-            <input type="number" min="0" class="form-control" name="price" id="price" ng-pattern="hexPattern" placeholder="100" ng-model="local.order.price">
+            <input type="number" min="0" class="form-control" id="price"  placeholder="100" ng-model="local.order.price">
           </div>
 
-          <div class="form-group" ng-class="{'has error': form-block2.quantity.$invalid }">
+          <div class="form-group">
             <label for="date" class="item-label-price">Quantity</label>
-            <input type="number" min="0" class="form-control" name="quantity" id="quantity" ng-pattern="hexPattern" ng-model="local.order.quantity" placeholder="2">
+            <input type="number" min="0" class="form-control" id="quantity" ng-model="local.order.quantity" placeholder="2">
           </div>
 
-          <div class="form-group" ng-class="{'has error': form-block2.reward.$invalid }">
+          <div class="form-group">
             <label for="date" class="item-label-price">Reward for the traveller (in $)</label>
-            <input type="number" min="0" class="form-control" name="reward"  id="reward" ng-pattern="hexPattern" ng-model="local.order.reward" placeholder="Reward for the traveller">
+            <input type="number" min="0" class="form-control" id="reward" ng-model="local.order.reward" placeholder="Reward for the traveller">
           </div>
 
         </form>
@@ -165,7 +165,7 @@
     <div class="col-md-offset-2 col-md-8">
       <div class="row" ng-if="inherit.usertype == 'shopper'">
         <div class="row padding-top block-bottom">
-          <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn-next btn btn-default navigate-button pull-right" ng-disabled="form-block2.$invalid">Next</button>
+          <button ng-if="!local.stages[local.stages.length-1]" ng-click="stepForward()" class="btn-next btn btn-default navigate-button pull-right" >Next</button>
           <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'shopper'" ng-click="publishOrder()" class="btn-next btn btn-default navigate-button pull-right">Publish the order</button>
           <button ng-if="local.stages[local.stages.length-1] && inherit.usertype == 'traveller'" ng-click="publishShipment()" class="btn-next btn btn-default navigate-button pull-right">Publish the travel</button>
           <button ng-if="!local.stages[0]" ng-click="stepBack()" class="btn-back btn btn-default navigate-button pull-left">Back</button>
