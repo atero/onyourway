@@ -2051,6 +2051,23 @@ button.btn-next {
     width: 180px;
   }
 }
+@media (max-width: 435px){
+  .left-bar{
+    width: 62%;
+  }
+  .table-td-to{
+    text-align: center;
+  }
+  .payout-block .input-w{
+    width: 45%;
+  }
+  .paypal-details{
+    margin-left: 23px;
+  }
+  .payout-block .payout-form-control{
+    width: 50%;
+  }
+}
 @media (max-width: 375px){
   .profile-body{
     padding: 0;
@@ -2079,7 +2096,22 @@ button.btn-next {
   .table >tbody>tr>td{
     vertical-align: top !important;
   }
+  .table-td-to{
+    text-align: center;
+  }
 }
+@media (max-width: 360px){
+  .payout-block .table>tbody>tr>th{
+    font-size: 16px;
+  }
+  .payout-block .table>tbody>tr>th{
+    font-size: 16px;
+  }
+  .table-td-to{
+    text-align: center;
+  }
+}
+
 @media (max-width: 320px){
   .thumbs-row{
     margin-top: -60px;
