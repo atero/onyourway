@@ -4,10 +4,12 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 	$scope.local={
 		shipments: shipments
 	}
-	if (shipments && shipments.length > 0){
-		$scope.local.shipmen_to_show = shipments[0];
-		if(shipments[0].orders.length > 0){
-			$scope.local.data_to_show = shipments[0].orders[0];
+	if (shipments){
+		if (shipments.length > 0){
+			$scope.local.shipmen_to_show = shipments[0];
+			if(shipments[0].orders.length > 0){
+				$scope.local.data_to_show = shipments[0].orders[0];
+			}
 		}
 	}
 	$scope.toOptions = {
