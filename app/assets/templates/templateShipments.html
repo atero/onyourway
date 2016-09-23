@@ -33,10 +33,10 @@
                 <div class="home-table-th text-center home-span1" valign="middle">{{order.item}}</div>
               </div>
               <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Price
-                <div class="home-table-th text-center home-span2" valign="middle">{{order.price}}€</div>
+                <div class="home-table-th text-center home-span2" valign="middle">{{order.price}}$</div>
               </div>
               <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Reward
-                <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}€</div>
+                <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}$</div>
               </div>
             </div>
           </div>
@@ -51,14 +51,14 @@
       <p class="status-travels">Status:</p> <b class="main-pending">{{local.data_to_show.status}}</b>
       <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
       <div class=""  ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
-        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}€  as soon as you enter the confirmation code</p>
+        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}$  as soon as you enter the confirmation code</p>
         <div class="code-wrapper">
           <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
           <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
         </div>
       </div>
       <p class="lead text-center main-lead" ng-if="(local.data_to_show.status != 'pending' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.data_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult Active orders for many other items awaiting a delivery.</p>
-      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'delivered' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id)">Thanks for delivering the item! You will receive {{(local.data_to_show.total_price - 6) / 1.07}}€ via your prefered payout method in the upcoming days.</p>
+      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'delivered' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id)">Thanks for delivering the item! You will receive {{(local.data_to_show.total_price - 6) / 1.07}}$ via your prefered payout method in the upcoming days.</p>
       <div class="col-sm-9">
         <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
           {{order.message}}
