@@ -47,6 +47,25 @@ input.ng-invalid{
 .profile-body-block{
   padding: 40px 35px 0;
 }
+.table-td-from{
+  border-bottom: 1px solid #f2f2f2;
+  text-align: left;
+  font-size: 20px;
+  color: #6e6e6e;
+  font-family: FaricyNew-Regular;
+}
+.table-td{
+  text-align: right;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 20px;
+  color: #6e6e6e;
+  font-family: FaricyNew-Regular;
+}
+.table-b{
+  font-size: 20px;
+  color:#6e6e6e;
+  font-family: FaricyNew-Bold;
+}
 .left-bar-profile {
   margin-top: 40px;
   li a{
@@ -1886,6 +1905,25 @@ button.btn-next {
     margin-bottom: 50px ;
     margin-top: 50px ;
   }
+  .left-bar{
+    width: 60%;
+    padding-bottom: 10px;
+  }
+  .nav-stacked>li{
+    float: left;
+  }
+  .shipments-left-bar li{
+    display: inline-block;
+  }
+  .payout-block .payout-form-control{
+    display: inline-block;
+  }
+  .main-message{
+    min-height: 70px;
+  }
+  .thumbs-row{
+    margin-top: -20px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2015,10 +2053,124 @@ button.btn-next {
   .navbar-header .navbar-brand img{
     width: 180px;
   }
+  .nopay{
+    margin-top:-25px;
+  }
+  .land-content .row-how{
+    margin-bottom: 20px;
+  }
 }
-@media (max-width: 320px){
+@media (max-width: 435px){
+  .left-bar{
+    width: 62%;
+  }
+  .table-td-to{
+    text-align: center;
+  }
+  .payout-block .input-w{
+    width: 45%;
+  }
+  .paypal-details{
+    margin-left: 23px;
+  }
+  .payout-block .payout-form-control{
+    width: 50%;
+  }
+  .thumbs-row{
+    margin-top: -30px;
+  }
+  .templateCreateblock{
+    padding: 0;
+  }
+}
+@media (max-width: 414px){
+  .profile-body{
+    padding: 0;
+  }
+  .profile-body-block{
+    padding: 0 35px 0;
+  }
+  .left-bar{
+    width: 65%;
+  }
+  .table >tbody>tr>td{
+    vertical-align: top !important;
+  }
+}
+
+@media (max-width: 411px){
+  .paypal-details{
+    margin-left: 7px;
+  }
   .thumbs-row{
     margin-top: -60px;
+  }
+}
+@media (max-width: 375px){
+  .profile-body{
+    padding: 0;
+  }
+  .left-bar{
+    width: 75%;
+  }
+  .nav-stacked>li{
+    float: left;
+  }
+  .shipments-left-bar li{
+    display: inline-block;
+  }
+  .main-message{
+    min-height: 70px;
+  }
+  .paypal-details{
+    margin-left: 4px;
+  }
+  .payout-block .payout-form-control{
+    width: 60%;
+  }
+  .payout-block .input-w{
+    width: 42%;
+  }
+  .table >tbody>tr>td{
+    vertical-align: top !important;
+  }
+  .table-td-to{
+    text-align: center;
+  }
+}
+@media (max-width: 360px){
+  .payout-block .table>tbody>tr>th{
+    font-size: 16px;
+  }
+  .payout-block .table>tbody>tr>th{
+    font-size: 16px;
+  }
+  .table-td-to{
+    text-align: center;
+  }
+  .thumbs-row{
+    margin-top: -60px;
+  }
+  .templateCreateblock{
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px){
+  .templateCreateblock{
+    padding: 0;
+  }
+  .result-block-home .search-form #form-block label{
+    font-size: 20px;
+  }
+  .result-block-home .result-p{
+    font-size: 20px;
+  }
+  .result-block-home .search-form #form-block button{
+    font-size: 20px;
+  }
+  .thumbs-row{
+    margin-top: -80px;
   }
   .padding-top{
     padding-top: 0;
@@ -2183,4 +2335,31 @@ button.btn-next {
     width: 230px;
     height: 50px;
   }
+  .payout-block .table>tbody>tr>th{
+    font-size: 12px;
+  }
+  .payout-block .table>tbody>tr>td{
+    font-size: 14px;
+  }
+  .payout-block .payment-method{
+    margin-left: 50px;
+  }
+  .payout-block label{
+    margin-left: 50px;
+  }
+  .table{
+    margin-left: 3px;
+  }
+  .table-td-from{
+    font-size: 15px;
+  }
+  .table-td{
+     font-size: 15px;
+   }
+  .table-b{
+     font-size: 16px;
+   }
+  .table-td-to{
+     text-align:center;
+   }
 }
