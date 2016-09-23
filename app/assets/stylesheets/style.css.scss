@@ -1921,6 +1921,9 @@ button.btn-next {
   .main-message{
     min-height: 70px;
   }
+  .thumbs-row{
+    margin-top: -20px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2050,6 +2053,12 @@ button.btn-next {
   .navbar-header .navbar-brand img{
     width: 180px;
   }
+  .nopay{
+    margin-top:-25px;
+  }
+  .land-content .row-how{
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 435px){
   .left-bar{
@@ -2066,6 +2075,35 @@ button.btn-next {
   }
   .payout-block .payout-form-control{
     width: 50%;
+  }
+  .thumbs-row{
+    margin-top: -30px;
+  }
+  .templateCreateblock{
+    padding: 0;
+  }
+}
+@media (max-width: 414px){
+  .profile-body{
+    padding: 0;
+  }
+  .profile-body-block{
+    padding: 0 35px 0;
+  }
+  .left-bar{
+    width: 65%;
+  }
+  .table >tbody>tr>td{
+    vertical-align: top !important;
+  }
+}
+
+@media (max-width: 411px){
+  .paypal-details{
+    margin-left: 7px;
+  }
+  .thumbs-row{
+    margin-top: -60px;
   }
 }
 @media (max-width: 375px){
@@ -2110,11 +2148,29 @@ button.btn-next {
   .table-td-to{
     text-align: center;
   }
+  .thumbs-row{
+    margin-top: -60px;
+  }
+  .templateCreateblock{
+    padding: 0;
+  }
 }
 
 @media (max-width: 320px){
+  .templateCreateblock{
+    padding: 0;
+  }
+  .result-block-home .search-form #form-block label{
+    font-size: 20px;
+  }
+  .result-block-home .result-p{
+    font-size: 20px;
+  }
+  .result-block-home .search-form #form-block button{
+    font-size: 20px;
+  }
   .thumbs-row{
-    margin-top: -60px;
+    margin-top: -80px;
   }
   .padding-top{
     padding-top: 0;
