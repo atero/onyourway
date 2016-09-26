@@ -1924,6 +1924,14 @@ button.btn-next {
   .thumbs-row{
     margin-top: -20px;
   }
+  .credit-card-box{
+    margin-top: 2px;
+    margin-left: 40px;
+    margin-right: 110px;
+  }
+  .modal-dialog{
+    width: 678px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2059,6 +2067,9 @@ button.btn-next {
   .land-content .row-how{
     margin-bottom: 20px;
   }
+  .credit-card-box{
+    margin-left: 15px;
+  }
 }
 @media (max-width: 435px){
   .left-bar{
@@ -2082,6 +2093,16 @@ button.btn-next {
   .templateCreateblock{
     padding: 0;
   }
+  .search-input{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .main-date-group label{
+    display: block;
+   }
+   .credit-card-box{
+     margin-left: 0;
+   }
 }
 @media (max-width: 414px){
   .profile-body{
@@ -2096,6 +2117,16 @@ button.btn-next {
   .table >tbody>tr>td{
     vertical-align: top !important;
   }
+  .search-input{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .main-date-group label{
+    display: block;
+   }
+   .credit-card-box{
+     margin-left: 0;
+   }
 }
 
 @media (max-width: 411px){
@@ -2137,6 +2168,13 @@ button.btn-next {
   .table-td-to{
     text-align: center;
   }
+  .search-input{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .credit-card-box{
+    margin-left: 0;
+  }
 }
 @media (max-width: 360px){
   .payout-block .table>tbody>tr>th{
@@ -2153,6 +2191,13 @@ button.btn-next {
   }
   .templateCreateblock{
     padding: 0;
+  }
+  .search-input{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .credit-card-box{
+    margin-left: 0;
   }
 }
 
@@ -2361,5 +2406,21 @@ button.btn-next {
    }
   .table-td-to{
      text-align:center;
+   }
+   .main-date-group .main-search-input{
+     font-size: 14px;
+   }
+   .search-input{
+     margin-left: 0;
+     margin-top: 0;
+   }
+   .panel-heading{
+     padding: 10px 10px;
+   }
+   .sweet-alert{
+     top: 45%;
+   }
+   .offers-account-div{
+     width: 75%;
    }
 }
