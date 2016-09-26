@@ -928,11 +928,11 @@ button.btn-next {
 }
 .sweet-alert button.confirm{
   border-radius: 6px;
-  background-color: #11E9DE;
+  background-color: #11E9DE !important;
   padding: 10px 25px;
 }
 .pulseWarning{
-  display: none;
+  display: none !important;
 }
 
 /***********Result************/
