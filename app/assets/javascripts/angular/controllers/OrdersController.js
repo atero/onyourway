@@ -81,8 +81,8 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-       imageUrl: "images/icon-delete.png"
+      confirmButtonText: 'Yes, delete it!',
+      imageUrl: "images/icon-delete.png"
     }, function(isConfirm) {
       if (isConfirm) {
         shipment.status = "refused"
