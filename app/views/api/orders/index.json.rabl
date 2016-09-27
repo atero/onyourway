@@ -4,6 +4,7 @@ attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, 
 
 child :user do |_u|
   attributes :id, :first_name, :last_name, :provider, :photo_url
+  _u.photo.url(:square)
 end
 
 node :photo do |order|
