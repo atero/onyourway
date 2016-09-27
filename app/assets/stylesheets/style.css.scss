@@ -349,6 +349,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .pac-container {
   z-index: 2000;
 }
+.profile-ul li a:hover{
+  background-color: white;
+  text-decoration: underline;
+}
 /************My Styles***********/
 @font-face {
   font-family: DistrictProThin;
