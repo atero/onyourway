@@ -70,8 +70,7 @@
 
   <div class="col-md-6" ng-show="local.data_to_show && local.conversation_shipment">
     <div class="col-md-12">
-      <p class="status-travels" >Status:</p> <b class="main-pending" ng-if="local.data_to_show.status == 'accepted'">Payment accepted</b><b class="main-pending" ng-if="local.data_to_show.status == 'delivered'">Delivered</b>
-      <!-- <b class="main-pending" ng-if="local.data_to_show.status == 'pending'">Pending</b> -->
+      <p class="status-travels" >Status:</p> <b class="main-pending" ng-if="local.data_to_show.status == 'accepted'">Payment accepted</b><b class="main-pending" ng-if="local.data_to_show.status == 'delivered'">Delivered</b><b class="main-pending" ng-if="local.data_to_show.status == 'pending'">Pending</b>
       <p class="lead text-center order-lead" ng-if="local.data_to_show.status == 'accepted'">You have accepted this travel.</p>
       <p class="lead text-center order-lead" ng-if="local.data_to_show.status == 'delivered'">Thank you for shopping with On Your Way!</p>
       <table class="table">

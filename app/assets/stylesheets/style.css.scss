@@ -1942,6 +1942,9 @@ button.btn-next {
     margin-left: 0px;
     margin-right: 149px;
   }
+  .panel-default>.panel-heading{
+    display: block;
+  }
 }
 @media (max-width: 480px) {
   body{
