@@ -922,6 +922,19 @@ button.btn-next {
     }
   }
 }
+.sweet-alert button.cancel{
+  border-radius: 6px;
+  padding: 10px 25px;
+}
+.sweet-alert button.confirm{
+  border-radius: 6px;
+  background-color: #11E9DE !important;
+  padding: 10px 25px;
+}
+.pulseWarning{
+  display: none !important;
+}
+
 /***********Result************/
 .result-block-home{
   .search-form{
@@ -1517,7 +1530,7 @@ button.btn-next {
 .additional-div{
   height: 90px;
   border: 1px solid #f2f2f2;
-  line-height: 90px;
+  line-height: 45px;
   color: #969696;
   font-size: 18px;
   font-family: FaricyNew-Regular;
@@ -1925,12 +1938,9 @@ button.btn-next {
     margin-top: -20px;
   }
   .credit-card-box{
-    margin-top: 2px;
-    margin-left: 40px;
-    margin-right: 110px;
-  }
-  .modal-dialog{
-    width: 678px;
+    margin-top: 1px;
+    margin-left: 0px;
+    margin-right: 149px;
   }
 }
 @media (max-width: 480px) {
@@ -2069,6 +2079,10 @@ button.btn-next {
   }
   .credit-card-box{
     margin-left: 15px;
+    margin-right:0;
+  }
+  .main-date-group .main-search-input{
+    font-size: 15px;
   }
 }
 @media (max-width: 435px){
@@ -2093,7 +2107,7 @@ button.btn-next {
   .templateCreateblock{
     padding: 0;
   }
-  .search-input{
+  .main-date-group .main-search-input{
     margin-left: 0;
     margin-top: 0;
   }
@@ -2102,6 +2116,10 @@ button.btn-next {
    }
    .credit-card-box{
      margin-left: 0;
+     margin-right: 0;
+   }
+   .signup-block{
+     padding-top: 10px;
    }
 }
 @media (max-width: 414px){
@@ -2126,6 +2144,8 @@ button.btn-next {
    }
    .credit-card-box{
      margin-left: 0;
+     margin-right: 0;
+     margin-top: 0;
    }
 }
 
@@ -2197,8 +2217,13 @@ button.btn-next {
     margin-top: 0;
   }
   .credit-card-box{
-    margin-left: 0;
+    //margin-left: 0;
+    margin-right: 0;
   }
+  .main-date-group .main-search-input{
+    font-size: 14px;
+  }
+
 }
 
 @media (max-width: 320px){

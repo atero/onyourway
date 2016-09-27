@@ -75,13 +75,14 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
   $scope.refuse_travel = function(order, shipment) {
 
     swal({
-      title: 'Are you sure you want to delete this delivery offer from the list?',
-      text: "You want be able to see it anymore!",
+      title: 'Are you sure you want to definitely delete this shipment from the list?',
+      text: "You won't be able to see this shipment any more!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Yes, delete it!',
+      imageUrl: "images/icon-delete.png"
     }, function(isConfirm) {
       if (isConfirm) {
         shipment.status = "refused"
