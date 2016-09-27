@@ -1,0 +1,35 @@
+<!-- Page Content -->
+<div class="narrow-banner conditions-banner ng-scope">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <h1><b>ABOUT US</b></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container result-block conditions-block">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row padding-top main-margin-block">
+        <div class="col-md-offset-1 col-md-12">
+          <div class="text-center conditions-head main-conditions-head">
+            <h2>Please fill fields below to contact us.</h2>
+          </div>
+          <div class="pay-pal-account" ng-show="inherit.user.is_spa">
+            <p class="account-bank-info">Please, enter your full name</p>
+            <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_name" />
+            <p class="account-bank">Email</p>
+            <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_mail" />
+            <p class="account-bank">Message</p>
+            <textarea style="float:left;" type="text" size="20" class="form-control" ng-model="inherit.user.contact_message"></textarea>
+            <button type="button" class="btn btn-default payout-btn" name="button" ng-click="send_contact_message()">OK</button>
+          </div>
+          <span class="condition-padding row"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.container -->

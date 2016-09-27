@@ -98,6 +98,40 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
           }]
         }
       })
+      $stateProvider
+        .state('about', {
+          url: '/about',
+          controller: 'AboutCtrl',
+          templateUrl: "templateAbout.html",
+          resolve: {
+            localuser: ['$q', 'Auth', function($q, Auth) {
+              var d = $q.defer();
+              var user = Auth.currentUser().then(function(user) {
+                d.resolve(user);
+              }, function(error) {
+                d.resolve(null);
+              });
+              return d.promise;
+            }]
+          }
+        })
+        $stateProvider
+          .state('contact', {
+            url: '/contact',
+            controller: 'ContactCtrl',
+            templateUrl: "templateContact.html",
+            resolve: {
+              localuser: ['$q', 'Auth', function($q, Auth) {
+                var d = $q.defer();
+                var user = Auth.currentUser().then(function(user) {
+                  d.resolve(user);
+                }, function(error) {
+                  d.resolve(null);
+                });
+                return d.promise;
+              }]
+            }
+          })
     $stateProvider
       .state('profile', {
         url: '/profile',
