@@ -69,7 +69,7 @@ input.ng-invalid{
 .left-bar-profile {
   margin-top: 40px;
   li a{
-    padding: 4px 15px;
+    padding: 6px 15px;
   }
 }
 .left-bar li.active a,
@@ -1532,9 +1532,10 @@ button.btn-next {
   padding-left: 0;
 }
 .additional-div{
+  overflow-y: auto;
   height: 90px;
   border: 1px solid #f2f2f2;
-  line-height: 45px;
+  line-height: 44px;
   color: #969696;
   font-size: 18px;
   font-family: FaricyNew-Regular;
