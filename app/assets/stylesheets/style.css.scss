@@ -69,7 +69,7 @@ input.ng-invalid{
 .left-bar-profile {
   margin-top: 40px;
   li a{
-    padding: 6px 15px;
+    padding: 10px 15px;
   }
 }
 .left-bar li.active a,
@@ -928,12 +928,17 @@ button.btn-next {
 }
 .sweet-alert button.cancel{
   border-radius: 6px;
-  padding: 10px 25px;
+  padding: 10px 25px !important;
+  background-color: #DDD!important;
 }
 .sweet-alert button.confirm{
   border-radius: 6px;
   background-color: #11E9DE !important;
-  padding: 10px 25px;
+  padding: 10px 25px !important;
+}
+.sweet-alert h2{
+  font-weight: 300;
+  padding-bottom: 20px;
 }
 .pulseWarning{
   display: none !important;
