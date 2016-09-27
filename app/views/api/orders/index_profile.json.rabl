@@ -8,7 +8,7 @@ child :shipments do |_shipment|
   attributes :id, :from, :to, :date, :status, :messages
 
   child :user do |_u|
-    attributes :id, :first_name, :last_name
+    attributes :id, :first_name, :last_name, :photo_url
   end
 
   child :messages do |_u|
