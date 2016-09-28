@@ -67,9 +67,9 @@ input.ng-invalid{
   font-family: FaricyNew-Bold;
 }
 .left-bar-profile {
-  margin-top: 40px;
+  margin-top: 28px;
   li a{
-    padding: 4px 15px;
+    padding: 10px 15px;
   }
 }
 .left-bar li.active a,
@@ -928,12 +928,20 @@ button.btn-next {
 }
 .sweet-alert button.cancel{
   border-radius: 6px;
-  padding: 10px 25px;
+  padding: 7px 25px !important;
+  background-color: #DDD!important;
 }
 .sweet-alert button.confirm{
   border-radius: 6px;
   background-color: #11E9DE !important;
-  padding: 10px 25px;
+  padding: 7px 25px !important;
+}
+.sweet-alert h2{
+  font-weight: 300 !important;
+  padding-bottom: 20px;
+}
+.sweet-alert button.cancel:hover{
+  background-color: #c8c8c8 !important;
 }
 .pulseWarning{
   display: none !important;
@@ -1080,7 +1088,7 @@ button.btn-next {
     color: #fff;
     background-color: #11e9de;
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     padding: 3px 0;
     border: none;
     .fileinput-new{
@@ -1532,9 +1540,10 @@ button.btn-next {
   padding-left: 0;
 }
 .additional-div{
+  overflow-y: auto;
   height: 90px;
   border: 1px solid #f2f2f2;
-  line-height: 45px;
+  line-height: 44px;
   color: #969696;
   font-size: 18px;
   font-family: FaricyNew-Regular;
@@ -1880,7 +1889,7 @@ button.btn-next {
       td:nth-of-type(2):before { content: "What"; }
     	td:nth-of-type(3):before { content: "From"; }
     	td:nth-of-type(4):before { content: "To"; }
-    	td:nth-of-type(5):before { content: "Reward"; }
+    	td:nth-of-type(5):before { content: "Traveler earns"; }
     	td:nth-of-type(6):before { content: "Price"; }
     	td:nth-of-type(7):before { content: "Quantity"; }
       .main-btn{
@@ -1948,6 +1957,10 @@ button.btn-next {
   }
   .panel-default>.panel-heading{
     display: block;
+  }
+  .footer-wrapper .footer-nav li{
+    padding-right: 13px;
+
   }
 }
 @media (max-width: 480px) {
@@ -2103,7 +2116,7 @@ button.btn-next {
     width: 45%;
   }
   .paypal-details{
-    margin-left: 23px;
+    margin-left: 19px;
   }
   .payout-block .payout-form-control{
     width: 50%;
@@ -2127,6 +2140,12 @@ button.btn-next {
    }
    .signup-block{
      padding-top: 10px;
+   }
+   .profile-body-block{
+     padding: 0 35px 0;
+   }
+   .profile-body{
+     padding-top: 0;
    }
 }
 @media (max-width: 414px){
@@ -2202,6 +2221,18 @@ button.btn-next {
   .credit-card-box{
     margin-left: 0;
   }
+  .footer-wrapper{
+    font-size: 14px;
+  }
+  .payout-block label{
+    margin-left: 35px;
+  }
+  .payout-block .payment-method{
+    margin-left: 35px;
+  }
+  .footer-wrapper .footer-nav li{
+    margin: 0 6px;
+  }
 }
 @media (max-width: 360px){
   .payout-block .table>tbody>tr>th{
@@ -2230,7 +2261,9 @@ button.btn-next {
   .main-date-group .main-search-input{
     font-size: 14px;
   }
-
+  .footer-wrapper .footer-nav li{
+    margin: 0 5px;
+  }
 }
 
 @media (max-width: 320px){
@@ -2319,7 +2352,10 @@ button.btn-next {
   }
   .footer-wrapper .footer-nav li{
     padding: 20px 0;
-    margin: 0 10px;
+    margin: 0 3px;
+  }
+  .footer-wrapper .footer-nav li a{
+    font-size: 16px;
   }
   .land-content .vector-wrap img{
     max-width: 35px;
@@ -2454,5 +2490,11 @@ button.btn-next {
    }
    .offers-account-div{
      width: 75%;
+   }
+   .paypal-details{
+     margin-left: 10px;
+   }
+   .footer-wrapper{
+     height: 65px;
    }
 }
