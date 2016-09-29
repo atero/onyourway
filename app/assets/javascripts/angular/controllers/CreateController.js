@@ -3,6 +3,7 @@ App.controller('CreateCtrl', ['$scope', '$state', 'localuser', 'Order', 'Shipmen
   $scope.inherit.loading = false;
   ga('set', 'page', '/create');
   ga('send', 'pageview');
+  $curr_stage = 0;
   $scope.local = {
     order: {
       from: [],
