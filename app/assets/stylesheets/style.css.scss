@@ -1795,7 +1795,8 @@ button.btn-next {
 }
 .btn-block{
   background-color: #11E9DE !important;
-  color: white;  
+  color: white;
+  font-weight: 600;
 }
 
 
@@ -1811,10 +1812,16 @@ button.btn-next {
     background: url("../images/Image_home1.jpg") center center no-repeat;
     background-size: auto 100%;
   }
+  .profile-message{
+    width: 82% !important;
+  }
 }
 @media (max-width: 1280px){
   .first-last-name{
     padding: 0;
+  }
+  .profile-message{
+    width: 79% !important;
   }
 }
 
@@ -1836,6 +1843,9 @@ button.btn-next {
   }
   .bank_account{
     margin-left: 45px;
+  }
+  .profile-message{
+    width: 72% !important;
   }
 }
 
