@@ -1815,6 +1815,9 @@ button.btn-next {
   .profile-message{
     width: 82% !important;
   }
+  .credit-card-box{
+    width: 405px;
+  }
 }
 @media (max-width: 1280px){
   .first-last-name{
@@ -1846,6 +1849,9 @@ button.btn-next {
   }
   .profile-message{
     width: 72% !important;
+  }
+  .left-bar{
+    width:105px;
   }
 }
 
@@ -1968,7 +1974,7 @@ button.btn-next {
   }
   .credit-card-box{
     margin-top: 1px;
-    margin-left: 0px;
+    //margin-left: 0px;
     margin-right: 149px;
   }
   .panel-default>.panel-heading{
@@ -2151,6 +2157,7 @@ button.btn-next {
     display: block;
    }
    .credit-card-box{
+     width: 100%;
      margin-left: 0;
      margin-right: 0;
    }
@@ -2271,7 +2278,6 @@ button.btn-next {
     margin-top: 0;
   }
   .credit-card-box{
-    //margin-left: 0;
     margin-right: 0;
   }
   .main-date-group .main-search-input{
