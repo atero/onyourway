@@ -930,6 +930,7 @@ button.btn-next {
   border-radius: 6px;
   padding: 7px 25px !important;
   background-color: white !important;
+  border:1px solid #adadad !important;
 }
 .sweet-alert button.confirm{
   border-radius: 6px;
@@ -937,13 +938,13 @@ button.btn-next {
   padding: 7px 25px !important;
 }
 .sweet-alert button.cancel:hover{
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #333 !important;
+  background-color: #e6e6e6 !important;
+  border-color: #adadad !important;
 }
 .sweet-alert button.confirm:hover{
-  color: #333;
-  background-color: #e6e6e6;
+  color: #333 !important;
+  background-color: #e6e6e6 !important;
 }
 .sweet-alert h2{
   font-weight: 300 !important;
@@ -953,7 +954,8 @@ button.btn-next {
   display: none !important;
 }
 .modal-content{
-
+  width: 0px;
+  border: none;
 }
 
 
