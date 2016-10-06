@@ -76,7 +76,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
     swal({
       title: 'Are you sure you want to delete this delivery offer from the list?',
-      text: "You want be able to see it anymore.",
+      text: "You won't be able to see it anymore.",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

@@ -21,13 +21,13 @@
       <thead>
         <th class="order-table-th text-left">What</th>
         <th class="order-table-th text-left">From</th>
-        <th class="order-table-th text-left">To</th>
+        <th class="order-table-th text-left">Total price</th>
       </thead>
       <tbody>
         <tr ng-repeat="order in local.orders" class="clickableRow " ng-class="{activeorder: order.id == local.data_to_show.id}">
           <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</td>
             <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</td>
-              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.to}}</td>
+              <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.total_price}}</td>
         </tr>
       </tbody>
     </table>
@@ -37,10 +37,10 @@
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
-    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">Travels proposed for this order</p>
+    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">Delivery offers proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
     <div class="text-left offers-account-div" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">
-      <p class="offers-account" >You have {{local.data_to_show.shipments.length}} offers</p>
+      <p class="offers-account" ng-if="local.data_to_show.status !== 'refused'" >You have {{local.data_to_show.shipments.length}} offers</p>
     </div>
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending' }">
 
@@ -56,6 +56,7 @@
             <li class="col-sm-4"><span>From:</span> {{shipment.from}}</li>
             <li class="col-sm-4"><span>Date:</span> {{shipment.date | date : mediumDate}}</li>
           </ul>
+          <p class="show_message">click to reply</p>
           <p class="offer-text text-left" ng-repeat="message in shipment.messages" ng-show="message.order_id == local.data_to_show.id">
             {{message.text}}
           </p>
