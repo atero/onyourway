@@ -279,10 +279,6 @@
   100% {
     transform: scale(0.5);
     -webkit-transform: scale(0.5); } }
-.showSweetAlert {
-  -webkit-animation: showSweetAlert 0.3s;
-  -moz-animation: showSweetAlert 0.3s;
-  animation: showSweetAlert 0.3s; }
 
 .hideSweetAlert {
   -webkit-animation: hideSweetAlert 0.2s;
