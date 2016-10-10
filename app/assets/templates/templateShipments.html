@@ -20,7 +20,7 @@
       <div class="from-to-date" ng-repeat="shipment in local.shipments" >
         <div class="col-sm-12">
           <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
-          <p class="offers">You have sent {{shipment.orders.length || 'no'}} offers for this trip</p>
+          <p class="offers">You have sent {{shipment.orders.length || 'no'}} <span ng-if="shipment.orders.length == 1">offer</span><span ng-if="shipment.orders.length > 1">offers</span> for this trip</p>
         </div>
         <div class="" ng-repeat="order in shipment.orders">
           <div class="col-sm-12 hover-div" ng-class="{activeorder: order.id == local.data_to_show.id}" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
