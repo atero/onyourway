@@ -18,17 +18,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
   }
 
-  if($scope.local.data_to_show.shipments.length > 0) {
-    var refused =0;
-    for (var i = 0; i < $scope.local.data_to_show.shipments.length; i++) {
-      if ($scope.local.data_to_show.shipments[i].status == "refused") {
-        refused++;
-      }
-    }
-    $scope.local.data_to_show.shipments.length = $scope.local.data_to_show.shipments.length - refused ;
-  }
-
-  console.log($scope.local.data_to_show.shipments.length );
 
   console.log($scope.local.orders);
 
@@ -100,6 +89,15 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         Shipment.update({
           id: shipment.id
         }, {
+          if($scope.local.data_to_show.shipments.length > 0) {
+            var refused =0;
+            for (var i = 0; i < $scope.local.data_to_show.shipments.length; i++) {
+              if ($scope.local.data_to_show.shipments[i].status == "refused") {
+                refused++;
+              }
+            }
+            $scope.local.data_to_show.shipments.length = local.data_to_show.shipments.length - refused ;
+          },
           shipment: shipment
         })
       }
