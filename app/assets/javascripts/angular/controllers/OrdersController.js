@@ -97,9 +97,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
             }
             $scope.local.data_to_show.shipments.length = $scope.local.data_to_show.shipments.length - refused ;
           }
-
-          console.log($scope.local.data_to_show.shipments.length );
-
+        
           shipment: shipment
         })
       }
