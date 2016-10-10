@@ -26,7 +26,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }
   }
     console.log(refused);
-  $scope.local.data_to_show.shipments.length = $scope.local.data_to_show.shipments.length - refused;
+  $scope.loc = $scope.local.data_to_show.shipments.length - refused;
 }
   console.log($scope.local.orders);
 

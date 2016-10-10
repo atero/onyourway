@@ -40,7 +40,7 @@
     <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">Delivery offers proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
     <div class="text-left offers-account-div" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">
-      <p class="offers-account " >You have {{local.data_to_show.shipments.length}} <span ng-if="local.data_to_show.shipments.length == 1">offer</span> <span ng-if="local.data_to_show.shipments.length > 1">offers</span></p>
+      <p class="offers-account " >You have {{loc}} <span ng-if="local.data_to_show.shipments.length == 1">offer</span> <span ng-if="local.data_to_show.shipments.length > 1">offers</span></p>
     </div>
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending' }">
 
