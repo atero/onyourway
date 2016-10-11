@@ -113,10 +113,9 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
             refused++;
           }
         }
-      //  $scope.local.data_to_show.shipments.length = $scope.local.data_to_show.shipments.length - refused;
-     $scope.count_offer = $scope.local.data_to_show.shipments.length - refused;
-    }
-  }
+           $scope.count_offer = $scope.local.data_to_show.shipments.length - refused;
+        }
+      }
   }
 
   $scope.sendMessage = function(order, shipment) {
