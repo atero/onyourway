@@ -48,7 +48,7 @@
   </div>
   <div class="col-md-5 shipmentt-details" ng-if="!!local.shipmen_to_show" resize>
     <div class="main-status-travels">
-      <p class="status-travels">Status:</p> <b class="main-pending" ng-if="(local.data_to_show.status == 'pending' ||local.data_to_show.status == 'accepted') && local.shipmen_to_show.status !== 'refused'">{{local.data_to_show.status}}</b><b class="main-pending" ng-if="local.shipmen_to_show.status == 'refused'">{{local.shipmen_to_show.status}}</b>
+      <p class="status-travels">Status:</p> <b class="main-pending" ng-if="(local.data_to_show.status == 'pending' ||local.data_to_show.status == 'accepted') && local.shipmen_to_show.status !== 'refused'">{{local.data_to_show.status}}</b> <b class="main-pending" ng-if="local.shipmen_to_show.status == 'refused'">{{local.shipmen_to_show.status}}</b>
       <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending' && local.shipmen_to_show.status !== 'refused'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
       <div class=""  ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
         <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}€  as soon as you enter the confirmation code</p>
