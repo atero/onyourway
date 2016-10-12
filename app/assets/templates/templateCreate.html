@@ -81,7 +81,7 @@
 
         <form ng-if="local.stages[1]" id="form-block2" >
           <div class="form-group" >
-            <label for="arrival" class="item-label-price">Price per item (in €)</label>
+            <label for="arrival" class="item-label-price">Price per item (in $)</label>
             <input type="number" min="0" class="form-control" id="price"  placeholder="100" ng-model="local.order.price">
           </div>
 
@@ -91,7 +91,7 @@
           </div>
 
           <div class="form-group">
-            <label for="date" class="item-label-price">Reward for the traveller (in €)</label>
+            <label for="date" class="item-label-price">Reward for the traveller (in $)</label>
             <input type="number" min="0" class="form-control" id="reward" ng-model="local.order.reward" placeholder="Reward for the traveller">
           </div>
 
@@ -120,16 +120,16 @@
                {{local.order.details}}
                <div class="clearfix"></div>
               <div class="col-sm-12">
-                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}€</span>
+                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}$</span>
               </div>
               <div class="clearfix"></div>
               <div class="col-sm-12">
-                <span class="pull-left summary-span">Traveller's reward:</span><span class="pull-right summary-span">{{local.order.reward}}€</span>
+                <span class="pull-left summary-span">Traveller's reward:</span><span class="pull-right summary-span">{{local.order.reward}}$</span>
               </div>
               <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">On Your Way's fee:</span><span class="pull-right summary-span summary-span">
-                  {{(( local.order.price*local.order.quantity + local.order.reward )* 0.07 + 6).toFixed(2)}}€
+                  {{(( local.order.price*local.order.quantity + local.order.reward )* 0.07 + 6).toFixed(2)}}$
                 </span>
               </div>
               <div class="clearfix"></div>
@@ -138,7 +138,7 @@
               <h5 class="pull-left summary-span">Total:</h5>
 
               <span style="padding-top:10px" class="pull-right summary-span">{{((local.order.reward +local.order.price*local.order.quantity) * 1.07 + 6).toFixed(2)
-              }}€</span>
+              }}$</span>
               <!--  replace above 0 with local.order.price*local.order.quantity*0.03 after prelunch-->
               <br/>
             </div>
