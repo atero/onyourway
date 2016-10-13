@@ -959,6 +959,7 @@ button.btn-next {
   border: none;
 }
 .show_message{
+  margin-bottom: 40px;
   text-align: left;
   color: #11E9DE;
   font-size: 14px;
@@ -1343,6 +1344,13 @@ button.btn-next {
   font-size: 18px;
   color: #969696;
   font-family: FaricyNew-Regular;
+}
+.main-lead a{
+  color: #969696;
+}
+.main-lead a:hover{
+  color: #11e9de;
+  text-decoration: none;
 }
  .main-pending{
   text-transform: capitalize;
