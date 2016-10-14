@@ -26,6 +26,11 @@ return {
               $scope.autocompleteSelect = function(event, ui) {
                 $scope.newValue = ui.item.value;
                 $scope.$apply( $scope.add );
+                if (ui.item.value == "") {
+                  $scope.newValue = input.val();
+                  console.log('input.val()' + input.val());
+                }
+                $scope.$apply( $scope.add );
 
                 return false;
               };
