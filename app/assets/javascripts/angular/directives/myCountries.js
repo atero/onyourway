@@ -64,9 +64,6 @@ return {
           // if not dupe, add it
           if ($scope.tags.indexOf($scope.newValue)==-1){
                   $scope.tags.push( $scope.newValue );
-                }else {
-                  console.log("text");
-                  $scope.tags.push(input.text());
                 }
                 $scope.newValue = "";
             };
