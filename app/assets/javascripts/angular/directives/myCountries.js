@@ -24,12 +24,7 @@ return {
                 return false;
               };
               $scope.autocompleteSelect = function(event, ui) {
-                if (ui.item.value) {
-                  $scope.newValue = ui.item.value;
-                  console.log("ui.item.value" + ui.item.value);
-                }else {
-                  $scope.newValue = ui.item.text();
-                }
+                $scope.newValue = ui.item.value;
                 $scope.$apply( $scope.add );
                 return false;
               };
