@@ -1263,6 +1263,7 @@ button.btn-next {
     }
     .about_start h1{
       color: white;
+      margin: 35px 0;
     }
   }
 
@@ -1296,9 +1297,15 @@ button.btn-next {
     }
 }
 .contact_text{
-  margin-right: 15px;
+   margin-right: 15px;
+}
+.contact_header{
+  background: red;
 }
 .contact_us{
+  background: white;
+  padding: 10px 0;
+  margin-bottom: 0;
   font-size: 30px;
   color: #a7a7a7;
   font-family: FaricyNew-Light;

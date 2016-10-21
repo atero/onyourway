@@ -116,4 +116,20 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 
     $scope.inherit.details = '';
 
+    $scope.openContact = function(){
+        var d = $q.defer();
+        var modalInstance = $uibModal.open({
+          animation: $scope.animationsEnabled,
+          templateUrl: 'templateContact.html',
+          controller: 'ContactCtrl',
+          size: "md",
+          resolve: {
+            contact_us: function() {
+              return ;
+            }
+          }
+       })
+
+    }
+
 }])

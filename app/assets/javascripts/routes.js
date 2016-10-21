@@ -115,23 +115,6 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
             }]
           }
         })
-        $stateProvider
-          // .state('contact', {
-          //   url: '/contact',
-          //   controller: 'ContactCtrl',
-          //   templateUrl: "templateContact.html",
-          //   resolve: {
-          //     localuser: ['$q', 'Auth', function($q, Auth) {
-          //       var d = $q.defer();
-          //       var user = Auth.currentUser().then(function(user) {
-          //         d.resolve(user);
-          //       }, function(error) {
-          //         d.resolve(null);
-          //       });
-          //       return d.promise;
-          //     }]
-          //   }
-          // })
     $stateProvider
       .state('profile', {
         url: '/profile',
