@@ -1247,6 +1247,85 @@ button.btn-next {
     margin: 0;
   }
 }
+.about_us{
+    background-image: url(../images/about_us.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    .text_about{
+      background-color: white;
+      padding-left: 35px;
+      padding-right: 35px;
+      margin-bottom: 35px;
+    }
+    .text_about h3{
+      color: #a7a7a7;
+    }
+    .about_start h1{
+      color: white;
+    }
+  }
+
+.contact_main{
+  background-image: url(../images/contact_us.png);
+  background-repeat: no-repeat;
+  //width: 640px;
+    .pay-pal-account{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .pay-pal-account  p{
+      color: white;
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+    .pay-pal-account input{
+      width: 45%;
+    }
+    .pay-pal-account button{
+      float: right;
+    }
+    .pay-pal-account .btn_send{
+      color: white;
+      background: #11E9DE;
+    }
+    .pay-pal-account .btn_send:hover{
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #adadad;
+    }
+}
+.contact_text{
+  margin-right: 15px;
+}
+.contact_us{
+  font-size: 30px;
+  color: #a7a7a7;
+  font-family: FaricyNew-Light;
+}
+.contact_text{
+  h1, h2{
+    padding-left: 53%;
+    text-align: right;
+    color: white;
+  }
+  h2{
+    margin-top: 0;
+    font-size: 24px;
+  }
+  h1{
+    margin-bottom: 0;
+    font-family: FaricyNew-Bold;
+    font-size: 32px;
+  }
+  a{
+    color: #11E9DE;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+}
+
 .faq-block{
   p{
     font-size: 25px;

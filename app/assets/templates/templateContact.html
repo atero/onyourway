@@ -1,35 +1,40 @@
 <!-- Page Content -->
-<div class="narrow-banner conditions-banner ng-scope">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="text-center">
-        <h1><b>ABOUT US</b></h1>
+<div class="collapse">
+  <div class="modal-dialog modal-md">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center contact_us">
+          <h1>Contact US</h1>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="container result-block conditions-block">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row padding-top main-margin-block">
-        <div class="col-md-offset-1 col-md-12">
-          <div class="text-center conditions-head main-conditions-head">
-            <h2>Please fill fields below to contact us.</h2>
+
+  <div class="result-block conditions-block contact_main  ">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="">
+          <div class="col-md-offset-1 col-md-12">
+            <div class="text-center contact_text">
+              <h1>HELLO?</h1>
+              <h2> We are here to answer you! Get in touch by writing to <a ng-click="" >support@onyourway.io </a> or using the form below</h2>
+            </div>
+            <div class="pay-pal-account" ng-show="inherit.user.is_spa">
+              <p class="account-bank-info">Name</p>
+              <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_name" required/>
+              <p class="account-bank">E-mail</p>
+              <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_mail" required/>
+              <p class="account-bank">Message</p>
+              <textarea style="float:left;" type="text" size="20" class="form-control" ng-model="inherit.user.contact_message"></textarea>
+              <button type="button" class="btn btn-default payout-btn btn_send" name="button" ng-click="send_contact_message()">Send</button>
+              <button type="button" class="btn btn-default payout-btn" name="button" ng-click="cancel()">Cancel</button>
+            </div>
+            <span class="condition-padding row"></span>
           </div>
-          <div class="pay-pal-account" ng-show="inherit.user.is_spa">
-            <p class="account-bank-info">Please, enter your full name</p>
-            <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_name" />
-            <p class="account-bank">Email</p>
-            <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_mail" />
-            <p class="account-bank">Message</p>
-            <textarea style="float:left;" type="text" size="20" class="form-control" ng-model="inherit.user.contact_message"></textarea>
-            <button type="button" class="btn btn-default payout-btn" name="button" ng-click="send_contact_message()">OK</button>
-          </div>
-          <span class="condition-padding row"></span>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </div>
-</div>
+
 <!-- /.container -->
