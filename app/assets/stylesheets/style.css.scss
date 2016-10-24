@@ -1299,9 +1299,10 @@ button.btn-next {
 .contact_text{
    margin-right: 15px;
 }
-// .contact_header{
-//   background: red;
-// }
+.contact_header{
+  opacity: 1 !important;
+  z-index: 9999;
+}
 .contact_us{
   background: white;
   padding: 10px 0;

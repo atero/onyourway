@@ -1,6 +1,10 @@
 App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($scope,$uibModalInstance, $window){
 
-
+  $('#contact-opacity').on('click',function(){
+  //  alert(this);
+  //  document.body.style.opacity = "0.4";
+    //$('html').css('opacity','-0.5');
+  });
 
   $scope.cancel = function() {
     if ($scope.validated) {
