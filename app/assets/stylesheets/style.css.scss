@@ -1251,7 +1251,7 @@ button.btn-next {
     background-image: url(../images/about_us.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100%;
+    background-size: cover;
     .text_about{
       background-color: white;
       padding-left: 35px;
@@ -1925,21 +1925,6 @@ button.btn-next {
   .container {
     width: 1530px;
   }
-  .about_us {
-    .about_start h1 {
-      margin: 20px 0;
-      font-size: 30px;
-    }
-    .conditions-head h2{
-      font-size: 25px;
-    }
-    .text_about h3{
-      font-size: 20px;
-    }
-  }
-  .conditions-block p{
-    font-size: 15px;
-  }
 }
 @media (max-width: 1450px) {
   .welcome-image{
@@ -1952,27 +1937,6 @@ button.btn-next {
   .credit-card-box{
     width: 405px;
   }
-  .about_us {
-    .about_start h1 {
-      margin: 20px 0;
-      font-size: 25px;
-    }
-    .conditions-head h2{
-      font-size: 20px;
-    }
-    .text_about h3{
-      font-size: 15px;
-    }
-  }
-  .main-margin-block i{
-    margin-bottom: 15px;
-  }
-  .conditions-block p{
-    font-size: 14px;
-  }
-  .condition-padding{
-    padding: 0;
-    }
 }
 @media (max-width: 1280px){
   .first-last-name{
@@ -1980,23 +1944,6 @@ button.btn-next {
   }
   .profile-message{
     width: 79% !important;
-  }
-  .conditions-block  h5{
-    margin: 20px 0 12px;
-  }
-  .about_us{
-    .text_about h3{
-      margin-top: 15px;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-  }
-  .main-margin-block i{
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  .main-margin-block h5{
-    font-size: 14px;
   }
 }
 
@@ -2033,32 +1980,6 @@ button.btn-next {
     margin-bottom: 5px;
     font-size: 14px;
   }
-  .about_us{
-    .text_about{
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .about_start h1{
-      margin: 10px 0;
-    }
-    .conditions-head h2{
-      font-size: 16px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-    }
-  }
-  .conditions-block h5{
-    margin-top: 12px;
-    margin-bottom: 0;
-  }
-  .conditions-block {
-    p{
-      font-size: 12px;
-    }
-  .condition-padding{
-      padding: 0;
-    }
-  }
 }
 
 
@@ -2071,11 +1992,6 @@ button.btn-next {
   }
   .main-margin-block{
     width: 100%;
-  }
-  .about_us{
-    .about_start h1{
-      font-size: 20px;
-    }
   }
 }
 

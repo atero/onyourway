@@ -9,8 +9,8 @@ App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($
       $scope.validated = false
     } else {
       $uibModalInstance.close()
-    }
-   }
+      }
+  }
 
    // 	$scope.sendMessage = function(order, shipment){
    // 		console.log($scope.local.new_message.text);

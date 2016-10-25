@@ -129,13 +129,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
             }
           }
        })
+     }
 
-    }
-
-    // $('#contact-opacity').on('click',function(){
-    //   alert(this);
-    // //$(this).css("opacity", "0.1");
-    //   //  document.getElementById(this).style.opacity = '0.4';
-    // })
 
 }])

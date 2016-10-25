@@ -120,7 +120,7 @@
                {{local.order.details}}
                <div class="clearfix"></div>
               <div class="col-sm-12">
-                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{local.order.price*local.order.quantity}}$</span>
+                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{(local.order.price*local.order.quantity).toFixed(2)}}$</span>
               </div>
               <div class="clearfix"></div>
               <div class="col-sm-12">
