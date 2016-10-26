@@ -1,82 +1,82 @@
 <div class="narrow-banner-orders ng-scope">
-  <div class="row">
-    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
 
+        </div>
     </div>
-  </div>
 </div>
 <div class="text-center profile-body orders-block container-fluid" resize>
-  <div class="col-md-2">
-    <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments', 'payout'].indexOf(inherit.currentState()) > -1">
-      <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
-      <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
-      <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
-      <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
-    </ul>
-  </div>
-  <div class="col-md-5">
-    <div class="col-md-12">
-      <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
-      <div class="from-to-date" ng-repeat="shipment in local.shipments" >
-        <div class="col-sm-12">
-          <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
-          <p class="offers">You have sent {{shipment.orders.length || 'no'}} <span ng-if="shipment.orders.length == 1">offer</span><span ng-if="shipment.orders.length > 1">offers</span> for this trip</p>
-        </div>
-        <div class="" ng-repeat="order in shipment.orders">
-          <div class="col-sm-12 hover-div" ng-class="{activeorder: order.id == local.data_to_show.id}" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
-            <div class="col-sm-2 first-last-name text-center">
-              <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
-              <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.user.photo}}" alt="">
-            </div>
-            <div class="col-sm-10 right-side">
-              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
-                <div class="home-table-th text-center home-span1" valign="middle">{{order.item}}</div>
-              </div>
-              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Price
-                <div class="home-table-th text-center home-span2" valign="middle">{{order.price}}$</div>
-              </div>
-              <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Traveler earns
-                <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}$</div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="separator-gray"></div>
-        </div>
-      </div>
+    <div class="col-md-2">
+        <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments', 'payout'].indexOf(inherit.currentState()) > -1">
+            <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
+            <li role="presentation" ng-class="{active:inherit.currentState() == 'orders'}"><a ng-click="inherit.goState('orders')">Orders</a></li>
+            <li role="presentation" ng-class="{active:inherit.currentState() == 'shipments'}"><a ng-click="inherit.goState('shipments')">Travels</a></li>
+            <li role="presentation" ng-class="{active:inherit.currentState() == 'payout'}"><a ng-click="inherit.goState('payout')">Payout</a></li>
+        </ul>
     </div>
-  </div>
-  <div class="col-md-5 shipmentt-details" ng-if="!!local.shipmen_to_show" resize>
-    <div class="main-status-travels">
-      <p class="status-travels">Status:</p> <b class="main-pending" ng-if="(local.data_to_show.status == 'pending' ||local.data_to_show.status == 'accepted') && local.shipmen_to_show.status !== 'refused'">{{local.data_to_show.status}}</b> <b class="main-pending" ng-if="local.shipmen_to_show.status == 'refused'">{{local.shipmen_to_show.status}}</b>
-      <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending' && local.shipmen_to_show.status !== 'refused'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
-      <div class=""  ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
-        <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}$  as soon as you enter the confirmation code</p>
-        <div class="code-wrapper">
-          <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
-          <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
+    <div class="col-md-5">
+        <div class="col-md-12">
+            <p style="text-align:center;" class="lead text-center">Travels you have proposed</p>
+            <div class="from-to-date" ng-repeat="shipment in local.shipments">
+                <div class="col-sm-12">
+                    <span class="from">{{shipment.from}} - {{shipment.to}} - {{shipment.date | date : 'dd.MM.yyyy'}}</span>
+                    <p class="offers">You have sent {{shipment.orders.length || 'no'}} <span ng-if="shipment.orders.length == 1">offer</span><span ng-if="shipment.orders.length > 1">offers</span> for this trip</p>
+                </div>
+                <div class="" ng-repeat="order in shipment.orders">
+                    <div class="col-sm-12 hover-div" ng-class="{activeorder: order.id == local.data_to_show.id}" ng-click="local.data_to_show = order; local.shipmen_to_show = shipment">
+                        <div class="col-sm-2 first-last-name text-center">
+                            <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
+                            <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.user.photo}}" alt="">
+                        </div>
+                        <div class="col-sm-10 right-side">
+                            <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
+                                <div class="home-table-th text-center home-span1" valign="middle">{{order.item}}</div>
+                            </div>
+                            <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Price
+                                <div class="home-table-th text-center home-span2" valign="middle">{{order.price}}$</div>
+                            </div>
+                            <div class="col-sm-4 home-table-structure" class="home-table-th text-center">Traveler earns
+                                <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="separator-gray"></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status != 'pending' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.shipmen_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult <a ng-click="inherit.goState('results')" class=""> Active Orders </a> for many other items awaiting a delivery.  </p>
-      <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'delivered' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id)">Thanks for delivering the item! You will receive {{(local.data_to_show.total_price - 6) / 1.07}}$ via your prefered payout method in the upcoming days.</p>
-      <div class="col-sm-9">
-        <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
-          {{order.message}}
-        </div>
-      </div>
-      <div class="col-sm-2">
-        <div class="photos-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
-          <img ng-src="{{order.photo}}" alt="" />
-        </div>
-      </div>
-      <table class="table">
-        <tbody>
-          <tr>
-            <td style='width:92%; padding: 13px;' class="home-table-th text-center" valign="middle">
-              <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text" placeholder="Type your message..."></textarea>
-            </td>
-            <td class="home-table-th text-center" valign="middle">
-              <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.shipmen_to_show)"><i style="color:#11e8dd;" class="fa fa-send">
+    </div>
+    <div class="col-md-5 shipmentt-details" ng-if="!!local.shipmen_to_show" resize>
+        <div class="main-status-travels">
+            <p class="status-travels">Status:</p> <b class="main-pending" ng-if="(local.data_to_show.status == 'pending' ||local.data_to_show.status == 'accepted') && local.shipmen_to_show.status !== 'refused'">{{local.data_to_show.status}}</b> <b class="main-pending" ng-if="local.shipmen_to_show.status == 'refused'">{{local.shipmen_to_show.status}}</b>
+            <p class="lead text-center main-lead" ng-if="local.data_to_show.status == 'pending' && local.shipmen_to_show.status !== 'refused'">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
+            <div class="" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
+                <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}$ as soon as you enter the confirmation code</p>
+                <div class="code-wrapper">
+                    <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
+                    <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
+                </div>
+            </div>
+            <p class="lead text-center main-lead" ng-if="(local.data_to_show.status != 'pending' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id) || local.shipmen_to_show.status == 'refused'">Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult <a ng-click="inherit.goState('results')" class=""> Active Orders </a> for many other items awaiting a delivery. </p>
+            <p class="lead text-center main-lead" ng-if="(local.data_to_show.status == 'delivered' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id)">Thanks for delivering the item! You will receive {{(local.data_to_show.total_price - 6) / 1.07}}$ via your prefered payout method in the upcoming days.</p>
+            <div class="col-sm-9">
+                <div class="additional-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
+                    {{order.message}}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="photos-div" ng-repeat="order in local.shipmen_to_show.orders" ng-show="order.id == local.data_to_show.id">
+                    <img ng-src="{{order.photo}}" alt="" />
+                </div>
+            </div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td style='width:92%; padding: 13px;' class="home-table-th text-center" valign="middle">
+                            <textarea name="content" type="text" class="form-control" ng-model="local.new_message.text" placeholder="Type your message..."></textarea>
+                        </td>
+                        <td class="home-table-th text-center" valign="middle">
+                            <button type="button" class="btn btn-default pull-right" ng-click="sendMessage(local.data_to_show, local.shipmen_to_show)"><i style="color:#11e8dd;" class="fa fa-send">
               </td>
             </tr>
           </tbody>
@@ -85,7 +85,8 @@
         <div class="col-md-12 padding-none">
             <div class="message col-md-12 main-message" ng-repeat="message in local.shipmen_to_show.messages" ng-show="message.order_id == local.data_to_show.id">
               <div class="user-w">
-                  <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !!local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id &&local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" ng-src="{{ message.sender_id ==  local.data_to_show.user.id && local.data_to_show.user.photo || local.shipmen_to_show.user.photo }}" alt="">
+                  <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !!local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" ng-src="{{ message.sender_id ==  local.data_to_show.user.id && local.data_to_show.user.photo || local.shipmen_to_show.user.photo }}" alt="">
+                  <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && !local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" src="/images/nophoto.png" alt="">
                   {{message.user.first_name + ' ' + message.user.last_name.split('')[0]}}
               </div>
               <p class="col-sm-10 profile-message" style="text-align: left; font-size:14px; color:#969696; padding-top: 20px; font-family: FaricyNew-Light;">
