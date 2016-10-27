@@ -4,7 +4,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
     if ($('.collapse').css('display') == 'block') {
       $('.collapse').collapse('hide');
     }
-  })
+  });
 
     $rootScope.$on('$stateChangeStart', function(){
         $scope.inherit.loading = true;
