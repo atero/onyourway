@@ -3,7 +3,10 @@ App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($
   $('#contact-opacity').on('click',function(){
     $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
   });
-
+  // if ('click') {
+  //   console.log("main");
+  //   $(".modal").css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
+  // }
   $scope.cancel = function() {
     if ($scope.validated) {
       $scope.validated = false

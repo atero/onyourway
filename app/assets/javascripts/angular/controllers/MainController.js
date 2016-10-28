@@ -123,13 +123,11 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
           templateUrl: 'templateContact.html',
           controller: 'ContactCtrl',
           size: "md",
-          resolve: {
-            contact_us: function() {
-              return ;
-            }
-          }
+          // resolve: {
+          //   contact_us: function() {
+          //     return ;
+          //   }
+          // }
        })
      }
-
-
 }])

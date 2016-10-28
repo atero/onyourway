@@ -17,9 +17,9 @@
                 <li class="active-orders">
                     <a ng-click="inherit.goState('results')" class="btn btn-sm btn-act-ord orders-active-a">Active Orders</a>
                 </li>
-                <!-- <li class="about-us">
-                    <a ng-click="">About us</a>
-                </li> -->
+                <li class="about-us">
+                    <a ng-click="inherit.goState('about')">About us</a>
+                </li>
                   <li ng-show="!inherit.user" class="signup">
                       <a ng-click="inherit.openSignup()">Sign up</a>
                   </li>
@@ -66,7 +66,7 @@
                                       <a ng-click="inherit.goState('conditions')">Terms of use</a>
                                   </li>
                                   <li>
-                                      <a href="#">Contact Us</a>
+                                      <a ng-click="openContact()">Contact Us</a>
                                   </li>
                               </ul>
                         </div>
