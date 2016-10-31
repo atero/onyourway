@@ -1,7 +1,7 @@
 App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($scope,$uibModalInstance, $window){
 
   $('#contact-opacity').on('click',function(){
-    $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
+     $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
   });
   // if ('click') {
   //   console.log("main");
