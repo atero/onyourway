@@ -4,7 +4,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
     if ($('.collapse').css('display') == 'block') {
       $('.collapse').collapse('hide');
     }
-  })
+  });
 
     $rootScope.$on('$stateChangeStart', function(){
         $scope.inherit.loading = true;
@@ -123,13 +123,11 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
           templateUrl: 'templateContact.html',
           controller: 'ContactCtrl',
           size: "md",
-          resolve: {
-            contact_us: function() {
-              return ;
-            }
-          }
+          // resolve: {
+          //   contact_us: function() {
+          //     return ;
+          //   }
+          // }
        })
      }
-
-
 }])
