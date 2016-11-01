@@ -21,7 +21,7 @@ child :order do |order|
   child :messages do |_u|
     attributes :text, :sender_id, :order_id
 
-    child :sender do |_u|
+    child :user do |_u|
       attributes :id, :first_name, :last_name
     end
   end
