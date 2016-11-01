@@ -3,7 +3,10 @@ object @shipments
 attributes :id, :from, :to, :date, :item, :messages, :status
 
 child :user do |_u|
-  attributes :id, :first_name, :last_name, :provider, :photo_url, :photo
+  attributes :id, :first_name, :last_name, :provider, :photo_url
+  node :photo do |_u|
+    _u.photo.url(:square)
+  end
 end
 
 child :order do |order|
@@ -13,6 +16,14 @@ child :order do |order|
 
   child :user do |_u|
     attributes :id, :first_name, :last_name, :photo_url, :photo
+  end
+
+  child :messages do |_u|
+    attributes :text, :sender_id, :order_id
+
+    child :sender do |_u|
+      attributes :id, :first_name, :last_name
+    end
   end
 
   node :photo do |order|
