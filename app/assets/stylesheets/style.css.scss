@@ -1908,6 +1908,7 @@ button.btn-next {
   font-size: 17px;
 }
 .shipmentt-details{
+  display: inline-block;
   position: fixed;
   right: 0;
   max-height: 50%;
@@ -1996,6 +1997,9 @@ button.btn-next {
 }
 
 @media (max-width: 768px) {
+  .shipmentt-details{
+    display: none;
+    }
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
     border: 1px solid #11e9de;
