@@ -1996,6 +1996,9 @@ button.btn-next {
 }
 
 @media (max-width: 768px) {
+  .shipmentt-details{
+    position: inherit;
+  }
   .navbar-toggle{
     background: url("../images/menu-icon.png") center center no-repeat;
     border: 1px solid #11e9de;
