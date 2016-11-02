@@ -9,6 +9,7 @@ child :shipments do |_shipment|
 
   child :user do |_u|
     attributes :id, :first_name, :last_name, :photo_url
+    _u.photo.url(:square)
   end
 
   child :messages do |_u|
