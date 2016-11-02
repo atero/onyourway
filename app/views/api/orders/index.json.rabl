@@ -16,9 +16,7 @@ end
 
 child :user do |_u|
   attributes :id, :first_name, :last_name, :provider, :photo_url
-  node :photo do |_u|
-      _u.photo.url(:square)
-  end
+  _u.photo.url(:square)
 end
 
 node :photo do |order|
