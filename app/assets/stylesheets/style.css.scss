@@ -1945,9 +1945,6 @@ button.btn-next {
   .first-last-name{
     padding: 0;
   }
-  // .profile-message{
-  //   width: 79% !important;
-  // }
 }
 
 @media (max-width: 1024px){
@@ -1969,9 +1966,9 @@ button.btn-next {
   .bank_account{
     margin-left: 45px;
   }
-  // .profile-message{
-  //   width: 72% !important;
-  // }
+  .profile-message{
+    width: 72% !important;
+  }
   .left-bar{
     width:105px;
   }
