@@ -12,14 +12,13 @@ child :shipments do |shipment|
           end
       end
   end
-  node :photo do |_u|
-      _u.photo.url(:square)
-  end
 end
 
 child :user do |_u|
   attributes :id, :first_name, :last_name, :provider, :photo_url
-  _u.photo.url(:square)
+  node :photo do |_u|
+      _u.photo.url(:square)
+  end
 end
 
 node :photo do |order|
