@@ -17,6 +17,7 @@ child :shipments do |_shipment|
 
     child :sender do |_u|
       attributes :id, :first_name, :last_name
+      _u.photo.url(:square)
     end
   end
 end
