@@ -27,14 +27,8 @@
                         <div class="col-sm-2 first-last-name text-center">
                             <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
                              <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.photo}}" alt="">
-
-                              <!-- <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !!local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" ng-src="{{ message.sender_id ==  local.data_to_show.user.id && local.data_to_show.user.photo || local.order.user.photo }}" alt="">
-
-                                <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && !local.order.user.photo)" style='width:100%' class="profile-photo" src="/images/User_No-Frame.png" alt="">
-
-                                <img ng-if=" (!local.order.user.photo)" style='width:100%' class="profile-photo" src="/images/User_No-Frame.png" alt=""> -->
-
-                        <div class="col-sm-10 right-side">
+                        </div>
+                            <div class="col-sm-10 right-side">
                             <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
                                 <div class="home-table-th text-center home-span1" valign="middle">{{order.item}}</div>
                             </div>
@@ -45,7 +39,7 @@
                                 <div class="home-table-th text-center home-span3" valign="middle">{{order.reward}}$</div>
                             </div>
                         </div>
-                    </div>
+
                     <div class="clearfix"></div>
                     <div class="separator-gray"></div>
                 </div>
