@@ -5,7 +5,7 @@
         </div>
     </div>
 </div>
-<div class="text-center profile-body orders-block container-fluid" resize>
+<div class="text-center profile-body profile-body-block orders-block container-fluid" resize>
     <div class="col-md-2">
         <ul class="left-bar orders-left-bar shipments-left-bar" ng-show="['profile', 'orders', 'shipments', 'payout'].indexOf(inherit.currentState()) > -1">
             <li role="presentation" ng-class="{active:inherit.currentState() == 'profile'}"><a ng-click="inherit.goState('profile')">Profile</a></li>
@@ -28,9 +28,13 @@
                             <span class="home-table-th text-center" valign="middle">{{order.user.first_name}} {{order.user.last_name.split('')[0]}}.</span>
                              <!-- <img style="width:60px; height:60px;" class="profile-photo" ng-src="{{order.user.photo}}" alt=""> -->
 
+<<<<<<< HEAD
                                 <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !!local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" ng-src="{{ message.sender_id ==  local.data_to_show.user.id && local.data_to_show.user.photo || local.order.user.photo }}" alt="">
 
                                 <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && !local.order.user.photo)" style='width:100%' class="profile-photo" src="/images/User_No-Frame.png" alt="">
+=======
+                                <!-- <img ng-if=" (!local.order.user.photo)" style='width:100%' class="profile-photo" src="/images/User_No-Frame.png" alt=""> -->
+>>>>>>> c72c6033b3c7e6345349ae5d5ddfd883143d6793
 
                         <div class="col-sm-10 right-side">
                             <div class="col-sm-4 home-table-structure" class="home-table-th text-center">What
@@ -92,9 +96,9 @@
                   <!-- <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !!local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" ng-src="{{ message.sender_id ==  local.data_to_show.user.id && local.data_to_show.user.photo || local.shipmen_to_show.user.photo }}" alt="">
                   <img ng-if="(message.sender_id ==  local.data_to_show.user.id && !local.data_to_show.user.photo) || (message.sender_id !=  local.data_to_show.user.id && !local.shipmen_to_show.user.photo)" style='width:100%' class="profile-photo" src="/images/User_No-Frame.png" alt=""> -->
                   <img  style='width:100%' class="profile-photo" ng-if="message.user.photo != '/photos/square/missing.png'" ng-src="{{ message.user.photo }}" alt="">
-                       <img  style='width:100%' class="profile-photo" ng-if="message.user.photo == '/photos/square/missing.png'" src="/images/User_No-Frame.png" alt="">
-                       <span>{{message.user.first_name }} {{order.user.last_name.split('')[0]}}.</span>
-                      </div>
+                  <img  style='width:100%' class="profile-photo" ng-if="message.user.photo == '/photos/square/missing.png'" src="/images/User_No-Frame.png" alt="">
+                  <span>{{message.user.first_name }} {{order.user.last_name.split('')[0]}}.</span>
+              </div>
               <p class="col-sm-10 profile-message" style="text-align: left; font-size:14px; color:#969696; padding-top: 20px; font-family: FaricyNew-Light;">
                 {{message.text}}
               </p>
@@ -105,7 +109,7 @@
     </div>
   <div class="clearfix"></div>
 </div>
-
+<div class="clearfix"></div>
 <!-- <table class="table">
     <thead>
       <th class="home-table-th text-center"></th>
