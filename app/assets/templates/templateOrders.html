@@ -42,7 +42,7 @@
     <div class="text-left offers-account-div" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending' && count_offer > 0">
       <p class="offers-account " >You have {{count_offer}} <span ng-if="count_offer == 1">offer</span> <span ng-if="count_offer > 1">offers</span></p>
     </div>
-    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending' | orderBy:'date' }">
+    <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | filter: { status: 'pending'} | orderBy:'date'">
       <!-- filter: [status: 'pending', shipment.date:'date' ] -->
       <div class="col-md-2 img-col">
         <img  style='width:85px' class="profile-photo" ng-if="shipment.user.photo != '/photos/square/missing.png'" ng-src="{{ shipment.user.photo }}" alt="">
