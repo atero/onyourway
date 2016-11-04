@@ -26,6 +26,7 @@ module Api
     def index #all the orders
       p '******************All Orders*************************'
       @orders = Order.where(:accepted_shipment => 'false')
+      @orders = Order.where(:date => 'new Date()')
 
       if @orders.length > 0
           render 'index'
