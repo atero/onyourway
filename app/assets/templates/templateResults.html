@@ -44,7 +44,7 @@
                 <th class="home-table-th text-center"></th>
               </thead>
               <tbody ng-if="inherit.usertype == 'traveller'" >
-                <tr ng-repeat="result in local.results | orderBy:'$$hashKey'">
+                <tr ng-repeat="result in local.results | orderBy:'date'">
                   <td class="home-table-td text-center"><img class="profile-photo" ng-src="{{result.photo}}" alt="">{{result.name}}</td>
                   <td class="home-table-th text-center" valign="middle">{{result.item}}</td>
                   <td class="home-table-th text-center" valign="middle">{{result.from}}</td>
