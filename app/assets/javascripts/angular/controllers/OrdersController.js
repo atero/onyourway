@@ -91,28 +91,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         }, {
                shipment: shipment
         }),
-        function(order, shipment) {
-          message = {
-            text: $scope.local.new_message.text("refused"),
-            sender: $scope.inherit.user._id,
-            recipient: shipment.user.id
-          }
-
-          console.log(shipment);
-
-          $scope.inherit.loading = true
-          Message.create({
-            shipment_id: shipment.id,
-            order_id: order.id
-          }, {
-            message: message
-          }, function(res) {
-            $scope.inherit.loading = false;
-            shipment.messages.push(res);
-            $scope.local.new_message.text = '';
-          })
-
-        }
       }
     })
   }
