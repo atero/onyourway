@@ -94,7 +94,7 @@
   <div class="gray-separator"></div>
   </div>
     <div class="col-md-12">
-      <div class="message col-md-12 main-message" ng-repeat="message in local.conversation_shipment.messages" ng-show="message.order_id == local.data_to_show.id">
+      <div class="message col-md-12 main-message" ng-repeat="message in local.conversation_shipment.messages | orderBy:'-created_at'" ng-show="message.order_id == local.data_to_show.id">
         <div class="user-w">
           <img  style='width:100%' class="profile-photo" ng-if="message.user.photo != '/photos/square/missing.png'" ng-src="{{ message.user.photo }}" alt="">
           <img  style='width:100%' class="profile-photo" ng-if="message.user.photo == '/photos/square/missing.png'" src="/images/User_No-Frame.png" alt="">

@@ -12,7 +12,7 @@ child :shipments do |_shipment|
   end
 
   child :messages do |_u|
-    attributes :text, :sender_id, :order_id
+    attributes :text, :sender_id, :order_id, :created_at
     child :sender do |_u|
       attributes :id, :first_name, :last_name, :provider, :photo_url
       node :photo do |_u|
