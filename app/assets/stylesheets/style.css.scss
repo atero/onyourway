@@ -497,6 +497,18 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
         font-family: FaricyNew-Regular;
         display: block;
       }
+      i{
+        color: #666;
+      }
+      a{
+        color: #666;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+      span{
+        font-family: FaricyNew-Bold;
+      }
     }
   }
   .how-title {
@@ -532,7 +544,112 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     font-size: 23px;
   }
 }
+  .down-image{
+    h3{
+      font-family: FaricyNew-Bold;
+      color: white;
+    }
+    .left-text{
+      margin-top: 115px;
+      p{
+        color: white;
+        text-align: left;
+        margin-left: -10%;
+        font-family: FaricyNew-Light;
+        font-size: 17px;
+        padding-bottom: 15px;
+      }
+    }
+  .block-connect{
+      max-width: 460px;
+      float: right;
+      padding: 25px 0;
+      border-radius: 5%;
+      margin-top: 66px;
+      background: white;
+      .connect-image{
+        position: absolute;
+        border-radius: 100%;
+        right: 22%;
+        top: 0;
+      }
+      .star{
+        margin-top: 65px;
+        margin-left: 36%;
+      }
+      p{
+        font-size: 17px;
+        text-align: center;
+        color: #999;
+        font-family: FaricyNew-Light;
+      }
+      .date{
+        border-bottom: 1px solid #999;
+        border-top: 1px solid #999;
+        padding-left: 0;
+        text-align: center;
+        li{
+          list-style: none;
+          display: inline-block;
+          padding: 20px;
+          font-size: 17px;
+          color: #999;
+          font-family: FaricyNew-Light;
+        }
+        .li-block{
+          border-right: 1px solid #999;
+          border-left: 1px solid #999;
+        }
+      }
+    }
+    table{
+      text-align: center;
+      margin: 0 15px;
+      tr{
+        td{
+          padding: 15px;
+          p{
+              display: inline-block;
+            }
+          a:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 
+  .block-customer{
+    h3{
+        text-align: center;
+        padding-top: 10px;
+        color: #666;
+        font-family: FaricyNew-Light;
+      }
+    p{
+        color: #999;
+        font-size: 17px;
+        display: inline-block;
+        margin-left: 15px;
+        margin-top: 36px;
+     }
+    .circle{
+        margin: 20px 0;
+      }
+    .block-support{
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 30px 0;
+      float: right;
+      .amazon{
+        margin-right: 85px;
+      }
+      .google{
+        margin-left: 85px;
+      }
+    }
+  }
 .jssor_1 {
   text-align: right;
   position: absolute;
