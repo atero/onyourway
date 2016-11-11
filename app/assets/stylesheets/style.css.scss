@@ -647,11 +647,20 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
      }
     .block1{
         margin: 20px 0;
+        img{
+          max-width: 100%;
+          height: auto;
+        }
         div{
+          float: left;
           display: inline-block;
         }
       }
     .block-support{
+      img{
+        max-width: 100%;
+        height: auto;
+      }
       h3{
           display: inline-block;
           border-bottom: 1px solid;
@@ -2076,6 +2085,9 @@ button.btn-next {
   .container {
     width: 1530px;
   }
+  .down-image .left-text p{
+    margin-left: 0;
+  }
 }
 @media (max-width: 1450px) {
   .welcome-image{
@@ -2084,6 +2096,14 @@ button.btn-next {
   }
   .credit-card-box{
     width: 405px;
+  }
+  .down-image .block-connect{
+    .connect-image{
+      right: 29%;
+    }
+    .icon-image{
+      left: 81%;
+    }
   }
 }
 @media (max-width: 1280px){
@@ -2123,6 +2143,22 @@ button.btn-next {
   .main-margin-block{
     width: 100%;
   }
+  .down-image {
+    .block-connect {
+      .connect-image{
+        right: 35%;
+     }
+     .icon-image{
+        left: 77%;
+      }
+    }
+    .left-text p{
+      margin-left: 0;
+      padding-bottom: 0;
+    }
+  }
+
+
 }
 
 
@@ -2259,6 +2295,32 @@ button.btn-next {
   }
   .navbar-brand{
     padding: 15px 9px;
+  }
+  .block-customer .block-support ul li{
+    margin: 25px 0;
+    display: block;
+  }
+  .down-image .block-connect {
+    margin-top: 100px;
+    .connect-image{
+      top: 40px;
+      max-width: 30%;
+      right: 31%;
+    }
+    .icon-image{
+      top: 50px;
+      max-width: 30%;
+    }
+    .star{
+      margin-top: 35px;
+      margin-left: 24%;
+    }
+    ul li{
+      padding: 13px;
+      p{
+        display: block;
+      }
+    }
   }
 }
 @media (max-width: 480px) {
@@ -2410,6 +2472,14 @@ button.btn-next {
       margin: 0 105px;
     }
   }
+.down-image{
+  .block-connect{
+    float: none;
+  }
+ .left-text{
+   margin-top: 10px;
+  }
+}
 
 }
 @media (max-width: 435px){
