@@ -545,6 +545,9 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
   .down-image{
+    background-image: url("../images/down-image.jpg");
+    padding: 15px 0 55px 0;
+    margin-top: 25px;
     h3{
       font-family: FaricyNew-Bold;
       color: white;
@@ -569,13 +572,18 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       background: white;
       .connect-image{
         position: absolute;
-        border-radius: 100%;
         right: 22%;
         top: 0;
       }
+      .icon-image{
+        position: absolute;
+        top: 17px;
+        left: 86%;
+      }
       .star{
-        margin-top: 65px;
-        margin-left: 36%;
+        margin-top: 60px;
+        margin-bottom: 10px;
+        margin-left: 33%;
       }
       p{
         font-size: 17px;
@@ -586,6 +594,13 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       .date{
         border-bottom: 1px solid #999;
         border-top: 1px solid #999;
+        li{
+          p{
+            display: block;
+          }
+        }
+      }
+      ul{
         padding-left: 0;
         text-align: center;
         li{
@@ -595,25 +610,16 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
           font-size: 17px;
           color: #999;
           font-family: FaricyNew-Light;
+          p{
+            display: inline-block;
+          }
+          a:hover{
+                  text-decoration: none;
+          }
         }
         .li-block{
           border-right: 1px solid #999;
           border-left: 1px solid #999;
-        }
-      }
-    }
-    table{
-      text-align: center;
-      margin: 0 15px;
-      tr{
-        td{
-          padding: 15px;
-          p{
-              display: inline-block;
-            }
-          a:hover{
-            text-decoration: none;
-          }
         }
       }
     }
@@ -633,20 +639,38 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
         margin-left: 15px;
         margin-top: 36px;
      }
-    .circle{
+     i{
+       margin-left: 10px;
+       color: #999;
+       font-size: 17px;
+       font-family: FaricyNew-Light;
+     }
+    .block1{
         margin: 20px 0;
+        div{
+          display: inline-block;
+        }
       }
     .block-support{
-      display: inline-block;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 30px 0;
-      float: right;
-      .amazon{
-        margin-right: 85px;
+      h3{
+          display: inline-block;
+          border-bottom: 1px solid;
       }
-      .google{
-        margin-left: 85px;
+      ul{
+         margin: 35px 0;
+        li{
+          text-align: center;
+          list-style: none;
+          display: inline-block;
+        }
+      }
+    }
+    .border{
+      display: block;
+      text-align: center;
+      a{
+        margin: 35px 0;
+        display: block;
       }
     }
   }
