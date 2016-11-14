@@ -462,6 +462,14 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       color: white;
       font-size: 24px;
       font-family: DistrictProThin, serif;
+      a{
+        border: 1px solid;
+        color: white;
+        padding: 5px;
+      }
+      a:hover{
+        text-decoration: none;
+      }
     }
 
 }
@@ -498,6 +506,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
         display: block;
       }
       i{
+        cursor: pointer;
         color: #666;
       }
       a{
@@ -542,6 +551,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
   p.welcome-p {
     font-size: 23px;
+    color: #666;
   }
 }
   .down-image{
@@ -649,10 +659,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
      }
     .block1{
         margin: 20px 0;
-        img{
-          max-width: 100%;
-          height: auto;
-        }
+        // img{
+        //   max-width: 100%;
+        //   height: auto;
+        // }
         div{
           float: left;
           display: inline-block;
@@ -663,7 +673,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
         max-width: 100%;
         height: auto;
       }
-      h3{
+      .undline{
           display: inline-block;
           border-bottom: 1px solid;
       }
@@ -680,9 +690,25 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       display: block;
       text-align: center;
       a{
+        color: #666;
         margin: 35px 0;
         display: block;
       }
+      a:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .circle{
+    width: 96px;
+    height: 95px;
+    border-radius: 100%;
+    border: 1px solid #11e9de;
+    a img{
+      margin: 2px;
+      border-radius: 100%;
+      width: 90px;
+      height: 90px;
     }
   }
 .jssor_1 {
@@ -2151,7 +2177,7 @@ button.btn-next {
         right: 35%;
      }
      .icon-image{
-        left: 77%;
+        left: 75%;
       }
     }
     .left-text p{
@@ -2326,10 +2352,11 @@ button.btn-next {
       }
     }
   }
-  .block-customer .block1 div{
-    display: block;
+  .block-customer .block1{
     text-align: center;
-    float: none;
+    div{
+      float: none;
+    }
   }
 }
 @media (max-width: 480px) {
