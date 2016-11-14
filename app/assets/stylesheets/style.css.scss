@@ -548,6 +548,8 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     background-image: url("../images/down-image.jpg");
     padding: 15px 0 55px 0;
     margin-top: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
     h3{
       font-family: FaricyNew-Bold;
       color: white;
@@ -570,7 +572,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       border-radius: 5%;
       margin-top: 66px;
       background: white;
-      .connect-image{
+      .data-image{
         position: absolute;
         right: 22%;
         top: 0;
@@ -2098,7 +2100,7 @@ button.btn-next {
     width: 405px;
   }
   .down-image .block-connect{
-    .connect-image{
+    .data-image{
       right: 29%;
     }
     .icon-image{
@@ -2145,7 +2147,7 @@ button.btn-next {
   }
   .down-image {
     .block-connect {
-      .connect-image{
+      .data-image{
         right: 35%;
      }
      .icon-image{
@@ -2283,7 +2285,6 @@ button.btn-next {
   }
   .credit-card-box{
     margin-top: 1px;
-    //margin-left: 0px;
     margin-right: 149px;
   }
   .panel-default>.panel-heading{
@@ -2302,18 +2303,21 @@ button.btn-next {
   }
   .down-image .block-connect {
     margin-top: 100px;
-    .connect-image{
+    float: none;
+    padding: 0;
+    .data-image{
       top: 40px;
-      max-width: 30%;
+      width: 30%;
       right: 31%;
     }
     .icon-image{
       top: 50px;
-      max-width: 30%;
+      width: 30%;
+      left: 75%;
     }
     .star{
-      margin-top: 35px;
-      margin-left: 24%;
+      margin-top: 60px;
+      margin-left: 33%;
     }
     ul li{
       padding: 13px;
@@ -2321,6 +2325,11 @@ button.btn-next {
         display: block;
       }
     }
+  }
+  .block-customer .block1 div{
+    display: block;
+    text-align: center;
+    float: none;
   }
 }
 @media (max-width: 480px) {
@@ -2475,9 +2484,22 @@ button.btn-next {
 .down-image{
   .block-connect{
     float: none;
+    .data-image{
+      top: -54px;
+      width: 25%;
+      right: 38%;
+    }
+    .icon-image {
+      top: -54px;
+      max-width: 25%;
+    }
+    .star {
+      margin-top: 74px;
+      margin-left: 32%;
+    }
   }
- .left-text{
-   margin-top: 10px;
+  .left-text{
+    margin-top: 10px;
   }
 }
 
@@ -2621,6 +2643,10 @@ button.btn-next {
     .pay-pal-account input{
       margin: 0 80px;
     }
+  }
+  .down-image .block-connect .star{
+    margin-top: 55px;
+    margin-left: 27%;
   }
 }
 @media (max-width: 360px){
@@ -2904,5 +2930,17 @@ button.btn-next {
      .pay-pal-account input{
        margin: 0 65px;
      }
+   }
+   .down-image .block-connect
+   {
+     ul li{
+       padding: 0 7px;
+    }
+    .data-image{
+      top:-35px;
+    }
+    .icon-image{
+      top: -30px;
+    }
    }
 }
