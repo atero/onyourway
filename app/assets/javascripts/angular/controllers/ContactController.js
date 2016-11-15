@@ -7,6 +7,7 @@ App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', 'Message',
   //   console.log("main");
   //   $(".modal").css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
   // }
+  if (localuser) $scope.inherit.user = localuser;
   $scope.cancel = function() {
     if ($scope.validated) {
       $scope.validated = false
