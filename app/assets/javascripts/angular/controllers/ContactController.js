@@ -1,4 +1,4 @@
-App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($scope,$uibModalInstance, $window){
+App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', 'Message', function($scope,$uibModalInstance, $window, Message){
 
   $('#contact-opacity').on('click',function(){
      $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"66px"});
@@ -13,6 +13,17 @@ App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($
     } else {
       $uibModalInstance.close()
     }
+   }
+
+   $scope.sendContactMessage = function(){
+     $scope.inherit.loading = true;
+     message = {text: "from contact form"};
+     console.log('Contacting!');
+     Message.create({shipment_id:0, order_id:0}, {message:message}, function(res) {
+       $scope.inherit.loading = false
+       shipment.messages.push(res)
+       $scope.local.new_message.text = '';
+     });
    }
 
    // 	$scope.sendMessage = function(order, shipment){
