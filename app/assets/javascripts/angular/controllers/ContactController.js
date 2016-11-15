@@ -17,7 +17,7 @@ App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', 'Message',
 
    $scope.sendContactMessage = function(){
      console.log($scope.contact_name);
-     $scope.inherit.loading = true;
+     //$scope.inherit.loading = true;
      message = {text: "from contact form"};
      Message.create({shipment_id:0, order_id:0}, {message:message}, function(res) {
        $scope.inherit.loading = false
