@@ -407,16 +407,16 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .shopper-button {
   background: #11e9de;
   font-family: FaricyNew-Bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: right;
   color: #666;
   margin: 6px;
   border: none;
   border-radius: 10px;
-  width: 270px;
+  width: 220px;
   span {
     margin-top: -8px;
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     font-family: DistrictProThin, serif;
     font-weight: normal;
@@ -425,16 +425,16 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .travaller-button {
   background: #fee539;
   font-family: FaricyNew-Bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
   color: #666;
   margin: 6px;
   border: none;
   border-radius: 10px;
-  width: 270px;
+  width: 220px;
   span {
     margin-top: -8px;
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     font-family: DistrictProThin, serif;
     font-weight: normal;
@@ -445,22 +445,22 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 .welcome-image{
     background: url("../images/Image_home1.jpg") center center no-repeat;
     background-size: 100% auto;
-    height: 550px;
+    height: 450px;
     width:100%;
-    padding-top: 70px;
+    padding-top: 55px;
     .row{
       margin: 0;
     }
     h1{
       color: white;
-      font-size: 83px;
+      font-size: 65px;
       font-family: DistrictProThin, serif;
       padding-top: 25px;
     }
     h4{
-      margin: 30px 0 60px;
+      margin: 25px 0 45px;
       color: white;
-      font-size: 24px;
+      // font-size: 24px;
       font-family: DistrictProThin, serif;
       a{
         border: 1px solid;
@@ -637,10 +637,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
     }
   }
 
-  .block-customer{
+.block-customer{
     h3{
+        padding-top: 15px;
         text-align: center;
-        padding-top: 10px;
         color: #666;
         font-family: FaricyNew-Light;
       }
@@ -659,13 +659,12 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
      }
     .block1{
         margin: 20px 0;
-        // img{
-        //   max-width: 100%;
-        //   height: auto;
-        // }
         div{
           float: left;
           display: inline-block;
+        }
+        a:hover{
+          text-decoration: none;
         }
       }
     .block-support{
@@ -678,7 +677,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
           border-bottom: 1px solid;
       }
       ul{
-         margin: 35px 0;
+         margin-top: 35px;
         li{
           text-align: center;
           list-style: none;
@@ -691,11 +690,13 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       text-align: center;
       a{
         color: #666;
-        margin: 35px 0;
         display: block;
       }
       a:hover{
         text-decoration: none;
+      }
+      h3{
+        margin-top: 50px;
       }
     }
   }
