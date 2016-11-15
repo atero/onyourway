@@ -1,38 +1,42 @@
 module Api
-  class MessagesController < ApplicationController
-    def create
-      @shipment = Shipment.where(id: params[:shipment_id]).first
-      @order = Order.where(id: params[:order_id]).first
-      @message = Message.new(message_params)
-      @user = User.where(id: message_params['recipient']).first
-      @message.shipment = @shipment if @shipment
-      @message.order = @order if @order
+    class MessagesController < ApplicationController
+        def create
+            if params[:shipment_id] != 0
+                @shipment = Shipment.where(id: params[:shipment_id]).first
+                @order = Order.where(id: params[:order_id]).first
+                @message = Message.new(message_params)
+                @user = User.where(id: message_params['recipient']).first
+                @message.shipment = @shipment if @shipment
+                @message.order = @order if @order
 
-      if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
-        # @messages = @shipment.messages
-        UserMailer.message_email(@user.email, @user.first_name, message_params['text']).deliver_later
-        render json: @message, status: :accepted
-      else
-        render json: { messsage: 'Bad request' }, status: 400
-      end
+                if (@message.sender == current_user || @message.recipient == current_user) && @message.save && @shipment
+                    # @messages = @shipment.messages
+                    UserMailer.message_email(@user.email, @user.first_name, message_params['text']).deliver_later
+                    render json: @message, status: :accepted
+                else
+                    render json: { messsage: 'Bad request' }, status: 400
+                end
+          else
+            UserMailer.message_email('karen@atero.solutions', 'OnYourWay team', message_params['text']).deliver_later
+          end
+        end
+
+        def index
+            @shipment = Shipment.where(id: params[:shipment_id]).first
+            @order = Order.where(id: params[:order_id]).first
+            @messages = @shipment.messages if @shipment
+            @messages = @order ? @order.messages : []
+            if !@messages.empty? && (@shipment.user == current_user || @order.user == current_user)
+                render 'index'
+            else
+                render json: { messsage: 'No messages found' }, status: 404
+            end
+        end
+
+        private
+
+        def message_params
+            params.require(:message).permit(:text, :sender, :recipient)
+        end
     end
-
-    def index
-      @shipment = Shipment.where(id: params[:shipment_id]).first
-      @order = Order.where(id: params[:order_id]).first
-      @messages = @shipment.messages if @shipment
-      @messages = @order ? @order.messages : []
-      if !@messages.empty? && (@shipment.user == current_user || @order.user == current_user)
-        render 'index'
-      else
-        render json: { messsage: 'No messages found' }, status: 404
-      end
-    end
-
-    private
-
-    def message_params
-      params.require(:message).permit(:text, :sender, :recipient)
-    end
-  end
 end
