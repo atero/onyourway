@@ -662,6 +662,9 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
         div{
           float: left;
           display: inline-block;
+          a:focus{
+             text-decoration: none;
+           }
         }
         a:hover{
           text-decoration: none;
