@@ -1,7 +1,7 @@
 module Api
     class MessagesController < ApplicationController
         def create
-            if params[:shipment_id] != 0
+            if (params[:shipment_id] != 0 && params[:order_id] != 0)
                 @shipment = Shipment.where(id: params[:shipment_id]).first
                 @order = Order.where(id: params[:order_id]).first
                 @message = Message.new(message_params)
