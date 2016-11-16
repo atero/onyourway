@@ -79,10 +79,9 @@ App.controller('ContactCtrl', ['$scope', '$uibModalInstance', 'Message', functio
   $scope.contact = {};
 
   $scope.sendContactMessage = function(isValid) {
-  if($('#contact_name').val() > 0 && $('#contact_mail').val() > 0 && $('#textarea_contact').val() > 0) {
-      $uibModalInstance.close($scope.contact);
-        }
-    else {
+  if(isValid){
+      $uibModalInstance.close($scope.contact)
+    }else {
       if (!($('#contact_name').val()) > 0) {
         $('#contact_name').addClass('error');
       }else {
