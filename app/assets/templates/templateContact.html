@@ -12,22 +12,24 @@
     <div class="row">
       <div class="col-md-12">
         <div class="">
-          <div class="col-md-offset-1 col-md-12 contact_form"  ng-if=!contact.validated>
+          <div class="col-md-offset-1 col-md-12 "  ng-if=!contact.validated>
+            <form name="contact_form">
             <div class="text-center contact_text">
               <h1>HELLO?</h1>
               <h2> We are here to answer you! Get in touch by writing to <a ng-click="" >support@onyourway.io </a> or using the form below</h2>
             </div>
             <div class="pay-pal-account contact_data">
               <p class="account-bank-info">Name</p>
-              <input type="text" size="20" class="form-control" ng-model="contact.contact_name" required/>
+              <input type="text" size="20" id="contact_name" class="form-control" ng-model="contact.contact_name" required/>
               <p class="account-bank">E-mail</p>
-              <input type="text" size="20" class="form-control" ng-model="contact.contact_mail" required/>
+              <input type="text" size="20"  id="contact_mail" class="form-control" ng-model="contact.contact_mail" required/>
               <p class="account-bank">Message</p>
-              <textarea style="float:left;" type="text" size="20" class="form-control textarea_contact" ng-model="contact.contact_message"></textarea>
-              <button type="button" class="btn btn-default payout-btn btn_send" name="button" ng-click="sendContactMessage()">Send</button>
-              <button type="button" class="btn btn-default cancel-modal-btn" name="button" ng-click="cancel(contact_form.$valid)">Cancel</button>
+              <textarea style="float:left;" type="text"  id="textarea_contact" size="20" class="form-control textarea_contact" ng-model="contact.contact_message"></textarea>
+              <button type="button" class="btn btn-default payout-btn btn_send" name="button" ng-click="sendContactMessage(contact_form.$valid)">Send</button>
+              <button type="button" class="btn btn-default cancel-modal-btn" name="button" ng-click="cancelContact()">Cancel</button>
             </div>
             <span class="condition-padding row"></span>
+            </form>
           </div>
         </div>
       </div>

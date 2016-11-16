@@ -17,11 +17,10 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
       } else {
         $scope.local.validated = true
       }
+    } else {
+      $('.ng-invalid').addClass('error');
+      $('.ng-valid').removeClass('error');
     }
-		else{
-			$('.ng-invalid').addClass('error');
-			$('.ng-valid').removeClass('error');
-		}
   }
 
   $scope.cancel = function() {
@@ -68,23 +67,42 @@ App.controller('LoginCtrl', ['$scope', '$uibModalInstance', 'type', function($sc
   }
 }]);
 
-App.controller('ContactCtrl',['$scope','$uibModalInstance', 'Message', function($scope, $uibModalInstance,  Message){
+App.controller('ContactCtrl', ['$scope', '$uibModalInstance', 'Message', function($scope, $uibModalInstance, Message) {
 
-  $('#contact-opacity').on('click',function(){
-    $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"55px"});
+  $('#contact-opacity').on('click', function() {
+    $('.modal').css({
+      "background-color": "rgba(0,0,0,0.4)",
+      "margin-top": "55px"
+    });
   });
 
-   $scope.contact = {};
+  $scope.contact = {};
 
-   $scope.sendContactMessage = function(){
-     $uibModalInstance.close($scope.contact)
-   }
+  $scope.sendContactMessage = function(isValid) {
+  if($('#contact_name').val() > 0 && $('#contact_mail').val() > 0 && $('#textarea_contact').val() > 0) {
+      $uibModalInstance.close($scope.contact);
+        }
+    else {
+      if (!($('#contact_name').val()) > 0) {
+        $('#contact_name').addClass('error');
+      }else {
+        $('#contact_name').removeClass('error');
+      }
+      if (!($('#contact_mail').val()) > 0) {
+          $('#contact_mail').addClass('error');
+      }else {
+        $('#contact_mail').removeClass('error');
+      }
+      if (!($('#textarea_contact').val()) > 0) {
+        $('#textarea_contact').addClass('error');
+      }else {
+        $('#textarea_contact').removeClass('error');
+      }
+    }
+  }
 
-   $scope.cancelContact = function($valid) {
-     if ($scope.contact.$valid) {
-       $scope.contact_from.$valid = false
-     } else {
-       $uibModalInstance.close()
-     }
-   }
+
+  $scope.cancelContact = function() {
+    $uibModalInstance.dismiss('cancel');
+  }
 }]);
