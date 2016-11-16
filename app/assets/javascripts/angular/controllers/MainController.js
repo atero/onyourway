@@ -1,4 +1,4 @@
-App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", function($scope,$rootScope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q){
+App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams','$window','Auth',"$uibModal", "$q", "Message", function($scope,$rootScope,Auth,$state,$stateParams,$window,Auth,$uibModal, $q, Message){
 
   $(document).on('click',function(){
     if ($('.collapse').css('display') == 'block') {
@@ -129,6 +129,15 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
           //     return ;
           //   }
           // }
+       })
+       modalInstance.result.then(function (contact) {
+          console.log(contact);
+          $scope.loading = true;
+          message = {text: "from contact form"};
+          Message.create({shipment_id:0, order_id:0}, {message:message}, function(res) {
+            $scope.inherit.loading = false
+          });
+
        })
      }
 }])

@@ -67,3 +67,24 @@ App.controller('LoginCtrl', ['$scope', '$uibModalInstance', 'type', function($sc
     $scope.local.type = ($scope.local.type == "signin") ? "signup" : "signin"
   }
 }]);
+
+App.controller('ContactCtrl',['$scope','$uibModalInstance', 'Message', function($scope, $uibModalInstance,  Message){
+
+  $('#contact-opacity').on('click',function(){
+    $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"55px"});
+  });
+
+   $scope.contact = {};
+
+   $scope.sendContactMessage = function(){
+     $uibModalInstance.close($scope.contact)
+   }
+
+   $scope.cancelContact = function($valid) {
+     if ($scope.contact.$valid) {
+       $scope.contact_from.$valid = false
+     } else {
+       $uibModalInstance.close()
+     }
+   }
+}]);
