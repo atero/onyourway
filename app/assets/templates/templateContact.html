@@ -19,12 +19,12 @@
             </div>
             <div class="pay-pal-account contact_data">
               <p class="account-bank-info">Name</p>
-              <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_name" required/>
+              <input type="text" size="20" class="form-control" ng-model="contact_name" required/>
               <p class="account-bank">E-mail</p>
-              <input type="text" size="20" class="form-control" ng-model="inherit.user.contact_mail" required/>
+              <input type="text" size="20" class="form-control" ng-model="contact_mail" required/>
               <p class="account-bank">Message</p>
-              <textarea style="float:left;" type="text" size="20" class="form-control textarea_contact" ng-model="inherit.user.contact_message"></textarea>
-              <button type="button" class="btn btn-default payout-btn btn_send" name="button" ng-click="send_contact_message()">Send</button>
+              <textarea style="float:left;" type="text" size="20" class="form-control textarea_contact" ng-model="contact_message"></textarea>
+              <button type="button" class="btn btn-default payout-btn btn_send" name="button" ng-click="sendContactMessage()">Send</button>
               <button type="button" class="btn btn-default cancel-modal-btn" name="button" ng-click="cancel()">Cancel</button>
             </div>
             <span class="condition-padding row"></span>

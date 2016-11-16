@@ -105,6 +105,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 			})
 			return d.promise
 		}
+
 	};
 
     $scope.inherit.result = '';
