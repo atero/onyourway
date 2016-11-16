@@ -1,16 +1,12 @@
 App.controller('ContactCtrl',['$scope','$uibModalInstance','$window', function($scope,$uibModalInstance, $window){
 
-  // $('#contact-opacity').on('click',function(){
-  //    $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"60px"});
-  // });
-  // ($(document).ready('click',function() && $('#contact-opacity').on('click',function()){
-  //  $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"60px"});
-  // });
-//   $(document).ready(function(){
-//      $('#contact-opacity').on('click',function(){
-//        $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"60px"});
-//     });
-// });
+  $('#contact-opacity').on('click',function(){
+     $('.modal').css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"55px"});
+  });
+  // if ('click') {
+  //   console.log("main");
+  //   $(".modal").css({"background-color":"rgba(0,0,0,0.4)", "margin-top":"55px"});
+  // }
   $scope.cancel = function() {
     if ($scope.validated) {
       $scope.validated = false
