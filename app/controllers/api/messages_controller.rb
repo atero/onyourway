@@ -14,7 +14,7 @@ module Api
                     UserMailer.message_email(@user.email, @user.first_name, message_params['text']).deliver_later
                     render json: @message, status: :accepted
                 else
-                    render json: { messsage: 'Bad request' }, status: 400
+                    render json: { messsage: 'Bad request' }, status: 404
                 end
           else
             UserMailer.message_email('karen@atero.solutions', 'OnYourWay team', message_params['text']).deliver_later
