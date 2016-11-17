@@ -52,7 +52,7 @@
         <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0 && (local.data_to_show.status == 'pending' || (local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id)) ">
               Pending
             </b>
-            <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0 && (local.data_to_show.accepted_shipment = local.shipmen_to_show.id) ">
+            <b class="main-pending" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
                   Accepted
                 </b>
         <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) >= 0">Refused</b>
