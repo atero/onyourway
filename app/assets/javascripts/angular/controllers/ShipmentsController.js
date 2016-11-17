@@ -43,6 +43,4 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			})
 		}
 	}
-
-
 }]);
