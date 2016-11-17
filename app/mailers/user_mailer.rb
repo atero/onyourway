@@ -48,7 +48,7 @@ class UserMailer < ApplicationMailer
   end
 
   def contact_email(email, name, txt, sender_email)
-    @email = sender_email
+    @email = email
     @sender_email = sender_email
     @message_text = txt
     @first_name = name
