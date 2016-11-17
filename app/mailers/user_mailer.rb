@@ -47,12 +47,12 @@ class UserMailer < ApplicationMailer
 
   end
 
-  def contact_email(email, name, txt)
+  def contact_email(email, name, txt, sender_email)
     @email = email
+    @sender_email = sender_email
     @message_text = txt
     @first_name = name
     p '************************NEW MESSAGE**************************'
-
     @url = 'https://shopnship.herokuapp.com'
     mail(to: 'karen@atero.solutions', subject: 'New Message from OnYourWay contact form')
 
