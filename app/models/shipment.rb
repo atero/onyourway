@@ -14,14 +14,14 @@ class Shipment
    has_and_belongs_to_many :order
    has_many :messages
    ## METHODS
-   before_save :check_status
+  #  before_save :check_status
 
-      # def check_status
-      #
-      #   valid_states = ["pending", "accepted", "delivered", "refused"]
-      #   if !valid_states.include?(self.status) || !self.status then self.status = "pending" end
-      #
-      #   true
-      #
-      # end
+  # def check_status
+  #
+  #   valid_states = ["pending", "accepted", "delivered", "refused"]
+  #   if !valid_states.include?(self.status) || !self.status then self.status = "pending" end
+  #
+  #   true
+  #
+  # end
 end
