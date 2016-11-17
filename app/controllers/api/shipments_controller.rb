@@ -77,7 +77,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :from, :refuses)
+      params.require(:shipment).permit(:to, :date, :from, :status, :refuses => [])
     end
   end
 end
