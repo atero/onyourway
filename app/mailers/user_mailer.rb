@@ -52,7 +52,7 @@ class UserMailer < ApplicationMailer
     @sender_email = sender_email
     @message_text = txt
     @first_name = name
-    p '************************NEW MESSAGE**************************'
+    p '************************NEW Contact**************************'
     @url = 'https://shopnship.herokuapp.com'
     mail(to: 'karen@atero.solutions', subject: 'New Message from OnYourWay contact form')
 
