@@ -16,12 +16,11 @@ module Api
                 else
                     render json: { messsage: 'Bad request' }, status: 404
                 end
+          else
+            UserMailer.contact_email('karen@atero.solutions', message_params['sender_name'], message_params['text'], message_params['sender_email'],).deliver_later
           end
         end
 
-        def contact
-          UserMailer.contact_email('karen@atero.solutions', message_params['sender_name'], message_params['text'], message_params['sender_email'],).deliver_later
-        end
 
         def index
             @shipment = Shipment.where(id: params[:shipment_id]).first
@@ -38,7 +37,7 @@ module Api
         private
 
         def message_params
-            params.require(:message).permit(:text, :sender, :recipient, :sender_name, :sender_email)
+            params.require(:message).permit(:text, :sender, :recipient)
         end
     end
 end
