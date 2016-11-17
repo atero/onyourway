@@ -130,6 +130,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
           //   }
           // }
        })
+       
        modalInstance.result.then(function (contact) {
           console.log(contact);
           $scope.inherit.loading = true;

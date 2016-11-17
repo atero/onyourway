@@ -24,6 +24,7 @@ App.factory('Message',['$resource',function($resource){
 	return $resource(api_endpoint+'messages/:shipment_id/', {shipment_id:'@shipment_id'},
 	{
 		create: { method:"POST", params: {shipment_id :'@shipment_id', order_id :'@order_id'}, isArray : false },
+    contact: { method:"POST", params: {shipment_id :'@shipment_id', order_id :'@order_id'}, isArray : false },
 		index: { method:"GET", params: {shipment_id :'@shipment_id', order_id :'@order_id'}, isArray : true }
 	});
 }]);
