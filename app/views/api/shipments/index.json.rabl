@@ -1,6 +1,6 @@
 object @shipments
 
-attributes :id, :from, :to, :date, :item, :status
+attributes :id, :from, :to, :date, :item, :status, :refuses
 
 child :user do |_u|
     attributes :id, :first_name, :last_name, :provider, :photo_url
