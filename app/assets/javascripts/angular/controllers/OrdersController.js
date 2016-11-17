@@ -85,7 +85,13 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       imageUrl: "images/icon-delete.png"
     }, function(isConfirm) {
       if (isConfirm) {
-        shipment.status = "refused"
+        //shipment.status = "refused"
+        if(shipment.refuses){
+          shipment.refuses.push(order.id);
+        }
+        else{
+          shipment.refuses = [order.id];
+        }
         Shipment.update({
           id: shipment.id
         }, {
