@@ -72,7 +72,6 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
   }
 
-var decline = [];
   $scope.refuse_travel = function(order, shipment) {
 
     swal({
@@ -87,13 +86,11 @@ var decline = [];
     }, function(isConfirm) {
       if (isConfirm) {
         shipment.status = "refused"
-        decline.push(shipment),
-        decline.update({
+        Shipment.update({
           id: shipment.id
         }, {
                shipment: shipment
         })
-        Shipment.push.apply(Shipment, decline )
       }
     })
   }
