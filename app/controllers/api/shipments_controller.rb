@@ -64,7 +64,6 @@ module Api
 
     def update
       @shipment = Shipment.where(id: params[:shipment_id]).first
-
       if @shipment && @shipment.update(shipment_params)
         p '8888888888888888888888888888888888888888'
         p shipment_params
@@ -78,7 +77,7 @@ module Api
     private
 
     def shipment_params
-      params.require(:shipment).permit(:to, :date, :from, :status, :refuses)
+      params.require(:shipment).permit(:to, :date, :from, :refuses)
     end
   end
 end

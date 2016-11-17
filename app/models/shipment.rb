@@ -8,7 +8,7 @@ class Shipment
    field :to, type: String
    field :date, type: Date
    field :status, type: String
-   field :refuses
+   field :refuses, type: Array
    ## RELATIONSHIPS
    belongs_to :user
    has_and_belongs_to_many :order
