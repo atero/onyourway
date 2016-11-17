@@ -16,12 +16,12 @@ class Shipment
    ## METHODS
    before_save :check_status
 
-      def check_status
-
-        valid_states = ["pending", "accepted", "delivered", "refused"]
-        if !valid_states.include?(self.status) || !self.status then self.status = "pending" end
-
-        true
-
-      end
+      # def check_status
+      #
+      #   valid_states = ["pending", "accepted", "delivered", "refused"]
+      #   if !valid_states.include?(self.status) || !self.status then self.status = "pending" end
+      #
+      #   true
+      #
+      # end
 end
