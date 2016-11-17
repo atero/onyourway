@@ -52,6 +52,9 @@
         <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0 && (local.data_to_show.status == 'pending' || (local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id)) ">
               Pending
             </b>
+            <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0 && (local.data_to_show.accepted_shipment = local.shipmen_to_show.id) ">
+                  Accepted
+                </b>
         <b class="main-pending" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) >= 0">Refused</b>
         <p class="lead text-center main-lead"  ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0 && (local.data_to_show.status == 'pending' || (local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id)) ">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
         <div class="" ng-if="local.data_to_show.status == 'accepted' && local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
