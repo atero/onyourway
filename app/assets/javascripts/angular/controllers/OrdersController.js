@@ -86,10 +86,12 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     }, function(isConfirm) {
       if (isConfirm) {
         //shipment.status = "refused"
-        if(shipment.refuses){
+        if(!!shipment.refuses){
+          console.log('adding refuse');
           shipment.refuses.push(order.id);
         }
         else{
+          console.log('create refuse');
           shipment.refuses = [order.id];
         }
         Shipment.update({
