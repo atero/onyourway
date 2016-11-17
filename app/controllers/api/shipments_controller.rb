@@ -66,6 +66,8 @@ module Api
       @shipment = Shipment.where(id: params[:shipment_id]).first
 
       if @shipment && @shipment.update(shipment_params)
+        p '8888888888888888888888888888888888888888'
+        p shipment_params
         # @shipment.order.save
         render json: @shipment, status: :accepted
       else
