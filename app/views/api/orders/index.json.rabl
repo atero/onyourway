@@ -1,6 +1,6 @@
 object @orders
 
-attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price, :user_id, :status, :accepted_shipment, :confirm_token, :created_at, :shipments
+attributes :id, :from, :to, :date, :item, :message, :price, :quantity, :reward, :total_price, :user_id, :status, :accepted_shipment, :confirm_token, :created_at, :shipments, :refuses
 
 child :user do |_u|
   attributes :id, :first_name, :last_name, :provider, :photo_url
