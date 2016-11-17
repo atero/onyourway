@@ -134,8 +134,8 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
        modalInstance.result.then(function (contact) {
           console.log(contact);
           $scope.inherit.loading = true;
-          message = {text: contact.contact_message, sender_name: contact.contact_name, sender_email: contact.contact_email};
-          Message.create({shipment_id:0, order_id:0,}, {message:message}, function(res) {
+          message = {text: contact.contact_message, sender_name: contact.contact_name, sender_email: contact.contact_mail};
+          Message.create({shipment_id:0, order_id:0,}, {message: message}, function(res) {
             $scope.inherit.loading = false
           });
 

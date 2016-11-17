@@ -17,7 +17,7 @@ module Api
                     render json: { messsage: 'Bad request' }, status: 404
                 end
           else
-            UserMailer.contact_email('karen@atero.solutions', message_params['sender_name'], message_params['text'], message_params['sender_email'],).deliver_later
+            UserMailer.contact_email('karen@atero.solutions', message_params['sender_name'], message_params['text'], message_params['sender_email']).deliver_later
           end
         end
 
