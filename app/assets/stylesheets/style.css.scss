@@ -1897,10 +1897,19 @@ button.btn-next {
   margin-bottom: 20px;
 }
 .main-modal-title .background-white{
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+  color: #666;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: white;
   margin-bottom: 0;
+}
+.border-form{
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
 }
 .main-modal-title .message-button{
   float: right;
