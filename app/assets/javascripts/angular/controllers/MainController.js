@@ -50,7 +50,6 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 		usertype: "shopper",
 		currentState: function(){
 			return $state.current.name;
-      console.log($state.current.name);
 		},
 		goState:function(state){
 			$state.go(state)
