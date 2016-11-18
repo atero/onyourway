@@ -13,9 +13,9 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
   $scope.ok = function(isValid) {
     if (isValid) {
       if ($scope.local.validated) {
-        $scope.inherit.loading = true;
+        $scope.local.loading = true;
         $uibModalInstance.close($scope.local.shipment);
-        $scope.inherit.loading = false
+        $scope.local.loading = false
       } else {
         $scope.local.validated = true
       }
