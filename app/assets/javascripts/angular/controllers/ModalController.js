@@ -6,8 +6,6 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
       to: null
     }
   }
-  $scope.inherit = {};
-
   $scope.with_order = true;
   if (order_id == 'noid') {
     $scope.with_order = false;
@@ -15,9 +13,7 @@ App.controller('ModalCtrl', ['$scope', '$uibModalInstance', "order_id", function
   $scope.ok = function(isValid) {
     if (isValid) {
       if ($scope.local.validated) {
-        $scope.inherit.loading= true;
         $uibModalInstance.close($scope.local.shipment)
-          $scope.inherit.loading= false
       } else {
         $scope.local.validated = true
       }
