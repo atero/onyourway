@@ -455,7 +455,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       color: white;
       font-size: 65px;
       font-family: DistrictProThin, serif;
-      padding-top: 25px;
+      padding-top: 85px;
     }
     h4{
       margin: 25px 0 45px;
@@ -463,9 +463,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       // font-size: 24px;
       font-family: DistrictProThin, serif;
       a{
+        font-size: 22px;
         border: 1px solid;
         color: white;
-        padding: 5px;
+        padding: 7px;
       }
       a:hover{
         text-decoration: none;
@@ -1894,6 +1895,12 @@ button.btn-next {
   font-size: 20px;
   color: #969696;
   margin-bottom: 20px;
+}
+.main-modal-title .background-white{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: red;
+  margin-bottom: 0;
 }
 .main-modal-title .message-button{
   float: right;
