@@ -117,7 +117,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       if($scope.local.data_to_show.shipments.length > 0) {
         var refused = 0;
         for (var i = 0; i < $scope.local.data_to_show.shipments.length; i++) {
-          if ($scope.local.data_to_show.shipments[i].status == "refused") {
+          if ($scope.local.data_to_show.shipments[i].refuses.length > 0) {
             refused++;
           }
         }

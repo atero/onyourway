@@ -37,9 +37,9 @@
   </div>
 
   <div class="col-md-6" ng-show="local.data_to_show && !local.conversation_shipment">
-    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending'">Delivery offers proposed for this order</p>
+    <p class="lead text-center order-lead" ng-if="local.data_to_show.shipments.length > 0 && (!!!shipment.refuses || shipment.refuses.indexOf(local.data_to_show.id) < 0 )">Delivery offers proposed for this order</p>
     <p class="lead text-center order-lead-small" ng-if="local.data_to_show.shipments.length == 0">No travel proposed for this order</p>
-    <div class="text-left offers-account-div" ng-if="local.data_to_show.shipments.length > 0 && local.data_to_show.status == 'pending' && count_offer > 0">
+    <div class="text-left offers-account-div" ng-if="local.data_to_show.shipments.length > 0 && (!!!shipment.refuses || shipment.refuses.indexOf(local.data_to_show.id) < 0) && count_offer > 0">
       <p class="offers-account " >You have {{count_offer}} <span ng-if="count_offer == 1">offer</span> <span ng-if="count_offer > 1">offers</span></p>
     </div>
     <div ng-click="local.conversation_shipment = shipment" class="col-md-12 profile-travel offer-wrapper" ng-repeat="shipment in local.data_to_show.shipments | orderBy:'date'" ng-if="!!!shipment.refuses || shipment.refuses.indexOf(local.data_to_show.id) < 0">
