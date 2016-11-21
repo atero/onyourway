@@ -118,8 +118,12 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
         var refused = 0;
         for (var i = 0; i < $scope.local.data_to_show.shipments.length; i++) {
           if ($scope.local.data_to_show.shipments[i].refuses) {
-            if ($scope.local.data_to_show.shipments[i].refuses.length > 0) {
-              refused++;
+            for (var j = 0; j < $scope.local.data_to_show.shipments[i].refuses.length; j++) {
+              if ($scope.local.data_to_show.shipments[i].refuses[j] == $scope.local.data_to_show.id) {
+                console.log($scope.local.data_to_show.shipments[i].refuses[j]);
+                console.log(local.data_to_show.id);
+                refused++;
+              }
             }
           }
         }
