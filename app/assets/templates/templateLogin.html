@@ -13,7 +13,7 @@
   </textarea>
   <div class="has-success">
     <div class="checkbox">
-      <label>
+      <label  style="color: #6e6e6e">
         <input type="checkbox" ng-model="local.user.agree" id="checkboxAgree" value="option1" required> I agree with Terms and conditions
       </label>
     </div>
@@ -33,6 +33,6 @@
 
 <div class="modal-footer text-center signup-block">
   <!-- <a href="#" class="pull-left" ng-if="local.type == 'signin'">Forgot password?</a> -->
-  <a ng-click="change_type()" ng-if="local.type == 'signup'">Already have an account?</button>
-  <a type="button" ng-click="change_type()" ng-if="local.type == 'signin'">Do not have an account?</a>
+  <a  style="color: #11e9de" ng-click="change_type()" ng-if="local.type == 'signup'">Already have an account?</button>
+  <a style="color: #11e9de" type="button" ng-click="change_type()" ng-if="local.type == 'signin'">Do not have an account?</a>
 </div>
