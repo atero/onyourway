@@ -78,12 +78,15 @@ Rails.application.configure do
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings =
   {
-    :address            => 'email-smtp.us-west-2.amazonaws.com',
+    # :address            => 'email-smtp.us-west-2.amazonaws.com',
+    :address            => 'in-v3.mailjet.com',
     :port               => 587,
     :authentication => :login,
     :enable_starttls_auto => true,
-    :user_name          => 'AKIAIVKFQCBHMWA4X7OA',
-    :password           => 'AmLayPide+jXMyTPLJO5Mo5TpKTLQwNgBg84AXrNMyDo'
+    # :user_name          => 'AKIAIVKFQCBHMWA4X7OA',
+    # :password           => 'AmLayPide+jXMyTPLJO5Mo5TpKTLQwNgBg84AXrNMyDo'
+    :user_name          => 'e9b93b892955e856d00853878dfb6f9c',
+    :password           => 'e00d2fde501d5eed495cd33e0f008573'
   }
 
 end
