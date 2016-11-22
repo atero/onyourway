@@ -33,14 +33,16 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     console.log(result.id + '**************************');
     $scope.inherit.loading = true;
     console.log($scope.inherit.user)
-    // if (!!shipment.address_components) {
-    //   shipment.to = shipment.to.address_components[0].long_name;
-    //   shipment.from = shipment.from.address_components[0].long_name;
-    // }else {
-    //
-    // }
-    shipment.to = shipment.to.address_components[0].long_name;
-    shipment.from = shipment.from.address_components[0].long_name;
+    if (!!shipment.address_components) {
+      shipment.to = shipment.to.address_components[0].long_name;
+      shipment.from = shipment.from.address_components[0].long_name;
+    }else {
+         shipment.to =$('#city').text();
+         console.log($('#city').text());
+         shipment.from =$('#country').text();
+    }
+    // shipment.to = shipment.to.address_components[0].long_name;
+    // shipment.from = shipment.from.address_components[0].long_name;
     console.log('???????????????????????');
     console.log(shipment);
     console.log('////////////////////////');
