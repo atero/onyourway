@@ -1454,27 +1454,37 @@ button.btn-next {
       margin: 35px 0;
     }
   }
+.contact_header{
+  width: 658px;
+}
 .contact_main{
   background-image: url(../images/contact_us.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  // background-size: cover;
     .pay-pal-account{
       margin-left: 15px;
       margin-right: 15px;
     }
     .pay-pal-account  p{
+      font-family: FaricyNew-Regular;
+      font-size: 17px;
       color: white;
       margin-bottom: 0;
       margin-top: 15px;
     }
     .pay-pal-account input{
-      margin: 10px 0;
-      width: 45%;
+      border-radius: 6px;
+      margin: 0 0 10px 0;
+      width: 42%;
+      height: 38px;
     }
     .pay-pal-account button{
-      margin-bottom: 20px;
+      border-radius: 6px;
+      font-family: FaricyNew-Regular;
+      font-size: 17px;
+
       margin-top: 15px;
-      padding: 8px 30px;
+      padding: 8px 32px 4px 32px;
       float: right;
     }
     .pay-pal-account .btn_send{
@@ -1482,41 +1492,50 @@ button.btn-next {
       color: white;
       background: #11E9DE;
     }
+    .pay-pal-account .cancel-modal-btn{
+      color: #a7a7a7;
+    }
+    .pay-pal-account .cancel-modal-btn:hover{
+      color: #333;
+    }
     .pay-pal-account .btn_send:hover{
       color: #333;
       background-color: #e6e6e6;
       border-color: #adadad;
     }
     .textarea_contact{
+      border-radius: 6px;
       padding: 10px 0;
-      margin-top: 10px;
     }
-}
-.contact_text{
-   margin-right: -5px;
 }
 .contact_us{
   background: white;
   padding: 5px 0;
   margin-bottom: 0;
-  font-size: 30px;
   color: #a7a7a7;
   font-family: FaricyNew-Light;
+  text-transform: uppercase;
+  h1{
+    font-family: FaricyNew-Regular;
+    font-size: 24px;
+  }
 }
 .contact_text{
-  padding-left: 61%;
+  margin-right: 10px;
+  padding-left: 55%;
   text-align: right;
-  h1, h2{
-      color: white;
-  }
-  h2{
+  p{
+    letter-spacing: 1px;
+    text-align: right;
+    color: white;
     margin-top: 0;
-    font-size: 21px;
+    font-size: 17px;
   }
   h1{
+    color: white;
     margin-bottom: 0;
     font-family: FaricyNew-Bold;
-    font-size: 30px;
+    font-size: 28px;
   }
   a{
     color: #11E9DE;
