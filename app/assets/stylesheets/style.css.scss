@@ -1460,6 +1460,7 @@ button.btn-next {
 .contact_main{
   background-image: url(../images/contact_us.png);
   background-repeat: no-repeat;
+  padding-left: 0;
   // background-size: cover;
     .pay-pal-account{
       margin-left: 15px;
@@ -2394,6 +2395,9 @@ button.btn-next {
       float: none;
     }
   }
+  .contact_header{
+    width: 615px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2536,13 +2540,27 @@ button.btn-next {
   .main-date-group .main-search-input{
     font-size: 15px;
   }
-  .contact_text{
-      padding-left: 41%;
+  .contact_header{
+    width: inherit;
   }
   .contact_main{
-    .pay-pal-account input{
-      margin: 0 105px;
-    }
+    padding: 0;
+  }
+  .contact_text{
+    padding-left: 0;
+    text-align: left;
+    p{
+      padding-left: 0;
+     text-align: left;
+     padding-right: 36%;
+   }
+  }
+  .contact_data p{
+    padding-left: 0;
+    text-align: left;
+  }
+  .contact_main .pay-pal-account{
+    margin-left: 0;
   }
 .down-image{
   .block-connect{
@@ -2609,10 +2627,10 @@ button.btn-next {
    .profile-body{
      padding-top: 0;
    }
-   .contact_text{
-     padding-left: 27%;
+   .contact_main .pay-pal-account p{
+     margin-top: 10px;
    }
-}
+  }
 @media (max-width: 414px){
   .profile-body{
     padding: 0;
@@ -2644,9 +2662,6 @@ button.btn-next {
   }
   .thumbs-row{
     margin-top: -60px;
-  }
-  .contact_text{
-    padding-left: 24%;
   }
 }
 @media (max-width: 375px){
@@ -2699,13 +2714,8 @@ button.btn-next {
   .footer-wrapper .footer-nav li{
     margin: 0 6px;
   }
-  .contact_text{
-    padding-left: 18%;
-  }
-  .contact_main{
-    .pay-pal-account input{
-      margin: 0 80px;
-    }
+  .contact_text p{
+    padding-right: 24%;
   }
   .down-image .block-connect .star{
     margin-top: 55px;
@@ -2742,13 +2752,8 @@ button.btn-next {
   .footer-wrapper .footer-nav li{
     margin: 0 5px;
   }
-  .contact_main{
-    .pay-pal-account input{
-      margin: 0 80px;
-    }
-  }
   .contact_text{
-    padding-left: 10%;
+    padding-left: 0;
   }
 }
 
@@ -2986,13 +2991,13 @@ button.btn-next {
    .credit-card-box{
      width: 285px;
    }
-   .contact_text{
+   .contact_text p{
      padding-left: 0;
+     text-align: left;
    }
-   .contact_main{
-     .pay-pal-account input{
-       margin: 0 65px;
-     }
+   .contact_main .pay-pal-account p{
+     text-align: left;
+     padding-left: 0;
    }
    .down-image .block-connect
    {
