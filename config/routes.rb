@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { sessions: 'sessions', :omniauth_callbacks => "omniauth_callbacks" }
   post '/users/sign_up.json', to: 'users#create'
   post '/payment', to: 'payment#create'
+  get '/activate', to: 'activate#activate'
 
   namespace :api, path: '/api', defaults: { format: 'json' } do
     match '/orders', to: 'orders#show', via: [:options]

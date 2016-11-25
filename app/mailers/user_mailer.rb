@@ -2,12 +2,13 @@ class UserMailer < ApplicationMailer
 
   default from: 'support@onyourway.io'
 
-  def welcome_email(email, name)
+  def welcome_email(email, name, activtion_code)
     @email = email
     @first_name = name
+    @activtion_code = activtion_code
     p '************************{}}}}}}}}}}}}}**************************'
 
-    @url = 'https://shopnship.herokuapp.com'
+    @url = 'https://onyourway.io'
     mail(to: email, subject: 'Welcome to OnYourWay')
   end
 
@@ -17,7 +18,7 @@ class UserMailer < ApplicationMailer
     @first_name = name
     p '************************NEW MESSAGE**************************'
 
-    @url = 'https://shopnship.herokuapp.com'
+    @url = 'https://onyourway.io'
     mail(to: email, subject: 'New Message on OnYourWay')
 
   end
@@ -29,7 +30,7 @@ class UserMailer < ApplicationMailer
 
     p '************************NEW MESSAGE - ACCEPTED**************************'
 
-    @url = 'https://shopnship.herokuapp.com'
+    @url = 'https://onyourway.io'
     mail(to: email, subject: 'OnYourWay - Travel accepted')
 
   end
@@ -42,7 +43,7 @@ class UserMailer < ApplicationMailer
 
     p '************************NEW MESSAGE - GET YOUR TOKEN**************************'
 
-    @url = 'https://shopnship.herokuapp.com'
+    @url = 'https://onyourway.io'
     mail(to: email, subject: 'OnYourWay - Payment received')
 
   end
@@ -54,7 +55,7 @@ class UserMailer < ApplicationMailer
     @first_name = name
     p '************************NEW Contact**************************'
     p sender_email
-    @url = 'https://shopnship.herokuapp.com'
+    @url = 'https://onyourway.io'
     mail(to: 'support@onyourway.io', subject: 'New Message from OnYourWay contact form')
   end
 
