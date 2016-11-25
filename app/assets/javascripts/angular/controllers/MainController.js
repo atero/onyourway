@@ -142,9 +142,6 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
        })
      };
   $scope.funscroll = function(){
-       console.log("jhjh");
-       setTimeout(function(){ $("html, body").animate({ scrollTop:$("#esc").offset().top}, "slow"); }, 10);
-
-
+       setTimeout(function(){ $("html, body").animate({ scrollTop:$("#esc").offset().top -100}, "slow"); }, 10);
      }
 }])
