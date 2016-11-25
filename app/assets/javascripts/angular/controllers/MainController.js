@@ -72,7 +72,7 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
 				size: "md",
 				resolve: {
 					type: function () {
-						return d.promise
+						return "signup";
 					}
 				}
 			});
