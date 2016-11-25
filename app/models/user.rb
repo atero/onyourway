@@ -77,6 +77,9 @@ class User
   validates_uniqueness_of :email, case_sensitive: false
   before_save :process_base64_image
 
+  def active_for_authentication?
+    self.active == "true" && super
+  end
 
   def process_base64_image
     if base64_image && !base64_image.empty?
