@@ -722,15 +722,14 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   display: block;
   background-color: #11E9DE;
   opacity: 0.8;
-  width: 95%;
+  width: 100%;
   bottom: 55px;
-  left: 11px;
-  border-radius: 10px;
     h3{
+      font-family: FaricyNew-Bold;
+      letter-spacing: 1px;
       margin: 0;
       margin-top: 7px;
-      margin-right: 20px;
-      font-weight:bold;
+      margin-right: 35px;
       color:#fff;
       text-align:right;
     }
@@ -740,7 +739,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
       font-size: 18px;
       font-family: FaricyNew-Regular;
       padding: 0;
-      margin-right: 20px;
+      margin-right: 35px;
       color: #fff;
     }
 }
