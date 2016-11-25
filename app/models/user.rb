@@ -78,7 +78,7 @@ class User
   before_save :process_base64_image
 
   def active_for_authentication?
-    self.active == "true" && super
+    (self.active == "true" || !self.active ) && super
   end
 
   def process_base64_image
