@@ -4,22 +4,22 @@
   <!-- <p ng-if="local.usertype == 'shopper'" class="lead text-center">Request a delivery</p> -->
 </div>
 <div class="main-modal-title">
-  <p ng-if="!local.validated && with_order" class="modal-title">Send Message</p>
-  <p ng-if="!with_order" class="lead text-center background-white">Where are you traveling?</p>
+  <p ng-if="!local.validated && with_order" class="modal-title background-white">Send Message</p>
+  <p ng-if="!with_order" class="lead text-center background-white"> WHERE ARE YOU TRAVELING?</p>
 </div>
 <form name="modalForm" class="border-form">
 <div ng-if="!local.validated" class="modal-body main-modal-body">
   <div class="form-group main-from-group">
     <label>From:</label>
     <div class="input-w">
-      <input type="text" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.shipment.from" required/>
+      <input type="text"  id="country" class="form-control" options="fromOptions" g-places-autocomplete placeholder="Country" ng-model="local.shipment.from" required/>
       </div>
   </div>
 
   <div class="form-group main-to-group">
     <label for="arrival">To:</label>
     <div class="input-w">
-      <input type="text" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.shipment.to" required/>
+      <input type="text" id="city" class="form-control" options="toOptions" g-places-autocomplete placeholder="City" ng-model="local.shipment.to" required/>
     </div>
   </div>
 

@@ -1454,27 +1454,38 @@ button.btn-next {
       margin: 35px 0;
     }
   }
+.contact_header{
+  width: 658px;
+}
 .contact_main{
   background-image: url(../images/contact_us.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  padding-left: 0;
+  // background-size: cover;
     .pay-pal-account{
       margin-left: 15px;
       margin-right: 15px;
     }
     .pay-pal-account  p{
+      font-family: FaricyNew-Regular;
+      font-size: 17px;
       color: white;
       margin-bottom: 0;
       margin-top: 15px;
     }
     .pay-pal-account input{
-      margin: 10px 0;
-      width: 45%;
+      border-radius: 6px;
+      margin: 0 0 10px 0;
+      width: 42%;
+      height: 38px;
     }
     .pay-pal-account button{
-      margin-bottom: 20px;
+      border-radius: 6px;
+      font-family: FaricyNew-Regular;
+      font-size: 17px;
+
       margin-top: 15px;
-      padding: 8px 30px;
+      padding: 8px 32px 4px 32px;
       float: right;
     }
     .pay-pal-account .btn_send{
@@ -1482,41 +1493,50 @@ button.btn-next {
       color: white;
       background: #11E9DE;
     }
+    .pay-pal-account .cancel-modal-btn{
+      color: #a7a7a7;
+    }
+    .pay-pal-account .cancel-modal-btn:hover{
+      color: #333;
+    }
     .pay-pal-account .btn_send:hover{
       color: #333;
       background-color: #e6e6e6;
       border-color: #adadad;
     }
     .textarea_contact{
+      border-radius: 6px;
       padding: 10px 0;
-      margin-top: 10px;
     }
-}
-.contact_text{
-   margin-right: -5px;
 }
 .contact_us{
   background: white;
   padding: 5px 0;
   margin-bottom: 0;
-  font-size: 30px;
   color: #a7a7a7;
   font-family: FaricyNew-Light;
+  text-transform: uppercase;
+  h1{
+    font-family: FaricyNew-Regular;
+    font-size: 24px;
+  }
 }
 .contact_text{
-  padding-left: 61%;
+  margin-right: 10px;
+  padding-left: 55%;
   text-align: right;
-  h1, h2{
-      color: white;
-  }
-  h2{
+  p{
+    letter-spacing: 1px;
+    text-align: right;
+    color: white;
     margin-top: 0;
-    font-size: 21px;
+    font-size: 17px;
   }
   h1{
+    color: white;
     margin-bottom: 0;
     font-family: FaricyNew-Bold;
-    font-size: 30px;
+    font-size: 28px;
   }
   a{
     color: #11E9DE;
@@ -1897,10 +1917,6 @@ button.btn-next {
   margin-bottom: 20px;
 }
 .main-modal-title .background-white{
-  // border-top: 1px solid #666;
-  // border-left: 1px solid #666;
-  // border-right: 1px solid #666;
-  text-transform: uppercase;
   color: #969696;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2379,6 +2395,9 @@ button.btn-next {
       float: none;
     }
   }
+  .contact_header{
+    width: 615px;
+  }
 }
 @media (max-width: 480px) {
   body{
@@ -2521,13 +2540,27 @@ button.btn-next {
   .main-date-group .main-search-input{
     font-size: 15px;
   }
-  .contact_text{
-      padding-left: 41%;
+  .contact_header{
+    width: inherit;
   }
   .contact_main{
-    .pay-pal-account input{
-      margin: 0 105px;
-    }
+    padding: 0;
+  }
+  .contact_text{
+    padding-left: 0;
+    text-align: left;
+    p{
+      padding-left: 0;
+     text-align: left;
+     padding-right: 36%;
+   }
+  }
+  .contact_data p{
+    padding-left: 0;
+    text-align: left;
+  }
+  .contact_main .pay-pal-account{
+    margin-left: 0;
   }
 .down-image{
   .block-connect{
@@ -2594,10 +2627,10 @@ button.btn-next {
    .profile-body{
      padding-top: 0;
    }
-   .contact_text{
-     padding-left: 27%;
+   .contact_main .pay-pal-account p{
+     margin-top: 10px;
    }
-}
+  }
 @media (max-width: 414px){
   .profile-body{
     padding: 0;
@@ -2629,9 +2662,6 @@ button.btn-next {
   }
   .thumbs-row{
     margin-top: -60px;
-  }
-  .contact_text{
-    padding-left: 24%;
   }
 }
 @media (max-width: 375px){
@@ -2684,13 +2714,8 @@ button.btn-next {
   .footer-wrapper .footer-nav li{
     margin: 0 6px;
   }
-  .contact_text{
-    padding-left: 18%;
-  }
-  .contact_main{
-    .pay-pal-account input{
-      margin: 0 80px;
-    }
+  .contact_text p{
+    padding-right: 24%;
   }
   .down-image .block-connect .star{
     margin-top: 55px;
@@ -2727,13 +2752,8 @@ button.btn-next {
   .footer-wrapper .footer-nav li{
     margin: 0 5px;
   }
-  .contact_main{
-    .pay-pal-account input{
-      margin: 0 80px;
-    }
-  }
   .contact_text{
-    padding-left: 10%;
+    padding-left: 0;
   }
 }
 
@@ -2971,13 +2991,13 @@ button.btn-next {
    .credit-card-box{
      width: 285px;
    }
-   .contact_text{
+   .contact_text p{
      padding-left: 0;
+     text-align: left;
    }
-   .contact_main{
-     .pay-pal-account input{
-       margin: 0 65px;
-     }
+   .contact_main .pay-pal-account p{
+     text-align: left;
+     padding-left: 0;
    }
    .down-image .block-connect
    {

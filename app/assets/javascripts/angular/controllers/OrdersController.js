@@ -116,14 +116,25 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     if ($scope.local.data_to_show.shipments){
       if($scope.local.data_to_show.shipments.length > 0) {
         var refused = 0;
+        var similar = 0;
         for (var i = 0; i < $scope.local.data_to_show.shipments.length; i++) {
           if ($scope.local.data_to_show.shipments[i].refuses) {
-            if ($scope.local.data_to_show.shipments[i].refuses.length > 0) {
-              refused++;
+            for (var j = 0; j < $scope.local.data_to_show.shipments[i].refuses.length; j++) {
+              if ($scope.local.data_to_show.shipments[i].refuses[j] == $scope.local.data_to_show .id) {
+                  refused++;
+              }
+            }
+            for (var m = 0; m < $scope.local.data_to_show.shipments[i].refuses.length; m++) {
+              var item = $scope.local.data_to_show.shipments[i].refuses[m];
+              for (var n = m+1; n < $scope.local.data_to_show.shipments[i].refuses.length; n++) {
+                if (item == $scope.local.data_to_show.shipments[i].refuses[n] ) {
+                    similar++;
+                }
+              }
             }
           }
         }
-           $scope.count_offer = $scope.local.data_to_show.shipments.length - refused;
+           $scope.count_offer = $scope.local.data_to_show.shipments.length - (refused - similar);
         }
       }
   }

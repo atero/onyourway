@@ -37,7 +37,8 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     //   shipment.to = shipment.to.address_components[0].long_name;
     //   shipment.from = shipment.from.address_components[0].long_name;
     // }else {
-    //
+    //      shipment.to =$('#city').val();
+    //      shipment.from =$('#country').val();
     // }
     shipment.to = shipment.to.address_components[0].long_name;
     shipment.from = shipment.from.address_components[0].long_name;
