@@ -29,6 +29,8 @@ App.controller('MainCtrl',['$scope','$rootScope', 'Auth','$state','$stateParams'
     	}else{
 			Auth.register(credentials.user).then(function(user) {
 				if(user){
+          toastr.error("A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.");
+          toastr.success("A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.");
 					Auth.login(credentials.user).then(function(user) {
 						$scope.inherit.user = user
 						deferred.resolve(user)
