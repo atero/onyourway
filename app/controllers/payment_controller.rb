@@ -25,7 +25,7 @@ class PaymentController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         amount: total_to_pay.to_i * 100, # amount in cents, again
-        currency: 'eur',
+        currency: 'usd',
         source: token,
         description: 'Example charge'
       )

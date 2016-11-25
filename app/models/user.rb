@@ -26,6 +26,7 @@ class User
   field :base64_image, type: String
   field :country, type: String
   field :sex, type: String
+  field :active, type: String
   field :birthdate, type: Date
 
   #Payout
