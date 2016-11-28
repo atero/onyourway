@@ -1,5 +1,5 @@
-window.App.config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
+  function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
@@ -215,5 +215,6 @@ window.App.config(['$stateProvider', '$urlRouterProvider',
           }]
         }
       })
+      $locationProvider.html5Mode(true);
   }
 ]);
