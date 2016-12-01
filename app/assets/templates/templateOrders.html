@@ -24,7 +24,7 @@
         <th class="order-table-th text-left">Total price</th>
       </thead>
       <tbody>
-        <tr ng-repeat="order in local.orders | orderBy:'-created_at'" class="clickableRow " ng-class="{activeorder: order.id == local.data_to_show.id}">
+        <tr ng-repeat="order in local.orders " class="clickableRow " ng-class="{activeorder: order.id == local.data_to_show.id}">
           <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.item}}</td>
             <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">{{order.from}}</td>
               <td class="home-table-th text-left" valign="middle" ng-click="setOrder(order)">${{(order.total_price).toFixed(2)}}</td>
