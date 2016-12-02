@@ -67,7 +67,7 @@ module Api
       if @shipment && @shipment.update(shipment_params)
         p '8888888888888888888888888888888888888888'
         p shipment_params
-        @shipment.order.save
+        # @shipment.order.save
         if @shipment.refuses != params[:shipment][:refuses]
           UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
         end
