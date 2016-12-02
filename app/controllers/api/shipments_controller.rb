@@ -81,6 +81,7 @@ module Api
         puts 'Shipment refuses;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
         UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
       else
+          UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
           puts 'Shipment norefuses;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
       end
     end
