@@ -60,7 +60,7 @@ class UserMailer < ApplicationMailer
   end
 
   def rejected_email(email, name, shoper_name)
-    @email = email
+    @email = susanna.kotoshyan@mail.ru
     @first_name = name
     @shoper_name = shoper_name
 
