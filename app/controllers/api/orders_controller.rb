@@ -35,8 +35,7 @@ module Api
     end
 
     def list #created by the logged user
-      @orders = current_user.orders
-      @orders.sort_by { |obj| obj.created_at }
+      @orders = current_user.orders.sort_by { |obj| obj.created_at }
       if @orders.length > 0
           render 'index_profile'
        else
