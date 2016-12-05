@@ -53,6 +53,9 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       if (shipment.status == "accepted-" + order.id){
         order.status = "accepted"
       }
+      else {
+        order.status = ""
+      }
       console.log('8********************************');
       $scope.local.conversation_shipment = shipment;
       // Shipment.update({
