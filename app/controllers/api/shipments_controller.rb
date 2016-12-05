@@ -76,7 +76,7 @@ module Api
       else
         render json: { messsage: 'No orders found' }, status: 404
       end
-      if @shipment.refuses != params[:shipment][:refuses]
+      if @shipment.refuses = params[:shipment][:refuses]
         UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
       end
     end
