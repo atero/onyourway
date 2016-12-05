@@ -73,7 +73,7 @@ module Api
         #   UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
         # end
         if @shipment.refuses != params[:shipment][:refuses]
-          puts 'Shipment refuses;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+          then do  puts 'Shipment refuses;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
           UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
         end
         render json: @shipment, status: :accepted
