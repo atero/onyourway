@@ -52,7 +52,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       order.accepted_shipment = shipment.id;
       var satus_ship ="accepted-" + order.id
       if (shipment.status == satus_ship){
-        order.status = "accepted"
+        order.status = "mnnnmnmnmn"
       }
       else {
         order.status = ""
