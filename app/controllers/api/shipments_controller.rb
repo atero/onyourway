@@ -1,6 +1,5 @@
 module Api
   class ShipmentsController < ApplicationController
-    include ActiveModel::Dirty
     before_filter :authenticate_user!
 
     def create
