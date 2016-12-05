@@ -1,5 +1,6 @@
 module Api
   class ShipmentsController < ApplicationController
+    include ActiveModel::Dirty
     before_filter :authenticate_user!
 
     def create
@@ -68,12 +69,12 @@ module Api
         p '8888888888888888888888888888888888888888'
         p shipment_params
         # @shipment.order.save
-        if @shipment.refuses != params[:shipment][:refuses]
-          UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
-        end
-        # if  @shipment.refuses_changed? #=> true
+        # if @shipment.refuses != params[:shipment][:refuses]
         #   UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
         # end
+        if  @shipment.refuses_changed? #=> true
+          UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
+        end
 
         render json: @shipment, status: :accepted
       else
