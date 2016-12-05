@@ -63,8 +63,8 @@ module Api
     end
 
     def update
-      if @shipment.refuses != params[:shipment][:refuses]
-        UserMailer.rejected_email('susanna.koptoshyan@mail.ru', @traveler.first_name, @shoper.first_name).deliver_later
+      if @shipment.refuses[] != params[:shipment][:refuses]
+        UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
       end
       @shipment = Shipment.where(id: params[:shipment_id]).first
       if @shipment && @shipment.update(shipment_params)
