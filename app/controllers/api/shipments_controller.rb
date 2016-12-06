@@ -58,7 +58,7 @@ module Api
     end
 
     def list
-      @shipments = current_user.shipments.sort_by { |obj| obj.date}
+      @shipments = current_user.shipments.sort_by { |obj| obj.date}.reverse!
       render 'index'
     end
 
