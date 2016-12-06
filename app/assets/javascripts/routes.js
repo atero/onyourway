@@ -277,7 +277,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
       })
       $locationProvider.html5Mode(true);
   }
-]);
-window.App.run(['ngMeta', function(ngMeta) {
+])
+.run(['ngMeta', function(ngMeta) {
   ngMeta.init();
 }]);
