@@ -280,6 +280,5 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
   }
 ])
 .run(['ngMeta', function(ngMeta) {
-  ngMeta.init();
+  // ngMeta.init();
 }]);
-window.App.$inject = ["ngMeta"]
