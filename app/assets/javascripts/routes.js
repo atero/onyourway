@@ -1,5 +1,5 @@
 window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
-  function($stateProvider, $urlRouterProvider, $locationProvider ) {
+  function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta ) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
@@ -278,7 +278,8 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
       $locationProvider.html5Mode(true);
 
   }
-]);
-angular.module("ShopNShip").run(['ngMeta', function(ngMeta) {
+])
+.run(['ngMeta', function(ngMeta) {
   ngMeta.init();
 }]);
+window.App.$inject = ["ngMeta"]
