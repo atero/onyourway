@@ -3,7 +3,7 @@ module Api
     before_filter :authenticate_user!
 
     def create
-      @ext = Shipment.where({to: shipment_params['to'], from: shipment_params['from'], date: shipment_params['date'], user: current_user}).first
+      @ext = Shipment.where({to: shipment_params['to'], from: shipment_params['from'], date: shipment_params['date'], user: current_user}).first.sort_by { |obj| obj.date} 
       @order = Order.where(id: params['order_id']).first
 
       if @ext

@@ -50,13 +50,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
     modalInstance.result.then(function(shipment) {
 
       order.accepted_shipment = shipment.id;
-      var satus_ship ="accepted-" + order.id
-      if (shipment.status == satus_ship){
-        order.status = "mnnnmnmnmn"
-      }
-      else {
-        order.status = ""
-      }
+      order.status = "accepted"
       console.log('8********************************');
       $scope.local.conversation_shipment = shipment;
       // Shipment.update({
