@@ -7,6 +7,18 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         url: '/',
         templateUrl: "templateWelcome.html",
         controller: 'WelcomeCtrl',
+        data:{
+          meta:{
+            title: "Buy overseas brands in Lebanon including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
+            description: "With On Your Way you can shop items from anywhere in the world or get paid to deliver them on your travels. Join us!",
+            "og-type": "website",
+            "og-site_name": "On Your Way",
+            "og-title": "Join On Your Way to shop items from anywhere in the world!",
+            "og-description": "Use On Your Way to shop items from anywhere in the world. A trusted traveler can bring them to via our secure p2p delivery platform.",
+            "og:url": "https://www.onyourway.io/",
+            "og:image": ""
+          }
+        },
         resolve: {
           localuser: ['$q', 'Auth', function($q, Auth) {
             var d = $q.defer();
@@ -217,4 +229,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
       })
       $locationProvider.html5Mode(true);
   }
-]);
+])
+.run(['ngMeta', function(ngMeta) {
+  ngMeta.init();
+}]);
