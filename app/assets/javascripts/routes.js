@@ -278,7 +278,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
       $locationProvider.html5Mode(true);
 
   }
-])
-.run(['ngMeta', function(ngMeta) {
+]);
+angular.module("ShopNShip").run(['ngMeta', function(ngMeta) {
   ngMeta.init();
 }]);
