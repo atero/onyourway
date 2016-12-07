@@ -1,4 +1,4 @@
-window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
+window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMeta',
   function($stateProvider, $urlRouterProvider, $locationProvider, ngMetaProvider ) {
     $urlRouterProvider.otherwise("/");
 
@@ -279,6 +279,6 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
 
   }
 ])
-.run(['ngMeta', function(ngMeta) {
-  ngMeta.init();
-}]);
+// .run(['ngMeta', function(ngMeta) {
+//   ngMeta.init();
+// }]);
