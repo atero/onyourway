@@ -1,4 +1,4 @@
-window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider'
+window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider', 'ngMeta',
   function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta, ngMetaProvider ) {
     $urlRouterProvider.otherwise("/");
     $stateProvider.decorator('data', ngMetaProvider.mergeNestedStateData);
