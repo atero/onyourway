@@ -1,7 +1,6 @@
-window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider', 'ngMeta',
-  function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta, ngMetaProvider ) {
+window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
+  function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta ) {
     $urlRouterProvider.otherwise("/");
-    $stateProvider.decorator('data', ngMetaProvider.mergeNestedStateData);
 
     $stateProvider
       .state('welcome', {
@@ -280,6 +279,6 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
 
   }
 ])
-.run(['ngMeta', function(ngMeta) {
-  ngMeta.init();
-}]);
+// .run(['ngMeta', function(ngMeta) {
+//   ngMeta.init();
+// }]);
