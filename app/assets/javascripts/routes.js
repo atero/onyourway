@@ -34,7 +34,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
 
     $stateProvider
       .state('results', {
-        url: '/results',
+        url: '/shop',
         templateUrl: "templateResults.html",
         controller: 'ResultsCtrl',
         data:{
@@ -45,7 +45,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
            "og:site_name": "On Your Way",
            "og:title": "Shop US &amp; European Brands | P2P Delivery to Lebanon.",
            "og:description": "Shop overseas brands including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
-           "og:url": "https://www.onyourway.io/results",
+           "og:url": "https://www.onyourway.io/shop",
            "og:image": ""
          }
        },
@@ -212,7 +212,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
 
     $stateProvider
       .state('shipments', {
-        url: '/shipments',
+        url: '/travel',
         templateUrl: "templateShipments.html",
         controller: 'ShipmentsCtrl',
         data:{
@@ -223,7 +223,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
            "og:site_name": "On Your Way",
            "og:title": "Travel and Earn Money",
            "og:description": "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
-           "og:url": "https://www.onyourway.io/shipments",
+           "og:url": "https://www.onyourway.io/travel",
            "og:image": ""
          }
        },
