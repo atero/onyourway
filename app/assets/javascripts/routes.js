@@ -1,5 +1,5 @@
-window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
-  function($stateProvider, $urlRouterProvider, $locationProvider) {
+window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider',
+  function($stateProvider, $urlRouterProvider, $locationProvider, ngMetaProvider) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
