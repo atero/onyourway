@@ -64,9 +64,9 @@ module Api
 
     def update
       @shipment = Shipment.where(id: params[:shipment_id]).first
-        if shipment_params['refuses'] && shipment_params['refuses'] != @shipment.refuses
-           UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
-        end
+        # if shipment_params['refuses'] && shipment_params['refuses'] != @shipment.refuses
+        #    UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
+        # end
       # if @shipment.refuses && @shipment.refuses != params[:shipment][:refuses]
       #    UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
       # end
@@ -74,13 +74,6 @@ module Api
         p '8888888888888888888888888888888888888888'
         p shipment_params
         # @shipment.order.save
-        # if  @shipment.attribute_changed? #=> true
-        #   UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
-        # end
-        # if @shipment.has_attribute?(:refuses)
-        #   UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
-        # end
-
         render json: @shipment, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404
