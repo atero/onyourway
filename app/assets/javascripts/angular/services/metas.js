@@ -14,7 +14,7 @@
 }(this, function(angular) {
 
   angular.module('ngMeta', [])
-    .provider('ngMeta', function() {
+    .provider('ngMeta', [function() {
 
       'use strict';
 
@@ -164,5 +164,5 @@
       this.$get = function($rootScope) {
         return new Meta($rootScope);
       };
-    });
+    }]);
 }));
