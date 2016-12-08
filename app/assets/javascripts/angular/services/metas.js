@@ -306,8 +306,8 @@
       };
 
 
-      this.$get = function($rootScope) {
+      this.$get = ["$rootScope", function($rootScope) {
         return new Meta($rootScope);
-      };
+      }];
     });
 }));
