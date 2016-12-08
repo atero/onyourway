@@ -1,5 +1,5 @@
 window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
-  function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta, ngMetaProvider ) {
+  function($stateProvider, $urlRouterProvider, $locationProvider, ngMeta) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
@@ -8,7 +8,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         templateUrl: "templateWelcome.html",
         controller: 'WelcomeCtrl',
         data:{
-         'meta':{
+         meta:{
            title: "Buy overseas brands in Lebanon including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
            description: "With On Your Way you can shop items from anywhere in the world or get paid to deliver them on your travels. Join us!",
            "og:type": "website",
@@ -38,7 +38,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         templateUrl: "templateResults.html",
         controller: 'ResultsCtrl',
         data:{
-         'meta':{
+         meta:{
            title: "On Your Way: shop US &amp; European Brands | P2P Delivery to Lebanon.",
            description: "Shop overseas brands including Apple, Amazon and Ebay.International delivery offered by travelers coming your way.",
            "og:type": "website",
@@ -94,7 +94,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         controller: 'FaqCtrl',
         templateUrl: "templateFaq.html",
         data:{
-         'meta':{
+         meta:{
            title: "FAQ online shopping and delivery to Lebanon",
            description: "Questions about shopping items from around the world. What can I buy in Lebanon?",
            "og:type": "website",
@@ -140,7 +140,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
           controller: 'AboutCtrl',
           templateUrl: "templateAbout.html",
           data:{
-           'meta':{
+           meta:{
              title: "About On Your Way",
              description: "A better way to shop and travel the world.",
              "og:type": "website",
@@ -216,7 +216,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         templateUrl: "templateShipments.html",
         controller: 'ShipmentsCtrl',
         data:{
-         'meta':{
+         meta:{
            title: "Travel to Lebanon and Earn Money",
            description: "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
            "og:type": "website",
@@ -278,6 +278,6 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
       $locationProvider.html5Mode(true);
   }
 ])
-.run(['ngMeta', function(ngMeta) {
-  ngMeta.init();
-}]);
+// .run(['ngMeta', function(ngMeta) {
+//   ngMeta.init();
+// }]);
