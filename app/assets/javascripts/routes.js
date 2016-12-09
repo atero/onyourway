@@ -34,7 +34,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
 
     $stateProvider
       .state('results', {
-        url: '/shop',
+        url: '/results',
         templateUrl: "templateResults.html",
         controller: 'ResultsCtrl',
         data:{
@@ -45,7 +45,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
            "og:site_name": "On Your Way",
            "og:title": "Shop US &amp; European Brands | P2P Delivery to Lebanon.",
            "og:description": "Shop overseas brands including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
-           "og:url": "https://www.onyourway.io/shop",
+           "og:url": "https://www.onyourway.io/results",
            "og:image": ""
          }
        },
@@ -72,7 +72,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
       })
     $stateProvider
       .state('create', {
-        url: '/create',
+        url: '/shop',
         templateUrl: "templateCreate.html",
         controller: 'CreateCtrl',
         resolve: {
