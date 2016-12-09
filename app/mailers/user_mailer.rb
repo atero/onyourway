@@ -60,9 +60,9 @@ class UserMailer < ApplicationMailer
   end
 
   def rejected_email(email, name, shoper_name)
-    @email = email
-    @first_name = name
-    @shoper_name = shoper_name
+    # @email = email
+    # @first_name = name
+    # @shoper_name = shoper_name
 
     p '************************NEW MESSAGE - REJECTED**************************'
 
