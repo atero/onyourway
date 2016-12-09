@@ -37,19 +37,7 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
         url: '/results',
         templateUrl: "templateResults.html",
         controller: 'ResultsCtrl',
-        data:{
-         meta:{
-           title: "On Your Way: shop US &amp; European Brands | P2P Delivery to Lebanon.",
-           description: "Shop overseas brands including Apple, Amazon and Ebay.International delivery offered by travelers coming your way.",
-           "og:type": "website",
-           "og:site_name": "On Your Way",
-           "og:title": "Shop US &amp; European Brands | P2P Delivery to Lebanon.",
-           "og:description": "Shop overseas brands including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
-           "og:url": "https://www.onyourway.io/results",
-           "og:image": ""
-         }
-       },
-        resolve: {
+          resolve: {
           localuser: ['$q', 'Auth', function($q, Auth) {
             var d = $q.defer();
             var user = Auth.currentUser().then(function(user) {
@@ -75,6 +63,18 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
         url: '/shop',
         templateUrl: "templateCreate.html",
         controller: 'CreateCtrl',
+        data:{
+         meta:{
+           title: "On Your Way: shop US &amp; European Brands | P2P Delivery to Lebanon.",
+           description: "Shop overseas brands including Apple, Amazon and Ebay.International delivery offered by travelers coming your way.",
+           "og:type": "website",
+           "og:site_name": "On Your Way",
+           "og:title": "Shop US &amp; European Brands | P2P Delivery to Lebanon.",
+           "og:description": "Shop overseas brands including Apple, Amazon and Ebay. International delivery offered by travelers coming your way.",
+           "og:url": "https://www.onyourway.io/shop",
+           "og:image": ""
+         }
+       },
         resolve: {
           localuser: ['$q', 'Auth', function($q, Auth) {
             var d = $q.defer();
