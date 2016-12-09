@@ -34,9 +34,21 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
 
     $stateProvider
       .state('results', {
-        url: '/results',
+        url: '/travel',
         templateUrl: "templateResults.html",
         controller: 'ResultsCtrl',
+        data:{
+         meta:{
+           title: "Travel to Lebanon and Earn Money",
+           description: "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
+           "og:type": "website",
+           "og:site_name": "On Your Way",
+           "og:title": "Travel and Earn Money",
+           "og:description": "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
+           "og:url": "https://www.onyourway.io/travel",
+           "og:image": ""
+         }
+       },
           resolve: {
           localuser: ['$q', 'Auth', function($q, Auth) {
             var d = $q.defer();
@@ -212,22 +224,10 @@ window.App.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '
 
     $stateProvider
       .state('shipments', {
-        url: '/travel',
+        url: '/shipments',
         templateUrl: "templateShipments.html",
         controller: 'ShipmentsCtrl',
-        data:{
-         meta:{
-           title: "Travel to Lebanon and Earn Money",
-           description: "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
-           "og:type": "website",
-           "og:site_name": "On Your Way",
-           "og:title": "Travel and Earn Money",
-           "og:description": "Traveling to Lebanon or Turkey? Earn money and meet new people each time you travel.",
-           "og:url": "https://www.onyourway.io/travel",
-           "og:image": ""
-         }
-       },
-        resolve: {
+          resolve: {
           localuser: ['$q', 'Auth', function($q, Auth) {
             var d = $q.defer();
             var user = Auth.currentUser().then(function(user) {

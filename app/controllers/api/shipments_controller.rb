@@ -68,8 +68,8 @@ module Api
         p '8888888888888888888888888888888888888888'
         p shipment_params
         # @shipment.order.save
-        shipment.refuses_changed?
-        UserMailer.rejected_email('susanna.kotoshyan@mail.ru').deliver_later
+        # shipment.refuses_changed?
+        # UserMailer.rejected_email('susanna.kotoshyan@mail.ru').deliver_later
         render json: @shipment, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404
