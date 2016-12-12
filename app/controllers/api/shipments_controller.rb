@@ -71,7 +71,6 @@ module Api
       # if shipment.refuses_changed?
       #   UserMailer.rejected_email().deliver_later
       # end
-      yield
         refuses_changed = self.refuses_changed?
         UserMailer.rejected_email().deliver_later if refuses_changed
 
