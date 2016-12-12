@@ -71,11 +71,6 @@ module Api
       # if shipment.refuses_changed?
       #   UserMailer.rejected_email().deliver_later
       # end
-      detect_changes
-
-  if @shipment.update_attributes(params[:shipment])
-    UserMailer.rejected_email().deliver_later if refuses_changed?
-  end
         render json: @shipment, status: :accepted
       else
         render json: { messsage: 'No orders found' }, status: 404
@@ -83,14 +78,6 @@ module Api
     end
 
     private
-
-    def detect_changes
-      @changed = []
-      @changed << :refuses if @model.refuses != params[:shipment][:refuses]
-    end
-    def refuses_changed?
-      @changed.include :refuses
-    end
 
     def shipment_params
       params.require(:shipment).permit(:to, :date, :from, :status, :refuses => [])
