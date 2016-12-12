@@ -71,8 +71,10 @@ module Api
       # if shipment.refuses_changed?
       #   UserMailer.rejected_email().deliver_later
       # end
-        refuses_changed = self.refuses_changed?
-        UserMailer.rejected_email().deliver_later if refuses_changed
+      detect_changes
+       if @shipment.update_attributes(params[:shipment])
+         do_stuff if refuses_changed?
+       end
 
         render json: @shipment, status: :accepted
       else
@@ -81,6 +83,15 @@ module Api
     end
 
     private
+
+     def detect_changes
+        @changed = []
+        @changed << :refuses if @shipment.refuses != params[:shipment][:refuses]
+      end
+
+      def attr_changed?
+        @changed.include :refuses
+      end
 
     def shipment_params
       params.require(:shipment).permit(:to, :date, :from, :status, :refuses => [])
