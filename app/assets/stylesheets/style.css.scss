@@ -1157,7 +1157,7 @@ button.btn-next {
       margin-bottom: 30px;
       label {
         display: inline-block;
-        font-size: 25px;
+        font-size: 22px;
         color: #646464;
         font-family: FaricyNew-Regular;
         margin-right: 20px;
@@ -1206,6 +1206,10 @@ button.btn-next {
     font-family: FaricyNew-Bold;
     text-transform: uppercase;
   }
+}
+.font_size{
+  color: #646464;
+  font-size: 18px;
 }
 /***********Sing Up************/
 .signup-block {

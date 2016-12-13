@@ -34,24 +34,24 @@
           <div class="col-md-offset-1 col-md-12 main-active-order">
             <table class="table">
               <thead>
-                <th class="home-table-th text-center"></th>
-                <th class="home-table-th text-center">What</th>
-                <th class="home-table-th text-center">From</th>
-                <th class="home-table-th text-center">To</th>
-                <th class="home-table-th text-center">Traveler earns</th>
-                <th class="home-table-th text-center">Price</th>
-                <th class="home-table-th text-center">Quantity</th>
-                <th class="home-table-th text-center"></th>
+                <th class="home-table-th text-center font_size"></th>
+                <th class="home-table-th text-center font_size">What</th>
+                <th class="home-table-th text-center font_size">From</th>
+                <th class="home-table-th text-center font_size">To</th>
+                <th class="home-table-th text-center font_size">Traveler earns</th>
+                <th class="home-table-th text-center font_size">Price</th>
+                <th class="home-table-th text-center font_size">Quantity</th>
+                <th class="home-table-th text-center font_size"></th>
               </thead>
               <tbody ng-if="inherit.usertype == 'traveller'" >
                 <tr ng-repeat="result in local.results">
-                  <td class="home-table-td text-center"><img class="profile-photo" ng-src="{{result.photo}}" alt="">{{result.name}}</td>
-                  <td class="home-table-th text-center" valign="middle">{{result.item}}</td>
-                  <td class="home-table-th text-center" valign="middle">{{result.from}}</td>
-                  <td class="home-table-th text-center" valign="middle">{{result.to}}</td>
-                  <td class="home-table-th text-center" valign="middle">${{result.reward}}</td>
-                  <td class="home-table-th text-center" valign="middle">${{(result.price).toFixed(2)}}</td>
-                  <td class="home-table-th text-center" valign="middle">{{result.quantity}}</td>
+                  <td class="home-table-td text-center" style="color: #646464"><img class="profile-photo" ng-src="{{result.photo}}" alt="">{{result.name}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">{{result.item}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">{{result.from}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">{{result.to}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">${{result.reward}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">${{(result.price).toFixed(2)}}</td>
+                  <td class="home-table-th text-center" style="color: #646464" valign="middle">{{result.quantity}}</td>
                   <td class="home-table-th text-center" valign="middle"><button type="button" class="btn btn-default main-btn" ng-click="propose('traveller', result)"><i style="color: #11e9de;" class="fa fa-envelope"></i></button></td>
                 </tr>
               </tbody>
@@ -60,8 +60,8 @@
         </div>
       </div>
       <div class="text-center col-md-12 result-bottom">
-       <h4>No item matching your trip?</h4>
-       <p class="text-center">
+       <h4 style="color: #646464;">No item matching your trip?</h4>
+       <p class="text-center" style="color: #646464;">
          We can notify you when new matching items are posted.
        </p>
        <div class="text-center create-button">
