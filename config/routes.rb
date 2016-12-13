@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post '/users/sign_up.json', to: 'users#create'
   post '/payment', to: 'payment#create'
   get '/activate', to: 'activate#activate'
+  get '/users/password/new', to: 'users#password'
 
   namespace :api, path: '/api', defaults: { format: 'json' } do
     match '/orders', to: 'orders#show', via: [:options]
