@@ -1219,6 +1219,27 @@ button.btn-next {
 //   margin: 10px 0;
 // }
 .new-pass{
+  h2{
+    padding: 20px 0;
+  }
+  .actions{
+    input{
+      color: #fff;
+      display: inline-block;
+      background: #11e9de;
+      border: none;
+      padding: 5px 10px;
+      margin: 10px 0;
+    }
+  }
+}
+.reset_pass{
+  text-align: center;
+  color: #969696;
+}
+.edit_pass{
+  text-align: center;
+  color: #646464;
   .actions{
     input{
       color: #fff;
