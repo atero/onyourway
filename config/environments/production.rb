@@ -71,7 +71,7 @@ Rails.application.configure do
 
      }
    }
-
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { :host => 'onyourway.io' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.perform_deliveries = true
