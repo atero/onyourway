@@ -1,4 +1,10 @@
 <div class="pass_background">
+  <div class="section1">
+    <div class="container" style="max-width: 640px;margin: auto;">
+      <img style="display: block; margin: auto; padding-top: 25px;"
+        src="https://s3.eu-central-1.amazonaws.com/oywuploads/newsletter-logo.png" alt="On Your Way"/>
+    </div>
+  </div>
   <h2>Change your password</h2>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -21,5 +27,13 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
+  <div class="section4">
+    <div class="container" style="max-width: 640px;margin: auto;">
+      <footer style="margin: 0;">
+        <div class="orange" style="height: 15px;background-color: #fde53a;"></div>
+        <div class="blue" style="height: 30px;background-color: #10e8dd;"></div>
+      </footer>
+    </div>
+  </div>
 
 </div>
