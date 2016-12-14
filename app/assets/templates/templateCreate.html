@@ -120,7 +120,7 @@
                {{local.order.details}}
                <div class="clearfix"></div>
               <div class="col-sm-12">
-                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{(local.order.price*local.order.quantity).toFixed(2)}}$</span>
+                <span class="pull-left summary-span">Total items' price:</span><span class="pull-right summary-span">{{(local.order.price*local.order.quantity).toFixed(0)}}$</span>
               </div>
               <div class="clearfix"></div>
               <div class="col-sm-12">
@@ -129,7 +129,7 @@
               <div class="clearfix"></div>
               <div class="col-sm-12">
                 <span class="pull-left summary-span">On Your Way's fee:</span><span class="pull-right summary-span summary-span">
-                  {{(( local.order.price*local.order.quantity + local.order.reward )* 0.07 + 6).toFixed(2)}}$
+                  {{(( local.order.price*local.order.quantity + local.order.reward )* 0.07 + 6).toFixed(0)}}$
                 </span>
               </div>
               <div class="clearfix"></div>
@@ -137,7 +137,7 @@
             <div class="padding-top col-sm-12">
               <h5 class="pull-left summary-span">Total:</h5>
 
-              <span style="padding-top:10px" class="pull-right summary-span">{{((local.order.reward +local.order.price*local.order.quantity) * 1.07 + 6).toFixed(2)
+              <span style="padding-top:10px" class="pull-right summary-span">{{((local.order.reward +local.order.price*local.order.quantity) * 1.07 + 6).toFixed(0)
               }}$</span>
               <!--  replace above 0 with local.order.price*local.order.quantity*0.03 after prelunch-->
               <br/>

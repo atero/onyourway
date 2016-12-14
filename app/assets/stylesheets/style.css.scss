@@ -1211,41 +1211,35 @@ button.btn-next {
   color: #646464;
   font-size: 18px;
 }
-// .forgot_pass{
-//   display: inline-block;
-//   background: #11e9de;
-//   border: none;
-//   padding: 5px 10px;
-//   margin: 10px 0;
-// }
-.new-pass{
-  h2{
-    padding: 20px 0;
-  }
-  .actions{
-    input{
-      color: #fff;
-      display: inline-block;
-      background: #11e9de;
-      border: none;
-      padding: 5px 10px;
-      margin: 10px 0;
-    }
-  }
-}
+/***********Forgot Password************/
 .reset_pass{
   text-align: center;
   color: #969696;
 }
-.edit_pass{
+.pass_background{
+  font-size: 16px;
+  background: #ebebeb;
   text-align: center;
   color: #646464;
+  form div ul{
+    list-style: none;
+  }
+  a{
+    display: none;
+  }
+  h2{
+    padding: 10px 0 5px 0;
+  }
+  label{
+    margin: 10px 0;
+  }
   .actions{
     input{
       color: #fff;
       display: inline-block;
       background: #11e9de;
       border: none;
+      border-radius: 6px;
       padding: 5px 10px;
       margin: 10px 0;
     }
