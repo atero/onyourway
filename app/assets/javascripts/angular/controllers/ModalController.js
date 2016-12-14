@@ -65,6 +65,9 @@ App.controller('LoginCtrl', ['$scope', '$uibModalInstance', 'type', function($sc
   $scope.change_type = function() {
     $scope.local.type = ($scope.local.type == "signin") ? "signup" : "signin"
   }
+  $scope.pass = function() {
+     window.location.href = 'https://www.onyourway.io/users/password/new'
+  }
 }]);
 
 App.controller('ContactCtrl', ['$scope', '$uibModalInstance', 'Message', function($scope, $uibModalInstance, Message) {
