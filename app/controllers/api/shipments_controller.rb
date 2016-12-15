@@ -69,7 +69,7 @@ module Api
         p shipment_params
         # @shipment.order.save
        if @shipment.has_attribute?(:refuses)
-         UserMailer.accepted_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
+         UserMailer.rejected_email(@traveler.email, @traveler.first_name, @shoper.first_name).deliver_later
           #  UserMailer.rejected_email().deliver_later
          end
         render json: @shipment, status: :accepted
