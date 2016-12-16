@@ -49,7 +49,7 @@ module Api
         @ord_par = order_params
         @ord_par['status'] = 'delivered'
       else
-         render json: { messsage: 'No orders found' }, status: 404
+        return false
       end
       if @order && @order.update(@ord_par)
 
