@@ -62,6 +62,8 @@
           <div class="code-wrapper">
             <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
             <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
+            <p ng-if="confirm == false"> error </p>
+            <p ng-if="confirm == false"> error </p>
           </div>
         </div>
         <p class="lead text-center main-lead" ng-if="local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) >= 0 || (local.data_to_show.accepted_shipment !='false' && local.data_to_show.accepted_shipment != local.shipmen_to_show.id)" >Sorry, {{local.data_to_show.user.first_name}} has already accepted another delivery offer. Please, consult <a ng-click="inherit.goState('results')" class=""> Active Orders </a> for many other items awaiting a delivery. </p>
