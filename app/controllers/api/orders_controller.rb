@@ -45,8 +45,8 @@ module Api
 
     def update
       @order = Order.where(id: params[:order_id]).first
-      if order_params['confirm_token'] && order_params['confirm_token'] == @order.accepted_token
-        @ord_par = order_params
+      if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] == @order.accepted_token
+        @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
       end
 
@@ -65,6 +65,10 @@ module Api
 
     def order_params
       params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity, :photo, :base64_image, :from, :accepted_shipment, :status, :confirm_token)
+    end
+
+    def order_params_tok
+      params.require(:order).permit(:to, :date, :item, :message, :price, :reward, :total_price, :quantity,  :from, :accepted_shipment, :status, :confirm_token)
     end
   end
 end
