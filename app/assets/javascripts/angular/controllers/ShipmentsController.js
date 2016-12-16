@@ -37,9 +37,13 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		if(order.confirm_token != ''){
 			if (order.confirm_token == order.accepted_token) {
 				console.log("true");
+				console.log(order.confirm_token);
+				console.log(order.accepted_token);
  				confirm = true;
 			}
 			else {
+				console.log(order.confirm_token);
+				console.log(order.accepted_token);
 					console.log("false");
 				confirm = false;
 			}
