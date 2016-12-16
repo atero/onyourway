@@ -59,8 +59,6 @@
         <p class="lead text-center main-lead"  ng-if="(!!!local.shipmen_to_show.refuses || local.shipmen_to_show.refuses.indexOf(local.data_to_show.id) < 0)  && (local.data_to_show.accepted_shipment =='false' || !!!local.data_to_show.accepted_shipment)">Your offer hasn’t been accepted yet. We will notify you as soon as {{local.data_to_show.user.first_name}} accepts it.</p>
         <div class="" ng-if="local.data_to_show.accepted_shipment == local.shipmen_to_show.id">
           <p class="lead text-center main-lead">Congratulations, {{local.data_to_show.user.first_name}} has accepted your offer, you can now buy the item. We will send you {{(local.data_to_show.total_price - 6) / 1.07}}$ as soon as you enter the confirmation code</p>
-          <p ng-if="confirm == 'false'"> error </p>
-          <p ng-if="confirm == 'true'"> Thank you</p>
           <div class="code-wrapper">
             <input type="text" name="name" value="" ng-model="local.data_to_show.confirm_token" placeholder="Enter the code">
             <button type="button" name="button" class="btn btn-default" ng-click="sendToken(local.data_to_show, local.shipmen_to_show)">Send</button>
