@@ -41,11 +41,6 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			}, function(res) {
 				location.reload();
 			})
-			setTimeout(function(){
-			 if(!($('#code').val() > 0)){
-				console.log($('#code').val());
-				$('#code').addClass('error');
-			}else{$('#code').removeClass('error');}; }, 2000)
 		}
 	}
 }]);
