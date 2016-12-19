@@ -48,10 +48,6 @@ module Api
       if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] == @order.accepted_token
         @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
-      else
-        if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] != @order.accepted_token
-          render json: { messsage: 'No orders found' }, status: 404
-        end
       end
 
       if @order && @order.update(@ord_par)
