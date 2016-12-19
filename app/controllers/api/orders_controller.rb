@@ -48,7 +48,7 @@ module Api
       if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] == @order.accepted_token
         @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
-        UserMailer.confirm_email().deliver_later
+        UserMailer.confirm_email(@order.user.first_name).deliver_later
       end
 
       if @order && @order.update(@ord_par)
