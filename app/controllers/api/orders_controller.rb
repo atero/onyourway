@@ -60,6 +60,12 @@ module Api
         render json: { messsage: 'No orders found' }, status: 404
       end
     end
+    
+    def chek_tok
+      if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] != @order.accepted_token
+        render json: { messsage: 'No orders found' }, status: 404
+    end
+      end
 
     private
 
