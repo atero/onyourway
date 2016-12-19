@@ -43,7 +43,7 @@ gem 'underscore-rails'
 gem 'font-awesome-sass'
 
 gem 'rabl'
-
+gem 'prerender_rails'
 # New Relic add-on for heroku
 gem 'newrelic_rpm'
 gem 'fog'
