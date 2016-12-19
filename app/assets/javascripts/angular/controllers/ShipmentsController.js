@@ -44,7 +44,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			setTimeout(function(){ if(!($('#code').val() > 0)){
 				console.log($('#code').val());
 				$('#code').addClass('error');
-			}else{$('#code').removeClass('error');}; }, 1000)
+			}else{$('#code').removeClass('error');}; }, 3000)
 		}
 	}
 }]);
