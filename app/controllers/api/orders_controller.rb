@@ -46,6 +46,7 @@ module Api
     def update
       @order = Order.where(id: params[:order_id]).first
       if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] == @order.accepted_token
+        @order = Order.where(id: order_id).first
         @shipment = Shipment.where(id: shipment_id).first
         @traveler = User.where(id: @shipment.user_id).first
         @ord_par = order_params_tok
