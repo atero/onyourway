@@ -70,10 +70,10 @@ class UserMailer < ApplicationMailer
     mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Offer rejected')
   end
 
-  def confirm_email(email, name)
+  def confirm_email(email, name, shoper_name)
     @email = email
     @first_name = name
-     # @shoper_name = shoper_name
+    @shoper_name = shoper_name
 
     p '************************NEW MESSAGE - Confirm Token**************************'
 
