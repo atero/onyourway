@@ -50,7 +50,7 @@ module Api
         @shipment = Shipment.where(id: shipment_id).first
         @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
-        UserMailer.confirm_email(@shipment.user.email, @shipment.user.first_name, @order.user.first_name ).deliver_later
+        UserMailer.confirm_email(@shipment.user.email, @shipment.user.first_name, @order.user.first_name, @order.item ).deliver_later
       end
 
       if @order && @order.update(@ord_par)
