@@ -59,11 +59,10 @@ class UserMailer < ApplicationMailer
     mail(to: 'support@onyourway.io', subject: 'New Message from OnYourWay contact form')
   end
 
-  def rejected_email(item)
+  def rejected_email(name)
     # @email = email
-    # @first_name = name
+     @first_name = name
     # @shoper_name = shoper_name
-    @item = item
     p '************************NEW MESSAGE - REJECTED**************************'
 
     @url = 'https://onyourway.io'
