@@ -67,7 +67,7 @@ class UserMailer < ApplicationMailer
     p '************************NEW MESSAGE - REJECTED**************************'
 
     @url = 'https://onyourway.io'
-    mail(to: email, subject: 'OnYourWay - Offer rejected')
+    mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Offer rejected')
 
   end
   def confirm_email(email, name)
