@@ -59,8 +59,8 @@ class UserMailer < ApplicationMailer
     mail(to: 'support@onyourway.io', subject: 'New Message from OnYourWay contact form')
   end
 
-  def rejected_email(name)
-    # @email = email
+  def rejected_email(email, name)
+    @email = email
     @first_name = name
     # @shoper_name = shoper_name
 
@@ -79,7 +79,7 @@ class UserMailer < ApplicationMailer
     p '************************NEW MESSAGE - Confirm Token**************************'
 
     @url = 'https://onyourway.io'
-    mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Confirm Token')
+    mail(to: 'support@onyourway.io', subject: 'OnYourWay - Confirm Token')
 
   end
 end

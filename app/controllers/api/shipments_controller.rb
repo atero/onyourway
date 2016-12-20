@@ -70,10 +70,10 @@ module Api
         # @shipment.order.save
        if @shipment.has_attribute?(:refuses)
         #  id = @shipment[:refuses]
-        #  @order = Order.where(id: order_id).first
+         @order = Order.where(id: @shipment[:refuses]).first
         #  @shoper = User.where(id: @order.user_id).first
         #  @traveler = User.where(id: @shipment.user_id).first
-             UserMailer.rejected_email( @shipment.user.first_name).deliver_later
+             UserMailer.rejected_email(@shipment.user.email, @order.user.first_name).deliver_later
          end
         render json: @shipment, status: :accepted
       else
