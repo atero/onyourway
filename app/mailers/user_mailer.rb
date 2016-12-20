@@ -70,8 +70,8 @@ class UserMailer < ApplicationMailer
     mail(to: email, subject: 'OnYourWay - Offer rejected')
 
   end
-  def confirm_email(name)
-    # @email = email
+  def confirm_email(email, name)
+   @email = email
    @first_name = name
     # @shoper_name = shoper_name
 
