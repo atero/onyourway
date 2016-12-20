@@ -46,13 +46,12 @@ module Api
     def update
       @order = Order.where(id: params[:order_id]).first
       if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] == @order.accepted_token
-        shipment_id = params[:shipment_id]
-        # shipment_id = params[:accepted_shipment]
+        shipment_id = @order.accepted_shipment
         @shipment = Shipment.where(id: shipment_id).first
         # @traveler = User.where(id: @shipment.user_id).first
         @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
-        UserMailer.confirm_email(@shipment.first_name).deliver_later
+        UserMailer.confirm_email(@shipment.user.first_name).deliver_later
       end
 
       if @order && @order.update(@ord_par)
