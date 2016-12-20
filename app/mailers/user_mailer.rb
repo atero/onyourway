@@ -78,7 +78,7 @@ class UserMailer < ApplicationMailer
     p '************************NEW MESSAGE - Confirm Token**************************'
 
     @url = 'https://onyourway.io'
-    mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Confirm Token')
+    mail(to: 'support@onyourway.io', subject: 'OnYourWay - Confirm Token')
 
   end
 end
