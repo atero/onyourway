@@ -74,7 +74,7 @@ module Api
         #  @shoper = User.where(id: @order.user_id).first
         #  @traveler = User.where(id: @shipment.user_id).first
         # @shipment.user.email,
-             UserMailer.rejected_email( @order.first_name).deliver_later
+             UserMailer.rejected_email( @order.item).deliver_later
          end
         render json: @shipment, status: :accepted
       else
