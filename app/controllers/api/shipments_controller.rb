@@ -69,7 +69,7 @@ module Api
         p shipment_params
         # @shipment.order.save
        if @shipment.has_attribute?(:refuses)
-         order_id = params[:order_id]
+         order_id = params[:refuses]
          @order = Order.where(id: order_id).first
         #  order_id = @shipment[:refuses]
         #  @shoper = User.where(id: @order.user_id).first
