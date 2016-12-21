@@ -98,7 +98,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
           id: shipment.id
         }, {
                shipment: shipment,
-               order: order,
+               order_id: order.id
         })
       }
     })
