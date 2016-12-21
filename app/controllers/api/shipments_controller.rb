@@ -64,7 +64,7 @@ module Api
 
     def update
       @shipment = Shipment.where(id: params[:shipment_id]).first
-      order_id = params[:order_id]
+      order_id = @shipment[:order_id]
       @order = Order.where(id:params[:order_id]).first
       if @shipment && @shipment.update(shipment_params)
         p '8888888888888888888888888888888888888888'
