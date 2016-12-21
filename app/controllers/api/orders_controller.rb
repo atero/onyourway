@@ -51,17 +51,6 @@ module Api
         @ord_par = order_params_tok
         @ord_par['status'] = 'delivered'
         UserMailer.confirm_email(@shipment.user.email, @shipment.user.first_name, @order.user.first_name, @order.item ).deliver_later
-      else
-        if @order && @order.update(@ord_par)
-
-          p '999999999999999999999999999999999999999999'
-          p @ord_par
-          p '9999999999999999999999999999999999999999999'
-          render json: @order, status: :accepted
-        else
-          render json: { messsage: 'No orders found' }, status: 404
-        end
-
       end
 
       if @order && @order.update(@ord_par)
