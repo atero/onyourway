@@ -64,8 +64,8 @@ module Api
 
     def update
       @shipment = Shipment.where(id: params[:shipment_id]).first
-      order_id = @shipment[:order_id]
-      @order = Order.where(id:params[:order_id]).first
+      order_id = params[:order_id]
+      @order = Order.where(id: order_id).first
       if @shipment && @shipment.update(shipment_params)
         p '8888888888888888888888888888888888888888'
         p shipment_params
@@ -73,8 +73,7 @@ module Api
        if @shipment.has_attribute?(:refuses)
         # @shoper = User.where(id: @order.user_id).first
         # @shipment.user.email,
-        p
-             UserMailer.rejected_email(@order.item).deliver_later
+           UserMailer.rejected_email(@order.item).deliver_later
          end
         render json: @shipment, status: :accepted
       else
