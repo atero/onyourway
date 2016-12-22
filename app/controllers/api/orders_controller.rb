@@ -52,7 +52,7 @@ module Api
         @ord_par['status'] = 'delivered'
         UserMailer.confirm_email(@shipment.user.email, @shipment.user.first_name, @order.user.first_name, @order.item ).deliver_later
       end
-      if @order.has_attribute?(:confirm_token) && order_params_tok['confirm_token'] != @order.accepted_token
+      if order_params_tok['confirm_token'] && order_params_tok['confirm_token'] != @order.accepted_token
         render json: { messsage: 'No orders found' }, status: 404 and return
       end
 
