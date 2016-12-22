@@ -34,16 +34,12 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 	$scope.sendToken = function(order, shipment){
 		console.log(order.confirm_token + " Tok");
 		if(order.confirm_token != ''){
-		// 	if (token == 'false') {
-		// 		$('#code').addClass('error');
-		// 	}else {
-		// 		$('#code').removeClass('error');
-		// 	}
 			Order.update({
 			  id: order.id
 			}, {
 			  order: order
 			}, function(res) {
+				console.log(res);
 				location.reload();
 			})
 		}
