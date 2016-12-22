@@ -40,13 +40,14 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			  order: order
 			}, function(res) {
 				console.log(res);
-				//location.reload();
+				if (res.messsage == 'False token') {
+						$('#code').addClass('error');
+				}else {
+				 $('#code').removeClass('error');
+					location.reload();
+				}
+				//
 			})
-			// 	if () {
-			// 		$('#code').addClass('error');
-			// 	}else {
-			// 		$('#code').removeClass('error');
-			// 	}
 		}
 	}
 }]);
