@@ -25,7 +25,7 @@ module Api
 
     def index #all the orders
       p '******************All Orders*************************'
-      @orders = Order.where(:accepted_shipment => 'false').sort_by { |obj| obj.created_at }
+      @orders = Order.where(:accepted_shipment => 'false').sort_by { |obj| obj.created_at }.reverse!
 
       if @orders.length > 0
           render 'index'
@@ -35,7 +35,7 @@ module Api
     end
 
     def list #created by the logged user
-      @orders = current_user.orders.sort_by { |obj| obj.created_at }.reverse!
+      @orders = current_user.orders.sort_by { |obj| obj.created_at }
       if @orders.length > 0
           render 'index_profile'
        else
