@@ -40,7 +40,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			  order: order
 			}, function(res) {
 				console.log(res);
-				location.reload();
+				//location.reload();
 			})
 			// 	if () {
 			// 		$('#code').addClass('error');
