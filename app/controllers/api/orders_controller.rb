@@ -25,7 +25,7 @@ module Api
 
     def index #all the orders
       p '******************All Orders*************************'
-      @orders = Order.where(:accepted_shipment => 'false').sort_by { |obj| obj.created_at }.reverse!
+      @orders = Order.where(:accepted_shipment => 'false').sort_by { |obj| obj.created_at }
 
       if @orders.length > 0
           render 'index'
