@@ -71,15 +71,17 @@ class UserMailer < ApplicationMailer
     mail(to: email, subject: 'OnYourWay - Offer declined')
   end
 
-  def confirm_email(email, name, shoper_name, item)
+  def confirm_email(email, name, shoper_name, id, item, order_id)
     @email = email
     @first_name = name
     @shoper_name = shoper_name
+    @id = id
     @item = item
+    @order_id = order_id
 
     p '************************NEW MESSAGE - Confirm Token**************************'
 
     @url = 'https://onyourway.io'
-    mail(to: 'support@onyourway.io', subject: 'OnYourWay - Confirm Token')
+    mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Confirm Token')
   end
 end
