@@ -59,11 +59,10 @@ class UserMailer < ApplicationMailer
     mail(to: 'support@onyourway.io', subject: 'New Message from OnYourWay contact form')
   end
 
-  def rejected_email(email, name, shoper_name, item, id)
+  def rejected_email(email, name, shoper_name, item)
     @email = email
     @first_name = name
     @shoper_name = shoper_name
-    @id = id
     @item = item
 
     p '************************NEW MESSAGE - REJECTED**************************'
@@ -72,10 +71,11 @@ class UserMailer < ApplicationMailer
     mail(to: email, subject: 'OnYourWay - Offer declined')
   end
 
-  def confirm_email(email, name, shoper_name, item)
+  def confirm_email(email, name, shoper_name, item, id)
     @email = email
     @first_name = name
     @shoper_name = shoper_name
+    @id = id
     @item = item
 
     p '************************NEW MESSAGE - Confirm Token**************************'
