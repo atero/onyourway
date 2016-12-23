@@ -75,7 +75,7 @@ class UserMailer < ApplicationMailer
     @email = email
     @first_name = name
     @shoper_name = shoper_name
-    @id = id
+    @order_id = id
     @item = item
 
     p '************************NEW MESSAGE - Confirm Token**************************'
