@@ -28,14 +28,14 @@ App.controller('ProfileCtrl', ['$scope', '$state', 'localuser', 'User', function
   $scope.saveProfile = function() {
     console.log("saving");
     // $scope.inherit.loading = true;
-    location.reload();
-    User.update({
+      User.update({
       token: $scope.inherit.user.token,
       id: $scope.inherit.user._id
     }, {
       user: $scope.inherit.user
     }, function(res) {
       $scope.inherit.loading = false;
+      location.reload();
       //$scope.inherit.goState('pr');
     })
   };
