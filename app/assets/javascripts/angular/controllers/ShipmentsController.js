@@ -29,6 +29,9 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
 		});
+		Order.update({
+			id: order.id
+		});
 	};
 
 	$scope.sendToken = function(order, shipment){
