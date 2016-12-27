@@ -29,8 +29,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
 		});
-		$scope.inherit.loading = true
-		// location.reload();
+		 location.reload();
 	};
 
 	$scope.sendToken = function(order, shipment){

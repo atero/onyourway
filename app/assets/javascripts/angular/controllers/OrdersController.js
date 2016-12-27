@@ -149,7 +149,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
 
     console.log(shipment);
 
-    $scope.inherit.loading = true
+    // $scope.inherit.loading = true
     Message.create({
       shipment_id: shipment.id,
       order_id: order.id
@@ -160,7 +160,7 @@ App.controller('OrdersCtrl', ['$scope', '$state', 'localuser', 'orders', 'Shipme
       shipment.messages.push(res);
       $scope.local.new_message.text = '';
     })
-
+    location.reload();
   }
 
 }]);
