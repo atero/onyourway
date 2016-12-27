@@ -28,9 +28,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			$scope.inherit.loading = false
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
-		});
-		Order.update({
-			id: order.id
+			location.reload();
 		});
 	};
 
