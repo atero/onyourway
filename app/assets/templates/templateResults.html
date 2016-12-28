@@ -16,12 +16,12 @@
           <!-- <p class="lead text-center">Search for shopper's ads</p> -->
           <form ng-submit="" id="form-block">
             <label>From:</label>
-            <input ng-model="search.from" list="countries" type="text" class="form-control search-input" placeholder="Country">
+            <input ng-model="search.from" list="countries" type="text" class="form-control search-input" g-places-autocomplete  placeholder="Country">
             <datalist id="countries">
               <option ng-repeat="x1 in local.countrylist" value="{{x1}}">
             </datalist>
             <label>To:</label>
-            <input ng-model="search.to" list="cities" type="text" class="form-control search-input" placeholder="City">
+            <input ng-model="search.to" list="cities" type="text" class="form-control search-input" g-places-autocomplete placeholder="City" placeholder="City">
             <datalist id="cities">
               <option ng-repeat="x1 in local.citylist" value="{{x1}}">
             </datalist>
