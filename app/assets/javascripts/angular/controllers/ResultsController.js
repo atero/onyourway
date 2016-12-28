@@ -16,8 +16,6 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
   $scope.filterResults = function() {
     filtered = orders
-    search.to = search.to.address_components[0].long_name;
-    search.from = search.from.address_components[0].long_name;
     if ($scope.search.from && $scope.search.from != "") {
       filtered = filtered.filter(function(d) {
         console.log($scope.search.from);
