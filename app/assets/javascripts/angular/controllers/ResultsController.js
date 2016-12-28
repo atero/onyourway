@@ -14,6 +14,13 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     to: "",
     from: ""
   }
+  
+  $scope.toOptions = {
+    types: ['(cities)'],
+  }
+  $scope.fromOptions = {
+
+  }
   $scope.filterResults = function() {
     filtered = orders
     console.log($scope.search.from);
