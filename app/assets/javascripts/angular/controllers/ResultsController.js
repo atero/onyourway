@@ -26,11 +26,11 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     $scope.local.search_from = $scope.local.search.address_components[0].long_name;
     $scope.local.search_to = $scope.local.search.address_components[1].long_name;
 
-    console.log($scope.search.from);
-    if ($scope.search.from && $scope.search.from != "") {
+    console.log($scope.search_from);
+    if ($scope.search_from && $scope.search_from != "") {
       filtered = filtered.filter(function(d) {
-        console.log($scope.search.from);
-        return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
+        console.log($scope.search_from);
+        return d.from.toLowerCase().indexOf($scope.search_from.toLowerCase()) > -1
       })
     }
     if ($scope.search.to && $scope.search.to != "") {
