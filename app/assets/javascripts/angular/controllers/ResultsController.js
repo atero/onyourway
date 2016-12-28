@@ -14,7 +14,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     to: "",
     from: ""
   }
-  
+
   $scope.toOptions = {
     types: ['(cities)'],
   }
@@ -23,6 +23,9 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
   $scope.filterResults = function() {
     filtered = orders
+    $scope.local.search.from = $scope.local.search.from.address_components[0].long_name;
+    $scope.local.search.to = $scope.local.search.to.address_components[0].long_name;
+
     console.log($scope.search.from);
     if ($scope.search.from && $scope.search.from != "") {
       filtered = filtered.filter(function(d) {
