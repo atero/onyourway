@@ -25,11 +25,8 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     filtered = orders
     $scope.search.from = $scope.search.from.address_components[0].long_name;
     $scope.search.to = $scope.search.to.address_components[0].long_name;
-
-    console.log($scope.search.from);
     if ($scope.search.from && $scope.search.from != "") {
       filtered = filtered.filter(function(d) {
-        console.log($scope.search.from);
         return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
       })
     }
