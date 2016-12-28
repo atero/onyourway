@@ -17,6 +17,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   $scope.filterResults = function() {
     filtered = orders
     if ($scope.search.from && $scope.search.from != "") {
+      console.log($scope.search.from);
       filtered = filtered.filter(function(d) {
         return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
       })
@@ -33,13 +34,6 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     console.log(result.id + '**************************');
     $scope.inherit.loading = true;
     console.log($scope.inherit.user)
-    // if (!!shipment.address_components) {
-    //   shipment.to = shipment.to.address_components[0].long_name;
-    //   shipment.from = shipment.from.address_components[0].long_name;
-    // }else {
-    //      shipment.to =$('#city').val();
-    //      shipment.from =$('#country').val();
-    // }
     shipment.to = shipment.to.address_components[0].long_name;
     shipment.from = shipment.from.address_components[0].long_name;
     console.log('???????????????????????');
