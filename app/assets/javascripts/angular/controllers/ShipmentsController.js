@@ -29,14 +29,15 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
 		});
-		$scope.inherit.loading = true
-		Order.update({
-			id: order.id
+
+		Shipment.update({
+			id: shipment.id
 		}, {
-			order: order
+			shipment:shipment
 		}, function(res) {
 
-		})
+		});
+		$scope.inherit.loading = true
 		// location.reload();
 	};
 
