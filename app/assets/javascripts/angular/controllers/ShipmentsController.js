@@ -24,15 +24,19 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		console.log($scope.local.new_message.text);
 		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id}
 		// $scope.inherit.loading = true
-		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message}, Order.update({
-			  id: order.id
-			}, {
-			  order: order
-			}),function(res) {
+		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message}, function(res) {
 			$scope.inherit.loading = false
 			shipment.messages.push(res)
 			$scope.local.new_message.text = '';
 		});
+		$scope.inherit.loading = true
+		Order.update({
+			id: order.id
+		}, {
+			order: order
+		}, function(res) {
+
+		})
 		// location.reload();
 	};
 
