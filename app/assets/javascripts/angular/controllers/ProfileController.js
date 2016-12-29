@@ -35,9 +35,10 @@ App.controller('ProfileCtrl', ['$scope', '$state', 'localuser', 'User', function
       user: $scope.inherit.user
     }, function(res) {
       $scope.inherit.loading = false;
-      location.reload();
+
       //$scope.inherit.goState('pr');
     })
+    location.reload();
   };
 
 }]);
