@@ -30,7 +30,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 			console.log(res);
 			$scope.local.new_message.text = '';
 		});
-		 location.reload();
+		//  location.reload();
 	};
 
 	$scope.sendToken = function(order, shipment){
