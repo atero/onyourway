@@ -27,18 +27,10 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message}, function(res) {
 			$scope.inherit.loading = false
 			shipment.messages.push(res)
+			console.log(res);
 			$scope.local.new_message.text = '';
 		});
-
-		Shipment.update({
-			id: shipment.id
-		}, {
-			shipment:shipment
-		}, function(res) {
-
-		});
-		$scope.inherit.loading = true
-		// location.reload();
+		 location.reload();
 	};
 
 	$scope.sendToken = function(order, shipment){
