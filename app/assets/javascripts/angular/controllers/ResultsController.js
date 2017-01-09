@@ -32,7 +32,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
           return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
         })
       }
-      if (!!$scope.search.to.address_components[0].long_name &) {
+      if (!!$scope.search.to.address_components[0].long_name ) {
         if ($scope.search.to.address_components[0].long_name != "") {
             $scope.search.to = $scope.search.to.address_components[0].long_name;
         }
