@@ -36,7 +36,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
               return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
             })
           }
-       }else{
+       }
          if (!!$scope.search.from.address_components[0].long_name && !$scope.search.to.address_components[0].long_name) {
              $scope.search.from = $scope.search.from.address_components[0].long_name;
              if ($scope.search.from && $scope.search.from != "") {
@@ -45,8 +45,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
                })
              }
           }
-       }else{
-         if (!$scope.search.from.address_components[0].long_name && !!$scope.search.to.address_components[0].long_name) {
+          if (!$scope.search.from.address_components[0].long_name && !!$scope.search.to.address_components[0].long_name) {
              $scope.search.to = $scope.search.to.address_components[0].long_name;
 
              if ($scope.search.to && $scope.search.to != "") {
@@ -55,7 +54,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
                })
              }
           }
-       }
+
     return filtered
   }
 
