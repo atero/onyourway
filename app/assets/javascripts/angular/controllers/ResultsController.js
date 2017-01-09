@@ -23,7 +23,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
   $scope.filterResults = function() {
     filtered = orders
-    console.log(search.address_components);
+    console.log($scope.search.address_components);
       if (!!$scope.search.from.address_components[0].long_name && $scope.search.from.address_components[0].long_name != "" ) {
           $scope.search.from = $scope.search.from.address_components[0].long_name;
        }
