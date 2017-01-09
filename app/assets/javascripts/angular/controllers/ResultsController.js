@@ -30,10 +30,9 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
             return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
           })
         }
+      }else {
+          $scope.search.from =   "Anywhere";
       }
-      // else {
-      //     $scope.search.from =   "Anywhere";
-      // }
       if ( !!$scope.search.to.address_components[0].long_name ) {
         $scope.search.to = $scope.search.to.address_components[0].long_name;
         if ($scope.search.to && $scope.search.to != "") {
@@ -41,10 +40,9 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
             return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
           })
         }
+      }else {
+          $scope.search.to =   "Anywhere";
       }
-      // else {
-      //     $scope.search.to =   "Anywhere";
-      // }
     return filtered
   }
 
