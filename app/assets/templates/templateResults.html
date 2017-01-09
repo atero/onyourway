@@ -21,7 +21,7 @@
               <option ng-repeat="x1 in local.countrylist" value="{{x1}}">
             </datalist>
             <label>To:</label>
-            <input id="to_city" ng-model="search.to" type="text" class="form-control search-input" g-places-autocomplete placeholder="City">
+            <input id="to_city" ng-model="search.to" list="cities" type="text" options="toOptions" class="form-control search-input" g-places-autocomplete placeholder="City">
             <datalist id="cities">
               <option ng-repeat="x1 in local.citylist" value="{{x1}}">
             </datalist>
