@@ -23,7 +23,8 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
   $scope.filterResults = function() {
     filtered = orders
-      if ( !!$scope.search.from.address_components[0].long_name ) {
+    console.log(filtered);
+      if (!!$scope.search.from.address_components[0].long_name) {
           $scope.search.from = $scope.search.from.address_components[0].long_name;
        }else {
           $scope.search.from =   "Anywhere";
@@ -33,7 +34,7 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
           return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
         })
       }
-      if ( !!$scope.search.to.address_components[0].long_name ) {
+      if (!!$scope.search.to.address_components[0].long_name) {
         $scope.search.to = $scope.search.to.address_components[0].long_name;
       }else {
           $scope.search.to =   "Anywhere";
