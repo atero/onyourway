@@ -24,21 +24,22 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   $scope.filterResults = function() {
     filtered = orders
     console.log($scope.search);
-    if (!!$scope.search.from.address_components[0].long_name && $scope.search.from.address_components[0].long_name != "" ) {
+    if (!!$scope.search.from.address_components) {
           $scope.search.from = $scope.search.from.address_components[0].long_name;
+          if ($scope.search.from && $scope.search.from != "") {
+            filtered = filtered.filter(function(d) {
+              return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
+            })
+          }
        }
-      if ($scope.search.from && $scope.search.from != "") {
-        filtered = filtered.filter(function(d) {
-          return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
-        })
-      }
-      if (!!$scope.search.to.address_components[0].long_name && $scope.search.to.address_components[0].long_name != "" ) {
+
+      if (!!$scope.search.to.address_components) {
           $scope.search.to = $scope.search.to.address_components[0].long_name;
-      }
-      if ($scope.search.to && $scope.search.to != "") {
-        filtered = filtered.filter(function(d) {
-          return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
-        })
+          if ($scope.search.to && $scope.search.to != "") {
+            filtered = filtered.filter(function(d) {
+              return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
+            })
+          }
       }
     return filtered
   }
