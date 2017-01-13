@@ -37,7 +37,7 @@ module Api
         private
 
         def message_params
-            params.require(:message).permit(:text, :sender, :recipient, :sender_email, :sender_name )
+            params.require(:message).permit(:text, :sender, :recipient, :sender_email, :sender_name, :user )
         end
     end
 end
