@@ -22,7 +22,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 
 	$scope.sendMessage = function(order, shipment){
 		console.log($scope.local.new_message.text);
-		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id}
+		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id, user:shipment.user }
 		$scope.inherit.loading = true
 		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message }, function(res) {
 			$scope.inherit.loading = false;
