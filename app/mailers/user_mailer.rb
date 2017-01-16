@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'support@onyourway.io'
+  default from: 'OnYourWay'
 
   def welcome_email(email, name, activtion_code)
     @email = email
