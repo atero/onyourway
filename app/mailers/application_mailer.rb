@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "support@onyourway.io"
+  default from: "OnYourWay"
   layout 'mailer'
 end
