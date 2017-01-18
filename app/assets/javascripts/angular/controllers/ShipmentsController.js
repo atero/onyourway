@@ -25,12 +25,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id, user: shipment.user }
 		$scope.inherit.loading = true
 		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message }, function(res) {
-			Shipment.update({
-		   id: shipment.id
-		 }, {
-		   shipment: shipment
-		 });
-			console.log(message);
+		  console.log(message);
 			$scope.inherit.loading = false;
 			shipment.messages.push(res)
 			console.log(res);
