@@ -26,7 +26,4 @@ Rails.application.routes.draw do
     put '/users/:user_id', to: 'users#update'
   end
   get '*path' => 'static_pages#home'
-  namespace :memcached do
-    Rails.cache.clear
-  end
 end
