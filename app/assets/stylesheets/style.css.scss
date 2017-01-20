@@ -784,7 +784,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 .narrow-banner {
-  background: url("../images/narrow-banner.jpg") center center no-repeat;
+  background: url("../images/narrow-banner.jpg?12304678") center center no-repeat;
   background-size: 100% auto;
   height: 128px;
   width: 100%;
@@ -807,10 +807,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 .narrow-banner.conditions-banner{
-  background: url("../images/Terms-and-Conditions.jpg") center center no-repeat;
+  background: url("../images/Terms-and-Conditions.jpg?12304678") center center no-repeat;
 }
 .narrow-banner-orders {
-  background: url("../images/order-bg.jpg") center center no-repeat;
+  background: url("../images/order-bg.jpg?12304678") center center no-repeat;
   background-size: 100% auto;
   height: 128px;
   width: 100%;
@@ -1391,7 +1391,7 @@ button.btn-next {
     background-color: #fff;
     /* fallback color if gradients are not supported */
     overflow: hidden;
-    background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
+    background-image: url(../images/bottom.png?12304678), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
     background-position: center right -1px;
     background-repeat: no-repeat;
     background-size: 29px 30px;
@@ -1420,7 +1420,7 @@ button.btn-next {
 }
 
 .profile-countries{
-  background-image: url(../images/bottom.png);
+  background-image: url(../images/bottom.png?12304678);
   background-position: center right -1px;
   background-repeat: no-repeat;
   background-size: 29px 30px;
@@ -1470,7 +1470,7 @@ button.btn-next {
   }
 }
 .about_us{
-    background-image: url(../images/about_us.png);
+    background-image: url(../images/about_us.png?12304678);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
