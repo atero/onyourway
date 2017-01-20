@@ -24,6 +24,7 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		console.log($scope.local.new_message.text);
 		message = {text:$scope.local.new_message.text, sender:shipment.user.id, recipient: order.user.id, user: shipment.user }
 		$scope.inherit.loading = true
+		$('#user-w').append(message.user.photo)
 		Message.create({shipment_id:shipment.id, order_id:order.id}, {message:message }, function(res) {
 		  console.log(message);
 			$scope.inherit.loading = false;
