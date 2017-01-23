@@ -28,7 +28,7 @@
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js?1309495796');
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '311396269229182');
     fbq('track', "PageView");</script>
@@ -40,8 +40,9 @@
   </head>
   <body >
     <%= yield %>
-    <%= stylesheet_link_tag  params[:controller], 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag params[:controller], 'application', 'data-turbolinks-track' => true, 'data-turbolinks-track' => true %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'data-turbolinks-track' => true %>
         <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
