@@ -28,7 +28,8 @@ App.controller('ShipmentsCtrl',['$scope','$state','localuser', 'shipments', 'Ord
 		  console.log(message);
 			$scope.inherit.loading = false;
 			shipment.messages.push(res)
-			$('#user-w').innerHTML( src= "message.user.photo ")
+			var img = "<img src='message.user.photo'>";
+			$('#user-w').innerHTML = img
 			console.log(res);
 			$scope.local.new_message.text = '';
 		});
