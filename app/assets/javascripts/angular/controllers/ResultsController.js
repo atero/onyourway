@@ -16,9 +16,10 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
   }
 
   $scope.toOptions = {
-    types: ['(cities)'],
+    // types: ['(cities)'],
   }
   $scope.fromOptions = {
+    types: ['(country)'],
 
   }
   $scope.filterResults = function() {
