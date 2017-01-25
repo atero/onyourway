@@ -14,18 +14,35 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     to: "",
     from: ""
   }
+
+  $scope.toOptions = {
+     types: ['(cities)'],
+    // types: ['(country)'],
+  }
+  $scope.fromOptions = {
+
+  }
   $scope.filterResults = function() {
     filtered = orders
-    if ($scope.search.from && $scope.search.from != "") {
-      filtered = filtered.filter(function(d) {
-        return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
-      })
-    }
-    if ($scope.search.to && $scope.search.to != "") {
-      filtered = filtered.filter(function(d) {
-        return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
-      })
-    }
+    console.log($scope.search);
+    if (!!$scope.search.from.address_components) {
+      console.log($scope.search.from.address_components);
+          $scope.search.from = $scope.search.from.address_components[0].long_name;
+          if ($scope.search.from && $scope.search.from != "") {
+            filtered = filtered.filter(function(d) {
+              return d.from.toLowerCase().indexOf($scope.search.from.toLowerCase()) > -1
+            })
+          }
+       }
+
+      if (!!$scope.search.to.address_components) {
+          $scope.search.to = $scope.search.to.address_components[0].long_name;
+          if ($scope.search.to && $scope.search.to != "") {
+            filtered = filtered.filter(function(d) {
+              return d.to.toLowerCase().indexOf($scope.search.to.toLowerCase()) > -1
+            })
+          }
+      }
     return filtered
   }
 
@@ -33,13 +50,6 @@ App.controller('ResultsCtrl', ['$scope', '$state', "$uibModal", 'localuser', 'or
     console.log(result.id + '**************************');
     $scope.inherit.loading = true;
     console.log($scope.inherit.user)
-    // if (!!shipment.address_components) {
-    //   shipment.to = shipment.to.address_components[0].long_name;
-    //   shipment.from = shipment.from.address_components[0].long_name;
-    // }else {
-    //      shipment.to =$('#city').val();
-    //      shipment.from =$('#country').val();
-    // }
     shipment.to = shipment.to.address_components[0].long_name;
     shipment.from = shipment.from.address_components[0].long_name;
     console.log('???????????????????????');

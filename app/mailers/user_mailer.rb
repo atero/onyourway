@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'support@onyourway.io'
+  default from: 'On Your Way <support@onyourway.io> '
 
   def welcome_email(email, name, activtion_code)
     @email = email
@@ -12,10 +12,12 @@ class UserMailer < ApplicationMailer
     mail(to: email, subject: 'Welcome to OnYourWay')
   end
 
-  def message_email(email, name, txt)
+  def message_email(email, name, txt, sender_name, item)
     @email = email
     @message_text = txt
     @first_name = name
+    @sender_name = sender_name
+    @item = item
     p '************************NEW MESSAGE**************************'
 
     @url = 'https://onyourway.io'
@@ -59,15 +61,29 @@ class UserMailer < ApplicationMailer
     mail(to: 'support@onyourway.io', subject: 'New Message from OnYourWay contact form')
   end
 
-  def rejected_email()
-    # @email = email
-    # @first_name = name
-    # @shoper_name = shoper_name
+  def rejected_email(email, name, shoper_name, item)
+    @email = email
+    @first_name = name
+    @shoper_name = shoper_name
+    @item = item
 
     p '************************NEW MESSAGE - REJECTED**************************'
 
     @url = 'https://onyourway.io'
-    mail(to: 'susanna.kotoshyan@mail.ru', subject: 'OnYourWay - Offer rejected')
+    mail(to: email, subject: 'OnYourWay - Offer declined')
+  end
 
+  def confirm_email(email, name, shoper_name, item, id, shipment_id)
+    @email = email
+    @first_name = name
+    @shoper_name = shoper_name
+    @order_id = id
+    @item = item
+    @shipment_id = shipment_id
+
+    p '************************NEW MESSAGE - Confirm Token**************************'
+
+    @url = 'https://onyourway.io'
+    mail(to: 'support@onyourway.io', subject: 'OnYourWay - Confirm Token')
   end
 end

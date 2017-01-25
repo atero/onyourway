@@ -25,7 +25,7 @@ input.ng-invalid{
   position: fixed;
   width: 100%;
   height: 100%;
-  background: white url("../images/LOADING.gif") center center no-repeat;
+  background: white url("../images/LOADING.gif?12304678") center center no-repeat;
   opacity: 1;
   z-index: 10000;
 }
@@ -443,7 +443,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
 
 
 .welcome-image{
-    background: url("../images/Image_home1.jpg") center center no-repeat;
+    background: url("../images/Image_home1.jpg?12304678") center center no-repeat;
     background-size: 100% auto;
     height: 550px;
     width:100%;
@@ -556,7 +556,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
   .down-image{
-    background-image: url("../images/down-image.jpg");
+    background-image: url("../images/down-image.jpg?12304678");
     padding: 15px 0 55px 0;
     margin-top: 25px;
     background-repeat: no-repeat;
@@ -784,7 +784,7 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 .narrow-banner {
-  background: url("../images/narrow-banner.jpg") center center no-repeat;
+  background: url("../images/narrow-banner.jpg?12304678") center center no-repeat;
   background-size: 100% auto;
   height: 128px;
   width: 100%;
@@ -807,10 +807,10 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited {
   }
 }
 .narrow-banner.conditions-banner{
-  background: url("../images/Terms-and-Conditions.jpg") center center no-repeat;
+  background: url("../images/Terms-and-Conditions.jpg?12304678") center center no-repeat;
 }
 .narrow-banner-orders {
-  background: url("../images/order-bg.jpg") center center no-repeat;
+  background: url("../images/order-bg.jpg?12304678") center center no-repeat;
   background-size: 100% auto;
   height: 128px;
   width: 100%;
@@ -1152,6 +1152,7 @@ button.btn-next {
 
 /***********Result************/
 .result-block-home{
+  margin-bottom: 66px;
   .search-form{
     #form-block{
       margin-bottom: 30px;
@@ -1390,7 +1391,7 @@ button.btn-next {
     background-color: #fff;
     /* fallback color if gradients are not supported */
     overflow: hidden;
-    background-image: url(../images/bottom.png), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
+    background-image: url(../images/bottom.png?12304678), linear-gradient(to bottom, #fff, #fff); /* Standard syntax; must be last */
     background-position: center right -1px;
     background-repeat: no-repeat;
     background-size: 29px 30px;
@@ -1419,7 +1420,7 @@ button.btn-next {
 }
 
 .profile-countries{
-  background-image: url(../images/bottom.png);
+  background-image: url(../images/bottom.png?12304678);
   background-position: center right -1px;
   background-repeat: no-repeat;
   background-size: 29px 30px;
@@ -1469,7 +1470,7 @@ button.btn-next {
   }
 }
 .about_us{
-    background-image: url(../images/about_us.png);
+    background-image: url(../images/about_us.png?12304678);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -1651,7 +1652,7 @@ button.btn-next {
     width: 55px;
     height: 55px;
     cursor: pointer;
-    background: url('../images/a03.png') no-repeat;
+    background: url('../images/a03.png?12304678') no-repeat;
     overflow: hidden;
 }
 .jssora03l { background-position: -3px -33px; }
@@ -2189,7 +2190,7 @@ button.btn-next {
 }
 @media (max-width: 1450px) {
   .welcome-image{
-    background: url("../images/Image_home1.jpg") center center no-repeat;
+    background: url("../images/Image_home1.jpg?12304678") center center no-repeat;
     background-size: auto 100%;
   }
   .credit-card-box{
@@ -2277,7 +2278,7 @@ button.btn-next {
       position: inherit;
     }
   .navbar-toggle{
-    background: url("../images/menu-icon.png") center center no-repeat;
+    background: url("../images/menu-icon.png?12304678") center center no-repeat;
     border: 1px solid #11e9de;
     margin-top: 30px;
   }
@@ -2445,7 +2446,7 @@ button.btn-next {
     margin-bottom: 15px;
   }
   .welcome-image{
-    background: url("../images/new-home-bg1.jpg") center center no-repeat;
+    background: url("../images/new-home-bg1.jpg?12304678") center center no-repeat;
     background-size: 100% auto;
     padding-top: 40px;
     margin-top: -40px;
@@ -2954,7 +2955,7 @@ button.btn-next {
     padding-top: 100px;
   }
   .welcome-image{
-    background: url("../images/new-home-bg1.jpg") center center no-repeat;
+    background: url("../images/new-home-bg1.jpg?12304678") center center no-repeat;
     background-size: 100% auto;
     margin-top: -40px;
     height: 550px;
